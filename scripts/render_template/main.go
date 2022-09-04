@@ -2,10 +2,17 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"io/fs"
+	"io/ioutil"
 	"log"
 	"os"
+	"path"
+	"path/filepath"
+	"sort"
+	"text/template"
 
+	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
 )
 
@@ -47,78 +54,103 @@ func gatherIncludes(dir string) []string {
 	return result
 }
 
+func findIncludesDir(dir string) (string, error) {
+	var err error
+	dir, err = filepath.Abs(dir)
+	if err != nil {
+		return dir, err
+	}
+	parts := filepath.SplitList(dir)
+	i := 0
+	for _, part := range parts {
+		if part == "db_object_kind" {
+			break
+		}
+		i++
+	}
+	dir = filepath.Join(parts[:i]...)
+	// try and make it relative to cwd?
+	cwd, err := filepath.Abs(".")
+	if err != nil {
+		return dir, err
+	}
+	if ok, err := filepath.Rel(cwd, dir); err == nil {
+		return ok, err
+	} else {
+		return dir, nil
+	}
+}
+
+// func render(tpl *template.Template, params interface{}, target string) error {
+// 	os.Create(target)
+// }
+
 var rootCmd = &cobra.Command{
 	Use: "render_template",
 	Run: func(cmd *cobra.Command, args []string) {
 		flags := cmd.Flags()
 		shouldList, _ := flags.GetBool("list")
 
-		searchDir, _ := flags.GetString("dir")
-		searchDirInfo, err := os.Stat(searchDir)
+		templatePath, err := flags.GetString("tpl")
 		crashIf(err)
-		if !searchDirInfo.IsDir() {
-			log.Fatalf("%s is not a directory", searchDir)
-		}
-		if endsWith("/", searchDir) {
-			searchDir = searchDir[:len(searchDir)-1]
-		}
-
-		// available template/param pairs
-		entries, err := fs.ReadDir(os.DirFS(searchDir), ".")
+		tpl, err := template.ParseFiles(templatePath)
 		crashIf(err)
-		templates := []string{}
-		for _, e := range entries {
-			if e.Type().IsRegular() && endsWith(".sql.tpl", e.Name()) {
-				templates = append(templates, stripSuffix(".sql.tpl", e.Name()))
-			}
-		}
-
-		tpl, _ := flags.GetString("tpl")
-		if tpl == "all" {
-			// continue with all available templates to be rendered
-		} else {
-			if endsWith(".sql.tpl", tpl) {
-				tpl = stripSuffix(".sql.tpl", tpl)
-			}
-			found := false
-			for _, t := range templates {
-				if tpl == t {
-					found = true
-					break
-				}
-			}
-			if !found {
-				log.Fatalf("unknown template %s. (available templates: %s)", tpl, templates)
-			}
-		}
-
-		includeDir, _ := flags.GetString("includes")
-		includeDirInfo, err := os.Stat(includeDir)
-		crashIf(err)
-		if !includeDirInfo.IsDir() {
-			log.Fatalf("%s is not a directory", includeDir)
-		}
-		if endsWith("/", includeDir) {
-			includeDir = includeDir[:len(includeDir)-1]
-		}
-		includes := gatherIncludes(includeDir)
-		fmt.Println(includes)
-
 		if shouldList {
-			fmt.Printf("dir=%s\ntpl=%s\n", searchDir, tpl)
+			fmt.Printf("tpl=%s\n", templatePath)
+			fmt.Printf("%+v\n", tpl)
+		}
+
+		dir, templateFileName := path.Split(templatePath)
+		blob, err := ioutil.ReadFile(path.Join(dir, fmt.Sprintf("%s.params.toml", stripSuffix(".sql.tpl", templateFileName))))
+		crashIf(err)
+
+		params := make(map[string]interface{}, 1)
+		// ^ need to initialize map pointer with some capacity, else Decode() does nothing
+		_, err = toml.Decode(string(blob), &params)
+		crashIf(err)
+		if shouldList {
+			fmt.Printf("params=\n%+v\n", params)
+		}
+		includesDir, err := findIncludesDir(dir)
+		crashIf(err)
+		if shouldList {
+			fmt.Printf("includes dir = %s\n", includesDir)
+		}
+		includes := gatherIncludes(includesDir)
+		if shouldList {
+			fmt.Printf("includes = %s\n", includes)
+		}
+		targetDir := filepath.Join(dir, fmt.Sprintf("queries/%s", stripSuffix(".sql.tpl", templateFileName)))
+		fmt.Println(templateFileName, targetDir)
+		err = os.MkdirAll(targetDir, os.ModePerm)
+		crashIf(err)
+		names := make([]string, 0, len(params))
+		for name := range params {
+			names = append(names, name)
+		}
+		sort.Strings(names)
+		for _, name := range names {
+			fmt.Println("-- name: ", name)
+			var file io.Writer
+			if shouldList {
+				file = os.Stdout
+			} else {
+				file, err = os.Create(filepath.Join(targetDir, "query.sql"))
+				crashIf(err)
+			}
+			err = tpl.Execute(file, params[name])
+			crashIf(err)
 		}
 	},
 }
 
 func init() {
-	rootCmd.Flags().StringP("dir", "d", "./", "the directory in which to find the template")
-	rootCmd.Flags().StringP("tpl", "t", "all", "the template to use if there are many (default all)")
+	rootCmd.Flags().StringP("tpl", "t", "", "Path to template-file to render")
 	rootCmd.Flags().StringArrayP("query", "q", []string{}, "the template target to render if there are many (default 'all')")
 	rootCmd.Flags().StringP("includes", "i", "./", "a directory to search for sql files for includes")
 	rootCmd.Flags().BoolP("list", "l", false, "whether to list found config/not")
+	rootCmd.Flags().Bool("dry-run", false, "print what would happen rather than executing it")
 }
-
-// type paramInfo = map[string]interface{}
 
 func main() {
 	if err := rootCmd.Execute(); err != nil {
