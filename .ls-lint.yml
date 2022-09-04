@@ -1,0 +1,31 @@
+ls:
+  .md: regex:README | snake_case
+  .dir: snake_case
+  .go: snake_case
+  .sh: snake_case
+  db_object_kind/*:
+    .dir: SCREAMING_SNAKE_CASE
+  db_object_kind/*/*:
+    .dir: snake_case
+  db_object_kind/*/*/*:
+    .sql: regex:query
+    .dir: regex:tests
+  db_object_kind/*/*/*/tests:
+    .dir: |
+       regex:adventureworks
+       | regex:airflow
+       | regex:chinook
+       | regex:clubdata
+       | regex:covid
+       | regex:northwind
+       | regex:omnibus
+       | regex:polls
+       | regex:retail_analytics
+       | regex:sakila
+       | regex:sportsdb
+  db_object_kind/*/*/*/tests/*:
+    .dir: regex:\?.*
+    .tsv: regex:results
+    .yaml: regex:explain
+ignore:
+  - .git
