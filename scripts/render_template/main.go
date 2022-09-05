@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/fs"
 	"io/ioutil"
 	"log"
 	"os"
 	"path"
 	"path/filepath"
 	"sort"
+	"strings"
 	"text/template"
 
 	"github.com/BurntSushi/toml"
@@ -24,12 +24,12 @@ func crashIf(err error) {
 	}
 }
 
-func endsWith(suffix string, str string) bool {
-	if len(str) < len(suffix) {
-		return false
-	}
-	return str[len(str)-len(suffix):] == suffix
-}
+// func endsWith(suffix string, str string) bool {
+// 	if len(str) < len(suffix) {
+// 		return false
+// 	}
+// 	return str[len(str)-len(suffix):] == suffix
+// }
 
 func stripSuffix(suffix string, str string) string {
 	if len(str) < len(suffix) {
@@ -38,52 +38,20 @@ func stripSuffix(suffix string, str string) string {
 	return str[:len(str)-len(suffix)]
 }
 
-func gatherIncludes(dir string) []string {
-	result := []string{}
-	root := os.DirFS(dir)
-	fs.WalkDir(root, ".", func(path string, d fs.DirEntry, err error) error {
-		if err != nil || d.IsDir() || !endsWith(".sql", path) {
-			return err
-		}
-		mode := d.Type()
-		if mode.IsRegular() {
-			result = append(result, path)
-		}
-		return err
-	})
-	return result
+// TODO: cache io?
+// TODO: use file:// protocol?
+func include(ctx map[string]string, relativePath string) (string, error) {
+	dir := ctx["dir"]
+	blob, err := ioutil.ReadFile(filepath.Clean(filepath.Join(dir, relativePath)))
+	if err != nil {
+		return "", err
+	}
+	return string(blob), err
 }
 
-func findIncludesDir(dir string) (string, error) {
-	var err error
-	dir, err = filepath.Abs(dir)
-	if err != nil {
-		return dir, err
-	}
-	parts := filepath.SplitList(dir)
-	i := 0
-	for _, part := range parts {
-		if part == "db_object_kind" {
-			break
-		}
-		i++
-	}
-	dir = filepath.Join(parts[:i]...)
-	// try and make it relative to cwd?
-	cwd, err := filepath.Abs(".")
-	if err != nil {
-		return dir, err
-	}
-	if ok, err := filepath.Rel(cwd, dir); err == nil {
-		return ok, err
-	} else {
-		return dir, nil
-	}
+func indent(n int, str string) string {
+	return strings.ReplaceAll(str, "\n", "\n"+strings.Repeat("  ", n))
 }
-
-// func render(tpl *template.Template, params interface{}, target string) error {
-// 	os.Create(target)
-// }
 
 var rootCmd = &cobra.Command{
 	Use: "render_template",
@@ -95,40 +63,47 @@ var rootCmd = &cobra.Command{
 		crashIf(err)
 		tpl, err := template.ParseFiles(templatePath)
 		crashIf(err)
+		tpl.Funcs(template.FuncMap{"include": include, "indent": indent})
 		if shouldList {
 			fmt.Printf("tpl=%s\n", templatePath)
 			fmt.Printf("%+v\n", tpl)
 		}
 
 		dir, templateFileName := path.Split(templatePath)
-		blob, err := ioutil.ReadFile(path.Join(dir, fmt.Sprintf("%s.params.toml", stripSuffix(".sql.tpl", templateFileName))))
+		templateName := stripSuffix(".sql.tpl", templateFileName)
+		paramsPath := path.Join(dir, fmt.Sprintf("%s.params.toml", templateName))
+		blob, err := ioutil.ReadFile(paramsPath)
 		crashIf(err)
 
-		params := make(map[string]interface{}, 1)
+		params := make(map[string]map[string]interface{}, 1)
 		// ^ need to initialize map pointer with some capacity, else Decode() does nothing
 		_, err = toml.Decode(string(blob), &params)
 		crashIf(err)
+		for _, val := range params {
+			val["dir"] = dir
+		}
 		if shouldList {
 			fmt.Printf("params=\n%+v\n", params)
 		}
-		includesDir, err := findIncludesDir(dir)
-		crashIf(err)
-		if shouldList {
-			fmt.Printf("includes dir = %s\n", includesDir)
-		}
-		includes := gatherIncludes(includesDir)
-		if shouldList {
-			fmt.Printf("includes = %s\n", includes)
-		}
-		targetDir := filepath.Join(dir, fmt.Sprintf("queries/%s", stripSuffix(".sql.tpl", templateFileName)))
-		fmt.Println(templateFileName, targetDir)
+		targetDir := filepath.Join(dir, fmt.Sprintf("queries/%s", templateName))
 		err = os.MkdirAll(targetDir, os.ModePerm)
 		crashIf(err)
-		names := make([]string, 0, len(params))
-		for name := range params {
-			names = append(names, name)
+		names, err := cmd.Flags().GetStringArray("query")
+		crashIf(err)
+		if len(names) == 0 {
+			names = make([]string, 0, len(params))
+			for name := range params {
+				names = append(names, name)
+			}
 		}
 		sort.Strings(names)
+
+		for _, name := range names {
+			if _, ok := params[name]; !ok {
+				log.Fatalf("%s missing key %s", paramsPath, name)
+			}
+		}
+
 		for _, name := range names {
 			fmt.Println("-- name: ", name)
 			var file io.Writer
@@ -156,7 +131,4 @@ func main() {
 	if err := rootCmd.Execute(); err != nil {
 		log.Fatal(err)
 	}
-	// find dir
-	// load params.toml
-	// render templates, serialize to disk
 }
