@@ -17,3 +17,7 @@
 bin
 # ignore explain plans until we can average or round timing, costs
 explain.yaml
+__pycache__
+*.pyc
+.pids
+.pants.d

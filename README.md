@@ -6,7 +6,7 @@ Each SQL query is tested against a number of example databases.
 
 ### Directory structure
 
-```
+<pre>
 .
 ├── pkg
 │   └── internal
@@ -26,7 +26,7 @@ Each SQL query is tested against a number of example databases.
 │            └── results.tsv
 ├── Makefile
 └── README.md
-```
+</pre>
 
 ### Database Object Kinds
 

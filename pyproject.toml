@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "pg-inventory"
+version = "0.0.0"
+description = "pg_catalog queries"
+authors = ["Steven Kalt <kalt.steven@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pg_inventory"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
+mypy = "^0.971"
+flake8 = "^5.0.4"
+bandit = "^1.7.4"
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+exclude = '''
+/(
+  # These would already be ignored by pants, but having them here allows for manually running Black if one so wishes.
+  | \.git
+  | \.mypy_cache
+  | dist
+  | \.pants\.d
+  | virtualenvs
+)/
+'''
+
+[tool.isort]
+profile = "black"

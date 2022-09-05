@@ -1,0 +1,24 @@
+[GLOBAL]
+pants_version = "2.12.0"
+pythonpath = ["%(buildroot)s/pkg/pants_plugins"]
+backend_packages = [
+  "pants.backend.experimental.go",
+  "pants.backend.python",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.typecheck.mypy",
+  "pants.backend.plugin_development",
+  # "pants.backend.shell.lint.shellcheck",
+  # "pants.backend.shell",
+  # custom ---
+  "sql_template",
+]
+# TODO: ticket backend_packages vs backend_packages.add conflict in docs
+# see also: https://pantsbuild.slack.com/archives/C046T6T9U/p1659243255507499
+
+[golang]
+expected_version = "1.18"
+
+[anonymous-telemetry]
+enabled = true
+repo_id = "f2400be9-56e6-46bc-bc45-6c8424166a15"

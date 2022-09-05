@@ -1,0 +1,32 @@
+version: "3"
+services:
+  pg: &base
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - PGUSER=postgres
+  sakila:
+    <<: *base
+    ports:
+      - 50000:5432
+    volumes:
+      - ./sample_dbs/sakila.schema.dump.sql:/docker-entrypoint-initdb.d/sakila.schema.dump.sql
+  omnibus:
+    <<: *base
+    ports:
+      - 50001:5432
+    volumes:
+      - ./sample_dbs/omnibus.schema.dump.sql:/docker-entrypoint-initdb.d/omnibus.schema.dump.sql
+      - example_tablespace:/data/example_tablespace
+      - indices_tablespace:/data/indices_tablespace
+
+volumes:
+  example_tablespace:  &local_driver_opts
+    driver: local
+    driver_opts:
+      type: tmpfs
+      device: tmpfs
+      o: 'size=10m,uid=70' # 70 is the postgres uid
+  indices_tablespace: *local_driver_opts
