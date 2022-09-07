@@ -21,7 +21,8 @@ Each SQL query is tested against a number of example databases.
 │   ├── ${template_name}.params.toml
 │   └── ${query_name}
 │        ├── query.sql
-│        └── tests/${sample_db_name}/?${query_params}
+│        └── tests/${sample_db_name}/${test_case_name}
+│            ├── params.toml
 │            ├── explain.yaml
 │            └── results.tsv
 ├── Makefile

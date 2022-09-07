@@ -1,0 +1,18 @@
+[all_schemata]
+ilike = false
+exclude_internal = false
+
+[all_schemata_named_like]
+ilike = true
+exclude_internal = false
+
+[all_schemata_excluding_internal_named_like]
+ilike = true
+exclude_internal = false
+
+[all_schemata_excluding_internal]
+ilike = false
+exclude_internal = true
+
+[single_schema_named]
+equals = true
