@@ -74,6 +74,9 @@ var rootCmd = &cobra.Command{
 		flags := cmd.Flags()
 		dryRun, err := flags.GetBool("dry-run")
 		crashIf(err)
+		accept, err := flags.GetBool("accept")
+		crashIf(err)
+
 		segments := strings.Split(testDir, string(os.PathSeparator))
 		if segments[len(segments)-3] != "tests" {
 			log.Fatalf("%s is not a test-case", testDir)
@@ -121,15 +124,28 @@ var rootCmd = &cobra.Command{
 		subCmd.Stdin = strings.NewReader(query)
 		err = subCmd.Run()
 		crashIf(err)
+		if _, err = os.Stat(targetTsvPath); err != nil {
+			// the file doesn't exist: write the output to it
+			accept = true
+		}
 		targetTsv, err := os.OpenFile(targetTsvPath, os.O_CREATE|os.O_RDWR, 0666)
 		crashIf(err)
+
 		diff := exec.Command("diff", "-u", targetTsv.Name(), tempFile.Name())
 		diff.Stdout = os.Stdout
 		diff.Stderr = os.Stderr
-		if err = diff.Run(); err != nil {
-			os.Exit(diff.ProcessState.ExitCode())
+		err = diff.Run()
+		if accept {
+			result, err := os.ReadFile(tempFile.Name())
+			crashIf(err)
+			_, err = targetTsv.Write(result)
+			crashIf(err)
 		} else {
-			fmt.Printf("%s: ok\n", testDir)
+			if err != nil {
+				os.Exit(diff.ProcessState.ExitCode())
+			} else {
+				fmt.Printf("%s: ok\n", testDir)
+			}
 		}
 	},
 }
@@ -137,6 +153,7 @@ var rootCmd = &cobra.Command{
 func init() {
 	flags := rootCmd.Flags()
 	flags.Bool("dry-run", false, "print the commands that would be run")
+	flags.Bool("accept", false, "accept the new input")
 }
 
 func main() {

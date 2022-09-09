@@ -1,0 +1,5 @@
+schema_oid	schema_name	schema_owner	schema_acl
+99	pg_toast	10	
+11	pg_catalog	10	{postgres=UC/postgres,=U/postgres}
+2200	public	10	{postgres=UC/postgres,=UC/postgres}
+13403	information_schema	10	{postgres=UC/postgres,=U/postgres}
