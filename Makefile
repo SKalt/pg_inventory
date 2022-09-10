@@ -54,35 +54,61 @@ ${schema}/all_schemata/tests/sakila/expected/results.tsv: \
 	${schema}/all_schemata/query.sql \
 	sample_dbs/sakila.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m "$@"
 
 ${schema}/all_schemata/tests/omnibus/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata/query.sql \
 	sample_dbs/omnibus.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m "$@"
 
 # ------------------------------------------------------------------------------
 ${schema}/all_schemata_excluding_internal/tests/empty/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata/query.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m $@
 
 ${schema}/all_schemata_excluding_internal/tests/omnibus/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata_excluding_internal/query.sql \
 	sample_dbs/omnibus.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m $@
 
 ${schema}/all_schemata_excluding_internal/tests/sakila/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata_excluding_internal/query.sql \
 	sample_dbs/sakila.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m $@
+################################################################################
+role=db_object_kind/ROLE/queries
+all_role_tests=\
+	${role}/all_roles/tests/empty/superuser_only/results.tsv \
+	${role}/all_roles/tests/sakila/superuser_only/results.tsv \
+	${role}/all_roles/tests/omnibus/mishmash/results.tsv \
+
+${role}/all_roles/tests/empty/superuser_only/results.tsv: \
+	${role}/all_roles/query.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${role}/all_roles/tests/sakila/superuser_only/results.tsv: \
+	${role}/all_roles/query.sql \
+	sample_dbs/sakila.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${role}/all_roles/tests/omnibus/mishmash/results.tsv: \
+	${role}/all_roles/query.sql \
+	sample_dbs/omnibus.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
 ################################################################################
 all_queries=\
 	${schema_queries}\
@@ -91,6 +117,8 @@ all_tests=\
 	${all_schema_tests}\
 
 .PHONY: tests
-tests: ${all_tests}
+tests: \
+	${all_tests} \
+	${all_role_tests}
 
 all: ${all_queries} ${all_tests}

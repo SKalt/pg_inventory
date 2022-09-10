@@ -76,7 +76,7 @@ var rootCmd = &cobra.Command{
 		crashIf(err)
 		accept, err := flags.GetBool("accept")
 		crashIf(err)
-
+		testDir = strings.TrimRight(testDir, "/")
 		segments := strings.Split(testDir, string(os.PathSeparator))
 		if segments[len(segments)-3] != "tests" {
 			log.Fatalf("%s is not a test-case", testDir)
@@ -97,7 +97,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		subCmdArgs := make([]string, 0, len(params))
-		subCmdArgs = append(subCmdArgs, dsn)
+		subCmdArgs = append(subCmdArgs, dsn, "--set=ON_ERROR_STOP=on")
 		for key, value := range params {
 			subCmdArgs = append(subCmdArgs, fmt.Sprintf("--set=%s=%s", key, value))
 		}
@@ -106,7 +106,7 @@ var rootCmd = &cobra.Command{
 		queryName := filepath.Base(filepath.Dir(queryFile))
 		blob, err := os.ReadFile(queryFile)
 		crashIf(err)
-		query := fmt.Sprintf("COPY (%s)\nTO STDOUT WITH (FORMAT csv, DELIMITER '\t', HEADER on);", string(blob))
+		query := fmt.Sprintf("COPY (\n%s\n)\nTO STDOUT WITH (FORMAT csv, DELIMITER '\t', HEADER on);", string(blob))
 		targetTsvPath := filepath.Join(testDir, "results.tsv")
 
 		subCmd := exec.Command("psql", subCmdArgs...)
@@ -121,6 +121,7 @@ var rootCmd = &cobra.Command{
 		crashIf(err)
 		waitFor(dsn, 5)
 		subCmd.Stdout = tempFile
+		subCmd.Stderr = os.Stderr
 		subCmd.Stdin = strings.NewReader(query)
 		err = subCmd.Run()
 		crashIf(err)
