@@ -89,6 +89,10 @@ all_role_tests=\
 	${role}/all_roles/tests/empty/superuser_only/results.tsv \
 	${role}/all_roles/tests/sakila/superuser_only/results.tsv \
 	${role}/all_roles/tests/omnibus/mishmash/results.tsv \
+	${role}/all_roles_compressed/tests/empty/superuser_only/results.tsv \
+	${role}/all_roles_compressed/tests/sakila/superuser_only/results.tsv \
+	${role}/all_roles_compressed/tests/omnibus/mishmash/results.tsv \
+
 
 ${role}/all_roles/tests/empty/superuser_only/results.tsv: \
 	${role}/all_roles/query.sql \
@@ -105,6 +109,26 @@ ${role}/all_roles/tests/sakila/superuser_only/results.tsv: \
 
 ${role}/all_roles/tests/omnibus/mishmash/results.tsv: \
 	${role}/all_roles/query.sql \
+	sample_dbs/omnibus.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${role}/all_roles_compressed/tests/empty/superuser_only/results.tsv: \
+	${role}/all_roles_compressed/query.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${role}/all_roles_compressed/tests/sakila/superuser_only/results.tsv: \
+	${role}/all_roles_compressed/query.sql \
+	sample_dbs/sakila.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${role}/all_roles_compressed/tests/omnibus/mishmash/results.tsv: \
+	${role}/all_roles_compressed/query.sql \
 	sample_dbs/omnibus.schema.dump.sql \
 	bin/test_query \
 
