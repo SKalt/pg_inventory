@@ -1,4 +1,4 @@
-role_oid	name	is_superuser	inherits_permissions	can_create_roles	can_create_dbs	can_log_in	is_replication_role	connection_count_limit	password_expiry_time	bypass_rls	config
+role_oid	name	is_superuser	inherits_permissions	can_create_roles	can_create_dbs	can_log_in	is_replication_role	connection_count_limit	password_expiry_time	bypass_rls	runtime_config_var_defaults
 6171	pg_database_owner	f	t	f	f	f	f	-1		f	
 6181	pg_read_all_data	f	t	f	f	f	f	-1		f	
 6182	pg_write_all_data	f	t	f	f	f	f	-1		f	

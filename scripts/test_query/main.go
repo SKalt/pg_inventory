@@ -58,16 +58,9 @@ func waitFor(dsn string, retries int) {
 
 var rootCmd = &cobra.Command{
 	Use: "test_query",
-	Args: func(cmd *cobra.Command, args []string) error {
-		err := cobra.ExactArgs(1)(cmd, args)
-		if err != nil {
-			return err
-		}
-		dir, err := os.Stat(args[0])
-		if err != nil || !dir.IsDir() {
-			return fmt.Errorf("%s is not a directory", args[0])
-		}
-		return nil
+	Args: func(cmd *cobra.Command, args []string) (err error) {
+		err = cobra.ExactArgs(1)(cmd, args)
+		return
 	},
 	Run: func(cmd *cobra.Command, args []string) {
 		testDir := args[0]
@@ -76,6 +69,7 @@ var rootCmd = &cobra.Command{
 		crashIf(err)
 		accept, err := flags.GetBool("accept")
 		crashIf(err)
+		testDir = strings.TrimSuffix(testDir, "results.tsv")
 		testDir = strings.TrimRight(testDir, "/")
 		segments := strings.Split(testDir, string(os.PathSeparator))
 		if segments[len(segments)-3] != "tests" {
@@ -139,6 +133,8 @@ var rootCmd = &cobra.Command{
 		if accept {
 			result, err := os.ReadFile(tempFile.Name())
 			crashIf(err)
+			err = targetTsv.Truncate(0)
+			crashIf(err)
 			_, err = targetTsv.Write(result)
 			crashIf(err)
 		} else {
@@ -154,7 +150,7 @@ var rootCmd = &cobra.Command{
 func init() {
 	flags := rootCmd.Flags()
 	flags.Bool("dry-run", false, "print the commands that would be run")
-	flags.Bool("accept", false, "accept the new input")
+	flags.BoolP("accept", "a", false, "accept the new input")
 }
 
 func main() {

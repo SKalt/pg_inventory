@@ -1,4 +1,4 @@
-role_oid	name	permission_bits	connection_count_limit	password_expiry_time	config
+role_oid	name	permission_bits	connection_count_limit	password_expiry_time	runtime_config_var_defaults
 6171	pg_database_owner	128	-1		
 6181	pg_read_all_data	128	-1		
 6182	pg_write_all_data	128	-1		
@@ -51,18 +51,3 @@ role_oid	name	permission_bits	connection_count_limit	password_expiry_time	config
 16421	role_progenitor	192	-1		
 16422	super_user	384	-1		
 16423	tablespace_owner	144	-1		
-ce	f	t	f	f	f	f	-1		f	
-16410	regress_rls_carol	f	t	f	f	f	f	-1		f	
-16411	regress_rls_dave	f	t	f	f	f	f	-1		f	
-16412	regress_rls_dob_role1	f	t	f	f	f	f	-1		f	
-16413	regress_rls_dob_role2	f	t	f	f	f	f	-1		f	
-16414	regress_rls_eve	f	t	f	f	f	f	-1		f	
-16415	regress_rls_exempt_user	f	t	f	f	f	f	-1		t	
-16416	regress_rls_frank	f	t	f	f	f	f	-1		f	
-16417	regress_rls_group1	f	t	f	f	f	f	-1		f	
-16418	regress_rls_group2	f	t	f	f	f	f	-1		f	
-16419	replicant	f	t	f	f	f	t	-1		f	
-16420	rls_enforced	f	t	f	f	f	f	-1		f	
-16421	role_progenitor	f	t	t	f	f	f	-1		f	
-16422	super_user	t	t	f	f	f	f	-1		f	
-16423	tablespace_owner	f	t	f	f	t	f	-1		f	

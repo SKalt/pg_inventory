@@ -1,0 +1,4 @@
+oid	db_name	admin_role_oid	admin_role_name	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	last_system_oid	min_unfrozen_xid	min_multixact_id	tablespace_oid	access_privileges
+13768	template0	10	postgres	UTF8	en_US.utf8	en_US.utf8	t	f	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
+1	template1	10	postgres	UTF8	en_US.utf8	en_US.utf8	t	t	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
+13769	postgres	10	postgres	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	

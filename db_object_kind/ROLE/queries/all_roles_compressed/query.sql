@@ -13,11 +13,8 @@ SELECT
       | CASE WHEN rolbypassrls   THEN 1<<2 ELSE 0 END
   ) AS permission_bits -- int2
   , rolconnlimit AS connection_count_limit
-    -- int4: For roles that can log in, this sets maximum number of concurrent connections this role can make. -1 means no limit.
   , rolvaliduntil AS password_expiry_time
-    -- timestamptz: Password expiry time (only used for password authentication); null if no expiration
-  , rolconfig AS config
-    -- text[]: Role-specific defaults for run-time configuration variables
+  , rolconfig AS runtime_config_var_defaults
 FROM pg_catalog.pg_roles -- https://www.postgresql.org/docs/current/view-pg-roles.html
 -- see also: https://www.postgresql.org/docs/current/catalog-pg-authid.html
 -- could ORDER BY oid or name here

@@ -47,21 +47,20 @@ ${schema}/all_schemata/tests/empty/should_have_internal_schemata_only/results.ts
 	bin/test_query \
 	${schema}/all_schemata/query.sql \
 
-	@bin/test_query $(shell dirname $@)
+	@bin/test_query $(shell dirname $@) && touch -m $@
 
 ${schema}/all_schemata/tests/sakila/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata/query.sql \
-	sample_dbs/sakila.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@) && touch -m "$@"
+	@bin/test_query $(shell dirname $@) && touch -m $@
 
 ${schema}/all_schemata/tests/omnibus/expected/results.tsv: \
 	bin/test_query \
 	${schema}/all_schemata/query.sql \
 	sample_dbs/omnibus.schema.dump.sql \
 
-	@bin/test_query $(shell dirname $@) && touch -m "$@"
+	@bin/test_query $(shell dirname $@) && touch -m $@
 
 # ------------------------------------------------------------------------------
 ${schema}/all_schemata_excluding_internal/tests/empty/expected/results.tsv: \
@@ -134,6 +133,32 @@ ${role}/all_roles_compressed/tests/omnibus/mishmash/results.tsv: \
 
 	@bin/test_query $(shell dirname $@) && touch -m $@
 ################################################################################
+db=db_object_kind/DATABASE/queries
+all_db_tests=\
+	${db}/all/tests/empty/basic_dbs_only/results.tsv \
+	${db}/all/tests/omnibus/should_have_10/results.tsv \
+	${db}/all/tests/sakila/basic_dbs_only/results.tsv \
+
+${db}/all/tests/empty/basic_dbs_only/results.tsv: \
+	${db}/all/query.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${db}/all/tests/omnibus/should_have_10/results.tsv: \
+	${db}/all/query.sql \
+	sample_dbs/omnibus.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+
+${db}/all/tests/sakila/basic_dbs_only/results.tsv: \
+	${db}/all/query.sql \
+	sample_dbs/sakila.schema.dump.sql \
+	bin/test_query \
+
+	@bin/test_query $(shell dirname $@) && touch -m $@
+################################################################################
 all_queries=\
 	${schema_queries}\
 
@@ -143,6 +168,17 @@ all_tests=\
 .PHONY: tests
 tests: \
 	${all_tests} \
-	${all_role_tests}
+	${all_role_tests} \
+	${all_db_tests} \
+
+# KIND=
+# QUERY=
+# DB=
+# TEST=
+# db_object_kind/${KIND}/queries/${QUERY}/tests/${DB}/${TEST}/results.tsv:
+# single-test: \
+# 	db_object_kind/${KIND}/queries/${QUERY}/query.sql \
+# 	bin/test_query
+# 	@bin/test_query $(shell dirname $@) && touch -m $@
 
 all: ${all_queries} ${all_tests}

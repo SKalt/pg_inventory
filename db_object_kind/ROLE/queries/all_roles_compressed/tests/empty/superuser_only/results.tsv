@@ -1,4 +1,4 @@
-role_oid	name	permission_bits	connection_count_limit	password_expiry_time	config
+role_oid	name	permission_bits	connection_count_limit	password_expiry_time	runtime_config_var_defaults
 6171	pg_database_owner	128	-1		
 6181	pg_read_all_data	128	-1		
 6182	pg_write_all_data	128	-1		
@@ -11,8 +11,3 @@ role_oid	name	permission_bits	connection_count_limit	password_expiry_time	config
 4571	pg_execute_server_program	128	-1		
 4200	pg_signal_backend	128	-1		
 10	postgres	508	-1		
-69	pg_read_server_files	f	t	f	f	f	f	-1		f	
-4570	pg_write_server_files	f	t	f	f	f	f	-1		f	
-4571	pg_execute_server_program	f	t	f	f	f	f	-1		f	
-4200	pg_signal_backend	f	t	f	f	f	f	-1		f	
-10	postgres	t	t	t	t	t	t	-1		t	
