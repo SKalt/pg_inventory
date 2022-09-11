@@ -1,11 +1,11 @@
 oid	db_name	admin_role_oid	admin_role_name	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	last_system_oid	min_unfrozen_xid	min_multixact_id	tablespace_oid	access_privileges
-16430	example_owned_template	16395	db_owner	UTF8	en_US.utf8	en_US.utf8	t	t	-1	13768	727	1	1663	
-16429	example_owned	16395	db_owner	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-16432	other_db	16401	foreign_db_owner	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-16431	example_utf8	10	postgres	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-16428	example_cloned	10	postgres	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-16427	example	10	postgres	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-13768	template0	10	postgres	UTF8	en_US.utf8	en_US.utf8	t	f	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
-1	template1	10	postgres	UTF8	en_US.utf8	en_US.utf8	t	t	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
-13769	postgres	10	postgres	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	1663	
-16426	db_in_tablespace	16423	tablespace_owner	UTF8	en_US.utf8	en_US.utf8	f	t	-1	13768	727	1	16424	
+16430	example_owned_template	16395	db_owner	UTF8	en_US.utf8	en_US.utf8	true	true	-1	13768	727	1	1663	
+16429	example_owned	16395	db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+16432	other_db	16401	foreign_db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+16431	example_utf8	10	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+16428	example_cloned	10	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+16427	example	10	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+13768	template0	10	postgres	UTF8	en_US.utf8	en_US.utf8	true	false	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
+1	template1	10	postgres	UTF8	en_US.utf8	en_US.utf8	true	true	-1	13768	727	1	1663	{=c/postgres,postgres=CTc/postgres}
+13769	postgres	10	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	1663	
+16426	db_in_tablespace	16423	tablespace_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	13768	727	1	16424	
