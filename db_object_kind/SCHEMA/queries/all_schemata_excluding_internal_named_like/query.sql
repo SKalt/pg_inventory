@@ -2,7 +2,8 @@
 SELECT
     oid      AS schema_oid
   , nspname  AS schema_name
-  , nspowner AS schema_owner
+  , nspowner AS schema_owner_oid
+    -- TODO: join to get owner names?
   , nspacl   AS schema_acl
 FROM pg_catalog.pg_namespace AS ns
 WHERE 1=1
