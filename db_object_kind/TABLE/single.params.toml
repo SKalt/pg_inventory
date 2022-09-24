@@ -1,0 +1,6 @@
+[single_table_with_oid]
+  table_filter = "AND tbl.oid = :table_oid"
+[single_table_with_specific_name_in_schema_named]
+  table_filter = "AND tbl.relname = :'table_name'"
+[single_table_with_specific_name_in_schema_with_oid]
+  table_filter = "AND tbl.relname = :'table_name'"

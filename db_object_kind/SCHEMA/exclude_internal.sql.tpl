@@ -1,0 +1,1 @@
+ns.nspname NOT IN ('pg_catalog', 'pg_toast', 'information_schema')

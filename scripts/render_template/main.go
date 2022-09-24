@@ -16,6 +16,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/spf13/cobra"
+	"gonum.org/v1/gonum/stat/combin"
 )
 
 // TODO: extract constants
@@ -24,19 +25,6 @@ func crashIf(err error) {
 	if err != nil {
 		log.Panic(err)
 	}
-}
-
-// func endsWith(suffix string, str string) bool {
-// 	if len(str) < len(suffix) {
-// 		return false
-// 	}
-// 	return str[len(str)-len(suffix):] == suffix
-// }
-func startsWith(prefix string, str string) bool {
-	if len(str) < len(prefix) {
-		return false
-	}
-	return str[:len(prefix)] == prefix
 }
 
 func walk(node parse.Node, callback func(n parse.Node) error) (err error) {
@@ -115,26 +103,120 @@ func walk(node parse.Node, callback func(n parse.Node) error) (err error) {
 
 // TODO: cache io?
 // TODO: use file:// protocol?
-func include(ctx map[string]string, relativePath string) (string, error) {
-	dir := ctx["dir"]
+func include(ctx map[string]interface{}, relativePath string) (string, error) {
+	thisDir := ctx["dir"].(string)
 	relativePath = strings.TrimPrefix(relativePath, "file://")
-	blob, err := ioutil.ReadFile(filepath.Clean(filepath.Join(dir, relativePath)))
+	relativePath = filepath.Clean(filepath.Join(thisDir, relativePath))
+	blob, err := ioutil.ReadFile(relativePath)
 	if err != nil {
 		return "", err
 	}
-	return string(blob), err
+	str := string(blob)
+	if strings.HasSuffix(relativePath, ".tpl") {
+		thatDir := filepath.Dir(relativePath)
+		cloned := make(map[string]interface{}, len(ctx))
+		for key, value := range ctx {
+			cloned[key] = value
+		}
+		cloned["dir"] = thatDir
+		tpl, err := template.New("include").Parse(str)
+		if err != nil {
+			return "", err
+		}
+		return renderToStr(tpl, ctx)
+	} else {
+		return str, err
+	}
 }
-
-// func listInclude(ctx map[string]string, relativePath string) (string, error) {
-// 	dir := ctx["dir"]
-// 	relativePath = strings.TrimPrefix(relativePath, "file://")
-// 	relativePath = filepath.Clean(filepath.Join(dir, relativePath))
-// 	fmt.Println(relativePath)
-// 	return "", nil
-// }
 
 func indent(n int, str string) string {
 	return strings.ReplaceAll(str, "\n", "\n"+strings.Repeat("  ", n))
+}
+
+func renderToStr(tpl *template.Template, options any) (string, error) {
+	builder := strings.Builder{}
+	err := tpl.Execute(&builder, options)
+	return builder.String(), err
+}
+
+// find each of the names to render, zipped with the parameters with which to render that name
+func getParams(path string) ([]string, []map[string]interface{}) {
+	blob, err := os.ReadFile(path)
+	crashIf(err)
+	params := make(map[string]interface{}, 1)
+	// ^ need to initialize map pointer with some capacity, else Decode() does nothing
+	_, err = toml.Decode(string(blob), &params)
+	crashIf(err)
+	dir := filepath.Dir(path)
+	if namePattern, isOrthogonal := params["name_template"]; isOrthogonal {
+		nameTpl := template.Must(template.New("name").Parse(namePattern.(string)))
+		delete(params, "name_template")
+		nExpected := 1
+		keys := make([]string, 0, len(params))
+		for key, values := range params {
+			m := len(values.(map[string]interface{})) // maps option name => option value
+			if m == 0 {
+				delete(params, key)
+			} else {
+				nExpected = nExpected * m // name_component => value
+				keys = append(keys, key)
+			}
+		}
+
+		sort.Strings(keys)
+		lens := make([]int, len(keys))
+		groups := make([]map[string]interface{}, len(keys))
+		optionKeys := make([][]string, len(keys))
+		for i, key := range keys {
+			options := params[key].(map[string]interface{})
+			optKeys := make([]string, 0, len(options))
+			for optName := range options {
+				optKeys = append(optKeys, optName)
+			}
+			sort.Strings(optKeys)
+			groups[i] = options
+			optionKeys[i] = optKeys
+			lens[i] = len(options)
+		}
+		// nameParams := make([]map[string]string, nExpected)
+		queryParams := make([]map[string]interface{}, nExpected)
+		queryNames := make([]string, nExpected)
+		generator := combin.NewCartesianGenerator(lens)
+		i := 0
+		for generator.Next() {
+			combo := generator.Product(make([]int, len(keys)))
+			nameParamSet := make(map[string]string, len(keys))
+			queryParamSet := make(map[string]interface{}, len(keys))
+			queryParamSet["dir"] = dir
+			for j, optIndex := range combo {
+				key := keys[j]
+				group := groups[j]
+				optionKey := optionKeys[j][optIndex]
+				optionValue := group[optionKey]
+				nameParamSet[key] = optionKey
+				queryParamSet[key] = optionValue
+			}
+			queryName, err := renderToStr(nameTpl, nameParamSet)
+			crashIf(err)
+			queryNames[i] = queryName
+			queryParams[i] = queryParamSet
+			i++
+		}
+		return queryNames, queryParams
+	} else {
+		queryNames := make([]string, 0, len(params))
+		for name := range params {
+			queryNames = append(queryNames, name)
+		}
+		sort.Strings(queryNames)
+		queryParams := make([]map[string]interface{}, len(params))
+
+		for i, name := range queryNames {
+			queryParams[i] = params[name].(map[string]interface{})
+			queryParams[i]["dir"] = dir
+		}
+		return queryNames, queryParams
+	}
 }
 
 var rootCmd = &cobra.Command{
@@ -143,18 +225,17 @@ var rootCmd = &cobra.Command{
 		flags := cmd.Flags()
 		dryRun, err := flags.GetBool("dry-run")
 		crashIf(err)
-		shouldList, err := flags.GetBool("debug")
+		debug, err := flags.GetBool("debug")
 		crashIf(err)
 		shouldGatherIncludes, err := flags.GetBool("list-includes")
 		crashIf(err)
 
 		templatePath, err := flags.GetString("tpl")
 		crashIf(err)
-		if shouldList {
-			fmt.Println("dry-run=", dryRun)
-			fmt.Printf("tpl=%s\n", templatePath)
-			fmt.Printf("%+v\n", templatePath)
-			return
+		if debug {
+			fmt.Println("dry-run = ", dryRun)
+			fmt.Println("tpl = ", templatePath)
+			fmt.Printf("template path = %+v\n", templatePath)
 		}
 		blob, err := ioutil.ReadFile(templatePath)
 		crashIf(err)
@@ -164,74 +245,76 @@ var rootCmd = &cobra.Command{
 			Parse(string(blob))
 		crashIf(err)
 		dir, templateFileName := path.Split(templatePath)
-		printInclude := func(node parse.Node) (err error) {
-			switch concrete := node.(type) {
-			case *parse.CommandNode:
-				if len(concrete.Args) == 3 { // && strings.HasPrefix(concrete.Args[1], "file://")
-					if concrete.Args[0].String() == "include" {
-						rel := strings.TrimPrefix(concrete.Args[2].String(), "\"file://")
-						rel = strings.TrimSuffix(rel, "\"")
-						rel = path.Join(dir, rel)
-						rel = path.Clean(rel)
-						fmt.Println(rel)
+		if shouldGatherIncludes {
+			printInclude := func(node parse.Node) (err error) {
+				switch concrete := node.(type) {
+				case *parse.CommandNode:
+					if len(concrete.Args) == 3 { // {{ include . "file://..."}}
+						if concrete.Args[0].String() == "include" {
+							rel := strings.TrimPrefix(concrete.Args[2].String(), "\"file://")
+							rel = strings.TrimSuffix(rel, "\"")
+							rel = path.Join(dir, rel)
+							rel = path.Clean(rel)
+							fmt.Println(rel)
+						}
 					}
 				}
+				return
 			}
-			return
-		}
-		if shouldGatherIncludes {
 			walk(tpl.Root, printInclude)
 			return
 		}
 
 		templateName := strings.TrimSuffix(templateFileName, ".sql.tpl")
 		paramsPath := path.Join(dir, fmt.Sprintf("%s.params.toml", templateName))
-		blob, err = ioutil.ReadFile(paramsPath)
+		queryNames, queryParams := getParams(paramsPath)
+		// if shouldList {
+		// }
+		selectedQueryNames, err := cmd.Flags().GetStringArray("query")
 		crashIf(err)
-
-		params := make(map[string]map[string]interface{}, 1)
-		// ^ need to initialize map pointer with some capacity, else Decode() does nothing
-		_, err = toml.Decode(string(blob), &params)
-		crashIf(err)
-		for _, val := range params {
-			val["dir"] = dir
-		}
-		if shouldList {
-			fmt.Printf("params=\n%+v\n", params)
-		}
-		names, err := cmd.Flags().GetStringArray("query")
-		crashIf(err)
-		if len(names) == 0 {
-			names = make([]string, 0, len(params))
-			for name := range params {
-				names = append(names, name)
-			}
-		}
-		sort.Strings(names)
-
-		for _, name := range names {
-			if _, ok := params[name]; !ok {
-				log.Fatalf("%s missing key %s", paramsPath, name)
+		sort.Strings(selectedQueryNames)
+		if len(selectedQueryNames) == 0 {
+			selectedQueryNames = queryNames
+		} else {
+			for _, name := range selectedQueryNames {
+				found := false
+				for _, queryName := range queryNames {
+					if name == queryName {
+						found = true
+						break
+					}
+				}
+				if !found {
+					log.Fatalf(
+						"unrecognized query name: %s\noptions are:\n  %v",
+						name, strings.Join(queryNames, "\n  "),
+					)
+				}
 			}
 		}
 
-		for _, name := range names {
-			if shouldList || dryRun {
+		for i, name := range selectedQueryNames {
+			p := queryParams[i]
+			if debug || dryRun {
 				fmt.Println("-- name: ", name)
+				// fmt.Printf("-- params=\n%+v\n", p)
 			}
+			targetDir := filepath.Join(dir, "queries", name)
+			targetFile := filepath.Join(targetDir, "query.sql")
 			var file io.Writer
 			if dryRun {
 				file = os.Stdout
+			} else if debug {
+				file, err = os.OpenFile(os.DevNull, os.O_RDWR, 0777)
+				crashIf(err)
 			} else {
-				targetDir := filepath.Join(dir, "queries", name)
 				err = os.MkdirAll(targetDir, os.ModePerm)
 				crashIf(err)
-				targetFile := filepath.Join(targetDir, "query.sql")
 				file, err = os.Create(targetFile)
 				crashIf(err)
-				fmt.Println(targetFile)
 			}
-			err = tpl.Execute(file, params[name])
+			// fmt.Println(targetFile)
+			err = tpl.Execute(file, p)
 			crashIf(err)
 		}
 	},
