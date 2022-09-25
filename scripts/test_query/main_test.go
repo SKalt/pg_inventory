@@ -43,6 +43,7 @@ func TestSnapshots(t *testing.T) {
 		}
 		testCases[i] = testCase
 	}
+	cache := fs{cache: make(map[string]string, len(testCases))}
 	for _, testCase := range testCases {
 		name, err := filepath.Rel(repoRoot, testCase.targetTsvPath())
 		if err != nil {
@@ -50,7 +51,7 @@ func TestSnapshots(t *testing.T) {
 		}
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			err := runTest(testCase, servicePool, false)
+			err := runTest(testCase, servicePool, cache, false, false)
 			if err != nil {
 				t.Fatal(err)
 			}

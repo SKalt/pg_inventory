@@ -180,8 +180,8 @@ func (c *testCase) targetTsvPath() string {
 	return filepath.Join(c.testDir, "results.tsv")
 }
 
-var bareVar = regexp.MustCompile(":[a-z]+") // watch out! can match ::type cast syntax
-var stringVar = regexp.MustCompile(":'[a-z]+'")
+var bareVar = regexp.MustCompile(":[a-z_]+") // watch out! can match ::type cast syntax
+var stringVar = regexp.MustCompile(":'[a-z_]+'")
 
 func findAllBarePsqlVarsIn(query string) []string {
 	found := bareVar.FindAllString(query, -1)
@@ -203,7 +203,7 @@ func findAllVarsNamesIn(query string) []string {
 }
 
 func interpolatePsqlVars(query string, params map[string]interface{}) (interpolated string, err error) {
-	interpolated = bareVar.ReplaceAllStringFunc(query, func(name string) string {
+	interpolated = bareVar.ReplaceAllStringFunc(query, func(name string) (result string) {
 		val, ok := params[strings.Trim(name, ":")]
 		if !ok {
 			msg := fmt.Sprintf("<unknown variable %s>", name)
@@ -218,28 +218,33 @@ func interpolatePsqlVars(query string, params map[string]interface{}) (interpola
 				builder.WriteString(fmt.Sprintf(", %v", el))
 			}
 			builder.WriteRune(')')
-			return builder.String()
+			result = builder.String()
+			return
 		default:
-			return fmt.Sprintf("%v", val)
+			result = fmt.Sprintf("%v", val)
+			return
 		}
 	})
-	interpolated = stringVar.ReplaceAllStringFunc(interpolated, func(name string) string {
+	interpolated = stringVar.ReplaceAllStringFunc(interpolated, func(name string) (result string) {
 		name = strings.TrimPrefix(name, ":'")
-		name = strings.TrimSuffix(name, "':")
+		name = strings.TrimSuffix(name, "'")
 		val, ok := params[name]
 		if !ok {
-			return fmt.Sprintf("<unknown variable %s>", name)
+			result = fmt.Sprintf("<unknown variable %s>", name)
+			return
 		}
 		switch real := val.(type) {
 		case int:
 		case string:
-			return fmt.Sprintf("'%s'", real)
+			result = fmt.Sprintf("'%s'", real)
+			return
 		default:
-			msg := fmt.Sprintf("<variable %s is of an invalid type: %v>", name, real)
-			err = fmt.Errorf(msg)
-			return msg
+			result = fmt.Sprintf("<variable %s is of an invalid type: %v>", name, real)
+			err = fmt.Errorf(result)
+			return
 		}
-		return ""
+		result = ""
+		return
 	})
 	return interpolated, err
 }
@@ -277,15 +282,37 @@ func rowsAsTsv(rows *sql.Rows) (string, error) {
 	return builder.String(), nil
 }
 
-func runTest(c *testCase, pool *dbServicePool, accept bool) error {
+type fs struct {
+	cache map[string]string
+}
+
+func (f *fs) readFile(path string) (string, error) {
+	str, ok := f.cache[path]
+	if ok {
+		return str, nil
+	} else {
+		blob, err := os.ReadFile(path)
+		if err != nil {
+			return "", err
+		}
+		str = string(blob)
+		f.cache[path] = str
+		return str, err
+	}
+}
+
+func runTest(c *testCase, pool *dbServicePool, fileCache fs, accept bool, viewDiff bool) error {
 	params := getParams(c.testDir)
-	blob, err := os.ReadFile(c.queryFile())
+	raw, err := fileCache.readFile(c.queryFile())
 	if err != nil {
 		return err
 	}
-	query, err := interpolatePsqlVars(string(blob), params)
+	query, err := interpolatePsqlVars(raw, params)
 	if err != nil {
 		return err
+	}
+	if order, ok := params["order_by"]; ok {
+		query += "\nORDER BY " + order.(string)
 	}
 	db, err := pool.waitFor(c.dbName())
 	if err != nil {
@@ -323,8 +350,6 @@ func runTest(c *testCase, pool *dbServicePool, accept bool) error {
 	}
 
 	if tsv != string(expected) {
-		// println(c.targetTsvPath())
-		// println("expected", string(expected))
 		tempFile, err := os.CreateTemp("", fmt.Sprintf("%s--%s--%s?*", c.dbName(), c.queryName(), c.testName()))
 		if err != nil {
 			return err
@@ -337,6 +362,10 @@ func runTest(c *testCase, pool *dbServicePool, accept bool) error {
 		err = tempFile.Close()
 		if err != nil {
 			return err
+		}
+		if viewDiff {
+			err = exec.Command("code", "--diff", c.targetTsvPath(), tempFile.Name()).Run()
+			crashIfErrNotNil(err)
 		}
 		return fmt.Errorf("different: try running ```sh\ncode --diff %s %s\n```\nIf the change looks correct, run ```sh\nbin/test_query --accept %s\n```", c.targetTsvPath(), tempFile.Name(), c.targetTsvPath())
 	} else {
@@ -368,6 +397,8 @@ var rootCmd = &cobra.Command{
 		crashIfErrNotNil(err)
 		accept, err := flags.GetBool("accept")
 		crashIfErrNotNil(err)
+		viewDiff, err := flags.GetBool("view-diff")
+		crashIfErrNotNil(err)
 		testCase, err := newTestCase(args[0])
 		crashIfErrNotNil(err)
 		repoRoot := filepath.Clean(filepath.Join(testCase.testDir, "../../../../../../.."))
@@ -381,8 +412,11 @@ var rootCmd = &cobra.Command{
 			fmt.Printf("    accept: %v\n", accept)
 			return
 		}
-		err = runTest(testCase, servicePool, accept)
-		crashIfErrNotNil(err)
+		cache := fs{cache: map[string]string{}}
+		err = runTest(testCase, servicePool, cache, accept, viewDiff)
+		if err != nil {
+			log.Fatal(err)
+		}
 	},
 }
 
@@ -390,6 +424,7 @@ func init() {
 	flags := rootCmd.Flags()
 	flags.Bool("dry-run", false, "print the commands that would be run")
 	flags.BoolP("accept", "a", false, "accept the new input")
+	flags.BoolP("view-diff", "v", false, "view the diff")
 }
 
 func main() {

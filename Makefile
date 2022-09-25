@@ -61,7 +61,8 @@ ${schema}/all_schemata/tests/omnibus/expected/results.tsv: \
 	sample_dbs/omnibus.schema.dump.sql \
 
 	@bin/test_query $(shell dirname $@) && touch -m $@
-
+.PHONY: all-schema-tests
+all-schema-tests: ${all_schema_tests}
 # ------------------------------------------------------------------------------
 ${schema}/all_schemata_excluding_internal/tests/empty/expected/results.tsv: \
 	bin/test_query \
@@ -159,17 +160,34 @@ ${db}/all/tests/sakila/basic_dbs_only/results.tsv: \
 
 	@bin/test_query $(shell dirname $@) && touch -m $@
 ################################################################################
+all_table_queries=\
+	db_object_kind/TABLE/queries/all_non_partition_tables/query.sql\
+	db_object_kind/TABLE/queries/all_partition_tables/query.sql\
+
+${all_table_queries} &: \
+	bin/render_template \
+	db_object_kind/TABLE/many.params.toml \
+	db_object_kind/TABLE/many.sql.tpl \
+
+	@bin/render_template -t db_object_kind/TABLE/many.sql.tpl
+
+.PHONY: table-queries
+table-queries: ${all_table_queries}
+# ------------------------------------------------------------------------------
+
+################################################################################
 all_queries=\
 	${schema_queries}\
+	${all_table_queries}\
+
 
 all_tests=\
 	${all_schema_tests}\
 
 .PHONY: tests
-tests: \
-	${all_tests} \
-	${all_role_tests} \
-	${all_db_tests} \
+tests: ${all_queries}
+	@go clean -testcache
+	@go test -v -parallel 4 -timeout 10s -run '^TestSnapshots' ./scripts/test_query
 
 # KIND=
 # QUERY=

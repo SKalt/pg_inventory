@@ -1,4 +1,4 @@
--- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+-- $1 : the schema name pattern.
 SELECT
     oid      AS schema_oid
   , nspname  AS schema_name
@@ -6,8 +6,9 @@ SELECT
     -- TODO: join to get owner names?
   , nspacl   AS schema_acl
 FROM pg_catalog.pg_namespace AS ns
+  -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
 WHERE 1=1
-  AND nspname ILIKE :'schema_name'
+  AND nspname ILIKE $1
   AND NOT EXISTS ( -- filter out schemata that are managed by extensions
     SELECT 1
     FROM pg_catalog.pg_depend AS dependency

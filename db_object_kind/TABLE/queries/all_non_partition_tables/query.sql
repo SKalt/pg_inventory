@@ -2,10 +2,6 @@
 -- $2: table persistence, 'p', 'u', or 't'
 SELECT
     tbl.oid
-  {{ if .schema_query -}}
-  , ns.nspname AS schema_name
-  , ns.oid AS schema_oid
-  {{- end -}}
   , tbl.relname AS table_name
   , tbl_space.spcname AS tablespace_name
   , tbl.reltablespace AS tablespace_oid
@@ -32,9 +28,6 @@ SELECT
   -- TODO: split out query identifying typed tables
   , underlying_composite_type.typname AS underlying_composite_type_name
   , tbl.reltuples AS approximate_number_of_rows
-  {{- if .partition }}
-  , pg_get_expr(tbl.relpartbound, tbl.oid, true) AS partition_bound
-  {{- end }}
 FROM pg_catalog.pg_class AS tbl
   -- https://www.postgresql.org/docs/current/catalog-pg-class.html
 LEFT JOIN pg_tablespace AS tbl_space ON (tbl.reltablespace = tbl_space.oid)
@@ -49,7 +42,7 @@ WHERE
   tbl.relkind = :'table_kind'
     -- 'r': ordinary
     -- 'p': partitioned
-  AND {{ if not .partition -}} NOT {{ end -}} tbl.relispartition
+  AND NOT tbl.relispartition
   AND tbl.relpersistence = :'table_persistence'
     -- 'p' = permanent table
     -- 'u' = unlogged table: not dropped at a session
