@@ -4,8 +4,9 @@ SELECT
     tbl.oid
   {{ if .schema_query -}}
   , ns.nspname AS schema_name
-  , ns.oid AS schema_oid
   {{- end -}}
+  , tbl.relnamespace AS schema_oid
+  , ns.nspname AS schema_name
   , tbl.relname AS table_name
   , tbl_space.spcname AS tablespace_name
   , tbl.reltablespace AS tablespace_oid
@@ -35,8 +36,9 @@ SELECT
   {{- if .partition }}
   , pg_get_expr(tbl.relpartbound, tbl.oid, true) AS partition_bound
   {{- end }}
-FROM pg_catalog.pg_class AS tbl
-  -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+FROM pg_catalog.pg_class AS tbl -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+  ON tbl.relnamespace = ns.oid
 LEFT JOIN pg_tablespace AS tbl_space ON (tbl.reltablespace = tbl_space.oid)
     -- https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
 LEFT JOIN (

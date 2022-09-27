@@ -186,7 +186,6 @@ all_tests=\
 
 .PHONY: tests
 tests: ${all_queries}
-	@go clean -testcache
 	@go test -v -parallel 4 -timeout 10s -run '^TestSnapshots' ./scripts/test_query
 
 # KIND=

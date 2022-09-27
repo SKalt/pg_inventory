@@ -4,12 +4,14 @@ import (
 	"database/sql"
 	"encoding/csv"
 	"fmt"
+	"io/fs"
 	"log"
 	"os"
 	"os/exec"
 	"path"
 	"path/filepath"
 	"regexp"
+	"runtime"
 	"strings"
 	"time"
 
@@ -165,7 +167,7 @@ func (c *testCase) dbName() string {
 	return c.segments[len(c.segments)-2]
 }
 func (c *testCase) validate() (err error) {
-	if c.segments[len(c.segments)-3] != "tests" {
+	if len(c.segments) < 3 || c.segments[len(c.segments)-3] != "tests" {
 		err = fmt.Errorf("%s is not a test-case", c.testDir)
 	}
 	return
@@ -178,6 +180,40 @@ func (c *testCase) queryFile() string {
 }
 func (c *testCase) targetTsvPath() string {
 	return filepath.Join(c.testDir, "results.tsv")
+}
+func getThisDir() string {
+	_, file, _, _ := runtime.Caller(0)
+	return filepath.Dir(file)
+}
+func getRepoRoot() string {
+	return filepath.Clean(filepath.Join(getThisDir(), "../.."))
+}
+func findTestCases(absPath string) (result []*testCase, err error) {
+	repoRoot := getRepoRoot()
+	// kindsDir := filepath.Join(repoRoot, "db_object_kind")
+	relPath, err := filepath.Rel(repoRoot, absPath)
+	if err != nil {
+		return
+	}
+	if strings.HasSuffix(relPath, "results.tsv") {
+		tc, err := newTestCase(relPath)
+		result = append(result, tc)
+		if err != nil {
+			return result, err
+		}
+	}
+	err = filepath.WalkDir(relPath, func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		var tc *testCase
+		tc, err = newTestCase(path)
+		if err == nil {
+			result = append(result, tc)
+		}
+		return nil
+	})
+	return
 }
 
 var bareVar = regexp.MustCompile(":[a-z_]+") // watch out! can match ::type cast syntax
@@ -203,10 +239,11 @@ func findAllVarsNamesIn(query string) []string {
 }
 
 func interpolatePsqlVars(query string, params map[string]interface{}) (interpolated string, err error) {
+	var msg string
 	interpolated = bareVar.ReplaceAllStringFunc(query, func(name string) (result string) {
 		val, ok := params[strings.Trim(name, ":")]
 		if !ok {
-			msg := fmt.Sprintf("<unknown variable %s>", name)
+			msg = fmt.Sprintf("<unknown variable %s>", name)
 			err = fmt.Errorf(msg)
 			return msg
 		}
@@ -225,12 +262,17 @@ func interpolatePsqlVars(query string, params map[string]interface{}) (interpola
 			return
 		}
 	})
+	if err != nil {
+		return
+	}
 	interpolated = stringVar.ReplaceAllStringFunc(interpolated, func(name string) (result string) {
 		name = strings.TrimPrefix(name, ":'")
 		name = strings.TrimSuffix(name, "'")
 		val, ok := params[name]
 		if !ok {
-			result = fmt.Sprintf("<unknown variable %s>", name)
+			msg := fmt.Sprintf("<unknown variable %s>", name)
+			result = msg
+			err = fmt.Errorf(msg)
 			return
 		}
 		switch real := val.(type) {
@@ -282,11 +324,11 @@ func rowsAsTsv(rows *sql.Rows) (string, error) {
 	return builder.String(), nil
 }
 
-type fs struct {
+type ioCache struct {
 	cache map[string]string
 }
 
-func (f *fs) readFile(path string) (string, error) {
+func (f *ioCache) readFile(path string) (string, error) {
 	str, ok := f.cache[path]
 	if ok {
 		return str, nil
@@ -301,7 +343,7 @@ func (f *fs) readFile(path string) (string, error) {
 	}
 }
 
-func runTest(c *testCase, pool *dbServicePool, fileCache fs, accept bool, viewDiff bool) error {
+func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, viewDiff bool) error {
 	params := getParams(c.testDir)
 	raw, err := fileCache.readFile(c.queryFile())
 	if err != nil {
@@ -399,23 +441,40 @@ var rootCmd = &cobra.Command{
 		crashIfErrNotNil(err)
 		viewDiff, err := flags.GetBool("view-diff")
 		crashIfErrNotNil(err)
-		testCase, err := newTestCase(args[0])
-		crashIfErrNotNil(err)
-		repoRoot := filepath.Clean(filepath.Join(testCase.testDir, "../../../../../../.."))
-		servicePool := newDbServicePool(repoRoot)
-		dsn, err := servicePool.getDsn(testCase.dbName())
-		crashIfErrNotNil(err)
-		if dryRun {
-			fmt.Printf("query file: %s\n", testCase.queryFile())
-			fmt.Printf("compare to: %s\n", testCase.targetTsvPath())
-			fmt.Printf(" target db: %s\n", dsn)
-			fmt.Printf("    accept: %v\n", accept)
-			return
+		path := args[0]
+		if !strings.HasPrefix(path, "/") {
+			path, err = filepath.Abs(filepath.Join(".", path))
+			crashIfErrNotNil(err)
 		}
-		cache := fs{cache: map[string]string{}}
-		err = runTest(testCase, servicePool, cache, accept, viewDiff)
-		if err != nil {
-			log.Fatal(err)
+		testCases, err := findTestCases(path)
+		crashIfErrNotNil(err)
+		repoRoot := getRepoRoot()
+		servicePool := newDbServicePool(repoRoot)
+		dbUsage := map[string]uint8{}
+		for _, tc := range testCases {
+			db := tc.dbName()
+			dbUsage[db]++
+			_, err := servicePool.getDsn(db)
+			crashIfErrNotNil(err)
+		}
+		if dryRun {
+			fmt.Printf("db usage: %v", dbUsage)
+		}
+		cache := ioCache{cache: map[string]string{}}
+		for _, tc := range testCases {
+			if dryRun {
+				fmt.Printf(
+					"Would run %s using %s against %s",
+					tc.testDir, tc.queryFile(), tc.dbName())
+			} else {
+				err = runTest(tc, servicePool, cache, accept, viewDiff)
+				if err != nil {
+					fmt.Printf(
+						"failed to run %s using %s against %s",
+						tc.testDir, tc.queryFile(), tc.dbName())
+					log.Fatal(err)
+				}
+			}
 		}
 	},
 }

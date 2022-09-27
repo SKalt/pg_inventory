@@ -3,17 +3,11 @@ package main
 import (
 	"os"
 	"path/filepath"
-	"runtime"
 	"testing"
 )
 
-func getThisDir() string {
-	_, file, _, _ := runtime.Caller(0)
-	return filepath.Dir(file)
-}
-
 func TestSnapshots(t *testing.T) {
-	repoRoot := filepath.Clean(filepath.Join(getThisDir(), "../.."))
+	repoRoot := getRepoRoot()
 	servicePool := newDbServicePool(repoRoot)
 	t.Cleanup(func() {
 		servicePool.cleanup()
@@ -43,7 +37,7 @@ func TestSnapshots(t *testing.T) {
 		}
 		testCases[i] = testCase
 	}
-	cache := fs{cache: make(map[string]string, len(testCases))}
+	cache := ioCache{cache: make(map[string]string, len(testCases))}
 	for _, testCase := range testCases {
 		name, err := filepath.Rel(repoRoot, testCase.targetTsvPath())
 		if err != nil {
