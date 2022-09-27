@@ -1,0 +1,8 @@
+oid	schema_oid	schema_name	table_name	tablespace_name	tablespace_oid	access_method_options	description	owner	owner_oid	persistence	acl	replica_identity	underlying_composite_type_oid	underlying_composite_type_name	approximate_number_of_rows	partition_bound
+16771	16434	am_examples	tableam_parted_c_heap2		0			postgres	10	p		d	0		-1	FOR VALUES IN ('c')
+16758	16434	am_examples	tableam_parted_1_heapx		0			postgres	10	p		d	0		-1	FOR VALUES IN ('a', 'b')
+16763	16434	am_examples	tableam_parted_2_heapx		0			postgres	10	p		d	0		-1	FOR VALUES IN ('c', 'd')
+16776	16434	am_examples	tableam_parted_d_heap2		0			postgres	10	p		d	0		-1	FOR VALUES IN ('d')
+18256	16447	regress_rls_schema	part_document_nonfiction		0			regress_rls_alice	16408	p	{regress_rls_alice=arwdDxt/regress_rls_alice,=arwdDxt/regress_rls_alice}	d	0		-1	FOR VALUES FROM (99) TO (100)
+18261	16447	regress_rls_schema	part_document_satire		0			regress_rls_alice	16408	p	{regress_rls_alice=arwdDxt/regress_rls_alice,=arwdDxt/regress_rls_alice}	d	0		-1	FOR VALUES FROM (55) TO (56)
+18251	16447	regress_rls_schema	part_document_fiction		0			regress_rls_alice	16408	p	{regress_rls_alice=arwdDxt/regress_rls_alice,=arwdDxt/regress_rls_alice}	d	0		-1	FOR VALUES FROM (11) TO (12)
