@@ -353,8 +353,14 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	if err != nil {
 		return err
 	}
+	if where, ok := params["where"]; ok {
+		query += "\n WHERE " + where.(string)
+	}
 	if order, ok := params["order_by"]; ok {
 		query += "\nORDER BY " + order.(string)
+	}
+	if suffix, ok := params["suffix"]; ok {
+		query += "\n" + suffix.(string)
 	}
 	db, err := pool.waitFor(c.dbName())
 	if err != nil {
@@ -470,7 +476,7 @@ var rootCmd = &cobra.Command{
 				err = runTest(tc, servicePool, cache, accept, viewDiff)
 				if err != nil {
 					fmt.Printf(
-						"failed to run %s using %s against %s",
+						"failed to run %s using %s against %s\n",
 						tc.testDir, tc.queryFile(), tc.dbName())
 					log.Fatal(err)
 				}

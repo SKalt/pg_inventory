@@ -1,0 +1,254 @@
+rel_oid	rel_name	col_name	type_oid	type_name	type_schema	stats_detail_level	col_number	dimension_number	type_length	nullability_identity_generation	expr	col_options	fdw_options
+16406	customer_customer_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16406	customer_customer_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16406	customer_customer_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16407	customer	store_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16407	customer	first_name	1043	varchar	pg_catalog	-1	3	0	49	3328			
+16407	customer	last_name	1043	varchar	pg_catalog	-1	4	0	49	3328			
+16407	customer	email	1043	varchar	pg_catalog	-1	5	0	54	1280			
+16407	customer	address_id	21	int2	pg_catalog	-1	6	0	-1	3328			
+16407	customer	active	23	int4	pg_catalog	-1	10	0	-1	1280			
+16407	customer	customer_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('customer_customer_id_seq'::regclass)		
+16407	customer	activebool	16	bool	pg_catalog	-1	7	0	-1	3328	true		
+16407	customer	create_date	1082	date	pg_catalog	-1	8	0	-1	3328	('now'::text)::date		
+16407	customer	last_update	1114	timestamp	pg_catalog	-1	9	0	-1	1280	now()		
+16416	actor_actor_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16416	actor_actor_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16416	actor_actor_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16417	actor	first_name	1043	varchar	pg_catalog	-1	2	0	49	3328			
+16417	actor	last_name	1043	varchar	pg_catalog	-1	3	0	49	3328			
+16417	actor	actor_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('actor_actor_id_seq'::regclass)		
+16417	actor	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	3328	now()		
+16422	category_category_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16422	category_category_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16422	category_category_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16423	category	name	1043	varchar	pg_catalog	-1	2	0	29	3328			
+16423	category	category_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('category_category_id_seq'::regclass)		
+16423	category	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	3328	now()		
+16428	film_film_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16428	film_film_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16428	film_film_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16429	film	title	1043	varchar	pg_catalog	-1	2	0	259	3328			
+16429	film	description	25	text	pg_catalog	-1	3	0	-1	1280			
+16429	film	release_year	16396	year	public	-1	4	0	-1	1280			
+16429	film	language_id	21	int2	pg_catalog	-1	5	0	-1	3328			
+16429	film	original_language_id	21	int2	pg_catalog	-1	6	0	-1	1280			
+16429	film	length	21	int2	pg_catalog	-1	9	0	-1	1280			
+16429	film	special_features	1009	_text	pg_catalog	-1	13	1	-1	1280			
+16429	film	fulltext	3614	tsvector	pg_catalog	-1	14	0	-1	3328			
+16429	film	film_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('film_film_id_seq'::regclass)		
+16429	film	rental_duration	21	int2	pg_catalog	-1	7	0	-1	3328	3		
+16429	film	rental_rate	1700	numeric	pg_catalog	-1	8	0	262150	3328	4.99		
+16429	film	replacement_cost	1700	numeric	pg_catalog	-1	10	0	327686	3328	19.99		
+16429	film	rating	16385	mpaa_rating	public	-1	11	0	-1	1280	'G'::mpaa_rating		
+16429	film	last_update	1114	timestamp	pg_catalog	-1	12	0	-1	3328	now()		
+16440	film_actor	actor_id	21	int2	pg_catalog	-1	1	0	-1	3328			
+16440	film_actor	film_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16440	film_actor	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	3328	now()		
+16444	film_category	film_id	21	int2	pg_catalog	-1	1	0	-1	3328			
+16444	film_category	category_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16444	film_category	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	3328	now()		
+16448	actor_info	actor_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16448	actor_info	first_name	1043	varchar	pg_catalog	-1	2	0	49	1280			
+16448	actor_info	last_name	1043	varchar	pg_catalog	-1	3	0	49	1280			
+16448	actor_info	film_info	25	text	pg_catalog	-1	4	0	-1	1280			
+16453	address_address_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16453	address_address_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16453	address_address_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16454	address	address	1043	varchar	pg_catalog	-1	2	0	54	3328			
+16454	address	address2	1043	varchar	pg_catalog	-1	3	0	54	1280			
+16454	address	district	1043	varchar	pg_catalog	-1	4	0	24	3328			
+16454	address	city_id	21	int2	pg_catalog	-1	5	0	-1	3328			
+16454	address	postal_code	1043	varchar	pg_catalog	-1	6	0	14	1280			
+16454	address	phone	1043	varchar	pg_catalog	-1	7	0	24	3328			
+16454	address	address_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('address_address_id_seq'::regclass)		
+16454	address	last_update	1114	timestamp	pg_catalog	-1	8	0	-1	3328	now()		
+16459	city_city_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16459	city_city_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16459	city_city_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16460	city	city	1043	varchar	pg_catalog	-1	2	0	54	3328			
+16460	city	country_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16460	city	city_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('city_city_id_seq'::regclass)		
+16460	city	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	3328	now()		
+16465	country_country_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16465	country_country_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16465	country_country_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16466	country	country	1043	varchar	pg_catalog	-1	2	0	54	3328			
+16466	country	country_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('country_country_id_seq'::regclass)		
+16466	country	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	3328	now()		
+16471	customer_list	id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16471	customer_list	name	25	text	pg_catalog	-1	2	0	-1	1280			
+16471	customer_list	address	1043	varchar	pg_catalog	-1	3	0	54	1280			
+16471	customer_list	zip code	1043	varchar	pg_catalog	-1	4	0	14	1280			
+16471	customer_list	phone	1043	varchar	pg_catalog	-1	5	0	24	1280			
+16471	customer_list	city	1043	varchar	pg_catalog	-1	6	0	54	1280			
+16471	customer_list	country	1043	varchar	pg_catalog	-1	7	0	54	1280			
+16471	customer_list	notes	25	text	pg_catalog	-1	8	0	-1	1280			
+16471	customer_list	sid	21	int2	pg_catalog	-1	9	0	-1	1280			
+16476	film_list	fid	23	int4	pg_catalog	-1	1	0	-1	1280			
+16476	film_list	title	1043	varchar	pg_catalog	-1	2	0	259	1280			
+16476	film_list	description	25	text	pg_catalog	-1	3	0	-1	1280			
+16476	film_list	category	1043	varchar	pg_catalog	-1	4	0	29	1280			
+16476	film_list	price	1700	numeric	pg_catalog	-1	5	0	262150	1280			
+16476	film_list	length	21	int2	pg_catalog	-1	6	0	-1	1280			
+16476	film_list	rating	16385	mpaa_rating	public	-1	7	0	-1	1280			
+16476	film_list	actors	25	text	pg_catalog	-1	8	0	-1	1280			
+16481	inventory_inventory_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16481	inventory_inventory_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16481	inventory_inventory_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16482	inventory	film_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16482	inventory	store_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16482	inventory	inventory_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('inventory_inventory_id_seq'::regclass)		
+16482	inventory	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	3328	now()		
+16487	language_language_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16487	language_language_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16487	language_language_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16488	language	name	1042	bpchar	pg_catalog	-1	2	0	24	3328			
+16488	language	language_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('language_language_id_seq'::regclass)		
+16488	language	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	3328	now()		
+16493	nicer_but_slower_film_list	fid	23	int4	pg_catalog	-1	1	0	-1	1280			
+16493	nicer_but_slower_film_list	title	1043	varchar	pg_catalog	-1	2	0	259	1280			
+16493	nicer_but_slower_film_list	description	25	text	pg_catalog	-1	3	0	-1	1280			
+16493	nicer_but_slower_film_list	category	1043	varchar	pg_catalog	-1	4	0	29	1280			
+16493	nicer_but_slower_film_list	price	1700	numeric	pg_catalog	-1	5	0	262150	1280			
+16493	nicer_but_slower_film_list	length	21	int2	pg_catalog	-1	6	0	-1	1280			
+16493	nicer_but_slower_film_list	rating	16385	mpaa_rating	public	-1	7	0	-1	1280			
+16493	nicer_but_slower_film_list	actors	25	text	pg_catalog	-1	8	0	-1	1280			
+16498	payment_payment_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16498	payment_payment_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16498	payment_payment_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16499	payment	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16499	payment	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16499	payment	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16499	payment	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16499	payment	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16499	payment	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16503	payment_p2007_01	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16503	payment_p2007_01	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16503	payment_p2007_01	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16503	payment_p2007_01	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16503	payment_p2007_01	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16508	payment_p2007_02	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16508	payment_p2007_02	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16508	payment_p2007_02	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16508	payment_p2007_02	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16508	payment_p2007_02	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16513	payment_p2007_03	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16513	payment_p2007_03	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16513	payment_p2007_03	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16513	payment_p2007_03	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16513	payment_p2007_03	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16513	payment_p2007_03	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16518	payment_p2007_04	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16518	payment_p2007_04	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16518	payment_p2007_04	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16518	payment_p2007_04	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16518	payment_p2007_04	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16518	payment_p2007_04	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16508	payment_p2007_02	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16503	payment_p2007_01	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16523	payment_p2007_05	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16523	payment_p2007_05	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16523	payment_p2007_05	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16523	payment_p2007_05	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16523	payment_p2007_05	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16528	payment_p2007_06	customer_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16528	payment_p2007_06	staff_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16528	payment_p2007_06	rental_id	23	int4	pg_catalog	-1	4	0	-1	3328			
+16528	payment_p2007_06	amount	1700	numeric	pg_catalog	-1	5	0	327686	3328			
+16528	payment_p2007_06	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	3328			
+16533	rental_rental_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16533	rental_rental_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16533	rental_rental_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16534	rental	rental_date	1114	timestamp	pg_catalog	-1	2	0	-1	3328			
+16534	rental	inventory_id	23	int4	pg_catalog	-1	3	0	-1	3328			
+16534	rental	customer_id	21	int2	pg_catalog	-1	4	0	-1	3328			
+16534	rental	return_date	1114	timestamp	pg_catalog	-1	5	0	-1	1280			
+16534	rental	staff_id	21	int2	pg_catalog	-1	6	0	-1	3328			
+16534	rental	rental_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('rental_rental_id_seq'::regclass)		
+16534	rental	last_update	1114	timestamp	pg_catalog	-1	7	0	-1	3328	now()		
+16539	sales_by_film_category	category	1043	varchar	pg_catalog	-1	1	0	29	1280			
+16539	sales_by_film_category	total_sales	1700	numeric	pg_catalog	-1	2	0	-1	1280			
+16544	staff_staff_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16544	staff_staff_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16544	staff_staff_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16545	staff	first_name	1043	varchar	pg_catalog	-1	2	0	49	3328			
+16545	staff	last_name	1043	varchar	pg_catalog	-1	3	0	49	3328			
+16545	staff	address_id	21	int2	pg_catalog	-1	4	0	-1	3328			
+16545	staff	email	1043	varchar	pg_catalog	-1	5	0	54	1280			
+16545	staff	store_id	21	int2	pg_catalog	-1	6	0	-1	3328			
+16545	staff	username	1043	varchar	pg_catalog	-1	8	0	20	3328			
+16545	staff	password	1043	varchar	pg_catalog	-1	9	0	44	1280			
+16545	staff	picture	17	bytea	pg_catalog	-1	11	0	-1	1280			
+16545	staff	staff_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('staff_staff_id_seq'::regclass)		
+16545	staff	active	16	bool	pg_catalog	-1	7	0	-1	3328	true		
+16545	staff	last_update	1114	timestamp	pg_catalog	-1	10	0	-1	3328	now()		
+16553	store_store_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	3328			
+16553	store_store_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	3328			
+16553	store_store_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	3328			
+16554	store	manager_staff_id	21	int2	pg_catalog	-1	2	0	-1	3328			
+16554	store	address_id	21	int2	pg_catalog	-1	3	0	-1	3328			
+16554	store	store_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('store_store_id_seq'::regclass)		
+16554	store	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	3328	now()		
+16559	sales_by_store	store	25	text	pg_catalog	-1	1	0	-1	1280			
+16559	sales_by_store	manager	25	text	pg_catalog	-1	2	0	-1	1280			
+16559	sales_by_store	total_sales	1700	numeric	pg_catalog	-1	3	0	-1	1280			
+16564	staff_list	id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16564	staff_list	name	25	text	pg_catalog	-1	2	0	-1	1280			
+16564	staff_list	address	1043	varchar	pg_catalog	-1	3	0	54	1280			
+16564	staff_list	zip code	1043	varchar	pg_catalog	-1	4	0	14	1280			
+16564	staff_list	phone	1043	varchar	pg_catalog	-1	5	0	24	1280			
+16564	staff_list	city	1043	varchar	pg_catalog	-1	6	0	54	1280			
+16564	staff_list	country	1043	varchar	pg_catalog	-1	7	0	54	1280			
+16564	staff_list	sid	21	int2	pg_catalog	-1	8	0	-1	1280			
+16523	payment_p2007_05	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16528	payment_p2007_06	payment_id	23	int4	pg_catalog	-1	1	0	-1	3328	nextval('payment_payment_id_seq'::regclass)		
+16575	actor_pkey	actor_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16577	address_pkey	address_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16579	category_pkey	category_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16581	city_pkey	city_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16583	country_pkey	country_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16585	customer_pkey	customer_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16587	film_actor_pkey	actor_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16587	film_actor_pkey	film_id	21	int2	pg_catalog	-1	2	0	-1	1280			
+16589	film_category_pkey	film_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16589	film_category_pkey	category_id	21	int2	pg_catalog	-1	2	0	-1	1280			
+16591	film_pkey	film_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16593	inventory_pkey	inventory_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16595	language_pkey	language_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16597	payment_pkey	payment_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16599	rental_pkey	rental_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16601	staff_pkey	staff_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16603	store_pkey	store_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16605	film_fulltext_idx	fulltext	3642	gtsvector	pg_catalog	-1	1	0	-1	1280			
+16606	idx_actor_last_name	last_name	1043	varchar	pg_catalog	-1	1	0	49	1280			
+16607	idx_fk_address_id	address_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16608	idx_fk_city_id	city_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16609	idx_fk_country_id	country_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16610	idx_fk_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16611	idx_fk_film_id	film_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16612	idx_fk_inventory_id	inventory_id	23	int4	pg_catalog	-1	1	0	-1	1280			
+16613	idx_fk_language_id	language_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16614	idx_fk_original_language_id	original_language_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16615	idx_fk_payment_p2007_01_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16616	idx_fk_payment_p2007_01_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16617	idx_fk_payment_p2007_02_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16618	idx_fk_payment_p2007_02_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16619	idx_fk_payment_p2007_03_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16620	idx_fk_payment_p2007_03_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16621	idx_fk_payment_p2007_04_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16622	idx_fk_payment_p2007_04_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16623	idx_fk_payment_p2007_05_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16624	idx_fk_payment_p2007_05_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16625	idx_fk_payment_p2007_06_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16626	idx_fk_payment_p2007_06_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16627	idx_fk_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16628	idx_fk_store_id	store_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16629	idx_last_name	last_name	1043	varchar	pg_catalog	-1	1	0	49	1280			
+16630	idx_store_id_film_id	store_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16630	idx_store_id_film_id	film_id	21	int2	pg_catalog	-1	2	0	-1	1280			
+16631	idx_title	title	1043	varchar	pg_catalog	-1	1	0	259	1280			
+16632	idx_unq_manager_staff_id	manager_staff_id	21	int2	pg_catalog	-1	1	0	-1	1280			
+16633	idx_unq_rental_rental_date_inventory_id_customer_id	rental_date	1114	timestamp	pg_catalog	-1	1	0	-1	1280			
+16633	idx_unq_rental_rental_date_inventory_id_customer_id	inventory_id	23	int4	pg_catalog	-1	2	0	-1	1280			
+16633	idx_unq_rental_rental_date_inventory_id_customer_id	customer_id	21	int2	pg_catalog	-1	3	0	-1	1280			

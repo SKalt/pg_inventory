@@ -1,0 +1,4 @@
+[informative]
+packed = false
+[minimal]
+packed = true

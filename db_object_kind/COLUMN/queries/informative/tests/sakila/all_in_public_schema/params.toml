@@ -1,0 +1,8 @@
+where = """
+rel.relnamespace = (
+  SELECT ns.oid
+  FROM pg_catalog.pg_namespace AS ns
+  WHERE ns.nspname = 'public'
+)
+"""
+order_by = "rel.relname, col.attname"

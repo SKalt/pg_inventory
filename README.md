@@ -62,7 +62,7 @@ Each SQL query is tested against a number of example databases.
 - [ ] [SERVER](./SERVER/)
 - [ ] [STATISTICS](./STATISTICS/)
 - [ ] [SUBSCRIPTION](./SUBSCRIPTION/)
-- [ ] [TABLE](./TABLE/)
+- [X] [TABLE](./TABLE/)
 - [ ] [TABLESPACE](./TABLESPACE/)
 - [ ] [TEXT_SEARCH_CONFIGURATION](./TEXT_SEARCH_CONFIGURATION/)
 - [ ] [TEXT_SEARCH_DICTIONARY](./TEXT_SEARCH_DICTIONARY/)
