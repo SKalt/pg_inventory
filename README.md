@@ -33,9 +33,9 @@ Each SQL query is tested against a number of example databases.
 
 - [ ] [ACCESS_METHOD](./ACCESS_METHOD/)
 - [ ] [AGGREGATE](./AGGREGATE/)
-- [ ] [CAST](./CAST/)
+- [X] [CAST](./CAST/)
 - [ ] [COLLATION](./COLLATION/)
-- [ ] [COLUMN](./COLUMN/)
+- [X] [COLUMN](./COLUMN/README.md)
 - [ ] [CONSTRAINT](./CONSTRAINT/)
 - [ ] [CONVERSION](./CONVERSION/)
 - [x] [DATABASE](./DATABASE/)
