@@ -1,0 +1,11 @@
+name_template = "{{.kind}}_constraints{{if .packed}}_packed{{end}}"
+[packed]
+  packed = true
+  "" = false
+[kind]
+  check = "c"
+  primary_key = "p"
+  foreign_key = "f"
+  unique = "u"
+  exclusion = "x"
+  all = ""

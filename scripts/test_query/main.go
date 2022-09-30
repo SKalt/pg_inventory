@@ -470,7 +470,7 @@ var rootCmd = &cobra.Command{
 		for _, tc := range testCases {
 			if dryRun {
 				fmt.Printf(
-					"Would run %s using %s against %s",
+					"Would run %s using %s against %s\n",
 					tc.testDir, tc.queryFile(), tc.dbName())
 			} else {
 				err = runTest(tc, servicePool, cache, accept, viewDiff)
