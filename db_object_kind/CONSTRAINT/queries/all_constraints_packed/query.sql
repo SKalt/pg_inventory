@@ -1,5 +1,3 @@
-{{ $is_fk := (eq .kind "f") -}}
-{{ $show_fk := or (not .kind) ($is_fk) -}}
 SELECT
 -- constraint namespacing
     ns.nspname AS constraint_schema
@@ -7,16 +5,6 @@ SELECT
   , constraint_.oid AS constraint_oid
   , constraint_.conname AS constraint_name
 -- constraint enforcement info
-{{- if and (not .kind) (not .packed) }}
-  , constraint_.contype AS constraint_type
-    -- c => check
-    -- f => foreign key
-    -- p => primary key
-    -- t => constraint trigger
-    -- u => unique
-    -- x => exclusion
-{{- end }}
-{{- if .packed }}
   , (/* enforcement_info: a 2-byte struct of the form
       00000000 00000000
       -----    ~~~~~~ *
@@ -28,7 +16,7 @@ SELECT
     | CASE WHEN constraint_.convalidated  THEN 1<<2 ELSE 0 END
     | CASE WHEN constraint_.conislocal    THEN 1<<3 ELSE 0 END
     | CASE WHEN constraint_.connoinherit  THEN 1<<4 ELSE 0 END
-    | ({{/* always include type in packed struct since we have room */}}
+    | (
         CASE constraint_.contype -- constraint type
           WHEN 'c' THEN 1<<8  -- check
           WHEN 'f' THEN 1<<9  -- foreign key
@@ -40,7 +28,6 @@ SELECT
         END
       )
     ) AS enforcement_info
-{{- if $show_fk }}
   , (/* fk_info: a 2-byte packed struct of the form
           update
           action
@@ -80,49 +67,6 @@ SELECT
         END
       )
   ) AS fk_info
-{{- end -}}
-{{- else }}
-  , constraint_.condeferrable AS is_deferrable
-  , constraint_.condeferred AS is_deferred_by_default
-  , constraint_.convalidated AS is_validated
-    -- currently falsifiable only for fk and check
-  , constraint_.conislocal AS is_local
-    -- the constraint is defined within the relation (can be inherited, too)
-  , constraint_.connoinherit AS not_inheritable
-    -- not inheritabe AND local to the relation
-{{- if $show_fk }}
--- FK update codes
-{{- if $is_fk }}
-  , constraint_.confupdtype
-{{- else }}
-  , CASE constraint_.contype WHEN 'f' THEN constraint_.confupdtype ELSE NULL END
-{{- end }} AS fk_update_action_code
-    -- fk update action code:
-    -- a => no action
-    -- r => restrict
-    -- c => cascade
-    -- n => set null
-    -- d => set default
-{{- if $is_fk }}
-  , constraint_.confdeltype
-{{- else }}
-  , CASE constraint_.contype WHEN 'f' THEN constraint_.confdeltype ELSE NULL END
-{{- end }} AS fk_delete_action_code -- same codes as fk update
-{{- if $is_fk }}
-  , constraint_.confmatchtype
-{{- else }}
-  , ( -- fk_match_type
-      CASE constraint_.contype
-        WHEN 'f' THEN constraint_.confmatchtype
-        ELSE NULL
-      END
-    )
-{{- end }} AS fk_match_type
-    -- f => full
-    -- p => partial
-    -- s => simple
-{{- end }}
-{{- end }}
 -- table constraint information
   , tbl_ns.nspname AS table_schema
   , tbl.relnamespace AS table_schema_oid
@@ -145,7 +89,6 @@ SELECT
     -- int2[] list of the constrained columns (references pg_attribute.attnum)
     -- Populated iff the constraint is a table constraint (including foreign
     -- keys, but not constraint triggers)
-{{- if $show_fk }}
 -- fk referenced table info
   , referenced_tbl_ns.nspname AS referenced_table_schema
   , referenced_tbl.relnamespace AS referenced_table_schema_oid
@@ -158,20 +101,13 @@ SELECT
   , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
   , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
   , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
-{{- else if or (not .kind) (eq .kind "x") }}
-  , constraint_.conexclop AS per_column_exclusion_operator_oids
-    -- oid[] each referencing pg_catalog.pg_operator.oid
-{{- end }}
 FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
-  ON {{- if .kind }} constraint_.contype = '{{.kind}}'
-  AND {{- end }} constraint_.connamespace = ns.oid
-{{ if $show_fk -}}
-{{- if not $is_fk }}LEFT{{ else }}INNER{{ end }} JOIN pg_catalog.pg_class AS referenced_tbl
+  ON constraint_.connamespace = ns.oid
+LEFT JOIN pg_catalog.pg_class AS referenced_tbl
   ON constraint_.confrelid = referenced_tbl.oid
-{{ if not $is_fk }}LEFT{{ else }}INNER{{ end }} JOIN pg_catalog.pg_namespace AS referenced_tbl_ns
+LEFT JOIN pg_catalog.pg_namespace AS referenced_tbl_ns
   ON referenced_tbl.relnamespace = referenced_tbl_ns.oid
-{{- end }}
 LEFT JOIN (
     pg_catalog.pg_class AS tbl -- https://www.postgresql.org/docs/current/catalog-pg-class.html
     INNER JOIN pg_catalog.pg_namespace AS tbl_ns ON tbl.relnamespace = tbl_ns.oid

@@ -1,0 +1,8 @@
+constraint_schema	constraint_schema_id	constraint_oid	constraint_name	enforcement_info	fk_info	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_schema_oid	referenced_table_name	referenced_table_oid	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids
+regress_rls_schema	16447	18507	document_cid_fkey	540	1044	regress_rls_schema	16447	document	18241	0				0	0	{2}	regress_rls_schema	16447	category	18224	{1}	{96}	{96}	{96}
+regress_rls_schema	16447	18512	r2_3_a_fkey	540	1044	regress_rls_schema	16447	r2_3	18283	0				0	0	{1}	regress_rls_schema	16447	r1	18265	{1}	{96}	{96}	{96}
+regress_rls_schema	16447	18517	r2_4_a_fkey	540	4116	regress_rls_schema	16447	r2_4	18286	0				0	0	{1}	regress_rls_schema	16447	r1	18265	{1}	{96}	{96}	{96}
+regress_rls_schema	16447	18522	r2_5_a_fkey	540	1092	regress_rls_schema	16447	r2_5	18289	0				0	0	{1}	regress_rls_schema	16447	r1	18265	{1}	{96}	{96}	{96}
+trigger_test	16449	18527	update_log_account_id_fkey	540	1044	trigger_test	16449	update_log	18446	0				0	0	{2}	trigger_test	16449	accounts	18439	{1}	{96}	{96}	{96}
+schema	16447	r1	18265	{1}	{96}	{96}	{96}
+trigger_test	16449	18527	update_log_account_id_fkey	false	false	true	true	true	a	a	s	trigger_test	16449	update_log	18446	0				0	0	{2}	trigger_test	16449	accounts	18439	{1}	{96}	{96}	{96}

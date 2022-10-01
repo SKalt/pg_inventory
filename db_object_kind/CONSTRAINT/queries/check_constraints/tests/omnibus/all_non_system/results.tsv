@@ -1,0 +1,14 @@
+constraint_schema	constraint_schema_id	constraint_oid	constraint_name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers
+composite_type_examples	16437	16805	check_f1_gt_1	false	false	true	true	false	composite_type_examples	16437	ordinary_table	16800	0				0	0	{1}
+composite_type_examples	16437	18108	check_f1_gt_1	false	false	true	false	false	composite_type_examples	16437	inherited_table	18103	0				0	1	{1}
+composite_type_examples	16437	18109	check_f1_gt_1_again	false	false	true	false	false	composite_type_examples	16437	inherited_table	18103	0				0	1	{2}
+composite_type_examples	16437	16806	check_f1_gt_1_again	false	false	true	true	false	composite_type_examples	16437	ordinary_table	16800	0				0	0	{2}
+composite_type_examples	16437	18110	check_nested_f1_gt_1	false	false	true	false	false	composite_type_examples	16437	inherited_table	18103	0				0	1	{3}
+composite_type_examples	16437	16807	check_nested_f1_gt_1	false	false	true	true	false	composite_type_examples	16437	ordinary_table	16800	0				0	0	{3}
+composite_type_examples	16437	16808	check_nested_f1_gt_1_again	false	false	true	true	false	composite_type_examples	16437	ordinary_table	16800	0				0	0	{4}
+composite_type_examples	16437	18111	check_nested_f1_gt_1_again	false	false	true	false	false	composite_type_examples	16437	inherited_table	18103	0				0	1	{4}
+domain_examples	16440	16645	check_postal_code_regex	false	false	true	true	false				0	0	domain_examples	16440	us_postal_code	16644	0	
+domain_examples	16440	16642	should_be_even	false	false	true	true	false				0	0	domain_examples	16440	positive_even_number	16641	0	
+domain_examples	16440	16638	should_be_positive	false	false	true	true	false				0	0	domain_examples	16440	positive_number	16637	0	
+foreign_db_example	16444	18165	imaginary_table_id_gt_1	false	false	true	true	false	foreign_db_example	16444	technically_doesnt_exist	18160	0				0	0	{1}
+foreign_db_example	16444	16670	positive_number_check	false	false	true	true	false				0	0	foreign_db_example	16444	positive_number	16669	0	

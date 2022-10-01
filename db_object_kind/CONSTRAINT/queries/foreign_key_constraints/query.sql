@@ -5,13 +5,6 @@ SELECT
   , constraint_.oid AS constraint_oid
   , constraint_.conname AS constraint_name
 -- constraint enforcement info
-  , constraint_.contype AS constraint_type
-    -- c => check
-    -- f => foreign key
-    -- p => primary key
-    -- t => constraint trigger
-    -- u => unique
-    -- x => exclusion
   , constraint_.condeferrable AS is_deferrable
   , constraint_.condeferred AS is_deferred_by_default
   , constraint_.convalidated AS is_validated
@@ -21,20 +14,15 @@ SELECT
   , constraint_.connoinherit AS not_inheritable
     -- not inheritabe AND local to the relation
 -- FK update codes
-  , CASE constraint_.contype WHEN 'f' THEN constraint_.confupdtype ELSE NULL END AS fk_update_action_code
+  , constraint_.confupdtype AS fk_update_action_code
     -- fk update action code:
     -- a => no action
     -- r => restrict
     -- c => cascade
     -- n => set null
     -- d => set default
-  , CASE constraint_.contype WHEN 'f' THEN constraint_.confdeltype ELSE NULL END AS fk_delete_action_code -- same codes as fk update
-  , ( -- fk_match_type
-      CASE constraint_.contype
-        WHEN 'f' THEN constraint_.confmatchtype
-        ELSE NULL
-      END
-    ) AS fk_match_type
+  , constraint_.confdeltype AS fk_delete_action_code -- same codes as fk update
+  , constraint_.confmatchtype AS fk_match_type
     -- f => full
     -- p => partial
     -- s => simple
@@ -74,10 +62,11 @@ SELECT
   , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
 FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
-  ON constraint_.connamespace = ns.oid
-LEFT JOIN pg_catalog.pg_class AS referenced_tbl
+  ON constraint_.contype = 'f'
+  AND constraint_.connamespace = ns.oid
+INNER JOIN pg_catalog.pg_class AS referenced_tbl
   ON constraint_.confrelid = referenced_tbl.oid
-LEFT JOIN pg_catalog.pg_namespace AS referenced_tbl_ns
+INNER JOIN pg_catalog.pg_namespace AS referenced_tbl_ns
   ON referenced_tbl.relnamespace = referenced_tbl_ns.oid
 LEFT JOIN (
     pg_catalog.pg_class AS tbl -- https://www.postgresql.org/docs/current/catalog-pg-class.html
