@@ -36,7 +36,7 @@ Each SQL query is tested against a number of example databases.
 - [X] [CAST](./CAST/)
 - [ ] [COLLATION](./COLLATION/)
 - [X] [COLUMN](./COLUMN/README.md)
-- [~] [CONSTRAINT](./CONSTRAINT/)
+- [X] [CONSTRAINT](./CONSTRAINT/)
 - [ ] [CONVERSION](./CONVERSION/)
 - [x] [DATABASE](./DATABASE/)
 - [ ] [DOMAIN](./DOMAIN/)

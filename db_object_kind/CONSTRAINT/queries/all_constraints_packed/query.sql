@@ -1,9 +1,9 @@
 SELECT
 -- constraint namespacing
     ns.nspname AS constraint_schema
-  , constraint_.connamespace AS constraint_schema_id
-  , constraint_.oid AS constraint_oid
+  , constraint_.connamespace AS constraint_schema_oid
   , constraint_.conname AS constraint_name
+  , constraint_.oid AS constraint_oid
 -- constraint enforcement info
   , (/* enforcement_info: a 2-byte struct of the form
       00000000 00000000
@@ -77,6 +77,7 @@ SELECT
     -- if this is a constraint on a partition, the oid of the constraint of the
     -- parent partitioned table. Zero if the constraint doesn't correspond to
     -- a constraint on a partitioned table.
+  , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
 -- domain information
   , type_ns.nspname AS type_schema
   , type_.typnamespace AS type_schema_oid

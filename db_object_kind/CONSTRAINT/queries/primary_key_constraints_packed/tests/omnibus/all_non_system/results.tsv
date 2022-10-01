@@ -1,25 +1,22 @@
-constraint_schema	constraint_schema_id	constraint_oid	constraint_name	enforcement_info	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers
-domain_examples	16440	18457	us_snail_addy_pkey	1052	domain_examples	16440	us_snail_addy	18117	0				0	0	{1}
-idx_ex	16445	18459	films_pkey	1052	idx_ex	16445	films	18166	0				0	0	{1}
-ordinary_tables	16446	18461	binary_examples_pkey	1052	ordinary_tables	16446	binary_examples	18171	0				0	0	{1}
-ordinary_tables	16446	18463	character_examples_pkey	1052	ordinary_tables	16446	character_examples	18182	0				0	0	{1}
-ordinary_tables	16446	18465	numeric_type_examples_pkey	1052	ordinary_tables	16446	numeric_type_examples	18200	0				0	0	{1}
-regress_rls_schema	16447	18467	category_pkey	1052	regress_rls_schema	16447	category	18224	0				0	0	{1}
-regress_rls_schema	16447	18469	document_pkey	1052	regress_rls_schema	16447	document	18241	0				0	0	{1}
-regress_rls_schema	16447	18471	r1_3_pkey	1052	regress_rls_schema	16447	r1_3	18271	0				0	0	{1}
-regress_rls_schema	16447	18473	r1_4_pkey	1052	regress_rls_schema	16447	r1_4	18274	0				0	0	{1}
-regress_rls_schema	16447	18475	r1_5_pkey	1052	regress_rls_schema	16447	r1_5	18277	0				0	0	{1}
-regress_rls_schema	16447	18477	r1_pkey	1052	regress_rls_schema	16447	r1	18265	0				0	0	{1}
-regress_rls_schema	16447	18479	t1_pkey	1052	regress_rls_schema	16447	t1	18373	0				0	0	{1}
-regress_rls_schema	16447	18481	t3_3_pkey	1052	regress_rls_schema	16447	t3_3	18396	0				0	0	{3}
-regress_rls_schema	16447	18483	uaccount_pkey	1052	regress_rls_schema	16447	uaccount	18411	0				0	0	{1}
-tablespace_dependencies	16448	18485	example_table_pk	1052	tablespace_dependencies	16448	example_table	18436	0				0	0	{1}
-trigger_test	16449	18487	accounts_pkey	1052	trigger_test	16449	accounts	18439	0				0	0	{1}
-trigger_test	16449	18489	update_log_pk	1052	trigger_test	16449	update_log	18446	0				0	0	{1,2}
-	true	regress_rls_schema	16447	uaccount	18411	0				0	0	{1}
-tablespace_dependencies	16448	18485	example_table_pk	false	false	true	true	true	tablespace_dependencies	16448	example_table	18436	0				0	0	{1}
-trigger_test	16449	18487	accounts_pkey	false	false	true	true	true	trigger_test	16449	accounts	18439	0				0	0	{1}
-trigger_test	16449	18489	update_log_pk	false	false	true	true	true	trigger_test	16449	update_log	18446	0				0	0	{1,2}
+constraint_schema	constraint_schema_oid	constraint_name	constraint_oid	enforcement_info	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	constraint_def	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers
+domain_examples	16440	us_snail_addy_pkey	18457	1052	domain_examples	16440	us_snail_addy	18117	0	PRIMARY KEY (address_id)				0	0	{1}
+idx_ex	16445	films_pkey	18459	1052	idx_ex	16445	films	18166	0	PRIMARY KEY (id)				0	0	{1}
+ordinary_tables	16446	binary_examples_pkey	18461	1052	ordinary_tables	16446	binary_examples	18171	0	PRIMARY KEY (bytes)				0	0	{1}
+ordinary_tables	16446	character_examples_pkey	18463	1052	ordinary_tables	16446	character_examples	18182	0	PRIMARY KEY (id)				0	0	{1}
+ordinary_tables	16446	numeric_type_examples_pkey	18465	1052	ordinary_tables	16446	numeric_type_examples	18200	0	PRIMARY KEY (id)				0	0	{1}
+regress_rls_schema	16447	category_pkey	18467	1052	regress_rls_schema	16447	category	18224	0	PRIMARY KEY (cid)				0	0	{1}
+regress_rls_schema	16447	document_pkey	18469	1052	regress_rls_schema	16447	document	18241	0	PRIMARY KEY (did)				0	0	{1}
+regress_rls_schema	16447	r1_3_pkey	18471	1052	regress_rls_schema	16447	r1_3	18271	0	PRIMARY KEY (a)				0	0	{1}
+regress_rls_schema	16447	r1_4_pkey	18473	1052	regress_rls_schema	16447	r1_4	18274	0	PRIMARY KEY (a)				0	0	{1}
+regress_rls_schema	16447	r1_5_pkey	18475	1052	regress_rls_schema	16447	r1_5	18277	0	PRIMARY KEY (a)				0	0	{1}
+regress_rls_schema	16447	r1_pkey	18477	1052	regress_rls_schema	16447	r1	18265	0	PRIMARY KEY (a)				0	0	{1}
+regress_rls_schema	16447	t1_pkey	18479	1052	regress_rls_schema	16447	t1	18373	0	PRIMARY KEY (id)				0	0	{1}
+regress_rls_schema	16447	t3_3_pkey	18481	1052	regress_rls_schema	16447	t3_3	18396	0	PRIMARY KEY (id)				0	0	{3}
+regress_rls_schema	16447	uaccount_pkey	18483	1052	regress_rls_schema	16447	uaccount	18411	0	PRIMARY KEY (pguser)				0	0	{1}
+tablespace_dependencies	16448	example_table_pk	18485	1052	tablespace_dependencies	16448	example_table	18436	0	PRIMARY KEY (id)				0	0	{1}
+trigger_test	16449	accounts_pkey	18487	1052	trigger_test	16449	accounts	18439	0	PRIMARY KEY (id)				0	0	{1}
+trigger_test	16449	update_log_pk	18489	1052	trigger_test	16449	update_log	18446	0	"PRIMARY KEY (""timestamp"", account_id)"				0	0	{1,2}
+ate_log_pk	false	false	true	true	true	trigger_test	16449	update_log	18446	0				0	0	{1,2}
 57	us_snail_addy_pkey	p	false	false	true	true	true				domain_examples	16440	us_snail_addy	18117	0				0	0	{1}				0				
 foreign_db_example	16444	18165	imaginary_table_id_gt_1	c	false	false	true	true	false				foreign_db_example	16444	technically_doesnt_exist	18160	0				0	0	{1}				0				
 foreign_db_example	16444	16670	positive_number_check	c	false	false	true	true	false							0	0	foreign_db_example	16444	positive_number	16669	0					0				
