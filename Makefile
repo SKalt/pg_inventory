@@ -176,6 +176,37 @@ table-queries: ${all_table_queries}
 # ------------------------------------------------------------------------------
 
 ################################################################################
+all_constraint_queries=\
+	db_object_kind/CONSTRAINT/queries/all_constraints/query.sql\
+	db_object_kind/CONSTRAINT/queries/check_constraints/query.sql\
+	db_object_kind/CONSTRAINT/queries/foreign_key_constraints/query.sql\
+	db_object_kind/CONSTRAINT/queries/primary_key_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/unique_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/primary_key_constraints/query.sql\
+	db_object_kind/CONSTRAINT/queries/exclusion_constraints/query.sql\
+	db_object_kind/CONSTRAINT/queries/check_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/exclusion_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/foreign_key_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/all_constraints_packed/query.sql\
+	db_object_kind/CONSTRAINT/queries/unique_constraints/query.sql\
+
+${all_constraint_queries} &:\
+	bin/render_template\
+	db_object_kind/CONSTRAINT/query.sql.tpl\
+	db_object_kind/CONSTRAINT/query.params.toml\
+
+	bin/render_template -t ./db_object_kind/CONSTRAINT/query.sql.tpl
+.PHONY: all-constraint-queries
+all-constraint-queries: ${all_constraint_queries}
+# ------------------------------------------------------------------------------
+# all_constraint_tests=db_object_kind/CONSTRAINT/queries/*/tests/*/*/results.tsv
+# db_object_kind/CONSTRAINT/queries/%/tests/*/*/results.tsv:\
+# 	bin/test_query\
+# 	db_object_kind/CONSTRAINT/queries/%/query.sql\
+
+# 	bin/test_query $@
+# all-constraint-tests: ${all_constraint_tests}
+################################################################################
 all_queries=\
 	${schema_queries}\
 	${all_table_queries}\

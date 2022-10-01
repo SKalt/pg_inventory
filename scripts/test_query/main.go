@@ -197,13 +197,15 @@ func findTestCases(absPath string) (result []*testCase, err error) {
 	}
 	if strings.HasSuffix(relPath, "results.tsv") {
 		tc, err := newTestCase(relPath)
-		result = append(result, tc)
 		if err != nil {
+			return result, err
+		} else {
+			result = append(result, tc)
 			return result, err
 		}
 	}
 	err = filepath.WalkDir(relPath, func(path string, d fs.DirEntry, err error) error {
-		if err != nil {
+		if err != nil || !d.IsDir() {
 			return err
 		}
 		var tc *testCase
@@ -415,7 +417,13 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 			err = exec.Command("code", "--diff", c.targetTsvPath(), tempFile.Name()).Run()
 			crashIfErrNotNil(err)
 		}
-		return fmt.Errorf("different: try running ```sh\ncode --diff %s %s\n```\nIf the change looks correct, run ```sh\nbin/test_query --accept %s\n```", c.targetTsvPath(), tempFile.Name(), c.targetTsvPath())
+		return fmt.Errorf(
+			"different: try running ```sh\n"+
+				"code --diff %s %s\n```\n"+
+				"If the change looks correct, run ```sh\n"+
+				"bin/test_query --accept %s\n```\n"+"or ```sh\n"+
+				"cat %s>%s\n```",
+			c.targetTsvPath(), tempFile.Name(), c.targetTsvPath(), tempFile.Name(), c.targetTsvPath())
 	} else {
 		return nil
 	}
@@ -473,7 +481,15 @@ var rootCmd = &cobra.Command{
 					"Would run %s using %s against %s\n",
 					tc.testDir, tc.queryFile(), tc.dbName())
 			} else {
+				fmt.Printf(
+					"running query=%s db=%s test=%s...",
+					tc.queryName(), tc.dbName(), tc.testName(),
+				)
+				start := time.Now()
 				err = runTest(tc, servicePool, cache, accept, viewDiff)
+				finish := time.Now()
+				duration := finish.Sub(start)
+				fmt.Printf("done in %v\n", duration)
 				if err != nil {
 					fmt.Printf(
 						"failed to run %s using %s against %s\n",
