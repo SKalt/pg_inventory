@@ -198,6 +198,7 @@ ${all_constraint_queries} &:\
 	bin/render_template -t ./db_object_kind/CONSTRAINT/query.sql.tpl
 .PHONY: all-constraint-queries
 all-constraint-queries: ${all_constraint_queries}
+
 # ------------------------------------------------------------------------------
 # all_constraint_tests=db_object_kind/CONSTRAINT/queries/*/tests/*/*/results.tsv
 # db_object_kind/CONSTRAINT/queries/%/tests/*/*/results.tsv:\
@@ -207,6 +208,34 @@ all-constraint-queries: ${all_constraint_queries}
 # 	bin/test_query $@
 # all-constraint-tests: ${all_constraint_tests}
 ################################################################################
+all_type_queries=\
+	db_object_kind/TYPE/queries/enum_types/query.sql\
+	db_object_kind/TYPE/queries/multirange_types_packed/query.sql\
+	db_object_kind/TYPE/queries/pseudo_types/query.sql\
+	db_object_kind/TYPE/queries/range_types/query.sql\
+	db_object_kind/TYPE/queries/domain_types/query.sql\
+	db_object_kind/TYPE/queries/domain_types_packed/query.sql\
+	db_object_kind/TYPE/queries/multirange_types/query.sql\
+	db_object_kind/TYPE/queries/composite_types/query.sql\
+	db_object_kind/TYPE/queries/enum_types_packed/query.sql\
+	db_object_kind/TYPE/queries/range_types_packed/query.sql\
+	db_object_kind/TYPE/queries/pseudo_types_packed/query.sql\
+	db_object_kind/TYPE/queries/base_types_packed/query.sql\
+	db_object_kind/TYPE/queries/composite_types_packed/query.sql\
+	db_object_kind/TYPE/queries/base_types/query.sql\
+
+${all_type_queries}:\
+	bin/render_template\
+	db_object_kind/TYPE/all.sql.tpl\
+	db_object_kind/TYPE/all.params.toml\
+
+	bin/render_template -t ./db_object_kind/TYPE/all.sql.tpl
+
+.PHONY:all-type-queries
+all-type-queries:  ${all_type_queries}
+
+################################################################################
+
 all_queries=\
 	${schema_queries}\
 	${all_table_queries}\
@@ -217,6 +246,7 @@ all_tests=\
 
 .PHONY: tests
 tests: ${all_queries}
+	@go clean -testcache
 	@go test -v -parallel 4 -timeout 10s -run '^TestSnapshots' ./scripts/test_query
 
 # KIND=

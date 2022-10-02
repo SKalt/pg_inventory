@@ -102,12 +102,11 @@ func walk(node parse.Node, callback func(n parse.Node) error) (err error) {
 }
 
 // TODO: cache io?
-// TODO: use file:// protocol?
 func include(ctx map[string]interface{}, relativePath string) (string, error) {
 	thisDir := ctx["dir"].(string)
 	relativePath = strings.TrimPrefix(relativePath, "file://")
 	relativePath = filepath.Clean(filepath.Join(thisDir, relativePath))
-	blob, err := ioutil.ReadFile(relativePath)
+	blob, err := os.ReadFile(relativePath)
 	if err != nil {
 		return "", err
 	}
@@ -268,8 +267,6 @@ var rootCmd = &cobra.Command{
 		templateName := strings.TrimSuffix(templateFileName, ".sql.tpl")
 		paramsPath := path.Join(dir, fmt.Sprintf("%s.params.toml", templateName))
 		queryNames, queryParams := getParams(paramsPath)
-		// if shouldList {
-		// }
 		selectedQueryNames, err := cmd.Flags().GetStringArray("query")
 		crashIf(err)
 		sort.Strings(selectedQueryNames)
@@ -297,7 +294,6 @@ var rootCmd = &cobra.Command{
 			p := queryParams[i]
 			if debug || dryRun {
 				fmt.Println("-- name: ", name)
-				// fmt.Printf("-- params=\n%+v\n", p)
 			}
 			targetDir := filepath.Join(dir, "queries", name)
 			targetFile := filepath.Join(targetDir, "query.sql")

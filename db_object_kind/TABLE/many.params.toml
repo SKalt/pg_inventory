@@ -1,34 +1,39 @@
-# name_template = """
-# all
-# {{- if not (eq .persistence "all" ) -}}_{{ .persistence -}}{{- end -}}
-# {{- if not (eq .table_kind "all") -}}_{{ .table_kind -}}{{- end -}}
-# {{- if not (eq .partition_filter "all") -}}_{{ .partition_filter -}}{{- end -}}
-# _tables
-# {{- if not (eq .table_filter "all")}}_{{- .table_filter -}}{{- end -}}
-# _in_{{- .schema_filter -}}
-# """
+name_template = """
+{{- $any_filters := or
+      .filter_on_partitioning
+      .filter_on_persistence
+      .filter_on_kind
+-}}
+{{- if not $any_filters -}}
+  all_
+{{- end -}}
+tables
+{{- if $any_tables -}}
+  _filtered_by
+  {{- if .filter_on_partitioning -}}
+    _partitioning
+  {{- end -}}
+  {{- if .filter_on_persistence -}}
+    _persistence
+  {{- end -}}
+  {{- if .filter_on_kind -}}
+    _kind
+  {{- end -}}
+{{- end -}}
+{{- if .packed -}}
+  _packed
+{{- end -}}
+"""
 
-# [table_filter]
-#   named = "AND tbl.relname = :'table_name'"
-#   with_similar_name = "AND tbl.relname ILIKE :'table_name'"
-#   all = ""
-# [schema_filter]
-#   schema_with_oid = "schema_with_oid"
-#   schema_named = "schema_named"
-#   schemata_with_oids = "schemata_with_oids"
-#   schemata_with_names = "schemata_with_names"
-#   schemata_named_like = "schemata_named_like"
-#   all_schemata = "all_schemata"
-# [table_kind]
-#   non_partitioned = "r"
-#   partitioned = "p"
-#   all = ""
-# [persistence]
-#   permanent = "p"
-#   unlogged = "u"
-#   temporary = "t"
-#   all = "" # excluding temp tables
-name_template = "all_{{.partition}}_tables"
-[partition]
-  partition = true
-  non_partition = false
+[filter_on_partitioning]
+  all = false
+  one = true
+[filter_on_persistence]
+  all = false
+  one = true
+[filter_on_kind]
+  all = false
+  one = true
+[packed]
+  "" = false
+  packed = true
