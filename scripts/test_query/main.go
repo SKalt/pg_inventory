@@ -106,41 +106,49 @@ func (pool *dbServicePool) waitFor(serviceName string) (db *sql.DB, err error) {
 	if db != nil {
 		return
 	}
-	cmd := exec.Command("docker", "compose", "up", "--wait", serviceName)
-	err = cmd.Run()
-	if err != nil {
-		e := err.(*exec.ExitError)
-		e.ExitCode()
-
-		err = fmt.Errorf("`%v` exited %v", cmd.Args, e.ExitCode())
-		return
-	}
 	var dsn string
 	dsn, err = pool.getDsn(serviceName)
 	if err != nil {
 		return
 	}
+	db, err = checkConnection(dsn)
+	if db != nil {
+		return
+	}
+	cmd := exec.Command("docker", "compose", "up", "--wait", serviceName)
+	err = cmd.Run()
+	if err != nil {
+		e := err.(*exec.ExitError)
+		e.ExitCode()
+		err = fmt.Errorf("`%v` exited %v", cmd.Args, e.ExitCode())
+		return
+	}
 	db, err = waitFor(dsn, 15)
 	return
+}
+func checkConnection(dsn string) (db *sql.DB, err error) {
+	if db, err = sql.Open("postgres", dsn); err == nil {
+		if err = db.Ping(); err == nil {
+			return
+		} else {
+			return
+		}
+	} else {
+		return
+	}
 }
 
 func waitFor(dsn string, retries int) (db *sql.DB, err error) {
 	ticker := time.NewTicker(time.Second)
 	for i := 0; i <= retries; i++ {
-		<-ticker.C // wait for a tick
-		if db, err = sql.Open("postgres", dsn); err == nil {
-			if err = db.Ping(); err == nil {
-				if i > 0 {
-					fmt.Println()
-				}
-				return
-			} else {
-				fmt.Printf(".")
-			}
-		} else {
-			fmt.Printf(".")
+		db, err = checkConnection(dsn)
+		if err == nil {
+			return
 		}
+		fmt.Printf(".")
+		<-ticker.C // wait for a tick
 	}
+	fmt.Println()
 	return
 }
 
