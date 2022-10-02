@@ -447,7 +447,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 				"If the change looks correct, run ```sh\n"+
 				"cat %s>%s\n```",
 			c.targetTsvPath(), tempFile.Name(),
-			c.targetTsvPath(), c.targetTsvPath())
+			tempFile.Name(), c.targetTsvPath())
 	} else {
 		return nil
 	}
@@ -479,6 +479,8 @@ var rootCmd = &cobra.Command{
 		crashIfErrNotNil(err)
 		viewDiff, err := flags.GetBool("view-diff")
 		crashIfErrNotNil(err)
+		verbose, err := flags.GetBool("verbose")
+		crashIfErrNotNil(err)
 		testCases := make([]*testCase, 0, 1)
 		for _, path := range args {
 			if !strings.HasPrefix(path, "/") {
@@ -508,15 +510,19 @@ var rootCmd = &cobra.Command{
 					"Would run %s using %s against %s\n",
 					tc.testDir, tc.queryFile(), tc.dbName())
 			} else {
-				fmt.Printf(
-					"running query=%s db=%s test=%s...",
-					tc.queryName(), tc.dbName(), tc.testName(),
-				)
+				if verbose {
+					fmt.Printf(
+						"running query=%s db=%s test=%s...",
+						tc.queryName(), tc.dbName(), tc.testName(),
+					)
+				}
 				start := time.Now()
 				err = runTest(tc, servicePool, cache, accept, viewDiff)
 				finish := time.Now()
 				duration := finish.Sub(start)
-				fmt.Printf("done in %v\n", duration)
+				if verbose {
+					fmt.Printf("done in %v\n", duration)
+				}
 				if err != nil {
 					fmt.Printf(
 						"failed to run %s using %s against %s\n",
@@ -532,7 +538,8 @@ func init() {
 	flags := rootCmd.Flags()
 	flags.Bool("dry-run", false, "print the commands that would be run")
 	flags.BoolP("accept", "a", false, "accept the new input")
-	flags.BoolP("view-diff", "v", false, "view the diff")
+	flags.BoolP("view-diff", "d", false, "view the diff")
+	flags.BoolP("verbose", "v", false, "verbose logs")
 }
 
 func main() {
