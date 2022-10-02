@@ -1,14 +1,14 @@
 constraint_schema	constraint_schema_oid	constraint_name	constraint_oid	enforcement_info	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	constraint_def	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers
-composite_type_examples	16437	check_f1_gt_1	16805	268	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((basic_).f1 > 1)				0	0	{1}
-composite_type_examples	16437	check_f1_gt_1	18108	260	composite_type_examples	16437	inherited_table	18103	0	CHECK ((basic_).f1 > 1)				0	1	{1}
-composite_type_examples	16437	check_f1_gt_1_again	18109	260	composite_type_examples	16437	inherited_table	18103	0	CHECK ((_basic).f1 > 1)				0	1	{2}
-composite_type_examples	16437	check_f1_gt_1_again	16806	268	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((_basic).f1 > 1)				0	0	{2}
-composite_type_examples	16437	check_nested_f1_gt_1	18110	260	composite_type_examples	16437	inherited_table	18103	0	CHECK ((nested).foo.f1 > 1)				0	1	{3}
-composite_type_examples	16437	check_nested_f1_gt_1	16807	268	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((nested).foo.f1 > 1)				0	0	{3}
-composite_type_examples	16437	check_nested_f1_gt_1_again	16808	268	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((_nested).foo.f1 > 1)				0	0	{4}
-composite_type_examples	16437	check_nested_f1_gt_1_again	18111	260	composite_type_examples	16437	inherited_table	18103	0	CHECK ((_nested).foo.f1 > 1)				0	1	{4}
-domain_examples	16440	check_postal_code_regex	16645	268				0	0	CHECK (VALUE ~ '^\d{5}$'::text OR VALUE ~ '^\d{5}-\d{4}$'::text)	domain_examples	16440	us_postal_code	16644	0	
-domain_examples	16440	should_be_even	16642	268				0	0	CHECK (domain_examples.is_even(VALUE))	domain_examples	16440	positive_even_number	16641	0	
-domain_examples	16440	should_be_positive	16638	268				0	0	CHECK (domain_examples.is_positive(VALUE))	domain_examples	16440	positive_number	16637	0	
-foreign_db_example	16444	imaginary_table_id_gt_1	18165	268	foreign_db_example	16444	technically_doesnt_exist	18160	0	CHECK (id > 1)				0	0	{1}
-foreign_db_example	16444	positive_number_check	16670	268				0	0	CHECK (foreign_db_example.is_positive(VALUE))	foreign_db_example	16444	positive_number	16669	0	
+composite_type_examples	16437	check_f1_gt_1	16805	12	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((basic_).f1 > 1)				0	0	{1}
+composite_type_examples	16437	check_f1_gt_1	18108	4	composite_type_examples	16437	inherited_table	18103	0	CHECK ((basic_).f1 > 1)				0	1	{1}
+composite_type_examples	16437	check_f1_gt_1_again	18109	4	composite_type_examples	16437	inherited_table	18103	0	CHECK ((_basic).f1 > 1)				0	1	{2}
+composite_type_examples	16437	check_f1_gt_1_again	16806	12	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((_basic).f1 > 1)				0	0	{2}
+composite_type_examples	16437	check_nested_f1_gt_1	18110	4	composite_type_examples	16437	inherited_table	18103	0	CHECK ((nested).foo.f1 > 1)				0	1	{3}
+composite_type_examples	16437	check_nested_f1_gt_1	16807	12	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((nested).foo.f1 > 1)				0	0	{3}
+composite_type_examples	16437	check_nested_f1_gt_1_again	16808	12	composite_type_examples	16437	ordinary_table	16800	0	CHECK ((_nested).foo.f1 > 1)				0	0	{4}
+composite_type_examples	16437	check_nested_f1_gt_1_again	18111	4	composite_type_examples	16437	inherited_table	18103	0	CHECK ((_nested).foo.f1 > 1)				0	1	{4}
+domain_examples	16440	check_postal_code_regex	16645	12				0	0	CHECK (VALUE ~ '^\d{5}$'::text OR VALUE ~ '^\d{5}-\d{4}$'::text)	domain_examples	16440	us_postal_code	16644	0	
+domain_examples	16440	should_be_even	16642	12				0	0	CHECK (domain_examples.is_even(VALUE))	domain_examples	16440	positive_even_number	16641	0	
+domain_examples	16440	should_be_positive	16638	12				0	0	CHECK (domain_examples.is_positive(VALUE))	domain_examples	16440	positive_number	16637	0	
+foreign_db_example	16444	imaginary_table_id_gt_1	18165	12	foreign_db_example	16444	technically_doesnt_exist	18160	0	CHECK (id > 1)				0	0	{1}
+foreign_db_example	16444	positive_number_check	16670	12				0	0	CHECK (foreign_db_example.is_positive(VALUE))	foreign_db_example	16444	positive_number	16669	0	

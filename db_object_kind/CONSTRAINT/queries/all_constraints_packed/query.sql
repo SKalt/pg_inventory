@@ -6,9 +6,8 @@ SELECT
   , constraint_.oid AS constraint_oid
 -- constraint enforcement info
   , (/* enforcement_info: a 2-byte struct of the form
-      00000000 00000000
-      -----    ~~~~~~ *
-      bools    type     validation
+      0000 0000 0001 1111 : bools
+      0000 0000 1110 0000 : constraint type
     */
     CAST(0 as INT2)
     | CASE WHEN constraint_.condeferrable THEN 1<<0 ELSE 0 END
@@ -16,57 +15,53 @@ SELECT
     | CASE WHEN constraint_.convalidated  THEN 1<<2 ELSE 0 END
     | CASE WHEN constraint_.conislocal    THEN 1<<3 ELSE 0 END
     | CASE WHEN constraint_.connoinherit  THEN 1<<4 ELSE 0 END
-    | (
+    | ((
         CASE constraint_.contype -- constraint type
-          WHEN 'c' THEN 1<<8  -- check
-          WHEN 'f' THEN 1<<9  -- foreign key
-          WHEN 'p' THEN 1<<10 -- primary key
-          WHEN 't' THEN 1<<11 -- constraint trigger
-          WHEN 'u' THEN 1<<12 -- unique
-          WHEN 'x' THEN 1<<13 -- exclusion
-          ELSE          1<<15 -- validation bit
+          WHEN 'c' THEN 1 -- check
+          WHEN 'f' THEN 2 -- foreign key
+          WHEN 'p' THEN 3 -- primary key
+          WHEN 't' THEN 4 -- constraint trigger
+          WHEN 'u' THEN 5 -- unique
+          WHEN 'x' THEN 6 -- exclusion
+          ELSE          0
         END
-      )
-    ) AS enforcement_info
+      )<<5)
+    )::INT2 AS enforcement_info
   , (/* fk_info: a 2-byte packed struct of the form
-          update
-          action
-           ~~~ ~~*
-      00000000 00000000
-       ---*      =====*
-    match        delete
-    type         action
+      0000 0000 0000 0011 : match type
+      0000 0000 0001 1100 : update action
+      0000 0000 1110 0000 : delete action
     */
     CAST(0 as INT2)
-    | (
+    | ((
         CASE constraint_.confmatchtype
-          WHEN 'f' THEN 1<<0 -- f => full
-          WHEN 'p' THEN 1<<1 -- p => partial
-          WHEN 's' THEN 1<<2 -- s => simple
-          ELSE          1<<3 -- validation bit
+          WHEN 'f' THEN 1 -- f => full
+          WHEN 'p' THEN 2 -- p => partial
+          WHEN 's' THEN 3 -- s => simple
+          ELSE 0
         END
-      )
-    | (
+      )<<0)
+    | ((
         CASE constraint_.confupdtype
-          WHEN 'a' THEN 1<<4 -- no action
-          WHEN 'r' THEN 1<<5 -- restrict
-          WHEN 'c' THEN 1<<6 -- cascade
-          WHEN 'n' THEN 1<<7 -- set null
-          WHEN 'd' THEN 1<<8 -- set default
-          ELSE          1<<9 -- validation bit
+          WHEN 'a' THEN 1 -- no action
+          WHEN 'r' THEN 2 -- restrict
+          WHEN 'c' THEN 3 -- cascade
+          WHEN 'n' THEN 4 -- set null
+          WHEN 'd' THEN 5 -- set default
+          ELSE          0
         END
-      )
-    | (
+      )<<2)
+    | ((
         CASE constraint_.confdeltype
-          WHEN 'a' THEN 1<<10 -- no action
-          WHEN 'r' THEN 1<<11 -- restrict
-          WHEN 'c' THEN 1<<12 -- cascade
-          WHEN 'n' THEN 1<<13 -- set null
-          WHEN 'd' THEN 1<<14 -- set default
-          ELSE          1<<15 -- validation bit
+          WHEN 'a' THEN 1 -- no action
+          WHEN 'r' THEN 2 -- restrict
+          WHEN 'c' THEN 3 -- cascade
+          WHEN 'n' THEN 4 -- set null
+          WHEN 'd' THEN 5 -- set default
+          ELSE          0
         END
-      )
-  ) AS fk_info
+      )<<5)
+  )::INT2 AS fk_info
 -- table constraint information
   , tbl_ns.nspname AS table_schema
   , tbl.relnamespace AS table_schema_oid

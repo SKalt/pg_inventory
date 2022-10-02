@@ -1,19 +1,19 @@
-schema_oid	schema_name	schema_owner	schema_acl
-2200	public	10	{postgres=UC/postgres,=UC/postgres}
-16433	agg_ex	10	
-16434	am_examples	16385	
-16435	base_type_examples	16386	
-16436	collation_ex	10	
-16437	composite_type_examples	10	
-16438	conversion_example	16392	
-16439	create_cast	16390	
-16440	domain_examples	16396	
-16441	enum_example	10	
-16442	extension_example	16399	
-16443	fn_examples	16400	
-16444	foreign_db_example	16401	
-16445	idx_ex	10	
-16446	ordinary_tables	16407	
-16448	tablespace_dependencies	16423	
-16449	trigger_test	10	
-16447	regress_rls_schema	10	{postgres=UC/postgres,=UC/postgres}
+schema_name	schema_oid	schema_owner_name	schema_owner_oid	schema_acl
+public	2200	postgres	10	{postgres=UC/postgres,=UC/postgres}
+agg_ex	16433	postgres	10	
+am_examples	16434	am_owner	16385	
+base_type_examples	16435	base_type_owner	16386	
+collation_ex	16436	postgres	10	
+composite_type_examples	16437	postgres	10	
+conversion_example	16438	conversion_owner	16392	
+create_cast	16439	castor	16390	
+domain_examples	16440	domain_owner	16396	
+enum_example	16441	postgres	10	
+extension_example	16442	extension_user	16399	
+fn_examples	16443	fn_owner	16400	
+foreign_db_example	16444	foreign_db_owner	16401	
+idx_ex	16445	postgres	10	
+ordinary_tables	16446	ordinary_table_owner	16407	
+tablespace_dependencies	16448	tablespace_owner	16423	
+trigger_test	16449	postgres	10	
+regress_rls_schema	16447	postgres	10	{postgres=UC/postgres,=UC/postgres}

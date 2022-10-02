@@ -1,63 +1,63 @@
 constraint_schema	constraint_schema_oid	constraint_name	constraint_oid	enforcement_info	fk_info	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	constraint_def	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_schema_oid	referenced_table_name	referenced_table_oid	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids
-public	2200	actor_pkey	16576	1052	33288	public	2200	actor	16417	0	PRIMARY KEY (actor_id)				0	0	{1}				0				
-public	2200	film_original_language_id_fkey	16700	540	2116	public	2200	film	16429	0	FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	language	16488	{1}	{533}	{96}	{94}
-public	2200	film_language_id_fkey	16695	540	2116	public	2200	film	16429	0	FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{5}	public	2200	language	16488	{1}	{533}	{96}	{94}
-public	2200	film_pkey	16592	1052	33288	public	2200	film	16429	0	PRIMARY KEY (film_id)				0	0	{1}				0				
-public	2200	payment_p2007_02_staff_id_fkey	16745	540	1044	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_02_rental_id_fkey	16740	540	1044	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_02_customer_id_fkey	16735	540	1044	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_02_payment_date_check	16512	268	33288	public	2200	payment_p2007_02	16508	0	CHECK (payment_date >= '2007-02-01 00:00:00'::timestamp without time zone AND payment_date < '2007-03-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	payment_p2007_03_staff_id_fkey	16761	540	1044	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_03_rental_id_fkey	16756	540	1044	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_03_customer_id_fkey	16750	540	1044	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_03_payment_date_check	16517	268	33288	public	2200	payment_p2007_03	16513	0	CHECK (payment_date >= '2007-03-01 00:00:00'::timestamp without time zone AND payment_date < '2007-04-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	payment_p2007_04_staff_id_fkey	16776	540	1044	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_04_rental_id_fkey	16771	540	1044	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_04_customer_id_fkey	16766	540	1044	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_04_payment_date_check	16522	268	33288	public	2200	payment_p2007_04	16518	0	CHECK (payment_date >= '2007-04-01 00:00:00'::timestamp without time zone AND payment_date < '2007-05-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	payment_p2007_05_staff_id_fkey	16791	540	1044	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_05_rental_id_fkey	16786	540	1044	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_05_customer_id_fkey	16781	540	1044	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_05_payment_date_check	16527	268	33288	public	2200	payment_p2007_05	16523	0	CHECK (payment_date >= '2007-05-01 00:00:00'::timestamp without time zone AND payment_date < '2007-06-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	payment_p2007_06_staff_id_fkey	16806	540	1044	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_06_rental_id_fkey	16801	540	1044	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_06_customer_id_fkey	16796	540	1044	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_06_payment_date_check	16532	268	33288	public	2200	payment_p2007_06	16528	0	CHECK (payment_date >= '2007-06-01 00:00:00'::timestamp without time zone AND payment_date < '2007-07-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	payment_p2007_01_staff_id_fkey	16730	540	1044	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_01_rental_id_fkey	16725	540	1044	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_p2007_01_customer_id_fkey	16720	540	1044	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_p2007_01_payment_date_check	16507	268	33288	public	2200	payment_p2007_01	16503	0	CHECK (payment_date >= '2007-01-01 00:00:00'::timestamp without time zone AND payment_date < '2007-02-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
-public	2200	address_city_id_fkey	16655	540	2116	public	2200	address	16454	0	FOREIGN KEY (city_id) REFERENCES city(city_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{5}	public	2200	city	16460	{1}	{533}	{96}	{94}
-public	2200	address_pkey	16578	1052	33288	public	2200	address	16454	0	PRIMARY KEY (address_id)				0	0	{1}				0				
-public	2200	category_pkey	16580	1052	33288	public	2200	category	16423	0	PRIMARY KEY (category_id)				0	0	{1}				0				
-public	2200	city_country_id_fkey	16660	540	2116	public	2200	city	16460	0	FOREIGN KEY (country_id) REFERENCES country(country_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	country	16466	{1}	{533}	{96}	{94}
-public	2200	city_pkey	16582	1052	33288	public	2200	city	16460	0	PRIMARY KEY (city_id)				0	0	{1}				0				
-public	2200	country_pkey	16584	1052	33288	public	2200	country	16466	0	PRIMARY KEY (country_id)				0	0	{1}				0				
-public	2200	customer_store_id_fkey	16670	540	2116	public	2200	customer	16407	0	FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	store	16554	{1}	{533}	{96}	{94}
-public	2200	customer_address_id_fkey	16665	540	2116	public	2200	customer	16407	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	address	16454	{1}	{533}	{96}	{94}
-public	2200	customer_pkey	16586	1052	33288	public	2200	customer	16407	0	PRIMARY KEY (customer_id)				0	0	{1}				0				
-public	2200	film_actor_film_id_fkey	16680	540	2116	public	2200	film_actor	16440	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	film	16429	{1}	{533}	{96}	{94}
-public	2200	film_actor_actor_id_fkey	16675	540	2116	public	2200	film_actor	16440	0	FOREIGN KEY (actor_id) REFERENCES actor(actor_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{1}	public	2200	actor	16417	{1}	{533}	{96}	{94}
-public	2200	film_actor_pkey	16588	1052	33288	public	2200	film_actor	16440	0	PRIMARY KEY (actor_id, film_id)				0	0	{1,2}				0				
-public	2200	film_category_film_id_fkey	16690	540	2116	public	2200	film_category	16444	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{1}	public	2200	film	16429	{1}	{533}	{96}	{94}
-public	2200	film_category_category_id_fkey	16685	540	2116	public	2200	film_category	16444	0	FOREIGN KEY (category_id) REFERENCES category(category_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	category	16423	{1}	{533}	{96}	{94}
-public	2200	film_category_pkey	16590	1052	33288	public	2200	film_category	16444	0	PRIMARY KEY (film_id, category_id)				0	0	{1,2}				0				
-public	2200	inventory_store_id_fkey	16710	540	2116	public	2200	inventory	16482	0	FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	store	16554	{1}	{533}	{96}	{94}
-public	2200	inventory_film_id_fkey	16705	540	2116	public	2200	inventory	16482	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	film	16429	{1}	{533}	{96}	{94}
-public	2200	inventory_pkey	16594	1052	33288	public	2200	inventory	16482	0	PRIMARY KEY (inventory_id)				0	0	{1}				0				
-public	2200	language_pkey	16596	1052	33288	public	2200	language	16488	0	PRIMARY KEY (language_id)				0	0	{1}				0				
-public	2200	rental_staff_id_fkey	16831	540	2116	public	2200	rental	16534	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	rental_inventory_id_fkey	16826	540	2116	public	2200	rental	16534	0	FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	inventory	16482	{1}	{96}	{96}	{96}
-public	2200	rental_customer_id_fkey	16821	540	2116	public	2200	rental	16534	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{4}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	rental_pkey	16600	1052	33288	public	2200	rental	16534	0	PRIMARY KEY (rental_id)				0	0	{1}				0				
-public	2200	staff_store_id_fkey	16841	540	1044	public	2200	staff	16545	0	FOREIGN KEY (store_id) REFERENCES store(store_id)				0	0	{6}	public	2200	store	16554	{1}	{533}	{96}	{94}
-public	2200	staff_address_id_fkey	16836	540	2116	public	2200	staff	16545	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{4}	public	2200	address	16454	{1}	{533}	{96}	{94}
-public	2200	staff_pkey	16602	1052	33288	public	2200	staff	16545	0	PRIMARY KEY (staff_id)				0	0	{1}				0				
-public	2200	store_manager_staff_id_fkey	16851	540	2116	public	2200	store	16554	0	FOREIGN KEY (manager_staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	store_address_id_fkey	16846	540	2116	public	2200	store	16554	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	address	16454	{1}	{533}	{96}	{94}
-public	2200	store_pkey	16604	1052	33288	public	2200	store	16554	0	PRIMARY KEY (store_id)				0	0	{1}				0				
-public	2200	payment_staff_id_fkey	16816	540	2116	public	2200	payment	16499	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
-public	2200	payment_rental_id_fkey	16811	540	8260	public	2200	payment	16499	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id) ON UPDATE CASCADE ON DELETE SET NULL				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
-public	2200	payment_customer_id_fkey	16715	540	2116	public	2200	payment	16499	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
-public	2200	payment_pkey	16598	1052	33288	public	2200	payment	16499	0	PRIMARY KEY (payment_id)				0	0	{1}				0				
-public	2200	year_check	16397	268	33288				0	0	CHECK (VALUE >= 1901 AND VALUE <= 2155)	public	2200	year	16396	0					0				
+public	2200	actor_pkey	16576	124	0	public	2200	actor	16417	0	PRIMARY KEY (actor_id)				0	0	{1}				0				
+public	2200	film_original_language_id_fkey	16700	92	79	public	2200	film	16429	0	FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	language	16488	{1}	{533}	{96}	{94}
+public	2200	film_language_id_fkey	16695	92	79	public	2200	film	16429	0	FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{5}	public	2200	language	16488	{1}	{533}	{96}	{94}
+public	2200	film_pkey	16592	124	0	public	2200	film	16429	0	PRIMARY KEY (film_id)				0	0	{1}				0				
+public	2200	payment_p2007_02_staff_id_fkey	16745	92	39	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_02_rental_id_fkey	16740	92	39	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_02_customer_id_fkey	16735	92	39	public	2200	payment_p2007_02	16508	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_02_payment_date_check	16512	44	0	public	2200	payment_p2007_02	16508	0	CHECK (payment_date >= '2007-02-01 00:00:00'::timestamp without time zone AND payment_date < '2007-03-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	payment_p2007_03_staff_id_fkey	16761	92	39	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_03_rental_id_fkey	16756	92	39	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_03_customer_id_fkey	16750	92	39	public	2200	payment_p2007_03	16513	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_03_payment_date_check	16517	44	0	public	2200	payment_p2007_03	16513	0	CHECK (payment_date >= '2007-03-01 00:00:00'::timestamp without time zone AND payment_date < '2007-04-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	payment_p2007_04_staff_id_fkey	16776	92	39	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_04_rental_id_fkey	16771	92	39	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_04_customer_id_fkey	16766	92	39	public	2200	payment_p2007_04	16518	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_04_payment_date_check	16522	44	0	public	2200	payment_p2007_04	16518	0	CHECK (payment_date >= '2007-04-01 00:00:00'::timestamp without time zone AND payment_date < '2007-05-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	payment_p2007_05_staff_id_fkey	16791	92	39	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_05_rental_id_fkey	16786	92	39	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_05_customer_id_fkey	16781	92	39	public	2200	payment_p2007_05	16523	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_05_payment_date_check	16527	44	0	public	2200	payment_p2007_05	16523	0	CHECK (payment_date >= '2007-05-01 00:00:00'::timestamp without time zone AND payment_date < '2007-06-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	payment_p2007_06_staff_id_fkey	16806	92	39	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_06_rental_id_fkey	16801	92	39	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_06_customer_id_fkey	16796	92	39	public	2200	payment_p2007_06	16528	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_06_payment_date_check	16532	44	0	public	2200	payment_p2007_06	16528	0	CHECK (payment_date >= '2007-06-01 00:00:00'::timestamp without time zone AND payment_date < '2007-07-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	payment_p2007_01_staff_id_fkey	16730	92	39	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id)				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_01_rental_id_fkey	16725	92	39	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id)				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_p2007_01_customer_id_fkey	16720	92	39	public	2200	payment_p2007_01	16503	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id)				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_p2007_01_payment_date_check	16507	44	0	public	2200	payment_p2007_01	16503	0	CHECK (payment_date >= '2007-01-01 00:00:00'::timestamp without time zone AND payment_date < '2007-02-01 00:00:00'::timestamp without time zone)				0	0	{6}				0				
+public	2200	address_city_id_fkey	16655	92	79	public	2200	address	16454	0	FOREIGN KEY (city_id) REFERENCES city(city_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{5}	public	2200	city	16460	{1}	{533}	{96}	{94}
+public	2200	address_pkey	16578	124	0	public	2200	address	16454	0	PRIMARY KEY (address_id)				0	0	{1}				0				
+public	2200	category_pkey	16580	124	0	public	2200	category	16423	0	PRIMARY KEY (category_id)				0	0	{1}				0				
+public	2200	city_country_id_fkey	16660	92	79	public	2200	city	16460	0	FOREIGN KEY (country_id) REFERENCES country(country_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	country	16466	{1}	{533}	{96}	{94}
+public	2200	city_pkey	16582	124	0	public	2200	city	16460	0	PRIMARY KEY (city_id)				0	0	{1}				0				
+public	2200	country_pkey	16584	124	0	public	2200	country	16466	0	PRIMARY KEY (country_id)				0	0	{1}				0				
+public	2200	customer_store_id_fkey	16670	92	79	public	2200	customer	16407	0	FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	store	16554	{1}	{533}	{96}	{94}
+public	2200	customer_address_id_fkey	16665	92	79	public	2200	customer	16407	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	address	16454	{1}	{533}	{96}	{94}
+public	2200	customer_pkey	16586	124	0	public	2200	customer	16407	0	PRIMARY KEY (customer_id)				0	0	{1}				0				
+public	2200	film_actor_film_id_fkey	16680	92	79	public	2200	film_actor	16440	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	film	16429	{1}	{533}	{96}	{94}
+public	2200	film_actor_actor_id_fkey	16675	92	79	public	2200	film_actor	16440	0	FOREIGN KEY (actor_id) REFERENCES actor(actor_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{1}	public	2200	actor	16417	{1}	{533}	{96}	{94}
+public	2200	film_actor_pkey	16588	124	0	public	2200	film_actor	16440	0	PRIMARY KEY (actor_id, film_id)				0	0	{1,2}				0				
+public	2200	film_category_film_id_fkey	16690	92	79	public	2200	film_category	16444	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{1}	public	2200	film	16429	{1}	{533}	{96}	{94}
+public	2200	film_category_category_id_fkey	16685	92	79	public	2200	film_category	16444	0	FOREIGN KEY (category_id) REFERENCES category(category_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	category	16423	{1}	{533}	{96}	{94}
+public	2200	film_category_pkey	16590	124	0	public	2200	film_category	16444	0	PRIMARY KEY (film_id, category_id)				0	0	{1,2}				0				
+public	2200	inventory_store_id_fkey	16710	92	79	public	2200	inventory	16482	0	FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	store	16554	{1}	{533}	{96}	{94}
+public	2200	inventory_film_id_fkey	16705	92	79	public	2200	inventory	16482	0	FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	film	16429	{1}	{533}	{96}	{94}
+public	2200	inventory_pkey	16594	124	0	public	2200	inventory	16482	0	PRIMARY KEY (inventory_id)				0	0	{1}				0				
+public	2200	language_pkey	16596	124	0	public	2200	language	16488	0	PRIMARY KEY (language_id)				0	0	{1}				0				
+public	2200	rental_staff_id_fkey	16831	92	79	public	2200	rental	16534	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{6}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	rental_inventory_id_fkey	16826	92	79	public	2200	rental	16534	0	FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	inventory	16482	{1}	{96}	{96}	{96}
+public	2200	rental_customer_id_fkey	16821	92	79	public	2200	rental	16534	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{4}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	rental_pkey	16600	124	0	public	2200	rental	16534	0	PRIMARY KEY (rental_id)				0	0	{1}				0				
+public	2200	staff_store_id_fkey	16841	92	39	public	2200	staff	16545	0	FOREIGN KEY (store_id) REFERENCES store(store_id)				0	0	{6}	public	2200	store	16554	{1}	{533}	{96}	{94}
+public	2200	staff_address_id_fkey	16836	92	79	public	2200	staff	16545	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{4}	public	2200	address	16454	{1}	{533}	{96}	{94}
+public	2200	staff_pkey	16602	124	0	public	2200	staff	16545	0	PRIMARY KEY (staff_id)				0	0	{1}				0				
+public	2200	store_manager_staff_id_fkey	16851	92	79	public	2200	store	16554	0	FOREIGN KEY (manager_staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	store_address_id_fkey	16846	92	79	public	2200	store	16554	0	FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	address	16454	{1}	{533}	{96}	{94}
+public	2200	store_pkey	16604	124	0	public	2200	store	16554	0	PRIMARY KEY (store_id)				0	0	{1}				0				
+public	2200	payment_staff_id_fkey	16816	92	79	public	2200	payment	16499	0	FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{3}	public	2200	staff	16545	{1}	{533}	{96}	{94}
+public	2200	payment_rental_id_fkey	16811	92	143	public	2200	payment	16499	0	FOREIGN KEY (rental_id) REFERENCES rental(rental_id) ON UPDATE CASCADE ON DELETE SET NULL				0	0	{4}	public	2200	rental	16534	{1}	{96}	{96}	{96}
+public	2200	payment_customer_id_fkey	16715	92	79	public	2200	payment	16499	0	FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT				0	0	{2}	public	2200	customer	16407	{1}	{533}	{96}	{94}
+public	2200	payment_pkey	16598	124	0	public	2200	payment	16499	0	PRIMARY KEY (payment_id)				0	0	{1}				0				
+public	2200	year_check	16397	44	0				0	0	CHECK (VALUE >= 1901 AND VALUE <= 2155)	public	2200	year	16396	0					0				

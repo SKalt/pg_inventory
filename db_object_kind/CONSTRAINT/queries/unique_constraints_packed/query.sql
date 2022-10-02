@@ -6,9 +6,8 @@ SELECT
   , constraint_.oid AS constraint_oid
 -- constraint enforcement info
   , (/* enforcement_info: a 2-byte struct of the form
-      00000000 00000000
-      -----    ~~~~~~ *
-      bools    type     validation
+      0000 0000 0001 1111 : bools
+      0000 0000 1110 0000 : constraint type
     */
     CAST(0 as INT2)
     | CASE WHEN constraint_.condeferrable THEN 1<<0 ELSE 0 END
@@ -16,18 +15,7 @@ SELECT
     | CASE WHEN constraint_.convalidated  THEN 1<<2 ELSE 0 END
     | CASE WHEN constraint_.conislocal    THEN 1<<3 ELSE 0 END
     | CASE WHEN constraint_.connoinherit  THEN 1<<4 ELSE 0 END
-    | (
-        CASE constraint_.contype -- constraint type
-          WHEN 'c' THEN 1<<8  -- check
-          WHEN 'f' THEN 1<<9  -- foreign key
-          WHEN 'p' THEN 1<<10 -- primary key
-          WHEN 't' THEN 1<<11 -- constraint trigger
-          WHEN 'u' THEN 1<<12 -- unique
-          WHEN 'x' THEN 1<<13 -- exclusion
-          ELSE          1<<15 -- validation bit
-        END
-      )
-    ) AS enforcement_info
+    )::INT2 AS enforcement_info
 -- table constraint information
   , tbl_ns.nspname AS table_schema
   , tbl.relnamespace AS table_schema_oid
@@ -55,7 +43,6 @@ FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON constraint_.contype = 'u'
   AND constraint_.connamespace = ns.oid
-
 LEFT JOIN (
     pg_catalog.pg_class AS tbl -- https://www.postgresql.org/docs/current/catalog-pg-class.html
     INNER JOIN pg_catalog.pg_namespace AS tbl_ns ON tbl.relnamespace = tbl_ns.oid

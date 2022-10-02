@@ -42,7 +42,6 @@ FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON constraint_.contype = 'x'
   AND constraint_.connamespace = ns.oid
-
 LEFT JOIN (
     pg_catalog.pg_class AS tbl -- https://www.postgresql.org/docs/current/catalog-pg-class.html
     INNER JOIN pg_catalog.pg_namespace AS tbl_ns ON tbl.relnamespace = tbl_ns.oid

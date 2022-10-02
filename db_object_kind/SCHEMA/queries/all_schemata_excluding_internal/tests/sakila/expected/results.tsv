@@ -1,2 +1,2 @@
-schema_oid	schema_name	schema_owner_oid	schema_acl
-2200	public	10	{postgres=UC/postgres,=UC/postgres}
+schema_name	schema_oid	schema_owner_name	schema_owner_oid	schema_acl
+public	2200	postgres	10	{postgres=UC/postgres,=UC/postgres}
