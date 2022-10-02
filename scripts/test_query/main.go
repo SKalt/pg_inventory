@@ -66,16 +66,17 @@ func newDbServicePool(repoRoot string) *dbServicePool {
 		composeSpec: getDockerComposeSpec(repoRoot),
 	}
 }
-func (pool *dbServicePool) ensure(serviceName string) (db *sql.DB) {
-	db = pool.get(serviceName)
-	if db != nil {
-		return db
-	}
-	var err error
-	db, err = pool.waitFor(serviceName)
-	crashIfErrNotNil(err)
-	return db
-}
+
+// func (pool *dbServicePool) ensure(serviceName string) (db *sql.DB) {
+// 	db = pool.get(serviceName)
+// 	if db != nil {
+// 		return db
+// 	}
+// 	var err error
+// 	db, err = pool.waitFor(serviceName)
+// 	crashIfErrNotNil(err)
+// 	return db
+// }
 
 func (pool *dbServicePool) get(name string) (db *sql.DB) {
 	db, ok := pool.cache[name]
@@ -229,24 +230,24 @@ func findTestCases(absPath string) (result []*testCase, err error) {
 var bareVar = regexp.MustCompile(":[a-z_]+") // watch out! can match ::type cast syntax
 var stringVar = regexp.MustCompile(":'[a-z_]+'")
 
-func findAllBarePsqlVarsIn(query string) []string {
-	found := bareVar.FindAllString(query, -1)
-	result := make([]string, len(found))
-	for i, val := range found {
-		result[i] = strings.Trim(val, ":")
-	}
-	return result
-}
+// func findAllBarePsqlVarsIn(query string) []string {
+// 	found := bareVar.FindAllString(query, -1)
+// 	result := make([]string, len(found))
+// 	for i, val := range found {
+// 		result[i] = strings.Trim(val, ":")
+// 	}
+// 	return result
+// }
 
-// detect psql-style variables, e.g. :foo or :'bar' but not :"baz"
-func findAllVarsNamesIn(query string) []string {
-	found := append(bareVar.FindAllString(query, -1), stringVar.FindAllString(query, -1)...)
-	results := make([]string, len(found))
-	for i, val := range found {
-		results[i] = strings.TrimSuffix(strings.TrimPrefix(strings.TrimPrefix(val, "'"), ":"), "'")
-	}
-	return results
-}
+// // detect psql-style variables, e.g. :foo or :'bar' but not :"baz"
+// func findAllVarsNamesIn(query string) []string {
+// 	found := append(bareVar.FindAllString(query, -1), stringVar.FindAllString(query, -1)...)
+// 	results := make([]string, len(found))
+// 	for i, val := range found {
+// 		results[i] = strings.TrimSuffix(strings.TrimPrefix(strings.TrimPrefix(val, "'"), ":"), "'")
+// 	}
+// 	return results
+// }
 
 func interpolatePsqlVars(query string, params map[string]interface{}) (interpolated string, err error) {
 	var msg string
@@ -309,7 +310,14 @@ func rowsAsTsv(rows *sql.Rows) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	tsv.Write(columnNames)
+	// fmt.Println()
+	// fmt.Println(strings.Join(columnNames, "\t"))
+	// fmt.Println()
+	if err := tsv.Write(columnNames); err != nil {
+		return "", err
+	} else {
+		tsv.Flush()
+	}
 	intermediate := make([]*string, len(columnNames))
 	row := make([]interface{}, len(columnNames))
 	tsvRow := make([]string, len(columnNames))
@@ -328,9 +336,12 @@ func rowsAsTsv(rows *sql.Rows) (string, error) {
 				tsvRow[i] = *str
 			}
 		}
-		tsv.Write(tsvRow)
+		if err = tsv.Write(tsvRow); err != nil {
+			return "", err
+		} else {
+			tsv.Flush()
+		}
 	}
-	tsv.Flush()
 	return builder.String(), nil
 }
 
@@ -408,7 +419,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	}
 
 	if tsv != string(expected) {
-		tempFile, err := os.CreateTemp("", fmt.Sprintf("%s--%s--%s?*", c.dbName(), c.queryName(), c.testName()))
+		tempFile, err := os.CreateTemp("", fmt.Sprintf("%s--%s--%s?*.tsv", c.dbName(), c.queryName(), c.testName()))
 		if err != nil {
 			return err
 		}
