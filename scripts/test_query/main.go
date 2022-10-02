@@ -441,12 +441,18 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 			err = exec.Command("code", "--diff", c.targetTsvPath(), tempFile.Name()).Run()
 			crashIfErrNotNil(err)
 		}
+		msg := "different: "
+		if !viewDiff {
+			msg += fmt.Sprintf(
+				"try running ```sh\ncode --diff %s %s\n```\n",
+				c.targetTsvPath(), tempFile.Name(),
+			)
+		}
 		return fmt.Errorf(
-			"different: try running ```sh\n"+
-				"code --diff %s %s\n```\n"+
+			msg+
 				"If the change looks correct, run ```sh\n"+
 				"cat %s>%s\n```",
-			c.targetTsvPath(), tempFile.Name(),
+
 			tempFile.Name(), c.targetTsvPath())
 	} else {
 		return nil
