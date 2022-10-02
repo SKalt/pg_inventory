@@ -410,7 +410,12 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 		}
 	}
 	if accept {
-		targetTsvFile.WriteString(tsv)
+		err = targetTsvFile.Truncate(0)
+		crashIfErrNotNil(err)
+		_, err = targetTsvFile.WriteString(tsv)
+		crashIfErrNotNil(err)
+		err = targetTsvFile.Close()
+		crashIfErrNotNil(err)
 		return nil
 	}
 	expected, err := os.ReadFile(c.targetTsvPath())
@@ -440,9 +445,9 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 			"different: try running ```sh\n"+
 				"code --diff %s %s\n```\n"+
 				"If the change looks correct, run ```sh\n"+
-				"bin/test_query --accept %s\n```\n"+"or ```sh\n"+
 				"cat %s>%s\n```",
-			c.targetTsvPath(), tempFile.Name(), c.targetTsvPath(), tempFile.Name(), c.targetTsvPath())
+			c.targetTsvPath(), tempFile.Name(),
+			c.targetTsvPath(), c.targetTsvPath())
 	} else {
 		return nil
 	}
@@ -463,7 +468,7 @@ func getParams(testDir string) map[string]interface{} {
 var rootCmd = &cobra.Command{
 	Use: "test_query",
 	Args: func(cmd *cobra.Command, args []string) (err error) {
-		err = cobra.ExactArgs(1)(cmd, args)
+		err = cobra.MinimumNArgs(1)(cmd, args)
 		return
 	},
 	Run: func(cmd *cobra.Command, args []string) {
@@ -474,13 +479,16 @@ var rootCmd = &cobra.Command{
 		crashIfErrNotNil(err)
 		viewDiff, err := flags.GetBool("view-diff")
 		crashIfErrNotNil(err)
-		path := args[0]
-		if !strings.HasPrefix(path, "/") {
-			path, err = filepath.Abs(filepath.Join(".", path))
+		testCases := make([]*testCase, 0, 1)
+		for _, path := range args {
+			if !strings.HasPrefix(path, "/") {
+				path, err = filepath.Abs(filepath.Join(".", path))
+				crashIfErrNotNil(err)
+			}
+			foundTestCases, err := findTestCases(path)
 			crashIfErrNotNil(err)
+			testCases = append(testCases, foundTestCases...)
 		}
-		testCases, err := findTestCases(path)
-		crashIfErrNotNil(err)
 		repoRoot := getRepoRoot()
 		servicePool := newDbServicePool(repoRoot)
 		dbUsage := map[string]uint8{}
