@@ -1,0 +1,61 @@
+type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	type_kind	type_category	pass_by_value	not_null	storage_alignment_code	storage_kind	is_preferred	is_defined	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid	relation_oid	relation_name	base_type_oid	base_type_name	base_type_mod
+2200	public	16418	_actor	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16419	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16449	_actor_info	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16450	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16455	_address	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16456	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16424	_category	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16425	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16461	_city	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16462	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16467	_country	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16468	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16408	_customer	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16409	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16472	_customer_list	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16473	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16430	_film	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16431	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16441	_film_actor	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16442	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16445	_film_category	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16446	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16477	_film_list	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16478	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16483	_inventory	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16484	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16489	_language	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16490	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16384	_mpaa_rating	-1	10	postgres			b	A	false	false	i	x	false	true	,	array_subscript_handler	16385	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16494	_nicer_but_slower_film_list	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16495	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16500	_payment	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16501	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16504	_payment_p2007_01	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16505	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16509	_payment_p2007_02	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16510	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16514	_payment_p2007_03	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16515	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16519	_payment_p2007_04	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16520	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16524	_payment_p2007_05	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16525	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16529	_payment_p2007_06	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16530	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16535	_rental	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16536	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16540	_sales_by_film_category	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16541	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16560	_sales_by_store	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16561	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16546	_staff	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16547	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16565	_staff_list	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16566	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16555	_store	-1	10	postgres			b	A	false	false	d	x	false	true	,	array_subscript_handler	16556	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16395	_year	-1	10	postgres			b	A	false	false	i	x	false	true	,	array_subscript_handler	16396	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+2200	public	16419	actor	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16418	record_in	record_out	record_recv	record_send	-	-	16417	actor	0		-1
+2200	public	16450	actor_info	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16449	record_in	record_out	record_recv	record_send	-	-	16448	actor_info	0		-1
+2200	public	16456	address	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16455	record_in	record_out	record_recv	record_send	-	-	16454	address	0		-1
+2200	public	16425	category	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16424	record_in	record_out	record_recv	record_send	-	-	16423	category	0		-1
+2200	public	16462	city	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16461	record_in	record_out	record_recv	record_send	-	-	16460	city	0		-1
+2200	public	16468	country	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16467	record_in	record_out	record_recv	record_send	-	-	16466	country	0		-1
+2200	public	16409	customer	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16408	record_in	record_out	record_recv	record_send	-	-	16407	customer	0		-1
+2200	public	16473	customer_list	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16472	record_in	record_out	record_recv	record_send	-	-	16471	customer_list	0		-1
+2200	public	16431	film	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16430	record_in	record_out	record_recv	record_send	-	-	16429	film	0		-1
+2200	public	16442	film_actor	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16441	record_in	record_out	record_recv	record_send	-	-	16440	film_actor	0		-1
+2200	public	16446	film_category	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16445	record_in	record_out	record_recv	record_send	-	-	16444	film_category	0		-1
+2200	public	16478	film_list	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16477	record_in	record_out	record_recv	record_send	-	-	16476	film_list	0		-1
+2200	public	16484	inventory	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16483	record_in	record_out	record_recv	record_send	-	-	16482	inventory	0		-1
+2200	public	16490	language	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16489	record_in	record_out	record_recv	record_send	-	-	16488	language	0		-1
+2200	public	16385	mpaa_rating	4	10	postgres			e	E	true	false	i	p	false	true	,	-	0	0	0	16384	enum_in	enum_out	enum_recv	enum_send	-	-	0		0		-1
+2200	public	16495	nicer_but_slower_film_list	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16494	record_in	record_out	record_recv	record_send	-	-	16493	nicer_but_slower_film_list	0		-1
+2200	public	16501	payment	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16500	record_in	record_out	record_recv	record_send	-	-	16499	payment	0		-1
+2200	public	16505	payment_p2007_01	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16504	record_in	record_out	record_recv	record_send	-	-	16503	payment_p2007_01	0		-1
+2200	public	16510	payment_p2007_02	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16509	record_in	record_out	record_recv	record_send	-	-	16508	payment_p2007_02	0		-1
+2200	public	16515	payment_p2007_03	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16514	record_in	record_out	record_recv	record_send	-	-	16513	payment_p2007_03	0		-1
+2200	public	16520	payment_p2007_04	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16519	record_in	record_out	record_recv	record_send	-	-	16518	payment_p2007_04	0		-1
+2200	public	16525	payment_p2007_05	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16524	record_in	record_out	record_recv	record_send	-	-	16523	payment_p2007_05	0		-1
+2200	public	16530	payment_p2007_06	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16529	record_in	record_out	record_recv	record_send	-	-	16528	payment_p2007_06	0		-1
+2200	public	16536	rental	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16535	record_in	record_out	record_recv	record_send	-	-	16534	rental	0		-1
+2200	public	16541	sales_by_film_category	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16540	record_in	record_out	record_recv	record_send	-	-	16539	sales_by_film_category	0		-1
+2200	public	16561	sales_by_store	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16560	record_in	record_out	record_recv	record_send	-	-	16559	sales_by_store	0		-1
+2200	public	16547	staff	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16546	record_in	record_out	record_recv	record_send	-	-	16545	staff	0		-1
+2200	public	16566	staff_list	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16565	record_in	record_out	record_recv	record_send	-	-	16564	staff_list	0		-1
+2200	public	16556	store	-1	10	postgres			c	C	false	false	d	x	false	true	,	-	0	0	0	16555	record_in	record_out	record_recv	record_send	-	-	16554	store	0		-1
+2200	public	16396	year	4	10	postgres			d	N	true	false	i	p	false	true	,	-	0	0	0	16395	domain_in	int4out	domain_recv	int4send	-	-	0		23	int4	-1

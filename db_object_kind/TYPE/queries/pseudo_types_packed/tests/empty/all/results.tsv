@@ -1,0 +1,27 @@
+type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid
+11	pg_catalog	2287	_record	-1	10	postgres			20352	,	array_subscript_handler	2249	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
+11	pg_catalog	2276	any	4	10	postgres			21120	,	-	0	0	0	0	any_in	any_out	-	-	-	-
+11	pg_catalog	2277	anyarray	-1	10	postgres			20352	,	-	0	0	0	0	anyarray_in	anyarray_out	anyarray_recv	anyarray_send	-	-
+11	pg_catalog	5077	anycompatible	4	10	postgres			21120	,	-	0	0	0	0	anycompatible_in	anycompatible_out	-	-	-	-
+11	pg_catalog	5078	anycompatiblearray	-1	10	postgres			20352	,	-	0	0	0	0	anycompatiblearray_in	anycompatiblearray_out	anycompatiblearray_recv	anycompatiblearray_send	-	-
+11	pg_catalog	4538	anycompatiblemultirange	-1	10	postgres			20352	,	-	0	0	0	0	anycompatiblemultirange_in	anycompatiblemultirange_out	-	-	-	-
+11	pg_catalog	5079	anycompatiblenonarray	4	10	postgres			21120	,	-	0	0	0	0	anycompatiblenonarray_in	anycompatiblenonarray_out	-	-	-	-
+11	pg_catalog	5080	anycompatiblerange	-1	10	postgres			20352	,	-	0	0	0	0	anycompatiblerange_in	anycompatiblerange_out	-	-	-	-
+11	pg_catalog	2283	anyelement	4	10	postgres			21120	,	-	0	0	0	0	anyelement_in	anyelement_out	-	-	-	-
+11	pg_catalog	3500	anyenum	4	10	postgres			21120	,	-	0	0	0	0	anyenum_in	anyenum_out	-	-	-	-
+11	pg_catalog	4537	anymultirange	-1	10	postgres			20352	,	-	0	0	0	0	anymultirange_in	anymultirange_out	-	-	-	-
+11	pg_catalog	2776	anynonarray	4	10	postgres			21120	,	-	0	0	0	0	anynonarray_in	anynonarray_out	-	-	-	-
+11	pg_catalog	3831	anyrange	-1	10	postgres			20352	,	-	0	0	0	0	anyrange_in	anyrange_out	-	-	-	-
+11	pg_catalog	2275	cstring	-2	10	postgres			16512	,	-	0	0	0	1263	cstring_in	cstring_out	cstring_recv	cstring_send	-	-
+11	pg_catalog	3838	event_trigger	4	10	postgres			21120	,	-	0	0	0	0	event_trigger_in	event_trigger_out	-	-	-	-
+11	pg_catalog	3115	fdw_handler	4	10	postgres			21120	,	-	0	0	0	0	fdw_handler_in	fdw_handler_out	-	-	-	-
+11	pg_catalog	325	index_am_handler	4	10	postgres			21120	,	-	0	0	0	0	index_am_handler_in	index_am_handler_out	-	-	-	-
+11	pg_catalog	2281	internal	8	10	postgres			21376	,	-	0	0	0	0	internal_in	internal_out	-	-	-	-
+11	pg_catalog	2280	language_handler	4	10	postgres			21120	,	-	0	0	0	0	language_handler_in	language_handler_out	-	-	-	-
+11	pg_catalog	32	pg_ddl_command	8	10	postgres			21376	,	-	0	0	0	0	pg_ddl_command_in	pg_ddl_command_out	pg_ddl_command_recv	pg_ddl_command_send	-	-
+11	pg_catalog	2249	record	-1	10	postgres			20352	,	-	0	0	0	2287	record_in	record_out	record_recv	record_send	-	-
+11	pg_catalog	269	table_am_handler	4	10	postgres			21120	,	-	0	0	0	0	table_am_handler_in	table_am_handler_out	-	-	-	-
+11	pg_catalog	2279	trigger	4	10	postgres			21120	,	-	0	0	0	0	trigger_in	trigger_out	-	-	-	-
+11	pg_catalog	3310	tsm_handler	4	10	postgres			21120	,	-	0	0	0	0	tsm_handler_in	tsm_handler_out	-	-	-	-
+11	pg_catalog	705	unknown	-2	10	postgres			16608	,	-	0	0	0	0	unknownin	unknownout	unknownrecv	unknownsend	-	-
+11	pg_catalog	2278	void	4	10	postgres			21120	,	-	0	0	0	0	void_in	void_out	void_recv	void_send	-	-

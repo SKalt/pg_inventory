@@ -1,0 +1,7 @@
+type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid
+11	pg_catalog	4535	datemultirange	-1	10	postgres			20112	,	-	0	0	0	6155	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze
+11	pg_catalog	4451	int4multirange	-1	10	postgres			20112	,	-	0	0	0	6150	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze
+11	pg_catalog	4536	int8multirange	-1	10	postgres			20368	,	-	0	0	0	6157	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze
+11	pg_catalog	4532	nummultirange	-1	10	postgres			20112	,	-	0	0	0	6151	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze
+11	pg_catalog	4533	tsmultirange	-1	10	postgres			20368	,	-	0	0	0	6152	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze
+11	pg_catalog	4534	tstzmultirange	-1	10	postgres			20368	,	-	0	0	0	6153	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze

@@ -1,0 +1,602 @@
+type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid	relation_oid	relation_name	base_type_oid	base_type_name	base_type_mod
+13403	information_schema	13704	__pg_foreign_data_wrappers	-1	10	postgres			20225	,	array_subscript_handler	13705	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13716	__pg_foreign_servers	-1	10	postgres			20225	,	array_subscript_handler	13717	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13695	__pg_foreign_table_columns	-1	10	postgres			20225	,	array_subscript_handler	13696	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13729	__pg_foreign_tables	-1	10	postgres			20225	,	array_subscript_handler	13730	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13742	__pg_user_mappings	-1	10	postgres			20225	,	array_subscript_handler	13743	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13438	_administrable_role_authorizations	-1	10	postgres			20225	,	array_subscript_handler	13439	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13433	_applicable_roles	-1	10	postgres			20225	,	array_subscript_handler	13434	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13442	_attributes	-1	10	postgres			20225	,	array_subscript_handler	13443	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13416	_cardinal_number	-1	10	postgres			19969	,	array_subscript_handler	13417	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13419	_character_data	-1	10	postgres			19969	,	array_subscript_handler	13420	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13447	_character_sets	-1	10	postgres			20225	,	array_subscript_handler	13448	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13452	_check_constraint_routine_usage	-1	10	postgres			20225	,	array_subscript_handler	13453	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13457	_check_constraints	-1	10	postgres			20225	,	array_subscript_handler	13458	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13467	_collation_character_set_applicability	-1	10	postgres			20225	,	array_subscript_handler	13468	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13462	_collations	-1	10	postgres			20225	,	array_subscript_handler	13463	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13472	_column_column_usage	-1	10	postgres			20225	,	array_subscript_handler	13473	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13477	_column_domain_usage	-1	10	postgres			20225	,	array_subscript_handler	13478	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13700	_column_options	-1	10	postgres			20225	,	array_subscript_handler	13701	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13482	_column_privileges	-1	10	postgres			20225	,	array_subscript_handler	13483	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13487	_column_udt_usage	-1	10	postgres			20225	,	array_subscript_handler	13488	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13492	_columns	-1	10	postgres			20225	,	array_subscript_handler	13493	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13497	_constraint_column_usage	-1	10	postgres			20225	,	array_subscript_handler	13498	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13502	_constraint_table_usage	-1	10	postgres			20225	,	array_subscript_handler	13503	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13685	_data_type_privileges	-1	10	postgres			20225	,	array_subscript_handler	13686	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13507	_domain_constraints	-1	10	postgres			20225	,	array_subscript_handler	13508	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13512	_domain_udt_usage	-1	10	postgres			20225	,	array_subscript_handler	13513	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13517	_domains	-1	10	postgres			20225	,	array_subscript_handler	13518	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13690	_element_types	-1	10	postgres			20225	,	array_subscript_handler	13691	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13522	_enabled_roles	-1	10	postgres			20225	,	array_subscript_handler	13523	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13708	_foreign_data_wrapper_options	-1	10	postgres			20225	,	array_subscript_handler	13709	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13712	_foreign_data_wrappers	-1	10	postgres			20225	,	array_subscript_handler	13713	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13721	_foreign_server_options	-1	10	postgres			20225	,	array_subscript_handler	13722	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13725	_foreign_servers	-1	10	postgres			20225	,	array_subscript_handler	13726	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13734	_foreign_table_options	-1	10	postgres			20225	,	array_subscript_handler	13735	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13738	_foreign_tables	-1	10	postgres			20225	,	array_subscript_handler	13739	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13424	_information_schema_catalog_name	-1	10	postgres			20225	,	array_subscript_handler	13425	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13526	_key_column_usage	-1	10	postgres			20225	,	array_subscript_handler	13527	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13531	_parameters	-1	10	postgres			20225	,	array_subscript_handler	13532	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13705	_pg_foreign_data_wrappers	-1	10	postgres			20258	,	-	0	0	0	13704	record_in	record_out	record_recv	record_send	-	-	13703	_pg_foreign_data_wrappers	0		-1
+13403	information_schema	13717	_pg_foreign_servers	-1	10	postgres			20258	,	-	0	0	0	13716	record_in	record_out	record_recv	record_send	-	-	13715	_pg_foreign_servers	0		-1
+13403	information_schema	13696	_pg_foreign_table_columns	-1	10	postgres			20258	,	-	0	0	0	13695	record_in	record_out	record_recv	record_send	-	-	13694	_pg_foreign_table_columns	0		-1
+13403	information_schema	13730	_pg_foreign_tables	-1	10	postgres			20258	,	-	0	0	0	13729	record_in	record_out	record_recv	record_send	-	-	13728	_pg_foreign_tables	0		-1
+13403	information_schema	13743	_pg_user_mappings	-1	10	postgres			20258	,	-	0	0	0	13742	record_in	record_out	record_recv	record_send	-	-	13741	_pg_user_mappings	0		-1
+13403	information_schema	13536	_referential_constraints	-1	10	postgres			20225	,	array_subscript_handler	13537	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13541	_role_column_grants	-1	10	postgres			20225	,	array_subscript_handler	13542	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13555	_role_routine_grants	-1	10	postgres			20225	,	array_subscript_handler	13556	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13618	_role_table_grants	-1	10	postgres			20225	,	array_subscript_handler	13619	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13647	_role_udt_grants	-1	10	postgres			20225	,	array_subscript_handler	13648	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13656	_role_usage_grants	-1	10	postgres			20225	,	array_subscript_handler	13657	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13545	_routine_column_usage	-1	10	postgres			20225	,	array_subscript_handler	13546	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13550	_routine_privileges	-1	10	postgres			20225	,	array_subscript_handler	13551	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13559	_routine_routine_usage	-1	10	postgres			20225	,	array_subscript_handler	13560	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13564	_routine_sequence_usage	-1	10	postgres			20225	,	array_subscript_handler	13565	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13569	_routine_table_usage	-1	10	postgres			20225	,	array_subscript_handler	13570	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13574	_routines	-1	10	postgres			20225	,	array_subscript_handler	13575	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13579	_schemata	-1	10	postgres			20225	,	array_subscript_handler	13580	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13583	_sequences	-1	10	postgres			20225	,	array_subscript_handler	13584	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13588	_sql_features	-1	10	postgres			20225	,	array_subscript_handler	13589	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13421	_sql_identifier	-1	10	postgres			19969	,	array_subscript_handler	13422	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13593	_sql_implementation_info	-1	10	postgres			20225	,	array_subscript_handler	13594	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13598	_sql_parts	-1	10	postgres			20225	,	array_subscript_handler	13599	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13603	_sql_sizing	-1	10	postgres			20225	,	array_subscript_handler	13604	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13608	_table_constraints	-1	10	postgres			20225	,	array_subscript_handler	13609	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13613	_table_privileges	-1	10	postgres			20225	,	array_subscript_handler	13614	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13622	_tables	-1	10	postgres			20225	,	array_subscript_handler	13623	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13427	_time_stamp	-1	10	postgres			20225	,	array_subscript_handler	13428	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13627	_transforms	-1	10	postgres			20225	,	array_subscript_handler	13628	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13632	_triggered_update_columns	-1	10	postgres			20225	,	array_subscript_handler	13633	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13637	_triggers	-1	10	postgres			20225	,	array_subscript_handler	13638	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13642	_udt_privileges	-1	10	postgres			20225	,	array_subscript_handler	13643	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13651	_usage_privileges	-1	10	postgres			20225	,	array_subscript_handler	13652	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13660	_user_defined_types	-1	10	postgres			20225	,	array_subscript_handler	13661	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13747	_user_mapping_options	-1	10	postgres			20225	,	array_subscript_handler	13748	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13752	_user_mappings	-1	10	postgres			20225	,	array_subscript_handler	13753	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13665	_view_column_usage	-1	10	postgres			20225	,	array_subscript_handler	13666	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13670	_view_routine_usage	-1	10	postgres			20225	,	array_subscript_handler	13671	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13675	_view_table_usage	-1	10	postgres			20225	,	array_subscript_handler	13676	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13680	_views	-1	10	postgres			20225	,	array_subscript_handler	13681	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13429	_yes_or_no	-1	10	postgres			19969	,	array_subscript_handler	13430	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+13403	information_schema	13439	administrable_role_authorizations	-1	10	postgres			20258	,	-	0	0	0	13438	record_in	record_out	record_recv	record_send	-	-	13437	administrable_role_authorizations	0		-1
+13403	information_schema	13434	applicable_roles	-1	10	postgres			20258	,	-	0	0	0	13433	record_in	record_out	record_recv	record_send	-	-	13432	applicable_roles	0		-1
+13403	information_schema	13443	attributes	-1	10	postgres			20258	,	-	0	0	0	13442	record_in	record_out	record_recv	record_send	-	-	13441	attributes	0		-1
+13403	information_schema	13417	cardinal_number	4	10	postgres			21107	,	-	0	0	0	13416	domain_in	int4out	domain_recv	int4send	-	-	0		23	int4	-1
+13403	information_schema	13420	character_data	-1	10	postgres			20131	,	-	0	0	950	13419	domain_in	varcharout	domain_recv	varcharsend	-	-	0		1043	varchar	-1
+13403	information_schema	13448	character_sets	-1	10	postgres			20258	,	-	0	0	0	13447	record_in	record_out	record_recv	record_send	-	-	13446	character_sets	0		-1
+13403	information_schema	13453	check_constraint_routine_usage	-1	10	postgres			20258	,	-	0	0	0	13452	record_in	record_out	record_recv	record_send	-	-	13451	check_constraint_routine_usage	0		-1
+13403	information_schema	13458	check_constraints	-1	10	postgres			20258	,	-	0	0	0	13457	record_in	record_out	record_recv	record_send	-	-	13456	check_constraints	0		-1
+13403	information_schema	13468	collation_character_set_applicability	-1	10	postgres			20258	,	-	0	0	0	13467	record_in	record_out	record_recv	record_send	-	-	13466	collation_character_set_applicability	0		-1
+13403	information_schema	13463	collations	-1	10	postgres			20258	,	-	0	0	0	13462	record_in	record_out	record_recv	record_send	-	-	13461	collations	0		-1
+13403	information_schema	13473	column_column_usage	-1	10	postgres			20258	,	-	0	0	0	13472	record_in	record_out	record_recv	record_send	-	-	13471	column_column_usage	0		-1
+13403	information_schema	13478	column_domain_usage	-1	10	postgres			20258	,	-	0	0	0	13477	record_in	record_out	record_recv	record_send	-	-	13476	column_domain_usage	0		-1
+13403	information_schema	13701	column_options	-1	10	postgres			20258	,	-	0	0	0	13700	record_in	record_out	record_recv	record_send	-	-	13699	column_options	0		-1
+13403	information_schema	13483	column_privileges	-1	10	postgres			20258	,	-	0	0	0	13482	record_in	record_out	record_recv	record_send	-	-	13481	column_privileges	0		-1
+13403	information_schema	13488	column_udt_usage	-1	10	postgres			20258	,	-	0	0	0	13487	record_in	record_out	record_recv	record_send	-	-	13486	column_udt_usage	0		-1
+13403	information_schema	13493	columns	-1	10	postgres			20258	,	-	0	0	0	13492	record_in	record_out	record_recv	record_send	-	-	13491	columns	0		-1
+13403	information_schema	13498	constraint_column_usage	-1	10	postgres			20258	,	-	0	0	0	13497	record_in	record_out	record_recv	record_send	-	-	13496	constraint_column_usage	0		-1
+13403	information_schema	13503	constraint_table_usage	-1	10	postgres			20258	,	-	0	0	0	13502	record_in	record_out	record_recv	record_send	-	-	13501	constraint_table_usage	0		-1
+13403	information_schema	13686	data_type_privileges	-1	10	postgres			20258	,	-	0	0	0	13685	record_in	record_out	record_recv	record_send	-	-	13684	data_type_privileges	0		-1
+13403	information_schema	13508	domain_constraints	-1	10	postgres			20258	,	-	0	0	0	13507	record_in	record_out	record_recv	record_send	-	-	13506	domain_constraints	0		-1
+13403	information_schema	13513	domain_udt_usage	-1	10	postgres			20258	,	-	0	0	0	13512	record_in	record_out	record_recv	record_send	-	-	13511	domain_udt_usage	0		-1
+13403	information_schema	13518	domains	-1	10	postgres			20258	,	-	0	0	0	13517	record_in	record_out	record_recv	record_send	-	-	13516	domains	0		-1
+13403	information_schema	13691	element_types	-1	10	postgres			20258	,	-	0	0	0	13690	record_in	record_out	record_recv	record_send	-	-	13689	element_types	0		-1
+13403	information_schema	13523	enabled_roles	-1	10	postgres			20258	,	-	0	0	0	13522	record_in	record_out	record_recv	record_send	-	-	13521	enabled_roles	0		-1
+13403	information_schema	13709	foreign_data_wrapper_options	-1	10	postgres			20258	,	-	0	0	0	13708	record_in	record_out	record_recv	record_send	-	-	13707	foreign_data_wrapper_options	0		-1
+13403	information_schema	13713	foreign_data_wrappers	-1	10	postgres			20258	,	-	0	0	0	13712	record_in	record_out	record_recv	record_send	-	-	13711	foreign_data_wrappers	0		-1
+13403	information_schema	13722	foreign_server_options	-1	10	postgres			20258	,	-	0	0	0	13721	record_in	record_out	record_recv	record_send	-	-	13720	foreign_server_options	0		-1
+13403	information_schema	13726	foreign_servers	-1	10	postgres			20258	,	-	0	0	0	13725	record_in	record_out	record_recv	record_send	-	-	13724	foreign_servers	0		-1
+13403	information_schema	13735	foreign_table_options	-1	10	postgres			20258	,	-	0	0	0	13734	record_in	record_out	record_recv	record_send	-	-	13733	foreign_table_options	0		-1
+13403	information_schema	13739	foreign_tables	-1	10	postgres			20258	,	-	0	0	0	13738	record_in	record_out	record_recv	record_send	-	-	13737	foreign_tables	0		-1
+13403	information_schema	13425	information_schema_catalog_name	-1	10	postgres			20258	,	-	0	0	0	13424	record_in	record_out	record_recv	record_send	-	-	13423	information_schema_catalog_name	0		-1
+13403	information_schema	13527	key_column_usage	-1	10	postgres			20258	,	-	0	0	0	13526	record_in	record_out	record_recv	record_send	-	-	13525	key_column_usage	0		-1
+13403	information_schema	13532	parameters	-1	10	postgres			20258	,	-	0	0	0	13531	record_in	record_out	record_recv	record_send	-	-	13530	parameters	0		-1
+13403	information_schema	13537	referential_constraints	-1	10	postgres			20258	,	-	0	0	0	13536	record_in	record_out	record_recv	record_send	-	-	13535	referential_constraints	0		-1
+13403	information_schema	13542	role_column_grants	-1	10	postgres			20258	,	-	0	0	0	13541	record_in	record_out	record_recv	record_send	-	-	13540	role_column_grants	0		-1
+13403	information_schema	13556	role_routine_grants	-1	10	postgres			20258	,	-	0	0	0	13555	record_in	record_out	record_recv	record_send	-	-	13554	role_routine_grants	0		-1
+13403	information_schema	13619	role_table_grants	-1	10	postgres			20258	,	-	0	0	0	13618	record_in	record_out	record_recv	record_send	-	-	13617	role_table_grants	0		-1
+13403	information_schema	13648	role_udt_grants	-1	10	postgres			20258	,	-	0	0	0	13647	record_in	record_out	record_recv	record_send	-	-	13646	role_udt_grants	0		-1
+13403	information_schema	13657	role_usage_grants	-1	10	postgres			20258	,	-	0	0	0	13656	record_in	record_out	record_recv	record_send	-	-	13655	role_usage_grants	0		-1
+13403	information_schema	13546	routine_column_usage	-1	10	postgres			20258	,	-	0	0	0	13545	record_in	record_out	record_recv	record_send	-	-	13544	routine_column_usage	0		-1
+13403	information_schema	13551	routine_privileges	-1	10	postgres			20258	,	-	0	0	0	13550	record_in	record_out	record_recv	record_send	-	-	13549	routine_privileges	0		-1
+13403	information_schema	13560	routine_routine_usage	-1	10	postgres			20258	,	-	0	0	0	13559	record_in	record_out	record_recv	record_send	-	-	13558	routine_routine_usage	0		-1
+13403	information_schema	13565	routine_sequence_usage	-1	10	postgres			20258	,	-	0	0	0	13564	record_in	record_out	record_recv	record_send	-	-	13563	routine_sequence_usage	0		-1
+13403	information_schema	13570	routine_table_usage	-1	10	postgres			20258	,	-	0	0	0	13569	record_in	record_out	record_recv	record_send	-	-	13568	routine_table_usage	0		-1
+13403	information_schema	13575	routines	-1	10	postgres			20258	,	-	0	0	0	13574	record_in	record_out	record_recv	record_send	-	-	13573	routines	0		-1
+13403	information_schema	13580	schemata	-1	10	postgres			20258	,	-	0	0	0	13579	record_in	record_out	record_recv	record_send	-	-	13578	schemata	0		-1
+13403	information_schema	13584	sequences	-1	10	postgres			20258	,	-	0	0	0	13583	record_in	record_out	record_recv	record_send	-	-	13582	sequences	0		-1
+13403	information_schema	13589	sql_features	-1	10	postgres			20258	,	-	0	0	0	13588	record_in	record_out	record_recv	record_send	-	-	13587	sql_features	0		-1
+13403	information_schema	13422	sql_identifier	64	10	postgres			16547	,	-	0	0	950	13421	domain_in	nameout	domain_recv	namesend	-	-	0		19	name	-1
+13403	information_schema	13594	sql_implementation_info	-1	10	postgres			20258	,	-	0	0	0	13593	record_in	record_out	record_recv	record_send	-	-	13592	sql_implementation_info	0		-1
+13403	information_schema	13599	sql_parts	-1	10	postgres			20258	,	-	0	0	0	13598	record_in	record_out	record_recv	record_send	-	-	13597	sql_parts	0		-1
+13403	information_schema	13604	sql_sizing	-1	10	postgres			20258	,	-	0	0	0	13603	record_in	record_out	record_recv	record_send	-	-	13602	sql_sizing	0		-1
+13403	information_schema	13609	table_constraints	-1	10	postgres			20258	,	-	0	0	0	13608	record_in	record_out	record_recv	record_send	-	-	13607	table_constraints	0		-1
+13403	information_schema	13614	table_privileges	-1	10	postgres			20258	,	-	0	0	0	13613	record_in	record_out	record_recv	record_send	-	-	13612	table_privileges	0		-1
+13403	information_schema	13623	tables	-1	10	postgres			20258	,	-	0	0	0	13622	record_in	record_out	record_recv	record_send	-	-	13621	tables	0		-1
+13403	information_schema	13428	time_stamp	8	10	postgres	CURRENT_TIMESTAMP(2)		21299	,	-	0	0	0	13427	domain_in	timestamptz_out	domain_recv	timestamptz_send	-	-	0		1184	timestamptz	2
+13403	information_schema	13628	transforms	-1	10	postgres			20258	,	-	0	0	0	13627	record_in	record_out	record_recv	record_send	-	-	13626	transforms	0		-1
+13403	information_schema	13633	triggered_update_columns	-1	10	postgres			20258	,	-	0	0	0	13632	record_in	record_out	record_recv	record_send	-	-	13631	triggered_update_columns	0		-1
+13403	information_schema	13638	triggers	-1	10	postgres			20258	,	-	0	0	0	13637	record_in	record_out	record_recv	record_send	-	-	13636	triggers	0		-1
+13403	information_schema	13643	udt_privileges	-1	10	postgres			20258	,	-	0	0	0	13642	record_in	record_out	record_recv	record_send	-	-	13641	udt_privileges	0		-1
+13403	information_schema	13652	usage_privileges	-1	10	postgres			20258	,	-	0	0	0	13651	record_in	record_out	record_recv	record_send	-	-	13650	usage_privileges	0		-1
+13403	information_schema	13661	user_defined_types	-1	10	postgres			20258	,	-	0	0	0	13660	record_in	record_out	record_recv	record_send	-	-	13659	user_defined_types	0		-1
+13403	information_schema	13748	user_mapping_options	-1	10	postgres			20258	,	-	0	0	0	13747	record_in	record_out	record_recv	record_send	-	-	13746	user_mapping_options	0		-1
+13403	information_schema	13753	user_mappings	-1	10	postgres			20258	,	-	0	0	0	13752	record_in	record_out	record_recv	record_send	-	-	13751	user_mappings	0		-1
+13403	information_schema	13666	view_column_usage	-1	10	postgres			20258	,	-	0	0	0	13665	record_in	record_out	record_recv	record_send	-	-	13664	view_column_usage	0		-1
+13403	information_schema	13671	view_routine_usage	-1	10	postgres			20258	,	-	0	0	0	13670	record_in	record_out	record_recv	record_send	-	-	13669	view_routine_usage	0		-1
+13403	information_schema	13676	view_table_usage	-1	10	postgres			20258	,	-	0	0	0	13675	record_in	record_out	record_recv	record_send	-	-	13674	view_table_usage	0		-1
+13403	information_schema	13681	views	-1	10	postgres			20258	,	-	0	0	0	13680	record_in	record_out	record_recv	record_send	-	-	13679	views	0		-1
+13403	information_schema	13430	yes_or_no	-1	10	postgres			20131	,	-	0	0	950	13429	domain_in	varcharout	domain_recv	varcharsend	-	-	0		1043	varchar	7
+11	pg_catalog	1034	_aclitem	-1	10	postgres			19969	,	array_subscript_handler	1033	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1561	_bit	-1	10	postgres			19969	,	array_subscript_handler	1560	0	0	0	array_in	array_out	array_recv	array_send	bittypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1000	_bool	-1	10	postgres			19969	,	array_subscript_handler	16	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1020	_box	-1	10	postgres			20225	;	array_subscript_handler	603	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1014	_bpchar	-1	10	postgres			19969	,	array_subscript_handler	1042	0	100	0	array_in	array_out	array_recv	array_send	bpchartypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1001	_bytea	-1	10	postgres			19969	,	array_subscript_handler	17	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1002	_char	-1	10	postgres			19969	,	array_subscript_handler	18	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1012	_cid	-1	10	postgres			19969	,	array_subscript_handler	29	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	651	_cidr	-1	10	postgres			19969	,	array_subscript_handler	650	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	719	_circle	-1	10	postgres			20225	,	array_subscript_handler	718	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1263	_cstring	-1	10	postgres			19969	,	array_subscript_handler	2275	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1182	_date	-1	10	postgres			19969	,	array_subscript_handler	1082	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	6155	_datemultirange	-1	10	postgres			19969	,	array_subscript_handler	4535	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3913	_daterange	-1	10	postgres			19969	,	array_subscript_handler	3912	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1021	_float4	-1	10	postgres			19969	,	array_subscript_handler	700	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1022	_float8	-1	10	postgres			20225	,	array_subscript_handler	701	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3644	_gtsvector	-1	10	postgres			19969	,	array_subscript_handler	3642	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1041	_inet	-1	10	postgres			19969	,	array_subscript_handler	869	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1005	_int2	-1	10	postgres			19969	,	array_subscript_handler	21	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1006	_int2vector	-1	10	postgres			19969	,	array_subscript_handler	22	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1007	_int4	-1	10	postgres			19969	,	array_subscript_handler	23	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	6150	_int4multirange	-1	10	postgres			19969	,	array_subscript_handler	4451	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3905	_int4range	-1	10	postgres			19969	,	array_subscript_handler	3904	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1016	_int8	-1	10	postgres			20225	,	array_subscript_handler	20	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	6157	_int8multirange	-1	10	postgres			20225	,	array_subscript_handler	4536	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3927	_int8range	-1	10	postgres			20225	,	array_subscript_handler	3926	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1187	_interval	-1	10	postgres			20225	,	array_subscript_handler	1186	0	0	0	array_in	array_out	array_recv	array_send	intervaltypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	199	_json	-1	10	postgres			19969	,	array_subscript_handler	114	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3807	_jsonb	-1	10	postgres			19969	,	array_subscript_handler	3802	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	4073	_jsonpath	-1	10	postgres			19969	,	array_subscript_handler	4072	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	629	_line	-1	10	postgres			20225	,	array_subscript_handler	628	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1018	_lseg	-1	10	postgres			20225	,	array_subscript_handler	601	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1040	_macaddr	-1	10	postgres			19969	,	array_subscript_handler	829	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	775	_macaddr8	-1	10	postgres			19969	,	array_subscript_handler	774	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	791	_money	-1	10	postgres			20225	,	array_subscript_handler	790	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1003	_name	-1	10	postgres			19969	,	array_subscript_handler	19	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1231	_numeric	-1	10	postgres			19969	,	array_subscript_handler	1700	0	0	0	array_in	array_out	array_recv	array_send	numerictypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	6151	_nummultirange	-1	10	postgres			19969	,	array_subscript_handler	4532	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3907	_numrange	-1	10	postgres			19969	,	array_subscript_handler	3906	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1028	_oid	-1	10	postgres			19969	,	array_subscript_handler	26	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1013	_oidvector	-1	10	postgres			19969	,	array_subscript_handler	30	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1019	_path	-1	10	postgres			20225	,	array_subscript_handler	602	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12026	_pg_aggregate	-1	10	postgres			20225	,	array_subscript_handler	12027	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12014	_pg_am	-1	10	postgres			20225	,	array_subscript_handler	12015	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12016	_pg_amop	-1	10	postgres			20225	,	array_subscript_handler	12017	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12018	_pg_amproc	-1	10	postgres			20225	,	array_subscript_handler	12019	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12000	_pg_attrdef	-1	10	postgres			20225	,	array_subscript_handler	12001	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	270	_pg_attribute	-1	10	postgres			20225	,	array_subscript_handler	75	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12058	_pg_auth_members	-1	10	postgres			20225	,	array_subscript_handler	2843	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12057	_pg_authid	-1	10	postgres			20225	,	array_subscript_handler	2842	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12303	_pg_available_extension_versions	-1	10	postgres			20225	,	array_subscript_handler	12304	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12299	_pg_available_extensions	-1	10	postgres			20225	,	array_subscript_handler	12300	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12352	_pg_backend_memory_contexts	-1	10	postgres			20225	,	array_subscript_handler	12353	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12042	_pg_cast	-1	10	postgres			20225	,	array_subscript_handler	12043	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	273	_pg_class	-1	10	postgres			20225	,	array_subscript_handler	83	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12094	_pg_collation	-1	10	postgres			20225	,	array_subscript_handler	12095	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12344	_pg_config	-1	10	postgres			20225	,	array_subscript_handler	12345	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12002	_pg_constraint	-1	10	postgres			20225	,	array_subscript_handler	12003	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12048	_pg_conversion	-1	10	postgres			20225	,	array_subscript_handler	12049	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12295	_pg_cursors	-1	10	postgres			20225	,	array_subscript_handler	12296	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12052	_pg_database	-1	10	postgres			20225	,	array_subscript_handler	1248	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12053	_pg_db_role_setting	-1	10	postgres			20225	,	array_subscript_handler	12054	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12087	_pg_default_acl	-1	10	postgres			20225	,	array_subscript_handler	12088	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12050	_pg_depend	-1	10	postgres			20225	,	array_subscript_handler	12051	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12040	_pg_description	-1	10	postgres			20225	,	array_subscript_handler	12041	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12044	_pg_enum	-1	10	postgres			20225	,	array_subscript_handler	12045	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12038	_pg_event_trigger	-1	10	postgres			20225	,	array_subscript_handler	12039	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12073	_pg_extension	-1	10	postgres			20225	,	array_subscript_handler	12074	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12328	_pg_file_settings	-1	10	postgres			20225	,	array_subscript_handler	12329	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12075	_pg_foreign_data_wrapper	-1	10	postgres			20225	,	array_subscript_handler	12076	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12077	_pg_foreign_server	-1	10	postgres			20225	,	array_subscript_handler	12078	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12081	_pg_foreign_table	-1	10	postgres			20225	,	array_subscript_handler	12082	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12228	_pg_group	-1	10	postgres			20225	,	array_subscript_handler	12229	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12332	_pg_hba_file_rules	-1	10	postgres			20225	,	array_subscript_handler	12333	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12006	_pg_index	-1	10	postgres			20225	,	array_subscript_handler	12007	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12261	_pg_indexes	-1	10	postgres			20225	,	array_subscript_handler	12262	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12004	_pg_inherits	-1	10	postgres			20225	,	array_subscript_handler	12005	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12089	_pg_init_privs	-1	10	postgres			20225	,	array_subscript_handler	12090	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12020	_pg_language	-1	10	postgres			20225	,	array_subscript_handler	12021	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12024	_pg_largeobject	-1	10	postgres			20225	,	array_subscript_handler	12025	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12022	_pg_largeobject_metadata	-1	10	postgres			20225	,	array_subscript_handler	12023	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12291	_pg_locks	-1	10	postgres			20225	,	array_subscript_handler	12292	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3221	_pg_lsn	-1	10	postgres			20225	,	array_subscript_handler	3220	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12256	_pg_matviews	-1	10	postgres			20225	,	array_subscript_handler	12257	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12046	_pg_namespace	-1	10	postgres			20225	,	array_subscript_handler	12047	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12012	_pg_opclass	-1	10	postgres			20225	,	array_subscript_handler	12013	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12008	_pg_operator	-1	10	postgres			20225	,	array_subscript_handler	12009	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12010	_pg_opfamily	-1	10	postgres			20225	,	array_subscript_handler	12011	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12096	_pg_partitioned_table	-1	10	postgres			20225	,	array_subscript_handler	12097	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12236	_pg_policies	-1	10	postgres			20225	,	array_subscript_handler	12237	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12083	_pg_policy	-1	10	postgres			20225	,	array_subscript_handler	12084	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12313	_pg_prepared_statements	-1	10	postgres			20225	,	array_subscript_handler	12314	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12308	_pg_prepared_xacts	-1	10	postgres			20225	,	array_subscript_handler	12309	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	272	_pg_proc	-1	10	postgres			20225	,	array_subscript_handler	81	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12104	_pg_publication	-1	10	postgres			20225	,	array_subscript_handler	12105	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12106	_pg_publication_rel	-1	10	postgres			20225	,	array_subscript_handler	12107	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12286	_pg_publication_tables	-1	10	postgres			20225	,	array_subscript_handler	12287	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12098	_pg_range	-1	10	postgres			20225	,	array_subscript_handler	12099	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12085	_pg_replication_origin	-1	10	postgres			20225	,	array_subscript_handler	12086	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12542	_pg_replication_origin_status	-1	10	postgres			20225	,	array_subscript_handler	12543	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12467	_pg_replication_slots	-1	10	postgres			20225	,	array_subscript_handler	12468	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12034	_pg_rewrite	-1	10	postgres			20225	,	array_subscript_handler	12035	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12218	_pg_roles	-1	10	postgres			20225	,	array_subscript_handler	12219	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12241	_pg_rules	-1	10	postgres			20225	,	array_subscript_handler	12242	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12091	_pg_seclabel	-1	10	postgres			20225	,	array_subscript_handler	12092	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12317	_pg_seclabels	-1	10	postgres			20225	,	array_subscript_handler	12318	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12102	_pg_sequence	-1	10	postgres			20225	,	array_subscript_handler	12103	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12266	_pg_sequences	-1	10	postgres			20225	,	array_subscript_handler	12267	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12322	_pg_settings	-1	10	postgres			20225	,	array_subscript_handler	12323	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12223	_pg_shadow	-1	10	postgres			20225	,	array_subscript_handler	12224	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12059	_pg_shdepend	-1	10	postgres			20225	,	array_subscript_handler	12060	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12061	_pg_shdescription	-1	10	postgres			20225	,	array_subscript_handler	12062	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12348	_pg_shmem_allocations	-1	10	postgres			20225	,	array_subscript_handler	12349	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12093	_pg_shseclabel	-1	10	postgres			20225	,	array_subscript_handler	4066	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	5039	_pg_snapshot	-1	10	postgres			20225	,	array_subscript_handler	5038	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12436	_pg_stat_activity	-1	10	postgres			20225	,	array_subscript_handler	12437	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12397	_pg_stat_all_indexes	-1	10	postgres			20225	,	array_subscript_handler	12398	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12356	_pg_stat_all_tables	-1	10	postgres			20225	,	array_subscript_handler	12357	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12495	_pg_stat_archiver	-1	10	postgres			20225	,	array_subscript_handler	12496	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12499	_pg_stat_bgwriter	-1	10	postgres			20225	,	array_subscript_handler	12500	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12476	_pg_stat_database	-1	10	postgres			20225	,	array_subscript_handler	12477	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12481	_pg_stat_database_conflicts	-1	10	postgres			20225	,	array_subscript_handler	12482	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12463	_pg_stat_gssapi	-1	10	postgres			20225	,	array_subscript_handler	12464	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12507	_pg_stat_progress_analyze	-1	10	postgres			20225	,	array_subscript_handler	12508	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12527	_pg_stat_progress_basebackup	-1	10	postgres			20225	,	array_subscript_handler	12528	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12517	_pg_stat_progress_cluster	-1	10	postgres			20225	,	array_subscript_handler	12518	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12532	_pg_stat_progress_copy	-1	10	postgres			20225	,	array_subscript_handler	12533	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12522	_pg_stat_progress_create_index	-1	10	postgres			20225	,	array_subscript_handler	12523	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12512	_pg_stat_progress_vacuum	-1	10	postgres			20225	,	array_subscript_handler	12513	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12441	_pg_stat_replication	-1	10	postgres			20225	,	array_subscript_handler	12442	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12472	_pg_stat_replication_slots	-1	10	postgres			20225	,	array_subscript_handler	12473	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12446	_pg_stat_slru	-1	10	postgres			20225	,	array_subscript_handler	12447	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12459	_pg_stat_ssl	-1	10	postgres			20225	,	array_subscript_handler	12460	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12454	_pg_stat_subscription	-1	10	postgres			20225	,	array_subscript_handler	12455	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12402	_pg_stat_sys_indexes	-1	10	postgres			20225	,	array_subscript_handler	12403	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12366	_pg_stat_sys_tables	-1	10	postgres			20225	,	array_subscript_handler	12367	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12485	_pg_stat_user_functions	-1	10	postgres			20225	,	array_subscript_handler	12486	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12406	_pg_stat_user_indexes	-1	10	postgres			20225	,	array_subscript_handler	12407	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12375	_pg_stat_user_tables	-1	10	postgres			20225	,	array_subscript_handler	12376	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12503	_pg_stat_wal	-1	10	postgres			20225	,	array_subscript_handler	12504	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12450	_pg_stat_wal_receiver	-1	10	postgres			20225	,	array_subscript_handler	12451	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12361	_pg_stat_xact_all_tables	-1	10	postgres			20225	,	array_subscript_handler	12362	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12371	_pg_stat_xact_sys_tables	-1	10	postgres			20225	,	array_subscript_handler	12372	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12490	_pg_stat_xact_user_functions	-1	10	postgres			20225	,	array_subscript_handler	12491	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12380	_pg_stat_xact_user_tables	-1	10	postgres			20225	,	array_subscript_handler	12381	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12410	_pg_statio_all_indexes	-1	10	postgres			20225	,	array_subscript_handler	12411	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12423	_pg_statio_all_sequences	-1	10	postgres			20225	,	array_subscript_handler	12424	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12384	_pg_statio_all_tables	-1	10	postgres			20225	,	array_subscript_handler	12385	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12415	_pg_statio_sys_indexes	-1	10	postgres			20225	,	array_subscript_handler	12416	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12428	_pg_statio_sys_sequences	-1	10	postgres			20225	,	array_subscript_handler	12429	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12389	_pg_statio_sys_tables	-1	10	postgres			20225	,	array_subscript_handler	12390	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12419	_pg_statio_user_indexes	-1	10	postgres			20225	,	array_subscript_handler	12420	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12432	_pg_statio_user_sequences	-1	10	postgres			20225	,	array_subscript_handler	12433	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12393	_pg_statio_user_tables	-1	10	postgres			20225	,	array_subscript_handler	12394	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12028	_pg_statistic	-1	10	postgres			20225	,	array_subscript_handler	12029	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12030	_pg_statistic_ext	-1	10	postgres			20225	,	array_subscript_handler	12031	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12032	_pg_statistic_ext_data	-1	10	postgres			20225	,	array_subscript_handler	12033	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12271	_pg_stats	-1	10	postgres			20225	,	array_subscript_handler	12272	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12276	_pg_stats_ext	-1	10	postgres			20225	,	array_subscript_handler	12277	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12281	_pg_stats_ext_exprs	-1	10	postgres			20225	,	array_subscript_handler	12282	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12108	_pg_subscription	-1	10	postgres			20225	,	array_subscript_handler	6101	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12109	_pg_subscription_rel	-1	10	postgres			20225	,	array_subscript_handler	12110	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12251	_pg_tables	-1	10	postgres			20225	,	array_subscript_handler	12252	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12055	_pg_tablespace	-1	10	postgres			20225	,	array_subscript_handler	12056	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12336	_pg_timezone_abbrevs	-1	10	postgres			20225	,	array_subscript_handler	12337	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12340	_pg_timezone_names	-1	10	postgres			20225	,	array_subscript_handler	12341	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12100	_pg_transform	-1	10	postgres			20225	,	array_subscript_handler	12101	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12036	_pg_trigger	-1	10	postgres			20225	,	array_subscript_handler	12037	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12063	_pg_ts_config	-1	10	postgres			20225	,	array_subscript_handler	12064	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12065	_pg_ts_config_map	-1	10	postgres			20225	,	array_subscript_handler	12066	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12067	_pg_ts_dict	-1	10	postgres			20225	,	array_subscript_handler	12068	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12069	_pg_ts_parser	-1	10	postgres			20225	,	array_subscript_handler	12070	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12071	_pg_ts_template	-1	10	postgres			20225	,	array_subscript_handler	12072	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	210	_pg_type	-1	10	postgres			20225	,	array_subscript_handler	71	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12232	_pg_user	-1	10	postgres			20225	,	array_subscript_handler	12233	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12079	_pg_user_mapping	-1	10	postgres			20225	,	array_subscript_handler	12080	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12537	_pg_user_mappings	-1	10	postgres			20225	,	array_subscript_handler	12538	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	12246	_pg_views	-1	10	postgres			20225	,	array_subscript_handler	12247	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1017	_point	-1	10	postgres			20225	,	array_subscript_handler	600	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1027	_polygon	-1	10	postgres			20225	,	array_subscript_handler	604	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2287	_record	-1	10	postgres			20357	,	array_subscript_handler	2249	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2201	_refcursor	-1	10	postgres			19969	,	array_subscript_handler	1790	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2210	_regclass	-1	10	postgres			19969	,	array_subscript_handler	2205	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	4192	_regcollation	-1	10	postgres			19969	,	array_subscript_handler	4191	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3735	_regconfig	-1	10	postgres			19969	,	array_subscript_handler	3734	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3770	_regdictionary	-1	10	postgres			19969	,	array_subscript_handler	3769	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	4090	_regnamespace	-1	10	postgres			19969	,	array_subscript_handler	4089	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2208	_regoper	-1	10	postgres			19969	,	array_subscript_handler	2203	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2209	_regoperator	-1	10	postgres			19969	,	array_subscript_handler	2204	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1008	_regproc	-1	10	postgres			19969	,	array_subscript_handler	24	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2207	_regprocedure	-1	10	postgres			19969	,	array_subscript_handler	2202	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	4097	_regrole	-1	10	postgres			19969	,	array_subscript_handler	4096	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2211	_regtype	-1	10	postgres			19969	,	array_subscript_handler	2206	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1009	_text	-1	10	postgres			19969	,	array_subscript_handler	25	0	100	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1010	_tid	-1	10	postgres			19969	,	array_subscript_handler	27	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1183	_time	-1	10	postgres			20225	,	array_subscript_handler	1083	0	0	0	array_in	array_out	array_recv	array_send	timetypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1115	_timestamp	-1	10	postgres			20225	,	array_subscript_handler	1114	0	0	0	array_in	array_out	array_recv	array_send	timestamptypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1185	_timestamptz	-1	10	postgres			20225	,	array_subscript_handler	1184	0	0	0	array_in	array_out	array_recv	array_send	timestamptztypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1270	_timetz	-1	10	postgres			20225	,	array_subscript_handler	1266	0	0	0	array_in	array_out	array_recv	array_send	timetztypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	6152	_tsmultirange	-1	10	postgres			20225	,	array_subscript_handler	4533	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3645	_tsquery	-1	10	postgres			19969	,	array_subscript_handler	3615	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3909	_tsrange	-1	10	postgres			20225	,	array_subscript_handler	3908	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	6153	_tstzmultirange	-1	10	postgres			20225	,	array_subscript_handler	4534	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3911	_tstzrange	-1	10	postgres			20225	,	array_subscript_handler	3910	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	3643	_tsvector	-1	10	postgres			19969	,	array_subscript_handler	3614	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2949	_txid_snapshot	-1	10	postgres			20225	,	array_subscript_handler	2970	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	2951	_uuid	-1	10	postgres			19969	,	array_subscript_handler	2950	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1563	_varbit	-1	10	postgres			19969	,	array_subscript_handler	1562	0	0	0	array_in	array_out	array_recv	array_send	varbittypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1015	_varchar	-1	10	postgres			19969	,	array_subscript_handler	1043	0	100	0	array_in	array_out	array_recv	array_send	varchartypmodin	array_typanalyze	0		0		-1
+11	pg_catalog	1011	_xid	-1	10	postgres			19969	,	array_subscript_handler	28	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	271	_xid8	-1	10	postgres			20225	,	array_subscript_handler	5069	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	143	_xml	-1	10	postgres			19969	,	array_subscript_handler	142	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze	0		0		-1
+11	pg_catalog	1033	aclitem	12	10	postgres			17089	,	-	0	0	0	1034	aclitemin	aclitemout	-	-	-	-	0		0		-1
+11	pg_catalog	2276	any	4	10	postgres			21125	,	-	0	0	0	0	any_in	any_out	-	-	-	-	0		0		-1
+11	pg_catalog	2277	anyarray	-1	10	postgres			20357	,	-	0	0	0	0	anyarray_in	anyarray_out	anyarray_recv	anyarray_send	-	-	0		0		-1
+11	pg_catalog	5077	anycompatible	4	10	postgres			21125	,	-	0	0	0	0	anycompatible_in	anycompatible_out	-	-	-	-	0		0		-1
+11	pg_catalog	5078	anycompatiblearray	-1	10	postgres			20357	,	-	0	0	0	0	anycompatiblearray_in	anycompatiblearray_out	anycompatiblearray_recv	anycompatiblearray_send	-	-	0		0		-1
+11	pg_catalog	4538	anycompatiblemultirange	-1	10	postgres			20357	,	-	0	0	0	0	anycompatiblemultirange_in	anycompatiblemultirange_out	-	-	-	-	0		0		-1
+11	pg_catalog	5079	anycompatiblenonarray	4	10	postgres			21125	,	-	0	0	0	0	anycompatiblenonarray_in	anycompatiblenonarray_out	-	-	-	-	0		0		-1
+11	pg_catalog	5080	anycompatiblerange	-1	10	postgres			20357	,	-	0	0	0	0	anycompatiblerange_in	anycompatiblerange_out	-	-	-	-	0		0		-1
+11	pg_catalog	2283	anyelement	4	10	postgres			21125	,	-	0	0	0	0	anyelement_in	anyelement_out	-	-	-	-	0		0		-1
+11	pg_catalog	3500	anyenum	4	10	postgres			21125	,	-	0	0	0	0	anyenum_in	anyenum_out	-	-	-	-	0		0		-1
+11	pg_catalog	4537	anymultirange	-1	10	postgres			20357	,	-	0	0	0	0	anymultirange_in	anymultirange_out	-	-	-	-	0		0		-1
+11	pg_catalog	2776	anynonarray	4	10	postgres			21125	,	-	0	0	0	0	anynonarray_in	anynonarray_out	-	-	-	-	0		0		-1
+11	pg_catalog	3831	anyrange	-1	10	postgres			20357	,	-	0	0	0	0	anyrange_in	anyrange_out	-	-	-	-	0		0		-1
+11	pg_catalog	1560	bit	-1	10	postgres			20177	,	-	0	0	0	1561	bit_in	bit_out	bit_recv	bit_send	bittypmodin	-	0		0		-1
+11	pg_catalog	16	bool	1	10	postgres			28689	,	-	0	0	0	1000	boolin	boolout	boolrecv	boolsend	-	-	0		0		-1
+11	pg_catalog	603	box	32	10	postgres			17233	;	raw_array_subscript_handler	600	0	0	1020	box_in	box_out	box_recv	box_send	-	-	0		0		-1
+11	pg_catalog	1042	bpchar	-1	10	postgres			20129	,	-	0	0	100	1014	bpcharin	bpcharout	bpcharrecv	bpcharsend	bpchartypmodin	-	0		0		-1
+11	pg_catalog	17	bytea	-1	10	postgres			20161	,	-	0	0	0	1001	byteain	byteaout	bytearecv	byteasend	-	-	0		0		-1
+11	pg_catalog	18	char	1	10	postgres			20641	,	-	0	0	0	1002	charin	charout	charrecv	charsend	-	-	0		0		-1
+11	pg_catalog	29	cid	4	10	postgres			21185	,	-	0	0	0	1012	cidin	cidout	cidrecv	cidsend	-	-	0		0		-1
+11	pg_catalog	650	cidr	-1	10	postgres			19041	,	-	0	0	0	651	cidr_in	cidr_out	cidr_recv	cidr_send	-	-	0		0		-1
+11	pg_catalog	718	circle	24	10	postgres			17233	,	-	0	0	0	719	circle_in	circle_out	circle_recv	circle_send	-	-	0		0		-1
+11	pg_catalog	2275	cstring	-2	10	postgres			16517	,	-	0	0	0	1263	cstring_in	cstring_out	cstring_recv	cstring_send	-	-	0		0		-1
+11	pg_catalog	1082	date	4	10	postgres			21041	,	-	0	0	0	1182	date_in	date_out	date_recv	date_send	-	-	0		0		-1
+11	pg_catalog	4535	datemultirange	-1	10	postgres			20119	,	-	0	0	0	6155	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3912	daterange	-1	10	postgres			20118	,	-	0	0	0	3913	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	3838	event_trigger	4	10	postgres			21125	,	-	0	0	0	0	event_trigger_in	event_trigger_out	-	-	-	-	0		0		-1
+11	pg_catalog	3115	fdw_handler	4	10	postgres			21125	,	-	0	0	0	0	fdw_handler_in	fdw_handler_out	-	-	-	-	0		0		-1
+11	pg_catalog	700	float4	4	10	postgres			21105	,	-	0	0	0	1021	float4in	float4out	float4recv	float4send	-	-	0		0		-1
+11	pg_catalog	701	float8	8	10	postgres			29553	,	-	0	0	0	1022	float8in	float8out	float8recv	float8send	-	-	0		0		-1
+11	pg_catalog	3642	gtsvector	-1	10	postgres			17089	,	-	0	0	0	3644	gtsvectorin	gtsvectorout	-	-	-	-	0		0		-1
+11	pg_catalog	325	index_am_handler	4	10	postgres			21125	,	-	0	0	0	0	index_am_handler_in	index_am_handler_out	-	-	-	-	0		0		-1
+11	pg_catalog	869	inet	-1	10	postgres			27233	,	-	0	0	0	1041	inet_in	inet_out	inet_recv	inet_send	-	-	0		0		-1
+11	pg_catalog	21	int2	2	10	postgres			20849	,	-	0	0	0	1005	int2in	int2out	int2recv	int2send	-	-	0		0		-1
+11	pg_catalog	22	int2vector	-1	10	postgres			16897	,	array_subscript_handler	21	0	0	1006	int2vectorin	int2vectorout	int2vectorrecv	int2vectorsend	-	-	0		0		-1
+11	pg_catalog	23	int4	4	10	postgres			21105	,	-	0	0	0	1007	int4in	int4out	int4recv	int4send	-	-	0		0		-1
+11	pg_catalog	4451	int4multirange	-1	10	postgres			20119	,	-	0	0	0	6150	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3904	int4range	-1	10	postgres			20118	,	-	0	0	0	3905	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	20	int8	8	10	postgres			21361	,	-	0	0	0	1016	int8in	int8out	int8recv	int8send	-	-	0		0		-1
+11	pg_catalog	4536	int8multirange	-1	10	postgres			20375	,	-	0	0	0	6157	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3926	int8range	-1	10	postgres			20374	,	-	0	0	0	3927	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	2281	internal	8	10	postgres			21381	,	-	0	0	0	0	internal_in	internal_out	-	-	-	-	0		0		-1
+11	pg_catalog	1186	interval	16	10	postgres			25521	,	-	0	0	0	1187	interval_in	interval_out	interval_recv	interval_send	intervaltypmodin	-	0		0		-1
+11	pg_catalog	114	json	-1	10	postgres			20161	,	-	0	0	0	199	json_in	json_out	json_recv	json_send	-	-	0		0		-1
+11	pg_catalog	3802	jsonb	-1	10	postgres			20161	,	jsonb_subscript_handler	0	0	0	3807	jsonb_in	jsonb_out	jsonb_recv	jsonb_send	-	-	0		0		-1
+11	pg_catalog	4072	jsonpath	-1	10	postgres			20161	,	-	0	0	0	4073	jsonpath_in	jsonpath_out	jsonpath_recv	jsonpath_send	-	-	0		0		-1
+11	pg_catalog	2280	language_handler	4	10	postgres			21125	,	-	0	0	0	0	language_handler_in	language_handler_out	-	-	-	-	0		0		-1
+11	pg_catalog	628	line	24	10	postgres			17233	,	raw_array_subscript_handler	701	0	0	629	line_in	line_out	line_recv	line_send	-	-	0		0		-1
+11	pg_catalog	601	lseg	32	10	postgres			17233	,	raw_array_subscript_handler	600	0	0	1018	lseg_in	lseg_out	lseg_recv	lseg_send	-	-	0		0		-1
+11	pg_catalog	829	macaddr	6	10	postgres			17089	,	-	0	0	0	1040	macaddr_in	macaddr_out	macaddr_recv	macaddr_send	-	-	0		0		-1
+11	pg_catalog	774	macaddr8	8	10	postgres			17089	,	-	0	0	0	775	macaddr8_in	macaddr8_out	macaddr8_recv	macaddr8_send	-	-	0		0		-1
+11	pg_catalog	790	money	8	10	postgres			21361	,	-	0	0	0	791	cash_in	cash_out	cash_recv	cash_send	-	-	0		0		-1
+11	pg_catalog	19	name	64	10	postgres			16545	,	raw_array_subscript_handler	18	0	950	1003	namein	nameout	namerecv	namesend	-	-	0		0		-1
+11	pg_catalog	1700	numeric	-1	10	postgres			19057	,	-	0	0	0	1231	numeric_in	numeric_out	numeric_recv	numeric_send	numerictypmodin	-	0		0		-1
+11	pg_catalog	4532	nummultirange	-1	10	postgres			20119	,	-	0	0	0	6151	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3906	numrange	-1	10	postgres			20118	,	-	0	0	0	3907	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	26	oid	4	10	postgres			29297	,	-	0	0	0	1028	oidin	oidout	oidrecv	oidsend	-	-	0		0		-1
+11	pg_catalog	30	oidvector	-1	10	postgres			16897	,	array_subscript_handler	26	0	0	1013	oidvectorin	oidvectorout	oidvectorrecv	oidvectorsend	-	-	0		0		-1
+11	pg_catalog	602	path	-1	10	postgres			20305	,	-	0	0	0	1019	path_in	path_out	path_recv	path_send	-	-	0		0		-1
+11	pg_catalog	12027	pg_aggregate	-1	10	postgres			20258	,	-	0	0	0	12026	record_in	record_out	record_recv	record_send	-	-	2600	pg_aggregate	0		-1
+11	pg_catalog	12015	pg_am	-1	10	postgres			20258	,	-	0	0	0	12014	record_in	record_out	record_recv	record_send	-	-	2601	pg_am	0		-1
+11	pg_catalog	12017	pg_amop	-1	10	postgres			20258	,	-	0	0	0	12016	record_in	record_out	record_recv	record_send	-	-	2602	pg_amop	0		-1
+11	pg_catalog	12019	pg_amproc	-1	10	postgres			20258	,	-	0	0	0	12018	record_in	record_out	record_recv	record_send	-	-	2603	pg_amproc	0		-1
+11	pg_catalog	12001	pg_attrdef	-1	10	postgres			20258	,	-	0	0	0	12000	record_in	record_out	record_recv	record_send	-	-	2604	pg_attrdef	0		-1
+11	pg_catalog	75	pg_attribute	-1	10	postgres			20258	,	-	0	0	0	270	record_in	record_out	record_recv	record_send	-	-	1249	pg_attribute	0		-1
+11	pg_catalog	2843	pg_auth_members	-1	10	postgres			20258	,	-	0	0	0	12058	record_in	record_out	record_recv	record_send	-	-	1261	pg_auth_members	0		-1
+11	pg_catalog	2842	pg_authid	-1	10	postgres			20258	,	-	0	0	0	12057	record_in	record_out	record_recv	record_send	-	-	1260	pg_authid	0		-1
+11	pg_catalog	12304	pg_available_extension_versions	-1	10	postgres			20258	,	-	0	0	0	12303	record_in	record_out	record_recv	record_send	-	-	12302	pg_available_extension_versions	0		-1
+11	pg_catalog	12300	pg_available_extensions	-1	10	postgres			20258	,	-	0	0	0	12299	record_in	record_out	record_recv	record_send	-	-	12298	pg_available_extensions	0		-1
+11	pg_catalog	12353	pg_backend_memory_contexts	-1	10	postgres			20258	,	-	0	0	0	12352	record_in	record_out	record_recv	record_send	-	-	12351	pg_backend_memory_contexts	0		-1
+11	pg_catalog	4600	pg_brin_bloom_summary	-1	10	postgres			20129	,	-	0	0	100	0	brin_bloom_summary_in	brin_bloom_summary_out	brin_bloom_summary_recv	brin_bloom_summary_send	-	-	0		0		-1
+11	pg_catalog	4601	pg_brin_minmax_multi_summary	-1	10	postgres			20129	,	-	0	0	100	0	brin_minmax_multi_summary_in	brin_minmax_multi_summary_out	brin_minmax_multi_summary_recv	brin_minmax_multi_summary_send	-	-	0		0		-1
+11	pg_catalog	12043	pg_cast	-1	10	postgres			20258	,	-	0	0	0	12042	record_in	record_out	record_recv	record_send	-	-	2605	pg_cast	0		-1
+11	pg_catalog	83	pg_class	-1	10	postgres			20258	,	-	0	0	0	273	record_in	record_out	record_recv	record_send	-	-	1259	pg_class	0		-1
+11	pg_catalog	12095	pg_collation	-1	10	postgres			20258	,	-	0	0	0	12094	record_in	record_out	record_recv	record_send	-	-	3456	pg_collation	0		-1
+11	pg_catalog	12345	pg_config	-1	10	postgres			20258	,	-	0	0	0	12344	record_in	record_out	record_recv	record_send	-	-	12343	pg_config	0		-1
+11	pg_catalog	12003	pg_constraint	-1	10	postgres			20258	,	-	0	0	0	12002	record_in	record_out	record_recv	record_send	-	-	2606	pg_constraint	0		-1
+11	pg_catalog	12049	pg_conversion	-1	10	postgres			20258	,	-	0	0	0	12048	record_in	record_out	record_recv	record_send	-	-	2607	pg_conversion	0		-1
+11	pg_catalog	12296	pg_cursors	-1	10	postgres			20258	,	-	0	0	0	12295	record_in	record_out	record_recv	record_send	-	-	12294	pg_cursors	0		-1
+11	pg_catalog	1248	pg_database	-1	10	postgres			20258	,	-	0	0	0	12052	record_in	record_out	record_recv	record_send	-	-	1262	pg_database	0		-1
+11	pg_catalog	12054	pg_db_role_setting	-1	10	postgres			20258	,	-	0	0	0	12053	record_in	record_out	record_recv	record_send	-	-	2964	pg_db_role_setting	0		-1
+11	pg_catalog	32	pg_ddl_command	8	10	postgres			21381	,	-	0	0	0	0	pg_ddl_command_in	pg_ddl_command_out	pg_ddl_command_recv	pg_ddl_command_send	-	-	0		0		-1
+11	pg_catalog	12088	pg_default_acl	-1	10	postgres			20258	,	-	0	0	0	12087	record_in	record_out	record_recv	record_send	-	-	826	pg_default_acl	0		-1
+11	pg_catalog	12051	pg_depend	-1	10	postgres			20258	,	-	0	0	0	12050	record_in	record_out	record_recv	record_send	-	-	2608	pg_depend	0		-1
+11	pg_catalog	3402	pg_dependencies	-1	10	postgres			20129	,	-	0	0	100	0	pg_dependencies_in	pg_dependencies_out	pg_dependencies_recv	pg_dependencies_send	-	-	0		0		-1
+11	pg_catalog	12041	pg_description	-1	10	postgres			20258	,	-	0	0	0	12040	record_in	record_out	record_recv	record_send	-	-	2609	pg_description	0		-1
+11	pg_catalog	12045	pg_enum	-1	10	postgres			20258	,	-	0	0	0	12044	record_in	record_out	record_recv	record_send	-	-	3501	pg_enum	0		-1
+11	pg_catalog	12039	pg_event_trigger	-1	10	postgres			20258	,	-	0	0	0	12038	record_in	record_out	record_recv	record_send	-	-	3466	pg_event_trigger	0		-1
+11	pg_catalog	12074	pg_extension	-1	10	postgres			20258	,	-	0	0	0	12073	record_in	record_out	record_recv	record_send	-	-	3079	pg_extension	0		-1
+11	pg_catalog	12329	pg_file_settings	-1	10	postgres			20258	,	-	0	0	0	12328	record_in	record_out	record_recv	record_send	-	-	12327	pg_file_settings	0		-1
+11	pg_catalog	12076	pg_foreign_data_wrapper	-1	10	postgres			20258	,	-	0	0	0	12075	record_in	record_out	record_recv	record_send	-	-	2328	pg_foreign_data_wrapper	0		-1
+11	pg_catalog	12078	pg_foreign_server	-1	10	postgres			20258	,	-	0	0	0	12077	record_in	record_out	record_recv	record_send	-	-	1417	pg_foreign_server	0		-1
+11	pg_catalog	12082	pg_foreign_table	-1	10	postgres			20258	,	-	0	0	0	12081	record_in	record_out	record_recv	record_send	-	-	3118	pg_foreign_table	0		-1
+11	pg_catalog	12229	pg_group	-1	10	postgres			20258	,	-	0	0	0	12228	record_in	record_out	record_recv	record_send	-	-	12227	pg_group	0		-1
+11	pg_catalog	12333	pg_hba_file_rules	-1	10	postgres			20258	,	-	0	0	0	12332	record_in	record_out	record_recv	record_send	-	-	12331	pg_hba_file_rules	0		-1
+11	pg_catalog	12007	pg_index	-1	10	postgres			20258	,	-	0	0	0	12006	record_in	record_out	record_recv	record_send	-	-	2610	pg_index	0		-1
+11	pg_catalog	12262	pg_indexes	-1	10	postgres			20258	,	-	0	0	0	12261	record_in	record_out	record_recv	record_send	-	-	12260	pg_indexes	0		-1
+11	pg_catalog	12005	pg_inherits	-1	10	postgres			20258	,	-	0	0	0	12004	record_in	record_out	record_recv	record_send	-	-	2611	pg_inherits	0		-1
+11	pg_catalog	12090	pg_init_privs	-1	10	postgres			20258	,	-	0	0	0	12089	record_in	record_out	record_recv	record_send	-	-	3394	pg_init_privs	0		-1
+11	pg_catalog	12021	pg_language	-1	10	postgres			20258	,	-	0	0	0	12020	record_in	record_out	record_recv	record_send	-	-	2612	pg_language	0		-1
+11	pg_catalog	12025	pg_largeobject	-1	10	postgres			20258	,	-	0	0	0	12024	record_in	record_out	record_recv	record_send	-	-	2613	pg_largeobject	0		-1
+11	pg_catalog	12023	pg_largeobject_metadata	-1	10	postgres			20258	,	-	0	0	0	12022	record_in	record_out	record_recv	record_send	-	-	2995	pg_largeobject_metadata	0		-1
+11	pg_catalog	12292	pg_locks	-1	10	postgres			20258	,	-	0	0	0	12291	record_in	record_out	record_recv	record_send	-	-	12290	pg_locks	0		-1
+11	pg_catalog	3220	pg_lsn	8	10	postgres			21441	,	-	0	0	0	3221	pg_lsn_in	pg_lsn_out	pg_lsn_recv	pg_lsn_send	-	-	0		0		-1
+11	pg_catalog	12257	pg_matviews	-1	10	postgres			20258	,	-	0	0	0	12256	record_in	record_out	record_recv	record_send	-	-	12255	pg_matviews	0		-1
+11	pg_catalog	5017	pg_mcv_list	-1	10	postgres			20129	,	-	0	0	100	0	pg_mcv_list_in	pg_mcv_list_out	pg_mcv_list_recv	pg_mcv_list_send	-	-	0		0		-1
+11	pg_catalog	12047	pg_namespace	-1	10	postgres			20258	,	-	0	0	0	12046	record_in	record_out	record_recv	record_send	-	-	2615	pg_namespace	0		-1
+11	pg_catalog	3361	pg_ndistinct	-1	10	postgres			20129	,	-	0	0	100	0	pg_ndistinct_in	pg_ndistinct_out	pg_ndistinct_recv	pg_ndistinct_send	-	-	0		0		-1
+11	pg_catalog	194	pg_node_tree	-1	10	postgres			20129	,	-	0	0	100	0	pg_node_tree_in	pg_node_tree_out	pg_node_tree_recv	pg_node_tree_send	-	-	0		0		-1
+11	pg_catalog	12013	pg_opclass	-1	10	postgres			20258	,	-	0	0	0	12012	record_in	record_out	record_recv	record_send	-	-	2616	pg_opclass	0		-1
+11	pg_catalog	12009	pg_operator	-1	10	postgres			20258	,	-	0	0	0	12008	record_in	record_out	record_recv	record_send	-	-	2617	pg_operator	0		-1
+11	pg_catalog	12011	pg_opfamily	-1	10	postgres			20258	,	-	0	0	0	12010	record_in	record_out	record_recv	record_send	-	-	2753	pg_opfamily	0		-1
+11	pg_catalog	12097	pg_partitioned_table	-1	10	postgres			20258	,	-	0	0	0	12096	record_in	record_out	record_recv	record_send	-	-	3350	pg_partitioned_table	0		-1
+11	pg_catalog	12237	pg_policies	-1	10	postgres			20258	,	-	0	0	0	12236	record_in	record_out	record_recv	record_send	-	-	12235	pg_policies	0		-1
+11	pg_catalog	12084	pg_policy	-1	10	postgres			20258	,	-	0	0	0	12083	record_in	record_out	record_recv	record_send	-	-	3256	pg_policy	0		-1
+11	pg_catalog	12314	pg_prepared_statements	-1	10	postgres			20258	,	-	0	0	0	12313	record_in	record_out	record_recv	record_send	-	-	12312	pg_prepared_statements	0		-1
+11	pg_catalog	12309	pg_prepared_xacts	-1	10	postgres			20258	,	-	0	0	0	12308	record_in	record_out	record_recv	record_send	-	-	12307	pg_prepared_xacts	0		-1
+11	pg_catalog	81	pg_proc	-1	10	postgres			20258	,	-	0	0	0	272	record_in	record_out	record_recv	record_send	-	-	1255	pg_proc	0		-1
+11	pg_catalog	12105	pg_publication	-1	10	postgres			20258	,	-	0	0	0	12104	record_in	record_out	record_recv	record_send	-	-	6104	pg_publication	0		-1
+11	pg_catalog	12107	pg_publication_rel	-1	10	postgres			20258	,	-	0	0	0	12106	record_in	record_out	record_recv	record_send	-	-	6106	pg_publication_rel	0		-1
+11	pg_catalog	12287	pg_publication_tables	-1	10	postgres			20258	,	-	0	0	0	12286	record_in	record_out	record_recv	record_send	-	-	12285	pg_publication_tables	0		-1
+11	pg_catalog	12099	pg_range	-1	10	postgres			20258	,	-	0	0	0	12098	record_in	record_out	record_recv	record_send	-	-	3541	pg_range	0		-1
+11	pg_catalog	12086	pg_replication_origin	-1	10	postgres			20258	,	-	0	0	0	12085	record_in	record_out	record_recv	record_send	-	-	6000	pg_replication_origin	0		-1
+11	pg_catalog	12543	pg_replication_origin_status	-1	10	postgres			20258	,	-	0	0	0	12542	record_in	record_out	record_recv	record_send	-	-	12541	pg_replication_origin_status	0		-1
+11	pg_catalog	12468	pg_replication_slots	-1	10	postgres			20258	,	-	0	0	0	12467	record_in	record_out	record_recv	record_send	-	-	12466	pg_replication_slots	0		-1
+11	pg_catalog	12035	pg_rewrite	-1	10	postgres			20258	,	-	0	0	0	12034	record_in	record_out	record_recv	record_send	-	-	2618	pg_rewrite	0		-1
+11	pg_catalog	12219	pg_roles	-1	10	postgres			20258	,	-	0	0	0	12218	record_in	record_out	record_recv	record_send	-	-	12217	pg_roles	0		-1
+11	pg_catalog	12242	pg_rules	-1	10	postgres			20258	,	-	0	0	0	12241	record_in	record_out	record_recv	record_send	-	-	12240	pg_rules	0		-1
+11	pg_catalog	12092	pg_seclabel	-1	10	postgres			20258	,	-	0	0	0	12091	record_in	record_out	record_recv	record_send	-	-	3596	pg_seclabel	0		-1
+11	pg_catalog	12318	pg_seclabels	-1	10	postgres			20258	,	-	0	0	0	12317	record_in	record_out	record_recv	record_send	-	-	12316	pg_seclabels	0		-1
+11	pg_catalog	12103	pg_sequence	-1	10	postgres			20258	,	-	0	0	0	12102	record_in	record_out	record_recv	record_send	-	-	2224	pg_sequence	0		-1
+11	pg_catalog	12267	pg_sequences	-1	10	postgres			20258	,	-	0	0	0	12266	record_in	record_out	record_recv	record_send	-	-	12265	pg_sequences	0		-1
+11	pg_catalog	12323	pg_settings	-1	10	postgres			20258	,	-	0	0	0	12322	record_in	record_out	record_recv	record_send	-	-	12321	pg_settings	0		-1
+11	pg_catalog	12224	pg_shadow	-1	10	postgres			20258	,	-	0	0	0	12223	record_in	record_out	record_recv	record_send	-	-	12222	pg_shadow	0		-1
+11	pg_catalog	12060	pg_shdepend	-1	10	postgres			20258	,	-	0	0	0	12059	record_in	record_out	record_recv	record_send	-	-	1214	pg_shdepend	0		-1
+11	pg_catalog	12062	pg_shdescription	-1	10	postgres			20258	,	-	0	0	0	12061	record_in	record_out	record_recv	record_send	-	-	2396	pg_shdescription	0		-1
+11	pg_catalog	12349	pg_shmem_allocations	-1	10	postgres			20258	,	-	0	0	0	12348	record_in	record_out	record_recv	record_send	-	-	12347	pg_shmem_allocations	0		-1
+11	pg_catalog	4066	pg_shseclabel	-1	10	postgres			20258	,	-	0	0	0	12093	record_in	record_out	record_recv	record_send	-	-	3592	pg_shseclabel	0		-1
+11	pg_catalog	5038	pg_snapshot	-1	10	postgres			20417	,	-	0	0	0	5039	pg_snapshot_in	pg_snapshot_out	pg_snapshot_recv	pg_snapshot_send	-	-	0		0		-1
+11	pg_catalog	12437	pg_stat_activity	-1	10	postgres			20258	,	-	0	0	0	12436	record_in	record_out	record_recv	record_send	-	-	12435	pg_stat_activity	0		-1
+11	pg_catalog	12398	pg_stat_all_indexes	-1	10	postgres			20258	,	-	0	0	0	12397	record_in	record_out	record_recv	record_send	-	-	12396	pg_stat_all_indexes	0		-1
+11	pg_catalog	12357	pg_stat_all_tables	-1	10	postgres			20258	,	-	0	0	0	12356	record_in	record_out	record_recv	record_send	-	-	12355	pg_stat_all_tables	0		-1
+11	pg_catalog	12496	pg_stat_archiver	-1	10	postgres			20258	,	-	0	0	0	12495	record_in	record_out	record_recv	record_send	-	-	12494	pg_stat_archiver	0		-1
+11	pg_catalog	12500	pg_stat_bgwriter	-1	10	postgres			20258	,	-	0	0	0	12499	record_in	record_out	record_recv	record_send	-	-	12498	pg_stat_bgwriter	0		-1
+11	pg_catalog	12477	pg_stat_database	-1	10	postgres			20258	,	-	0	0	0	12476	record_in	record_out	record_recv	record_send	-	-	12475	pg_stat_database	0		-1
+11	pg_catalog	12482	pg_stat_database_conflicts	-1	10	postgres			20258	,	-	0	0	0	12481	record_in	record_out	record_recv	record_send	-	-	12480	pg_stat_database_conflicts	0		-1
+11	pg_catalog	12464	pg_stat_gssapi	-1	10	postgres			20258	,	-	0	0	0	12463	record_in	record_out	record_recv	record_send	-	-	12462	pg_stat_gssapi	0		-1
+11	pg_catalog	12508	pg_stat_progress_analyze	-1	10	postgres			20258	,	-	0	0	0	12507	record_in	record_out	record_recv	record_send	-	-	12506	pg_stat_progress_analyze	0		-1
+11	pg_catalog	12528	pg_stat_progress_basebackup	-1	10	postgres			20258	,	-	0	0	0	12527	record_in	record_out	record_recv	record_send	-	-	12526	pg_stat_progress_basebackup	0		-1
+11	pg_catalog	12518	pg_stat_progress_cluster	-1	10	postgres			20258	,	-	0	0	0	12517	record_in	record_out	record_recv	record_send	-	-	12516	pg_stat_progress_cluster	0		-1
+11	pg_catalog	12533	pg_stat_progress_copy	-1	10	postgres			20258	,	-	0	0	0	12532	record_in	record_out	record_recv	record_send	-	-	12531	pg_stat_progress_copy	0		-1
+11	pg_catalog	12523	pg_stat_progress_create_index	-1	10	postgres			20258	,	-	0	0	0	12522	record_in	record_out	record_recv	record_send	-	-	12521	pg_stat_progress_create_index	0		-1
+11	pg_catalog	12513	pg_stat_progress_vacuum	-1	10	postgres			20258	,	-	0	0	0	12512	record_in	record_out	record_recv	record_send	-	-	12511	pg_stat_progress_vacuum	0		-1
+11	pg_catalog	12442	pg_stat_replication	-1	10	postgres			20258	,	-	0	0	0	12441	record_in	record_out	record_recv	record_send	-	-	12440	pg_stat_replication	0		-1
+11	pg_catalog	12473	pg_stat_replication_slots	-1	10	postgres			20258	,	-	0	0	0	12472	record_in	record_out	record_recv	record_send	-	-	12471	pg_stat_replication_slots	0		-1
+11	pg_catalog	12447	pg_stat_slru	-1	10	postgres			20258	,	-	0	0	0	12446	record_in	record_out	record_recv	record_send	-	-	12445	pg_stat_slru	0		-1
+11	pg_catalog	12460	pg_stat_ssl	-1	10	postgres			20258	,	-	0	0	0	12459	record_in	record_out	record_recv	record_send	-	-	12458	pg_stat_ssl	0		-1
+11	pg_catalog	12455	pg_stat_subscription	-1	10	postgres			20258	,	-	0	0	0	12454	record_in	record_out	record_recv	record_send	-	-	12453	pg_stat_subscription	0		-1
+11	pg_catalog	12403	pg_stat_sys_indexes	-1	10	postgres			20258	,	-	0	0	0	12402	record_in	record_out	record_recv	record_send	-	-	12401	pg_stat_sys_indexes	0		-1
+11	pg_catalog	12367	pg_stat_sys_tables	-1	10	postgres			20258	,	-	0	0	0	12366	record_in	record_out	record_recv	record_send	-	-	12365	pg_stat_sys_tables	0		-1
+11	pg_catalog	12486	pg_stat_user_functions	-1	10	postgres			20258	,	-	0	0	0	12485	record_in	record_out	record_recv	record_send	-	-	12484	pg_stat_user_functions	0		-1
+11	pg_catalog	12407	pg_stat_user_indexes	-1	10	postgres			20258	,	-	0	0	0	12406	record_in	record_out	record_recv	record_send	-	-	12405	pg_stat_user_indexes	0		-1
+11	pg_catalog	12376	pg_stat_user_tables	-1	10	postgres			20258	,	-	0	0	0	12375	record_in	record_out	record_recv	record_send	-	-	12374	pg_stat_user_tables	0		-1
+11	pg_catalog	12504	pg_stat_wal	-1	10	postgres			20258	,	-	0	0	0	12503	record_in	record_out	record_recv	record_send	-	-	12502	pg_stat_wal	0		-1
+11	pg_catalog	12451	pg_stat_wal_receiver	-1	10	postgres			20258	,	-	0	0	0	12450	record_in	record_out	record_recv	record_send	-	-	12449	pg_stat_wal_receiver	0		-1
+11	pg_catalog	12362	pg_stat_xact_all_tables	-1	10	postgres			20258	,	-	0	0	0	12361	record_in	record_out	record_recv	record_send	-	-	12360	pg_stat_xact_all_tables	0		-1
+11	pg_catalog	12372	pg_stat_xact_sys_tables	-1	10	postgres			20258	,	-	0	0	0	12371	record_in	record_out	record_recv	record_send	-	-	12370	pg_stat_xact_sys_tables	0		-1
+11	pg_catalog	12491	pg_stat_xact_user_functions	-1	10	postgres			20258	,	-	0	0	0	12490	record_in	record_out	record_recv	record_send	-	-	12489	pg_stat_xact_user_functions	0		-1
+11	pg_catalog	12381	pg_stat_xact_user_tables	-1	10	postgres			20258	,	-	0	0	0	12380	record_in	record_out	record_recv	record_send	-	-	12379	pg_stat_xact_user_tables	0		-1
+11	pg_catalog	12411	pg_statio_all_indexes	-1	10	postgres			20258	,	-	0	0	0	12410	record_in	record_out	record_recv	record_send	-	-	12409	pg_statio_all_indexes	0		-1
+11	pg_catalog	12424	pg_statio_all_sequences	-1	10	postgres			20258	,	-	0	0	0	12423	record_in	record_out	record_recv	record_send	-	-	12422	pg_statio_all_sequences	0		-1
+11	pg_catalog	12385	pg_statio_all_tables	-1	10	postgres			20258	,	-	0	0	0	12384	record_in	record_out	record_recv	record_send	-	-	12383	pg_statio_all_tables	0		-1
+11	pg_catalog	12416	pg_statio_sys_indexes	-1	10	postgres			20258	,	-	0	0	0	12415	record_in	record_out	record_recv	record_send	-	-	12414	pg_statio_sys_indexes	0		-1
+11	pg_catalog	12429	pg_statio_sys_sequences	-1	10	postgres			20258	,	-	0	0	0	12428	record_in	record_out	record_recv	record_send	-	-	12427	pg_statio_sys_sequences	0		-1
+11	pg_catalog	12390	pg_statio_sys_tables	-1	10	postgres			20258	,	-	0	0	0	12389	record_in	record_out	record_recv	record_send	-	-	12388	pg_statio_sys_tables	0		-1
+11	pg_catalog	12420	pg_statio_user_indexes	-1	10	postgres			20258	,	-	0	0	0	12419	record_in	record_out	record_recv	record_send	-	-	12418	pg_statio_user_indexes	0		-1
+11	pg_catalog	12433	pg_statio_user_sequences	-1	10	postgres			20258	,	-	0	0	0	12432	record_in	record_out	record_recv	record_send	-	-	12431	pg_statio_user_sequences	0		-1
+11	pg_catalog	12394	pg_statio_user_tables	-1	10	postgres			20258	,	-	0	0	0	12393	record_in	record_out	record_recv	record_send	-	-	12392	pg_statio_user_tables	0		-1
+11	pg_catalog	12029	pg_statistic	-1	10	postgres			20258	,	-	0	0	0	12028	record_in	record_out	record_recv	record_send	-	-	2619	pg_statistic	0		-1
+11	pg_catalog	12031	pg_statistic_ext	-1	10	postgres			20258	,	-	0	0	0	12030	record_in	record_out	record_recv	record_send	-	-	3381	pg_statistic_ext	0		-1
+11	pg_catalog	12033	pg_statistic_ext_data	-1	10	postgres			20258	,	-	0	0	0	12032	record_in	record_out	record_recv	record_send	-	-	3429	pg_statistic_ext_data	0		-1
+11	pg_catalog	12272	pg_stats	-1	10	postgres			20258	,	-	0	0	0	12271	record_in	record_out	record_recv	record_send	-	-	12270	pg_stats	0		-1
+11	pg_catalog	12277	pg_stats_ext	-1	10	postgres			20258	,	-	0	0	0	12276	record_in	record_out	record_recv	record_send	-	-	12275	pg_stats_ext	0		-1
+11	pg_catalog	12282	pg_stats_ext_exprs	-1	10	postgres			20258	,	-	0	0	0	12281	record_in	record_out	record_recv	record_send	-	-	12280	pg_stats_ext_exprs	0		-1
+11	pg_catalog	6101	pg_subscription	-1	10	postgres			20258	,	-	0	0	0	12108	record_in	record_out	record_recv	record_send	-	-	6100	pg_subscription	0		-1
+11	pg_catalog	12110	pg_subscription_rel	-1	10	postgres			20258	,	-	0	0	0	12109	record_in	record_out	record_recv	record_send	-	-	6102	pg_subscription_rel	0		-1
+11	pg_catalog	12252	pg_tables	-1	10	postgres			20258	,	-	0	0	0	12251	record_in	record_out	record_recv	record_send	-	-	12250	pg_tables	0		-1
+11	pg_catalog	12056	pg_tablespace	-1	10	postgres			20258	,	-	0	0	0	12055	record_in	record_out	record_recv	record_send	-	-	1213	pg_tablespace	0		-1
+11	pg_catalog	12337	pg_timezone_abbrevs	-1	10	postgres			20258	,	-	0	0	0	12336	record_in	record_out	record_recv	record_send	-	-	12335	pg_timezone_abbrevs	0		-1
+11	pg_catalog	12341	pg_timezone_names	-1	10	postgres			20258	,	-	0	0	0	12340	record_in	record_out	record_recv	record_send	-	-	12339	pg_timezone_names	0		-1
+11	pg_catalog	12101	pg_transform	-1	10	postgres			20258	,	-	0	0	0	12100	record_in	record_out	record_recv	record_send	-	-	3576	pg_transform	0		-1
+11	pg_catalog	12037	pg_trigger	-1	10	postgres			20258	,	-	0	0	0	12036	record_in	record_out	record_recv	record_send	-	-	2620	pg_trigger	0		-1
+11	pg_catalog	12064	pg_ts_config	-1	10	postgres			20258	,	-	0	0	0	12063	record_in	record_out	record_recv	record_send	-	-	3602	pg_ts_config	0		-1
+11	pg_catalog	12066	pg_ts_config_map	-1	10	postgres			20258	,	-	0	0	0	12065	record_in	record_out	record_recv	record_send	-	-	3603	pg_ts_config_map	0		-1
+11	pg_catalog	12068	pg_ts_dict	-1	10	postgres			20258	,	-	0	0	0	12067	record_in	record_out	record_recv	record_send	-	-	3600	pg_ts_dict	0		-1
+11	pg_catalog	12070	pg_ts_parser	-1	10	postgres			20258	,	-	0	0	0	12069	record_in	record_out	record_recv	record_send	-	-	3601	pg_ts_parser	0		-1
+11	pg_catalog	12072	pg_ts_template	-1	10	postgres			20258	,	-	0	0	0	12071	record_in	record_out	record_recv	record_send	-	-	3764	pg_ts_template	0		-1
+11	pg_catalog	71	pg_type	-1	10	postgres			20258	,	-	0	0	0	210	record_in	record_out	record_recv	record_send	-	-	1247	pg_type	0		-1
+11	pg_catalog	12233	pg_user	-1	10	postgres			20258	,	-	0	0	0	12232	record_in	record_out	record_recv	record_send	-	-	12231	pg_user	0		-1
+11	pg_catalog	12080	pg_user_mapping	-1	10	postgres			20258	,	-	0	0	0	12079	record_in	record_out	record_recv	record_send	-	-	1418	pg_user_mapping	0		-1
+11	pg_catalog	12538	pg_user_mappings	-1	10	postgres			20258	,	-	0	0	0	12537	record_in	record_out	record_recv	record_send	-	-	12536	pg_user_mappings	0		-1
+11	pg_catalog	12247	pg_views	-1	10	postgres			20258	,	-	0	0	0	12246	record_in	record_out	record_recv	record_send	-	-	12245	pg_views	0		-1
+11	pg_catalog	600	point	16	10	postgres			17233	,	raw_array_subscript_handler	701	0	0	1017	point_in	point_out	point_recv	point_send	-	-	0		0		-1
+11	pg_catalog	604	polygon	-1	10	postgres			20305	,	-	0	0	0	1027	poly_in	poly_out	poly_recv	poly_send	-	-	0		0		-1
+11	pg_catalog	2249	record	-1	10	postgres			20357	,	-	0	0	0	2287	record_in	record_out	record_recv	record_send	-	-	0		0		-1
+11	pg_catalog	1790	refcursor	-1	10	postgres			20161	,	-	0	0	0	2201	textin	textout	textrecv	textsend	-	-	0		0		-1
+11	pg_catalog	2205	regclass	4	10	postgres			21105	,	-	0	0	0	2210	regclassin	regclassout	regclassrecv	regclasssend	-	-	0		0		-1
+11	pg_catalog	4191	regcollation	4	10	postgres			21105	,	-	0	0	0	4192	regcollationin	regcollationout	regcollationrecv	regcollationsend	-	-	0		0		-1
+11	pg_catalog	3734	regconfig	4	10	postgres			21105	,	-	0	0	0	3735	regconfigin	regconfigout	regconfigrecv	regconfigsend	-	-	0		0		-1
+11	pg_catalog	3769	regdictionary	4	10	postgres			21105	,	-	0	0	0	3770	regdictionaryin	regdictionaryout	regdictionaryrecv	regdictionarysend	-	-	0		0		-1
+11	pg_catalog	4089	regnamespace	4	10	postgres			21105	,	-	0	0	0	4090	regnamespacein	regnamespaceout	regnamespacerecv	regnamespacesend	-	-	0		0		-1
+11	pg_catalog	2203	regoper	4	10	postgres			21105	,	-	0	0	0	2208	regoperin	regoperout	regoperrecv	regopersend	-	-	0		0		-1
+11	pg_catalog	2204	regoperator	4	10	postgres			21105	,	-	0	0	0	2209	regoperatorin	regoperatorout	regoperatorrecv	regoperatorsend	-	-	0		0		-1
+11	pg_catalog	24	regproc	4	10	postgres			21105	,	-	0	0	0	1008	regprocin	regprocout	regprocrecv	regprocsend	-	-	0		0		-1
+11	pg_catalog	2202	regprocedure	4	10	postgres			21105	,	-	0	0	0	2207	regprocedurein	regprocedureout	regprocedurerecv	regproceduresend	-	-	0		0		-1
+11	pg_catalog	4096	regrole	4	10	postgres			21105	,	-	0	0	0	4097	regrolein	regroleout	regrolerecv	regrolesend	-	-	0		0		-1
+11	pg_catalog	2206	regtype	4	10	postgres			21105	,	-	0	0	0	2211	regtypein	regtypeout	regtyperecv	regtypesend	-	-	0		0		-1
+11	pg_catalog	269	table_am_handler	4	10	postgres			21125	,	-	0	0	0	0	table_am_handler_in	table_am_handler_out	-	-	-	-	0		0		-1
+11	pg_catalog	25	text	-1	10	postgres			28321	,	-	0	0	100	1009	textin	textout	textrecv	textsend	-	-	0		0		-1
+11	pg_catalog	27	tid	6	10	postgres			16833	,	-	0	0	0	1010	tidin	tidout	tidrecv	tidsend	-	-	0		0		-1
+11	pg_catalog	1083	time	8	10	postgres			21297	,	-	0	0	0	1183	time_in	time_out	time_recv	time_send	timetypmodin	-	0		0		-1
+11	pg_catalog	1114	timestamp	8	10	postgres			21297	,	-	0	0	0	1115	timestamp_in	timestamp_out	timestamp_recv	timestamp_send	timestamptypmodin	-	0		0		-1
+11	pg_catalog	1184	timestamptz	8	10	postgres			29489	,	-	0	0	0	1185	timestamptz_in	timestamptz_out	timestamptz_recv	timestamptz_send	timestamptztypmodin	-	0		0		-1
+11	pg_catalog	1266	timetz	12	10	postgres			17201	,	-	0	0	0	1270	timetz_in	timetz_out	timetz_recv	timetz_send	timetztypmodin	-	0		0		-1
+11	pg_catalog	2279	trigger	4	10	postgres			21125	,	-	0	0	0	0	trigger_in	trigger_out	-	-	-	-	0		0		-1
+11	pg_catalog	3310	tsm_handler	4	10	postgres			21125	,	-	0	0	0	0	tsm_handler_in	tsm_handler_out	-	-	-	-	0		0		-1
+11	pg_catalog	4533	tsmultirange	-1	10	postgres			20375	,	-	0	0	0	6152	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3615	tsquery	-1	10	postgres			17089	,	-	0	0	0	3645	tsqueryin	tsqueryout	tsqueryrecv	tsquerysend	-	-	0		0		-1
+11	pg_catalog	3908	tsrange	-1	10	postgres			20374	,	-	0	0	0	3909	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	4534	tstzmultirange	-1	10	postgres			20375	,	-	0	0	0	6153	multirange_in	multirange_out	multirange_recv	multirange_send	-	multirange_typanalyze	0		0		-1
+11	pg_catalog	3910	tstzrange	-1	10	postgres			20374	,	-	0	0	0	3911	range_in	range_out	range_recv	range_send	-	range_typanalyze	0		0		-1
+11	pg_catalog	3614	tsvector	-1	10	postgres			20161	,	-	0	0	0	3643	tsvectorin	tsvectorout	tsvectorrecv	tsvectorsend	-	ts_typanalyze	0		0		-1
+11	pg_catalog	2970	txid_snapshot	-1	10	postgres			20417	,	-	0	0	0	2949	txid_snapshot_in	txid_snapshot_out	txid_snapshot_recv	txid_snapshot_send	-	-	0		0		-1
+11	pg_catalog	705	unknown	-2	10	postgres			16613	,	-	0	0	0	0	unknownin	unknownout	unknownrecv	unknownsend	-	-	0		0		-1
+11	pg_catalog	2950	uuid	16	10	postgres			16577	,	-	0	0	0	2951	uuid_in	uuid_out	uuid_recv	uuid_send	-	-	0		0		-1
+11	pg_catalog	1562	varbit	-1	10	postgres			28369	,	-	0	0	0	1563	varbit_in	varbit_out	varbit_recv	varbit_send	varbittypmodin	-	0		0		-1
+11	pg_catalog	1043	varchar	-1	10	postgres			20129	,	-	0	0	100	1015	varcharin	varcharout	varcharrecv	varcharsend	varchartypmodin	-	0		0		-1
+11	pg_catalog	2278	void	4	10	postgres			21125	,	-	0	0	0	0	void_in	void_out	void_recv	void_send	-	-	0		0		-1
+11	pg_catalog	28	xid	4	10	postgres			21185	,	-	0	0	0	1011	xidin	xidout	xidrecv	xidsend	-	-	0		0		-1
+11	pg_catalog	5069	xid8	8	10	postgres			21441	,	-	0	0	0	271	xid8in	xid8out	xid8recv	xid8send	-	-	0		0		-1
+11	pg_catalog	142	xml	-1	10	postgres			20161	,	-	0	0	0	143	xml_in	xml_out	xml_recv	xml_send	-	-	0		0		-1

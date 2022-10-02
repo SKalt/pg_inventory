@@ -1,0 +1,13 @@
+name_template = "{{.kind}}_types{{ if .packed }}_packed{{end}}"
+[kind]
+  base = "b"
+  composite = "c"
+  domain = "d"
+  enum = "e"
+  pseudo = "p"
+  range = "r"
+  multirange = "m"
+  all = ""
+[packed]
+  "" = false
+  packed = true
