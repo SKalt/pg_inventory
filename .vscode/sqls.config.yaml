@@ -1,0 +1,11 @@
+# Set to true to use lowercase keywords instead of uppercase.
+lowercaseKeywords: false
+connections:
+  - alias: empty
+    driver: postgresql
+    user: postgres
+    host: 0.0.0.0
+    port: 50000
+    dbName: postgres
+    params:
+      tls: skip-verify

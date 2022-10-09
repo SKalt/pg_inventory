@@ -1,22 +1,25 @@
 name_template = """
+{{- $filter_on_partitioning := eq .filter_on_partitioning "one" -}}
+{{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
+{{- $filter_on_kind := eq .filter_on_kind "one" -}}
 {{- $any_filters := or
-      .filter_on_partitioning
-      .filter_on_persistence
-      .filter_on_kind
+      ($filter_on_partitioning)
+      ($filter_on_persistence)
+      ($filter_on_kind)
 -}}
 {{- if not $any_filters -}}
   all_
 {{- end -}}
 tables
-{{- if $any_tables -}}
+{{- if $any_filters -}}
   _filtered_by
-  {{- if .filter_on_partitioning -}}
+  {{- if $filter_on_partitioning -}}
     _partitioning
   {{- end -}}
-  {{- if .filter_on_persistence -}}
+  {{- if $filter_on_persistence -}}
     _persistence
   {{- end -}}
-  {{- if .filter_on_kind -}}
+  {{- if $filter_on_kind -}}
     _kind
   {{- end -}}
 {{- end -}}
@@ -24,7 +27,8 @@ tables
   _packed
 {{- end -}}
 """
-
+[pg_class_category]
+  kind = "TABLE"
 [filter_on_partitioning]
   all = false
   one = true

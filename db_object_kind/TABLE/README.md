@@ -38,14 +38,7 @@ relationships:
 
     - r = ordinary table
     - i = index
-    - S = sequence
-    - t = TOAST table
-    - v = view
-    - m = materialized view
-    - c = composite type
-    - f = foreign table
-    - p = partitioned table
-    - I = partitioned index
+
 
 - [ ] [all tables in a single schema](./)
 - [ ] [all tables](./)

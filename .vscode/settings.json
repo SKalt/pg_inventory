@@ -1,0 +1,8 @@
+{
+    "python.linting.mypyEnabled": true,
+    "cSpell.words": [
+        "Cmds",
+        "combin",
+        "psql"
+    ]
+}

@@ -1,6 +1,0 @@
-oid	schema_oid	schema_name	table_name	tablespace_name	tablespace_oid	access_method_options	description	owner	owner_oid	persistence	acl	replica_identity	underlying_composite_type_oid	underlying_composite_type_name	approximate_number_of_rows
-16738	16434	am_examples	am_partitioned		0			postgres	10	p		d	0		-1
-16768	16434	am_examples	tableam_parted_heap2		0			postgres	10	p		d	0		-1
-16755	16434	am_examples	tableam_parted_heapx		0			postgres	10	p		d	0		-1
-18239	16447	regress_rls_schema	dob_t2		0			postgres	10	p		d	0		-1
-18248	16447	regress_rls_schema	part_document		0			regress_rls_alice	16408	p	{regress_rls_alice=arwdDxt/regress_rls_alice,=arwdDxt/regress_rls_alice}	d	0		-1

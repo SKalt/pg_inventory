@@ -10,6 +10,7 @@ SELECT
   , ns.nspname AS type_schema_name
   , type_.oid AS type_oid
   , type_.typname AS type_name
+  -- TODO: consider using pg_catalog.format_type(type_.oid, type_.typtypmod)
   , type_.typlen AS byte_length -- int2
     -- for fixed-size types, the size of the internal representation of the type.
     -- for variable-length types, -1.

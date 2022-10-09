@@ -59,6 +59,7 @@ SELECT
     -- either generation, identity generation, or default expression OR just null.
   , col.attoptions AS col_options -- text[], 'key=value' strings
   , col.attfdwoptions AS fdw_options -- ^same
+  , pg_catalog.col_description(col.attrelid, col.attname) AS col_comment
 FROM pg_catalog.pg_attribute AS col -- https://www.postgresql.org/docs/current/catalog-pg-attribute.html
 INNER JOIN pg_catalog.pg_class AS rel -- https://www.postgresql.org/docs/current/catalog-pg-class.html
   ON col.attrelid = rel.oid
