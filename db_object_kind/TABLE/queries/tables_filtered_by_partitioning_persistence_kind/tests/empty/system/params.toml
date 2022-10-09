@@ -1,0 +1,4 @@
+order_by = "ns.nspname, cls.relname"
+partitioning = false
+kind = 'r'
+persistence = 'p'

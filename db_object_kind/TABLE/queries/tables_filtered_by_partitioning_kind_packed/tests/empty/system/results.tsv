@@ -1,0 +1,67 @@
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	access_method_oid	access_method_options	description	info	type_oid	underlying_composite_type_oid	underlying_composite_type_name	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
+information_schema	13388	sql_features	13572		0	13572	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			2560	13574	0		713		8	8	7	0
+information_schema	13388	sql_implementation_info	13577		0	13577	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			2560	13579	0		12		1	1	5	0
+information_schema	13388	sql_parts	13582		0	13582	postgres	10		2			2560	13584	0		10		1	1	5	0
+information_schema	13388	sql_sizing	13587		0	13587	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			2560	13589	0		23		1	1	4	0
+pg_catalog	11	pg_aggregate	2600		0	2600	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12027	0		145		2	2	22	0
+pg_catalog	11	pg_am	2601		0	2601	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12015	0		7		1	1	4	0
+pg_catalog	11	pg_amop	2602		0	2602	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12017	0		945		7	7	9	0
+pg_catalog	11	pg_amproc	2603		0	2603	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12019	0		697		5	5	6	0
+pg_catalog	11	pg_attrdef	2604		0	2604	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12001	0		0		0	0	4	0
+pg_catalog	11	pg_attribute	1249		0	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	75	0		2971		55	55	26	0
+pg_catalog	11	pg_auth_members	1261	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	2843	0		3		1	1	4	0
+pg_catalog	11	pg_authid	1260	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres}	2			3075	2842	0		12		1	1	12	0
+pg_catalog	11	pg_cast	2605		0	2605	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12043	0		230		2	2	6	0
+pg_catalog	11	pg_class	1259		0	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	83	0		396		13	13	33	0
+pg_catalog	11	pg_collation	3456		0	3456	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12095	0		787		25	25	10	0
+pg_catalog	11	pg_constraint	2606		0	2606	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12003	0		107		3	3	25	0
+pg_catalog	11	pg_conversion	2607		0	2607	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12049	0		128		2	2	8	0
+pg_catalog	11	pg_database	1262	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	1248	0		2		1	1	14	0
+pg_catalog	11	pg_db_role_setting	2964	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	12054	0		0		0	0	3	0
+pg_catalog	11	pg_default_acl	826		0	826	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12088	0		0		0	0	5	0
+pg_catalog	11	pg_depend	2608		0	2608	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12051	0		8814		65	65	7	0
+pg_catalog	11	pg_description	2609		0	2609	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12041	0		5078		44	44	4	0
+pg_catalog	11	pg_enum	3501		0	3501	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12045	0		0		0	0	4	0
+pg_catalog	11	pg_event_trigger	3466		0	3466	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12039	0		0		0	0	7	0
+pg_catalog	11	pg_extension	3079		0	3079	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12074	0		1		1	1	8	0
+pg_catalog	11	pg_foreign_data_wrapper	2328		0	2328	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12076	0		0		0	0	7	0
+pg_catalog	11	pg_foreign_server	1417		0	1417	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12078	0		0		0	0	8	0
+pg_catalog	11	pg_foreign_table	3118		0	3118	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12082	0		0		0	0	3	0
+pg_catalog	11	pg_index	2610		0	2610	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12007	0		155		4	4	20	0
+pg_catalog	11	pg_inherits	2611		0	2611	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12005	0		0		0	0	4	0
+pg_catalog	11	pg_init_privs	3394		0	3394	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12090	0		199		3	3	5	0
+pg_catalog	11	pg_language	2612		0	2612	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12021	0		4		1	1	9	0
+pg_catalog	11	pg_largeobject	2613		0	2613	postgres	10	{postgres=arwdDxt/postgres}	2			3073	12025	0		0		0	0	3	0
+pg_catalog	11	pg_largeobject_metadata	2995		0	2995	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12023	0		0		0	0	3	0
+pg_catalog	11	pg_namespace	2615		0	2615	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12047	0		4		1	1	4	0
+pg_catalog	11	pg_opclass	2616		0	2616	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12013	0		177		3	3	9	0
+pg_catalog	11	pg_operator	2617		0	2617	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12009	0		804		14	14	15	0
+pg_catalog	11	pg_opfamily	2753		0	2753	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12011	0		146		2	2	5	0
+pg_catalog	11	pg_partitioned_table	3350		0	3350	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12097	0		0		0	0	8	0
+pg_catalog	11	pg_policy	3256		0	3256	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12084	0		0		0	0	8	0
+pg_catalog	11	pg_proc	1255		0	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	81	0		3202		94	94	30	0
+pg_catalog	11	pg_publication	6104		0	6104	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12105	0		0		0	0	9	0
+pg_catalog	11	pg_publication_rel	6106		0	6106	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12107	0		0		0	0	3	0
+pg_catalog	11	pg_range	3541		0	3541	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12099	0		6		1	1	7	0
+pg_catalog	11	pg_replication_origin	6000	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	12086	0		0		0	0	2	0
+pg_catalog	11	pg_rewrite	2618		0	2618	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12035	0		139		13	13	8	0
+pg_catalog	11	pg_seclabel	3596		0	3596	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12092	0		0		0	0	5	0
+pg_catalog	11	pg_sequence	2224		0	2224	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12103	0		0		0	0	8	0
+pg_catalog	11	pg_shdepend	1214	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	12060	0		12		1	1	7	0
+pg_catalog	11	pg_shdescription	2396	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	12062	0		1		1	1	3	0
+pg_catalog	11	pg_shseclabel	3592	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	4066	0		0		0	0	4	0
+pg_catalog	11	pg_statistic	2619		0	2619	postgres	10	{postgres=arwdDxt/postgres}	2			3073	12029	0		406		19	19	31	0
+pg_catalog	11	pg_statistic_ext	3381		0	3381	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12031	0		0		0	0	9	0
+pg_catalog	11	pg_statistic_ext_data	3429		0	3429	postgres	10	{postgres=arwdDxt/postgres}	2			3073	12033	0		0		0	0	5	0
+pg_catalog	11	pg_subscription	6100	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres}	2			3075	6101	0		0		0	0	11	0
+pg_catalog	11	pg_subscription_rel	6102		0	6102	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12110	0		0		0	0	4	0
+pg_catalog	11	pg_tablespace	1213	pg_global	1664	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3075	12056	0		2		1	1	5	0
+pg_catalog	11	pg_transform	3576		0	3576	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12101	0		0		0	0	5	0
+pg_catalog	11	pg_trigger	2620		0	2620	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12037	0		0		0	0	19	0
+pg_catalog	11	pg_ts_config	3602		0	3602	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12064	0		29		1	1	5	0
+pg_catalog	11	pg_ts_config_map	3603		0	3603	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12066	0		551		3	3	4	0
+pg_catalog	11	pg_ts_dict	3600		0	3600	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12068	0		29		1	1	6	0
+pg_catalog	11	pg_ts_parser	3601		0	3601	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12070	0		1		1	1	8	0
+pg_catalog	11	pg_ts_template	3764		0	3764	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	12072	0		5		1	1	5	0
+pg_catalog	11	pg_type	1247		0	0	postgres	10	{postgres=arwdDxt/postgres,=r/postgres}	2			3073	71	0		601		14	14	32	0
+pg_catalog	11	pg_user_mapping	1418		0	1418	postgres	10	{postgres=arwdDxt/postgres}	2			3073	12080	0		0		0	0	4	0
