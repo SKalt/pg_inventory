@@ -389,6 +389,15 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	}
 	rows, err := db.Query(query)
 	if err != nil {
+		// persist query to /tmp/query.sql for further debugging
+		tempFile, e2 := os.CreateTemp("", "query.*.sql")
+		if e2 != nil {
+			panic(e2)
+		}
+		_, e2 = tempFile.WriteString(query)
+		if e2 != nil {
+			panic(e2)
+		}
 		return err
 	}
 	tsv, err := rowsAsTsv(rows)

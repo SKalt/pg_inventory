@@ -84,16 +84,17 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
         -- f => foreign table
         WHEN 'r' THEN true -- ordinary
         WHEN 'p' THEN true -- partitioned
-        ELSE 1/0 -- error: parameter kind must be either 'r' or 'p'
+        ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'r' or 'p'
       END
     ) AND
     cls.relkind = :'kind' AND
     ( --validate input parameter: persistence
-        CASE :'persistence'
-          WHEN 'p' THEN true -- permanent table
-          WHEN 'u' THEN true -- unlogged table: not dropped at a session
-          WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
-          ELSE 1/0 -- error: parameter persistence must be either 'p', 'u', or 't'
+      CASE :'persistence'
+        WHEN 'p' THEN true -- permanent table
+        WHEN 'u' THEN true -- unlogged table: not dropped at a session
+        WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
+        ELSE (1/0)::BOOLEAN -- error: parameter persistence must be either 'p', 'u', or 't'
+      END
     ) AND
     cls.relpersistence = :'persistence' AND
     cls.relnamespace = ns.oid

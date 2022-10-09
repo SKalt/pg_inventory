@@ -93,7 +93,7 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
         -- f => foreign table
         WHEN 'r' THEN true -- ordinary
         WHEN 'p' THEN true -- partitioned
-        ELSE 1/0 -- error: parameter kind must be either 'r' or 'p'
+        ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'r' or 'p'
       END
     ) AND
     cls.relkind = :'kind' AND

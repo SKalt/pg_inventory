@@ -214,15 +214,15 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
       {{- if $is_table }}
         WHEN 'r' THEN true -- ordinary
         WHEN 'p' THEN true -- partitioned
-        ELSE 1/0 -- error: parameter kind must be either 'r' or 'p'
+        ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'r' or 'p'
       {{- else if $is_view }}
         WHEN 'v' THEN true
         WHEN 'm' THEN true
-        ELSE 1/0 -- error: parameter kind must be either 'v' or 'm'
+        ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'v' or 'm'
       {{- else if $is_index }}
         WHEN 'i' THEN true
         WHEN 'I' THEN true
-        ELSE 1/0 -- error: parameter kind must be either 'i' or 'I'
+        ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'i' or 'I'
       {{- end }}
       END
     ) AND
@@ -236,11 +236,12 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
   {{- end }}
   {{- if .filter_on_persistence }}
     ( --validate input parameter: persistence
-        CASE :'persistence'
-          WHEN 'p' THEN true -- permanent table
-          WHEN 'u' THEN true -- unlogged table: not dropped at a session
-          WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
-          ELSE 1/0 -- error: parameter persistence must be either 'p', 'u', or 't'
+      CASE :'persistence'
+        WHEN 'p' THEN true -- permanent table
+        WHEN 'u' THEN true -- unlogged table: not dropped at a session
+        WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
+        ELSE (1/0)::BOOLEAN -- error: parameter persistence must be either 'p', 'u', or 't'
+      END
     ) AND
     cls.relpersistence = :'persistence' AND
   {{- end }}
