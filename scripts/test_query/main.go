@@ -333,7 +333,7 @@ func rowsAsTsv(rows *sql.Rows) (string, error) {
 			if str == nil {
 				tsvRow[i] = ""
 			} else {
-				tsvRow[i] = *str
+				tsvRow[i] = strings.ReplaceAll(*str, "\n", "\\n")
 			}
 		}
 		if err = tsv.Write(tsvRow); err != nil {
