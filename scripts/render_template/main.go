@@ -228,9 +228,11 @@ var rootCmd = &cobra.Command{
 		crashIf(err)
 		shouldGatherIncludes, err := flags.GetBool("list-includes")
 		crashIf(err)
-
+		paramsPath, err := flags.GetString("params")
+		crashIf(err)
 		templatePath, err := flags.GetString("tpl")
 		crashIf(err)
+
 		if debug {
 			fmt.Println("dry-run = ", dryRun)
 			fmt.Println("tpl = ", templatePath)
@@ -265,7 +267,9 @@ var rootCmd = &cobra.Command{
 		}
 
 		templateName := strings.TrimSuffix(templateFileName, ".sql.tpl")
-		paramsPath := path.Join(dir, fmt.Sprintf("%s.params.toml", templateName))
+		if paramsPath == "" {
+			paramsPath = path.Join(dir, fmt.Sprintf("%s.params.toml", templateName))
+		}
 		queryNames, queryParams := getParams(paramsPath)
 		selectedQueryNames, err := cmd.Flags().GetStringArray("query")
 		crashIf(err)
@@ -318,6 +322,7 @@ var rootCmd = &cobra.Command{
 
 func init() {
 	rootCmd.Flags().StringP("tpl", "t", "", "Path to template-file to render")
+	rootCmd.Flags().StringP("params", "p", "", "Path to template parameters toml file")
 	rootCmd.Flags().StringArrayP("query", "q", []string{}, "the template target to render if there are many (default 'all')")
 	rootCmd.Flags().BoolP("list-includes", "l", false, "print each of the included files")
 	rootCmd.Flags().BoolP("debug", "d", false, "print CLI configuration")
