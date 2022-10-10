@@ -1,0 +1,10 @@
+name_template = """
+{{.pg_class_category}}_views{{- if .packed -}}_packed{{- end -}}
+"""
+[pg_class_category]
+  materialized = "MATERIALIZED VIEW"
+[filter_on_persistence]
+  always = false # materialized views are always persistent, and can't be unlogged
+[packed]
+  "" = false
+  packed = true

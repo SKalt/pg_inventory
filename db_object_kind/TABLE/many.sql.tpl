@@ -71,8 +71,10 @@ SELECT
         | (CASE WHEN cls.relhassubclass      THEN 1<<4 ELSE 0 END)
         | (CASE WHEN cls.relrowsecurity      THEN 1<<5 ELSE 0 END)
         | (CASE WHEN cls.relforcerowsecurity THEN 1<<6 ELSE 0 END)
+        {{- if $is_partitionable }}
         | (CASE WHEN cls.relispartition      THEN 1<<7 ELSE 0 END)
-        {{- if $is_materialized_view }}
+        {{- end }}
+        {{- if (or $is_materialized_view $is_view) }}
         | (CASE WHEN cls.relispopulated      THEN 1<<8 ELSE 0 END)
         {{- end }}
         | ((
@@ -85,7 +87,7 @@ SELECT
               ELSE          0
             END
           )<<9)
-        {{- if not .filter_on_persistence }}
+        {{- if or (not .filter_on_persistence) (not $is_materialized_view) }}
         | ((
             CASE cls.relpersistence
               WHEN 'p' THEN 1
@@ -132,12 +134,14 @@ SELECT
     , cls.relforcerowsecurity AS row_level_security_enforced_on_owner
       -- if row-level security (when enabled) will also apply to table owner; see pg_policy catalog
     {{- end }}
-    {{- if $is_materialized_view }}
+    {{- if (or $is_view $is_materialized_view) }}
     , cls.relispopulated AS is_populated
       -- Only false for some materialized views
     {{- end }}
+    {{- if $is_partitionable }}
     , cls.relispartition AS is_partition
-    {{ if not .filter_on_persistence -}}
+    {{- end }}
+    {{ if or (not .filter_on_persistence) (not $is_materialized_view) -}}
     , cls.relpersistence AS persistence
       -- p => permanent table
       -- u => unlogged table: not dropped at a session
@@ -230,7 +234,7 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
   {{- else if $is_table }}
     cls.relkind IN ('r', 'p') AND
   {{- else if $is_view }}
-    cls.relkind IN ('v'', m') AND
+    cls.relkind IN ('v', 'm') AND
   {{- else if $is_index }}
     cls.relkind IN ('i', 'I') AND
   {{- end }}

@@ -1,0 +1,22 @@
+name_template = """
+{{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
+{{- $filter_on_kind := eq .filter_on_kind "one" -}}
+{{- $any_filters := or $filter_on_persistence $filter_on_kind -}}
+
+{{.pg_class_category}}_views
+{{- if $any_filters -}}           _filtered_by {{- end -}}
+{{- if $filter_on_persistence -}} _persistence {{- end -}}
+{{- if $filter_on_kind -}}        _kind        {{- end -}}
+{{- if .packed -}}                _packed      {{- end -}}
+"""
+[pg_class_category]
+  all = "VIEW"
+[filter_on_persistence]
+  all = false
+  one = true
+[filter_on_kind]
+  all = false
+  one = true
+[packed]
+  "" = false
+  packed = true

@@ -1,0 +1,4 @@
+where = "ns.nspname = 'public'"
+order_by = "ns.nspname, cls.relname"
+
+persistence = 't'

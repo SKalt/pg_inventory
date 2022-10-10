@@ -1,0 +1,3 @@
+where = "ns.nspname NOT IN ('pg_catalog', 'information_schema')"
+order_by = "ns.nspname, cls.relname"
+kind = 'm'

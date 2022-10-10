@@ -1,4 +1,5 @@
 # pg_inventory
+
 pg_catalog queries
 
 This contains SQL long-form queries generated from Go templates.
@@ -33,10 +34,10 @@ Each SQL query is tested against a number of example databases.
 
 - [ ] [ACCESS_METHOD](./ACCESS_METHOD/)
 - [ ] [AGGREGATE](./AGGREGATE/)
-- [X] [CAST](./CAST/)
+- [x] [CAST](./CAST/)
 - [ ] [COLLATION](./COLLATION/)
-- [X] [COLUMN](./COLUMN/README.md)
-- [X] [CONSTRAINT](./CONSTRAINT/)
+- [x] [COLUMN](./COLUMN/README.md)
+- [x] [CONSTRAINT](./CONSTRAINT/)
 - [ ] [CONVERSION](./CONVERSION/)
 - [x] [DATABASE](./DATABASE/)
 - [ ] [DOMAIN](./DOMAIN/)
@@ -54,14 +55,14 @@ Each SQL query is tested against a number of example databases.
 - [ ] [POLICY](./POLICY/)
 - [ ] [PROCEDURE](./PROCEDURE/)
 - [ ] [PUBLICATION](./PUBLICATION/)
-- [X] [ROLE](./ROLE/)
+- [x] [ROLE](./ROLE/)
 - [ ] [RULE](./RULE/)
 - [x] [SCHEMA](./SCHEMA/)
 - [~] [SEQUENCE](./SEQUENCE/)
 - [ ] [SERVER](./SERVER/)
 - [ ] [STATISTICS](./STATISTICS/)
 - [ ] [SUBSCRIPTION](./SUBSCRIPTION/)
-- [~] [TABLE](./TABLE/)
+- [x] [TABLE](./TABLE/)
 - [ ] [TABLESPACE](./TABLESPACE/)
 - [ ] [TEXT_SEARCH_CONFIGURATION](./TEXT_SEARCH_CONFIGURATION/)
 - [ ] [TEXT_SEARCH_DICTIONARY](./TEXT_SEARCH_DICTIONARY/)
@@ -69,6 +70,6 @@ Each SQL query is tested against a number of example databases.
 - [ ] [TEXT_SEARCH_TEMPLATE](./TEXT_SEARCH_TEMPLATE/)
 - [ ] [TRANSFORM](./TRANSFORM/)
 - [ ] [TRIGGER](./TRIGGER/)
-- [X] [TYPE](./TYPE/)
+- [x] [TYPE](./TYPE/)
 - [ ] [USER_MAPPING](./USER_MAPPING/)
-- [~] [VIEW](./VIEW/)
+- [x] [VIEW](./VIEW/)
