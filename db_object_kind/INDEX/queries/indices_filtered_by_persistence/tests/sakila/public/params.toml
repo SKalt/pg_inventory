@@ -1,0 +1,5 @@
+where = "ns.nspname = 'public'"
+order_by = "ns.nspname, cls.relname"
+kind = 'I'
+partitioning = false
+persistence = 'p'

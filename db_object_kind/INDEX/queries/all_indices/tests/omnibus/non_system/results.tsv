@@ -1,0 +1,30 @@
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	access_method_oid	access_method_name	access_method_options	description	replica_identity	has_subclass	is_partition	persistence	kind	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
+am_examples	16434	grect2ind2	18490		0	18490	postgres	10		16702	gist2			n	false	false	p	i	0		1	0	1	0
+am_examples	16434	grect2ind3	18491		0	18491	postgres	10		16702	gist2			n	false	false	p	i	0		1	0	1	0
+composite_type_examples	16437	idx_1	18492		0	18492	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+domain_examples	16440	us_snail_addy_pkey	18456		0	18456	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+extension_example	16442	hidx	18493		0	18493	postgres	10		783	gist			n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	films_pkey	18458		0	18458	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	gin_idx	18494		0	18494	postgres	10		2742	gin	{fastupdate=off}		n	false	false	p	i	0		2	0	1	0
+idx_ex	16445	title_idx	18495		0	18495	postgres	10		403	btree	{fillfactor=70}		n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	title_idx_lower	18496		0	18496	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	title_idx_nulls_low	18497		0	18497	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	title_idx_u1	18498		0	18498	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+idx_ex	16445	title_idx_u2	18499		0	18499	postgres	10		403	btree			n	false	false	p	i	0		1	0	3	0
+idx_ex	16445	title_idx_with_duplicates	18500		0	18500	postgres	10		403	btree	{deduplicate_items=off}		n	false	false	p	i	0		1	0	1	0
+ordinary_tables	16446	binary_examples_pkey	18460		0	18460	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+ordinary_tables	16446	character_examples_pkey	18462		0	18462	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+ordinary_tables	16446	numeric_type_examples_pkey	18464		0	18464	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	category_pkey	18466		0	18466	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	document_pkey	18468		0	18468	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	r1_3_pkey	18470		0	18470	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	r1_4_pkey	18472		0	18472	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	r1_5_pkey	18474		0	18474	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	r1_pkey	18476		0	18476	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	t1_pkey	18478		0	18478	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	t3_3_pkey	18480		0	18480	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+regress_rls_schema	16447	uaccount_pkey	18482		0	18482	regress_rls_alice	16408		403	btree			n	false	false	p	i	0		1	0	1	0
+tablespace_dependencies	16448	example_index	18501	indexspace	16425	18501	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+tablespace_dependencies	16448	example_table_pk	18484		0	18484	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+trigger_test	16449	accounts_pkey	18486		0	18486	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+trigger_test	16449	update_log_pk	18488		0	18488	postgres	10		403	btree			n	false	false	p	i	0		1	0	2	0

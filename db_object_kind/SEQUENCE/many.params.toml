@@ -1,0 +1,25 @@
+name_template = """
+{{- $filter_on_partitioning := eq .filter_on_partitioning "one" -}}
+{{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
+{{- $filter_on_kind := eq .filter_on_kind "one" -}}
+{{- $any_filters := or
+      ($filter_on_partitioning)
+      ($filter_on_persistence)
+      ($filter_on_kind)
+-}}
+
+{{- if (not $filter_on_persistence) -}}all_{{- end -}}
+sequences
+{{- if $filter_on_persistence -}}_filtered_by_persistence{{- end -}}
+{{- if .packed -}}_packed{{- end -}}
+"""
+[pg_class_category]
+  kind = "SEQUENCE"
+[kind]
+  always = 'S'
+[filter_on_persistence]
+  all = false
+  one = true
+[packed]
+  "" = false
+  packed = true

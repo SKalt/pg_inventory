@@ -1,0 +1,156 @@
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	access_method_oid	access_method_name	access_method_options	description	info	kind	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
+pg_catalog	11	pg_aggregate_fnoid_index	2650		0	2650	postgres	10		403	btree			3072	i	145		2	0	1	0
+pg_catalog	11	pg_am_name_index	2651		0	2651	postgres	10		403	btree			3072	i	7		2	0	1	0
+pg_catalog	11	pg_am_oid_index	2652		0	2652	postgres	10		403	btree			3072	i	7		2	0	1	0
+pg_catalog	11	pg_amop_fam_strat_index	2653		0	2653	postgres	10		403	btree			3072	i	945		6	0	4	0
+pg_catalog	11	pg_amop_oid_index	2756		0	2756	postgres	10		403	btree			3072	i	945		5	0	1	0
+pg_catalog	11	pg_amop_opr_fam_index	2654		0	2654	postgres	10		403	btree			3072	i	945		6	0	3	0
+pg_catalog	11	pg_amproc_fam_proc_index	2655		0	2655	postgres	10		403	btree			3072	i	697		5	0	4	0
+pg_catalog	11	pg_amproc_oid_index	2757		0	2757	postgres	10		403	btree			3072	i	697		4	0	1	0
+pg_catalog	11	pg_attrdef_adrelid_adnum_index	2656		0	2656	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_attrdef_oid_index	2657		0	2657	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_attribute_relid_attnam_index	2658		0	0	postgres	10		403	btree			3072	i	2971		15	0	2	0
+pg_catalog	11	pg_attribute_relid_attnum_index	2659		0	0	postgres	10		403	btree			3072	i	2971		10	0	2	0
+pg_catalog	11	pg_auth_members_member_role_index	2695	pg_global	1664	0	postgres	10		403	btree			3072	i	3		2	0	2	0
+pg_catalog	11	pg_auth_members_role_member_index	2694	pg_global	1664	0	postgres	10		403	btree			3072	i	3		2	0	2	0
+pg_catalog	11	pg_authid_oid_index	2677	pg_global	1664	0	postgres	10		403	btree			3072	i	12		2	0	1	0
+pg_catalog	11	pg_authid_rolname_index	2676	pg_global	1664	0	postgres	10		403	btree			3072	i	12		2	0	1	0
+pg_catalog	11	pg_cast_oid_index	2660		0	2660	postgres	10		403	btree			3072	i	230		2	0	1	0
+pg_catalog	11	pg_cast_source_target_index	2661		0	2661	postgres	10		403	btree			3072	i	230		2	0	2	0
+pg_catalog	11	pg_class_oid_index	2662		0	0	postgres	10		403	btree			3072	i	396		4	0	1	0
+pg_catalog	11	pg_class_relname_nsp_index	2663		0	0	postgres	10		403	btree			3072	i	396		6	0	2	0
+pg_catalog	11	pg_class_tblspc_relfilenode_index	3455		0	0	postgres	10		403	btree			3072	i	396		5	0	2	0
+pg_catalog	11	pg_collation_name_enc_nsp_index	3164		0	3164	postgres	10		403	btree			3072	i	787		6	0	3	0
+pg_catalog	11	pg_collation_oid_index	3085		0	3085	postgres	10		403	btree			3072	i	787		5	0	1	0
+pg_catalog	11	pg_constraint_conname_nsp_index	2664		0	2664	postgres	10		403	btree			3072	i	107		2	0	2	0
+pg_catalog	11	pg_constraint_conparentid_index	2579		0	2579	postgres	10		403	btree			3072	i	107		2	0	1	0
+pg_catalog	11	pg_constraint_conrelid_contypid_conname_index	2665		0	2665	postgres	10		403	btree			3072	i	107		2	0	3	0
+pg_catalog	11	pg_constraint_contypid_index	2666		0	2666	postgres	10		403	btree			3072	i	107		2	0	1	0
+pg_catalog	11	pg_constraint_oid_index	2667		0	2667	postgres	10		403	btree			3072	i	107		2	0	1	0
+pg_catalog	11	pg_conversion_default_index	2668		0	2668	postgres	10		403	btree			3072	i	128		2	0	4	0
+pg_catalog	11	pg_conversion_name_nsp_index	2669		0	2669	postgres	10		403	btree			3072	i	128		2	0	2	0
+pg_catalog	11	pg_conversion_oid_index	2670		0	2670	postgres	10		403	btree			3072	i	128		2	0	1	0
+pg_catalog	11	pg_database_datname_index	2671	pg_global	1664	0	postgres	10		403	btree			3072	i	1		2	0	1	0
+pg_catalog	11	pg_database_oid_index	2672	pg_global	1664	0	postgres	10		403	btree			3072	i	1		2	0	1	0
+pg_catalog	11	pg_db_role_setting_databaseid_rol_index	2965	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_default_acl_oid_index	828		0	828	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_default_acl_role_nsp_obj_index	827		0	827	postgres	10		403	btree			3072	i	0		1	0	3	0
+pg_catalog	11	pg_depend_depender_index	2673		0	2673	postgres	10		403	btree			3072	i	8814		43	0	3	0
+pg_catalog	11	pg_depend_reference_index	2674		0	2674	postgres	10		403	btree			3072	i	8814		53	0	3	0
+pg_catalog	11	pg_description_o_c_o_index	2675		0	2675	postgres	10		403	btree			3072	i	5078		27	0	3	0
+pg_catalog	11	pg_enum_oid_index	3502		0	3502	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_enum_typid_label_index	3503		0	3503	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_enum_typid_sortorder_index	3534		0	3534	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_event_trigger_evtname_index	3467		0	3467	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_event_trigger_oid_index	3468		0	3468	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_extension_name_index	3081		0	3081	postgres	10		403	btree			3072	i	1		2	0	1	0
+pg_catalog	11	pg_extension_oid_index	3080		0	3080	postgres	10		403	btree			3072	i	1		2	0	1	0
+pg_catalog	11	pg_foreign_data_wrapper_name_index	548		0	548	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_foreign_data_wrapper_oid_index	112		0	112	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_foreign_server_name_index	549		0	549	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_foreign_server_oid_index	113		0	113	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_foreign_table_relid_index	3119		0	3119	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_index_indexrelid_index	2679		0	2679	postgres	10		403	btree			3072	i	155		2	0	1	0
+pg_catalog	11	pg_index_indrelid_index	2678		0	2678	postgres	10		403	btree			3072	i	155		2	0	1	0
+pg_catalog	11	pg_inherits_parent_index	2187		0	2187	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_inherits_relid_seqno_index	2680		0	2680	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_init_privs_o_c_o_index	3395		0	3395	postgres	10		403	btree			3072	i	199		2	0	3	0
+pg_catalog	11	pg_language_name_index	2681		0	2681	postgres	10		403	btree			3072	i	4		2	0	1	0
+pg_catalog	11	pg_language_oid_index	2682		0	2682	postgres	10		403	btree			3072	i	4		2	0	1	0
+pg_catalog	11	pg_largeobject_loid_pn_index	2683		0	2683	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_largeobject_metadata_oid_index	2996		0	2996	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_namespace_nspname_index	2684		0	2684	postgres	10		403	btree			3072	i	4		2	0	1	0
+pg_catalog	11	pg_namespace_oid_index	2685		0	2685	postgres	10		403	btree			3072	i	4		2	0	1	0
+pg_catalog	11	pg_opclass_am_name_nsp_index	2686		0	2686	postgres	10		403	btree			3072	i	177		2	0	3	0
+pg_catalog	11	pg_opclass_oid_index	2687		0	2687	postgres	10		403	btree			3072	i	177		2	0	1	0
+pg_catalog	11	pg_operator_oid_index	2688		0	2688	postgres	10		403	btree			3072	i	804		5	0	1	0
+pg_catalog	11	pg_operator_oprname_l_r_n_index	2689		0	2689	postgres	10		403	btree			3072	i	804		6	0	4	0
+pg_catalog	11	pg_opfamily_am_name_nsp_index	2754		0	2754	postgres	10		403	btree			3072	i	146		2	0	3	0
+pg_catalog	11	pg_opfamily_oid_index	2755		0	2755	postgres	10		403	btree			3072	i	146		2	0	1	0
+pg_catalog	11	pg_partitioned_table_partrelid_index	3351		0	3351	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_policy_oid_index	3257		0	3257	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_policy_polrelid_polname_index	3258		0	3258	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_proc_oid_index	2690		0	0	postgres	10		403	btree			3072	i	3202		11	0	1	0
+pg_catalog	11	pg_proc_proname_args_nsp_index	2691		0	0	postgres	10		403	btree			3072	i	3202		32	0	3	0
+pg_catalog	11	pg_publication_oid_index	6110		0	6110	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_publication_pubname_index	6111		0	6111	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_publication_rel_oid_index	6112		0	6112	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_publication_rel_prrelid_prpubid_index	6113		0	6113	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_range_rngmultitypid_index	2228		0	2228	postgres	10		403	btree			3072	i	6		2	0	1	0
+pg_catalog	11	pg_range_rngtypid_index	3542		0	3542	postgres	10		403	btree			3072	i	6		2	0	1	0
+pg_catalog	11	pg_replication_origin_roiident_index	6001	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_replication_origin_roname_index	6002	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_rewrite_oid_index	2692		0	2692	postgres	10		403	btree			3072	i	139		2	0	1	0
+pg_catalog	11	pg_rewrite_rel_rulename_index	2693		0	2693	postgres	10		403	btree			3072	i	139		2	0	2	0
+pg_catalog	11	pg_seclabel_object_index	3597		0	3597	postgres	10		403	btree			3072	i	0		1	0	4	0
+pg_catalog	11	pg_sequence_seqrelid_index	5002		0	5002	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_shdepend_depender_index	1232	pg_global	1664	0	postgres	10		403	btree			3072	i	12		2	0	4	0
+pg_catalog	11	pg_shdepend_reference_index	1233	pg_global	1664	0	postgres	10		403	btree			3072	i	12		2	0	2	0
+pg_catalog	11	pg_shdescription_o_c_index	2397	pg_global	1664	0	postgres	10		403	btree			3072	i	1		2	0	2	0
+pg_catalog	11	pg_shseclabel_object_index	3593	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	3	0
+pg_catalog	11	pg_statistic_ext_data_stxoid_index	3433		0	3433	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_statistic_ext_name_index	3997		0	3997	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_statistic_ext_oid_index	3380		0	3380	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_statistic_ext_relid_index	3379		0	3379	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_statistic_relid_att_inh_index	2696		0	2696	postgres	10		403	btree			3072	i	0		1	0	3	0
+pg_catalog	11	pg_subscription_oid_index	6114	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_subscription_rel_srrelid_srsubid_index	6117		0	6117	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_subscription_subname_index	6115	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_tablespace_oid_index	2697	pg_global	1664	0	postgres	10		403	btree			3072	i	2		2	0	1	0
+pg_catalog	11	pg_tablespace_spcname_index	2698	pg_global	1664	0	postgres	10		403	btree			3072	i	2		2	0	1	0
+pg_catalog	11	pg_transform_oid_index	3574		0	3574	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_transform_type_lang_index	3575		0	3575	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_trigger_oid_index	2702		0	2702	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_trigger_tgconstraint_index	2699		0	2699	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_trigger_tgrelid_tgname_index	2701		0	2701	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_catalog	11	pg_ts_config_cfgname_index	3608		0	3608	postgres	10		403	btree			3072	i	29		2	0	2	0
+pg_catalog	11	pg_ts_config_map_index	3609		0	3609	postgres	10		403	btree			3072	i	551		4	0	3	0
+pg_catalog	11	pg_ts_config_oid_index	3712		0	3712	postgres	10		403	btree			3072	i	29		2	0	1	0
+pg_catalog	11	pg_ts_dict_dictname_index	3604		0	3604	postgres	10		403	btree			3072	i	29		2	0	2	0
+pg_catalog	11	pg_ts_dict_oid_index	3605		0	3605	postgres	10		403	btree			3072	i	29		2	0	1	0
+pg_catalog	11	pg_ts_parser_oid_index	3607		0	3607	postgres	10		403	btree			3072	i	1		2	0	1	0
+pg_catalog	11	pg_ts_parser_prsname_index	3606		0	3606	postgres	10		403	btree			3072	i	1		2	0	2	0
+pg_catalog	11	pg_ts_template_oid_index	3767		0	3767	postgres	10		403	btree			3072	i	5		2	0	1	0
+pg_catalog	11	pg_ts_template_tmplname_index	3766		0	3766	postgres	10		403	btree			3072	i	5		2	0	2	0
+pg_catalog	11	pg_type_oid_index	2703		0	0	postgres	10		403	btree			3072	i	601		4	0	1	0
+pg_catalog	11	pg_type_typname_nsp_index	2704		0	0	postgres	10		403	btree			3072	i	601		5	0	2	0
+pg_catalog	11	pg_user_mapping_oid_index	174		0	174	postgres	10		403	btree			3072	i	0		1	0	1	0
+pg_catalog	11	pg_user_mapping_user_server_index	175		0	175	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1213_index	4186	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1247_index	4172		0	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1255_index	2837		0	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1260_index	4176	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1262_index	4178	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_13572_index	13576		0	13576	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_13577_index	13581		0	13581	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_13582_index	13586		0	13586	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_13587_index	13591		0	13591	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1417_index	4152		0	4152	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_1418_index	4174		0	4174	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2328_index	4150		0	4150	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2396_index	2847	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2600_index	4160		0	4160	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2604_index	2831		0	2831	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2606_index	2833		0	2833	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2609_index	2835		0	2835	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2612_index	4158		0	4158	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2615_index	4164		0	4164	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2618_index	2839		0	2839	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2619_index	2841		0	2841	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2620_index	2337		0	2337	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_2964_index	2967	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3079_index	4148		0	4148	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3118_index	4154		0	4154	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3256_index	4168		0	4168	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3350_index	4166		0	4166	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3381_index	3440		0	3440	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3394_index	4156		0	4156	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3429_index	3431		0	3431	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3456_index	6176		0	6176	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3466_index	4146		0	4146	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3592_index	4061	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3596_index	3599		0	3599	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_3600_index	4170		0	4170	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_6000_index	4182	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_6100_index	4184	pg_global	1664	0	postgres	10		403	btree			3072	i	0		1	0	2	0
+pg_toast	99	pg_toast_826_index	4144		0	4144	postgres	10		403	btree			3072	i	0		1	0	2	0

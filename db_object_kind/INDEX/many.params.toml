@@ -1,0 +1,43 @@
+name_template = """
+{{- $filter_on_partitioning := eq .filter_on_partitioning "one" -}}
+{{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
+{{- $filter_on_kind := eq .filter_on_kind "one" -}}
+{{- $any_filters := or
+      ($filter_on_partitioning)
+      ($filter_on_persistence)
+      ($filter_on_kind)
+-}}
+{{- if not $any_filters -}}
+  all_
+{{- end -}}
+indices
+{{- if $any_filters -}}
+  _filtered_by
+  {{- if $filter_on_partitioning -}}
+    _partitioning
+  {{- end -}}
+  {{- if $filter_on_persistence -}}
+    _persistence
+  {{- end -}}
+  {{- if $filter_on_kind -}}
+    _kind
+  {{- end -}}
+{{- end -}}
+{{- if .packed -}}
+  _packed
+{{- end -}}
+"""
+[pg_class_category]
+  kind = "INDEX"
+[filter_on_partitioning]
+  all = false
+  one = true
+[filter_on_persistence]
+  all = false
+  one = true
+[filter_on_kind]
+  all = false
+  one = true
+[packed]
+  "" = false
+  packed = true

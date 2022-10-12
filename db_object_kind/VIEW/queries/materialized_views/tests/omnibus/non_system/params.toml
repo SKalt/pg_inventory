@@ -1,2 +1,2 @@
-where = "ns.nspname NOT IN ('pg_catalog', 'information_schema')"
+where = "ns.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')"
 order_by = "ns.nspname, cls.relname"

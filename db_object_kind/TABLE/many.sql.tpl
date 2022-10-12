@@ -164,7 +164,7 @@ SELECT
       -- c => composite type
       -- f => foreign table
   {{- end}}
-  {{- if not $is_toast}}
+  {{- if not (or $is_index $is_sequence $is_toast) }}
     , cls.reltype AS type_oid -- references pg_type.oid
       -- The OID of the data type that corresponds to this table's row type, if
       -- any; zero for TOAST tables, which have no pg_type entry
