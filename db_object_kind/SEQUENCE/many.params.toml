@@ -1,12 +1,5 @@
 name_template = """
-{{- $filter_on_partitioning := eq .filter_on_partitioning "one" -}}
 {{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
-{{- $filter_on_kind := eq .filter_on_kind "one" -}}
-{{- $any_filters := or
-      ($filter_on_partitioning)
-      ($filter_on_persistence)
-      ($filter_on_kind)
--}}
 
 {{- if (not $filter_on_persistence) -}}all_{{- end -}}
 sequences

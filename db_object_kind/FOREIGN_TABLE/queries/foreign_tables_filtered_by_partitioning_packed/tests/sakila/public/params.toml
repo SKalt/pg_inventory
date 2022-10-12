@@ -1,0 +1,3 @@
+where = "ns.nspname = 'public'"
+order_by = "ns.nspname, cls.relname"
+partitioning = false
