@@ -19,8 +19,6 @@ import (
 	"gonum.org/v1/gonum/stat/combin"
 )
 
-// TODO: extract constants
-
 func crashIf(err error) {
 	if err != nil {
 		log.Panic(err)

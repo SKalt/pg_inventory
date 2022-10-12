@@ -16,6 +16,7 @@ SELECT
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (zero occurs for sequences, as well as
       --  relations without storage, such as views)
+    , access_method.amname AS access_method_name
     , cls.reloptions AS access_method_options
       -- Access-method-specific options, as "keyword=value" strings
   -- details
@@ -93,8 +94,10 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
     cls.relkind IN ('r', 'p') AND
     cls.relispartition = :partitioning AND
     cls.relnamespace = ns.oid
-LEFT JOIN pg_tablespace AS cls_space ON (cls.reltablespace = cls_space.oid)
-  -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
+LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/current/catalog-pg-am.html
+  ON cls.relam > 0 AND cls.relam = access_method.oid
+LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
+  ON (cls.reltablespace = cls_space.oid)
 LEFT JOIN (
     pg_catalog.pg_type AS underlying_composite_type
     INNER JOIN pg_namespace AS underlying_type_ns ON (

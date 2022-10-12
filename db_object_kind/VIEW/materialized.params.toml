@@ -3,6 +3,8 @@ name_template = """
 """
 [pg_class_category]
   materialized = "MATERIALIZED VIEW"
+[kind]
+  always = 'm'
 [filter_on_persistence]
   always = false # materialized views are always persistent, and can't be unlogged
 [packed]

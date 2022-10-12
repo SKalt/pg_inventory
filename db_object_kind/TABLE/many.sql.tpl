@@ -38,12 +38,12 @@ SELECT
     , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
   -- access method details
-  {{- if or $is_table $is_index }}
-    -- TODO: fetch access method name, etc.
+  {{- if or $is_table $is_index $is_materialized_view }}
     , cls.relam AS access_method_oid
       -- If this is a table or an index, the access method used (heap, B-tree,
-      -- hash, etc.); otherwise zero (zero occurs for sequences, as well as
+      -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views)
+    , access_method.amname AS access_method_name
     , cls.reloptions AS access_method_options
       -- Access-method-specific options, as "keyword=value" strings
   {{- else }} -- omitted for classes other than tables and indices
@@ -253,8 +253,10 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
     cls.relispartition = :partitioning AND
   {{- end }}
     cls.relnamespace = ns.oid
-LEFT JOIN pg_tablespace AS cls_space ON (cls.reltablespace = cls_space.oid)
-  -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
+LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/current/catalog-pg-am.html
+  ON cls.relam > 0 AND cls.relam = access_method.oid
+LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
+  ON (cls.reltablespace = cls_space.oid)
 {{- if not (or $is_sequence $is_toast) }}
 LEFT JOIN (
     pg_catalog.pg_type AS underlying_composite_type
