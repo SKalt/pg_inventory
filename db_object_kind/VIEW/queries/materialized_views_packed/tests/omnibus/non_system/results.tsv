@@ -1,0 +1,3 @@
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	access_method_oid	access_method_name	access_method_options	description	info	type_oid	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	view_definition
+am_examples	16434	heapmv	16749		0	16749	postgres	10		16703	heap2			2560	16751	-1		0	0	2	0	" SELECT heaptable.a,\n    heaptable.repeat\n   FROM am_examples.heaptable;"
+am_examples	16434	tableam_tblmv_heapx	16793		0	16793	postgres	10		16703	heap2			2560	16795	-1		0	0	1	0	" SELECT tableam_tbl_heapx.f1\n   FROM am_examples.tableam_tbl_heapx;"
