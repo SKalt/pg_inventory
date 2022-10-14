@@ -1,0 +1,2 @@
+oid	name	owner_oid	owner_name	fdw_oid	server_type	server_version	access_privileges	srvoptions
+16729	technically_this_server	10	postgres	16584				{dbname=other_db,host=localhost,port=5432}
