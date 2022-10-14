@@ -1,2 +1,2 @@
-schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	info	type_oid	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
-foreign_db_example	16444	technically_doesnt_exist	18160		0	0	postgres	10			3072	18162	-1		0	0	5	1
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	info	type_oid	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	foreign_table_options	server_oid	server_name
+foreign_db_example	16444	technically_doesnt_exist	18160		0	0	postgres	10			3072	18162	0	0	5	1		16729	technically_this_server
