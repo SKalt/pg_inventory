@@ -1,0 +1,14 @@
+name_template="""
+{{- if (not .filter_by_kind) -}}all_{{- end -}}
+functions
+{{- if .filter_by_kind -}}_filtered_by_kind{{- end -}}
+{{- if .packed -}}_packed{{- end -}}
+"""
+
+[filter_by_kind]
+  "" = false
+  filtered = true
+
+[packed]
+  "" = false
+  packed = true
