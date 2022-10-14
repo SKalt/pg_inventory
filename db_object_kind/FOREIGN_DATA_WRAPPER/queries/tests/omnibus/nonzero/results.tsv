@@ -1,0 +1,2 @@
+oid	name	owner_oid	owner_name	access_privileges	options	handler_fn_oid	handler_fn_name	handler_fn_schema_oid	handler_fn_schema_name	handler_fn_owner	validator_fn_oid	validator_fn_schema_oid	validator_fn_schema_name	validator_fn_name	validator_fn_owner
+16584	postgres_fdw	10	postgres			16582	postgres_fdw_handler	16444	foreign_db_example	postgres	16583	16444	foreign_db_example	postgres_fdw_validator	postgres
