@@ -1,0 +1,5 @@
+name_template = "{{.internal}}_languages"
+[internal]
+  only_internal = "only"
+  all = "include"
+  non_internal = "exclude"
