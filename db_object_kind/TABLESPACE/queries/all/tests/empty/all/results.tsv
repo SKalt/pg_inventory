@@ -1,0 +1,3 @@
+oid	name	owner_oid	owner_name	location	access_privileges	options
+1663	pg_default	10	postgres			
+1664	pg_global	10	postgres			
