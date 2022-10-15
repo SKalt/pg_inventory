@@ -117,6 +117,7 @@ SELECT
     -- the typmod to be applied to this domain's base type
     -- -1 if the base type does not use a typmod or if this type is not a domain.
   -- TODO: consider returning type_.typdefaultbin?
+  -- , pg_catalog.format_type(type_.oid, type_.typtypmod) AS formatted
 FROM pg_catalog.pg_type AS type_ --https://www.postgresql.org/docs/current/catalog-pg-type.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON type_.typtype = 'd' AND type_.typnamespace = ns.oid

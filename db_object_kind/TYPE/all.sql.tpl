@@ -2,6 +2,7 @@
   {{- $show_all := (not .kind) -}}
   {{- $is_domain := (eq .kind "d") -}}
   {{- $is_composite := (eq .kind "c") -}}
+  {{- $is_enum := (eq .kind "e") -}}
   {{- $show_domain := or $show_all $is_domain -}}
   {{- $show_composite := or $show_all $is_composite -}}
 SELECT
@@ -10,7 +11,6 @@ SELECT
   , ns.nspname AS type_schema_name
   , type_.oid AS type_oid
   , type_.typname AS type_name
-  -- TODO: consider using pg_catalog.format_type(type_.oid, type_.typtypmod)
   , type_.typlen AS byte_length -- int2
     -- for fixed-size types, the size of the internal representation of the type.
     -- for variable-length types, -1.
@@ -201,7 +201,16 @@ SELECT
     -- the typmod to be applied to this domain's base type
     -- -1 if the base type does not use a typmod or if this type is not a domain.
   -- TODO: consider returning type_.typdefaultbin?
+  -- , pg_catalog.format_type(type_.oid, type_.typtypmod) AS formatted
 {{- end }}
+{{- if $is_enum }}
+, ARRAY((
+    SELECT enumlabel
+    FROM pg_catalog.pg_enum
+    WHERE enumtypid = type_.oid
+    ORDER BY enumsortorder
+  )) AS enum_items
+{{- end}}
 FROM pg_catalog.pg_type AS type_ --https://www.postgresql.org/docs/current/catalog-pg-type.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON {{- if .kind }} type_.typtype = '{{.kind}}' AND

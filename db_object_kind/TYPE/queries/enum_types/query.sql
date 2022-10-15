@@ -85,6 +85,12 @@ SELECT
     -- zero of this type doesn't support modifiers
   , type_.typanalyze AS custom_analyze_fn_oid
     -- zero if default analyze used
+, ARRAY((
+    SELECT enumlabel
+    FROM pg_catalog.pg_enum
+    WHERE enumtypid = type_.oid
+    ORDER BY enumsortorder
+  )) AS enum_items
 FROM pg_catalog.pg_type AS type_ --https://www.postgresql.org/docs/current/catalog-pg-type.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON type_.typtype = 'e' AND type_.typnamespace = ns.oid
