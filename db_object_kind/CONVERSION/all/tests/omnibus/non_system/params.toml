@@ -1,0 +1,2 @@
+order_by = "ns.nspname, conversion_.conname"
+where = "ns.nspname NOT IN ('pg_catalog', 'information_schema', 'pg_toast')"
