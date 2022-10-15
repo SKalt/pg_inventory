@@ -1,2 +1,2 @@
-where = "ns.nspname = 'public'"
-order_by = "ns.nspname, cls.relname"
+where = "rel.schema_name = 'public'"
+order_by = "rel.schema_name, rel.name"

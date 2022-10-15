@@ -1,6 +1,6 @@
-schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	replica_identity	persistence	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
-domain_examples	16440	us_snail_addy_address_id_seq	18122		0	18122	postgres	10			n	p	1		1	0	3	0
-enum_example	16441	bugs_id_seq	18146		0	18146	postgres	10			n	p	1		1	0	3	0
-ordinary_tables	16446	numeric_type_examples_a_bigserial_seq	18205		0	18205	postgres	10			n	p	1		1	0	3	0
-ordinary_tables	16446	numeric_type_examples_a_smallserial_seq	18206		0	18206	postgres	10			n	p	1		1	0	3	0
-ordinary_tables	16446	numeric_type_examples_id_seq	18207		0	18207	postgres	10			n	p	1		1	0	3	0
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	replica_identity	persistence	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	type_oid	start	increment	max	min	cache_size	does_cycle	sequence_type_oid	sequence_type_name	sequence_type_schema_name	sequence_type_owner_name
+domain_examples	16440	us_snail_addy_address_id_seq	18122		0	18122	postgres	10			n	p	1		1	0	3	23	1	1	2147483647	1	1	false	23	int4	pg_catalog	postgres
+enum_example	16441	bugs_id_seq	18146		0	18146	postgres	10			n	p	1		1	0	3	23	1	1	2147483647	1	1	false	23	int4	pg_catalog	postgres
+ordinary_tables	16446	numeric_type_examples_a_bigserial_seq	18205		0	18205	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+ordinary_tables	16446	numeric_type_examples_a_smallserial_seq	18206		0	18206	postgres	10			n	p	1		1	0	3	21	1	1	32767	1	1	false	21	int2	pg_catalog	postgres
+ordinary_tables	16446	numeric_type_examples_id_seq	18207		0	18207	postgres	10			n	p	1		1	0	3	23	1	1	2147483647	1	1	false	23	int4	pg_catalog	postgres

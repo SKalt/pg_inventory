@@ -1,2 +1,0 @@
-where = "ns.nspname NOT IN ('information_schema', 'pg_catalog')"
-order_by = "ns.nspname, cls.relname"

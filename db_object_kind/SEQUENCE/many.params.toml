@@ -4,7 +4,6 @@ name_template = """
 {{- if (not $filter_on_persistence) -}}all_{{- end -}}
 sequences
 {{- if $filter_on_persistence -}}_filtered_by_persistence{{- end -}}
-{{- if .packed -}}_packed{{- end -}}
 """
 [pg_class_category]
   kind = "SEQUENCE"
@@ -15,4 +14,3 @@ sequences
   one = true
 [packed]
   "" = false
-  packed = true

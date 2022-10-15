@@ -1,14 +1,14 @@
-schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	replica_identity	persistence	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
-public	2200	actor_actor_id_seq	16416		0	16416	postgres	10			n	p	1		1	0	3	0
-public	2200	address_address_id_seq	16453		0	16453	postgres	10			n	p	1		1	0	3	0
-public	2200	category_category_id_seq	16422		0	16422	postgres	10			n	p	1		1	0	3	0
-public	2200	city_city_id_seq	16459		0	16459	postgres	10			n	p	1		1	0	3	0
-public	2200	country_country_id_seq	16465		0	16465	postgres	10			n	p	1		1	0	3	0
-public	2200	customer_customer_id_seq	16406		0	16406	postgres	10			n	p	1		1	0	3	0
-public	2200	film_film_id_seq	16428		0	16428	postgres	10			n	p	1		1	0	3	0
-public	2200	inventory_inventory_id_seq	16481		0	16481	postgres	10			n	p	1		1	0	3	0
-public	2200	language_language_id_seq	16487		0	16487	postgres	10			n	p	1		1	0	3	0
-public	2200	payment_payment_id_seq	16498		0	16498	postgres	10			n	p	1		1	0	3	0
-public	2200	rental_rental_id_seq	16533		0	16533	postgres	10			n	p	1		1	0	3	0
-public	2200	staff_staff_id_seq	16544		0	16544	postgres	10			n	p	1		1	0	3	0
-public	2200	store_store_id_seq	16553		0	16553	postgres	10			n	p	1		1	0	3	0
+schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	description	replica_identity	persistence	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	type_oid	start	increment	max	min	cache_size	does_cycle	sequence_type_oid	sequence_type_name	sequence_type_schema_name	sequence_type_owner_name
+public	2200	actor_actor_id_seq	16416		0	16416	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	address_address_id_seq	16453		0	16453	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	category_category_id_seq	16422		0	16422	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	city_city_id_seq	16459		0	16459	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	country_country_id_seq	16465		0	16465	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	customer_customer_id_seq	16406		0	16406	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	film_film_id_seq	16428		0	16428	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	inventory_inventory_id_seq	16481		0	16481	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	language_language_id_seq	16487		0	16487	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	payment_payment_id_seq	16498		0	16498	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	rental_rental_id_seq	16533		0	16533	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	staff_staff_id_seq	16544		0	16544	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
+public	2200	store_store_id_seq	16553		0	16553	postgres	10			n	p	1		1	0	3	20	1	1	9223372036854775807	1	1	false	20	int8	pg_catalog	postgres
