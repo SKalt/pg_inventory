@@ -1,0 +1,1 @@
+schema_name	schema_oid	table_name	table_oid	oid	name	parent_trigger_oid	handler_fn_oid	tgtype	is_internal	is_deferrable	intially_deferred	session_replication_role_firing_mode	n_args	tgattr	referenced_table_oid	referenced_table_name	constraint_name	constraint_oid	tgconstrindid	args	old_table_name	old_table_name	trigger_when_clause

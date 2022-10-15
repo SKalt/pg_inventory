@@ -1,0 +1,2 @@
+schema_name	schema_oid	table_name	table_oid	oid	name	parent_trigger_oid	handler_fn_oid	tgtype	info	n_args	tgattr	referenced_table_oid	referenced_table_name	constraint_name	constraint_oid	tgconstrindid	args	old_table_name	old_table_name	trigger_when_clause
+trigger_test	16449	accounts_view	18442	18506	view_insert	0	16699	69	16	0		0			0	0				

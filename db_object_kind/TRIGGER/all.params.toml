@@ -1,0 +1,4 @@
+name_template = "all_triggers{{if .packed}}_packed{{end}}"
+[packed]
+  "" = false
+  packed = true
