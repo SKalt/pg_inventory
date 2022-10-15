@@ -1,0 +1,2 @@
+order_by = "ns.nspname, c.collencoding, c.collname"
+where = "ns.nspname NOT IN ('pg_catalog', 'information_schema')"

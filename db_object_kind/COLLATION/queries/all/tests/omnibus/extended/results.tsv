@@ -1,0 +1,4 @@
+schema_name	schema_oid	encoding	name	oid	owner_oid	owner_name	collprovider	is_deterministic	lc_collate	lc_ctype	collversion
+collation_ex	16436	-1	german_phonebook	16452	10	postgres	i	true	de-u-co-phonebk	de-u-co-phonebk	153.14.37
+collation_ex	16436	6	bad_french	16450	10	postgres	c	true	fr_FR.utf8	fr_FR.utf8	
+collation_ex	16436	6	french	16451	10	postgres	c	true	fr_FR.utf8	fr_FR.utf8	
