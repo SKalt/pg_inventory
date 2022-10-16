@@ -1,235 +1,235 @@
-oid	source_type_schema	source_type_owner_name	source_type_name	source_type_schema	source_type_owner_name	target_type_name	cast_fn_name	castcontext	castmethod
-10192	pg_catalog	postgres	bool	pg_catalog	postgres	text	text	a	f
-10035	pg_catalog	postgres	bool	pg_catalog	postgres	int4	int4	e	f
-10197	pg_catalog	postgres	bool	pg_catalog	postgres	varchar	text	a	f
-10202	pg_catalog	postgres	bool	pg_catalog	postgres	bpchar	text	a	f
-10132	pg_catalog	postgres	char	pg_catalog	postgres	bpchar	bpchar	a	f
-10143	pg_catalog	postgres	char	pg_catalog	postgres	int4	int4	e	f
-10133	pg_catalog	postgres	char	pg_catalog	postgres	varchar	text	a	f
-10131	pg_catalog	postgres	char	pg_catalog	postgres	text	text	i	f
-10134	pg_catalog	postgres	name	pg_catalog	postgres	text	text	i	f
-10135	pg_catalog	postgres	name	pg_catalog	postgres	bpchar	bpchar	a	f
-10136	pg_catalog	postgres	name	pg_catalog	postgres	varchar	varchar	a	f
-10113	pg_catalog	postgres	int8	pg_catalog	postgres	regrole	oid	i	f
-10044	pg_catalog	postgres	int8	pg_catalog	postgres	regproc	oid	i	f
-10002	pg_catalog	postgres	int8	pg_catalog	postgres	float4	float4	i	f
-10001	pg_catalog	postgres	int8	pg_catalog	postgres	int4	int4	a	f
-10053	pg_catalog	postgres	int8	pg_catalog	postgres	regprocedure	oid	i	f
-10090	pg_catalog	postgres	int8	pg_catalog	postgres	regtype	oid	i	f
-10104	pg_catalog	postgres	int8	pg_catalog	postgres	regdictionary	oid	i	f
-10097	pg_catalog	postgres	int8	pg_catalog	postgres	regconfig	oid	i	f
-10003	pg_catalog	postgres	int8	pg_catalog	postgres	float8	float8	i	f
-10120	pg_catalog	postgres	int8	pg_catalog	postgres	regnamespace	oid	i	f
-10186	pg_catalog	postgres	int8	pg_catalog	postgres	bit	bit	e	f
-10060	pg_catalog	postgres	int8	pg_catalog	postgres	regoper	oid	i	f
-10033	pg_catalog	postgres	int8	pg_catalog	postgres	money	money	a	f
-10000	pg_catalog	postgres	int8	pg_catalog	postgres	int2	int2	a	f
-10004	pg_catalog	postgres	int8	pg_catalog	postgres	numeric	numeric	i	f
-10037	pg_catalog	postgres	int8	pg_catalog	postgres	oid	oid	i	f
-10069	pg_catalog	postgres	int8	pg_catalog	postgres	regoperator	oid	i	f
-10083	pg_catalog	postgres	int8	pg_catalog	postgres	regcollation	oid	i	f
-10076	pg_catalog	postgres	int8	pg_catalog	postgres	regclass	oid	i	f
-10077	pg_catalog	postgres	int2	pg_catalog	postgres	regclass	int4	i	f
-10070	pg_catalog	postgres	int2	pg_catalog	postgres	regoperator	int4	i	f
-10054	pg_catalog	postgres	int2	pg_catalog	postgres	regprocedure	int4	i	f
-10061	pg_catalog	postgres	int2	pg_catalog	postgres	regoper	int4	i	f
-10005	pg_catalog	postgres	int2	pg_catalog	postgres	int8	int8	i	f
-10098	pg_catalog	postgres	int2	pg_catalog	postgres	regconfig	int4	i	f
-10091	pg_catalog	postgres	int2	pg_catalog	postgres	regtype	int4	i	f
-10006	pg_catalog	postgres	int2	pg_catalog	postgres	int4	int4	i	f
-10105	pg_catalog	postgres	int2	pg_catalog	postgres	regdictionary	int4	i	f
-10084	pg_catalog	postgres	int2	pg_catalog	postgres	regcollation	int4	i	f
-10121	pg_catalog	postgres	int2	pg_catalog	postgres	regnamespace	int4	i	f
-10007	pg_catalog	postgres	int2	pg_catalog	postgres	float4	float4	i	f
-10008	pg_catalog	postgres	int2	pg_catalog	postgres	float8	float8	i	f
-10009	pg_catalog	postgres	int2	pg_catalog	postgres	numeric	numeric	i	f
-10038	pg_catalog	postgres	int2	pg_catalog	postgres	oid	int4	i	f
-10114	pg_catalog	postgres	int2	pg_catalog	postgres	regrole	int4	i	f
-10045	pg_catalog	postgres	int2	pg_catalog	postgres	regproc	int4	i	f
-10071	pg_catalog	postgres	int4	pg_catalog	postgres	regoperator		i	b
-10010	pg_catalog	postgres	int4	pg_catalog	postgres	int8	int8	i	f
-10011	pg_catalog	postgres	int4	pg_catalog	postgres	int2	int2	a	f
-10012	pg_catalog	postgres	int4	pg_catalog	postgres	float4	float4	i	f
-10013	pg_catalog	postgres	int4	pg_catalog	postgres	float8	float8	i	f
-10014	pg_catalog	postgres	int4	pg_catalog	postgres	numeric	numeric	i	f
-10122	pg_catalog	postgres	int4	pg_catalog	postgres	regnamespace		i	b
-10032	pg_catalog	postgres	int4	pg_catalog	postgres	money	money	a	f
-10034	pg_catalog	postgres	int4	pg_catalog	postgres	bool	bool	e	f
-10144	pg_catalog	postgres	int4	pg_catalog	postgres	char	char	e	f
-10039	pg_catalog	postgres	int4	pg_catalog	postgres	oid		i	b
-10046	pg_catalog	postgres	int4	pg_catalog	postgres	regproc		i	b
-10055	pg_catalog	postgres	int4	pg_catalog	postgres	regprocedure		i	b
-10062	pg_catalog	postgres	int4	pg_catalog	postgres	regoper		i	b
-10115	pg_catalog	postgres	int4	pg_catalog	postgres	regrole		i	b
-10187	pg_catalog	postgres	int4	pg_catalog	postgres	bit	bit	e	f
-10078	pg_catalog	postgres	int4	pg_catalog	postgres	regclass		i	b
-10106	pg_catalog	postgres	int4	pg_catalog	postgres	regdictionary		i	b
-10085	pg_catalog	postgres	int4	pg_catalog	postgres	regcollation		i	b
-10092	pg_catalog	postgres	int4	pg_catalog	postgres	regtype		i	b
-10099	pg_catalog	postgres	int4	pg_catalog	postgres	regconfig		i	b
-10048	pg_catalog	postgres	regproc	pg_catalog	postgres	int4		a	b
-10043	pg_catalog	postgres	regproc	pg_catalog	postgres	oid		i	b
-10047	pg_catalog	postgres	regproc	pg_catalog	postgres	int8	int8	a	f
-10049	pg_catalog	postgres	regproc	pg_catalog	postgres	regprocedure		i	b
-10125	pg_catalog	postgres	text	pg_catalog	postgres	bpchar		i	b
-10126	pg_catalog	postgres	text	pg_catalog	postgres	varchar		i	b
-10109	pg_catalog	postgres	text	pg_catalog	postgres	regclass	regclass	i	f
-10137	pg_catalog	postgres	text	pg_catalog	postgres	char	char	a	f
-10140	pg_catalog	postgres	text	pg_catalog	postgres	name	name	i	f
-10194	pg_catalog	postgres	text	pg_catalog	postgres	xml	xml	e	f
-10041	pg_catalog	postgres	oid	pg_catalog	postgres	int4		a	b
-10111	pg_catalog	postgres	oid	pg_catalog	postgres	regrole		i	b
-10058	pg_catalog	postgres	oid	pg_catalog	postgres	regoper		i	b
-10088	pg_catalog	postgres	oid	pg_catalog	postgres	regtype		i	b
-10074	pg_catalog	postgres	oid	pg_catalog	postgres	regclass		i	b
-10051	pg_catalog	postgres	oid	pg_catalog	postgres	regprocedure		i	b
-10042	pg_catalog	postgres	oid	pg_catalog	postgres	regproc		i	b
-10081	pg_catalog	postgres	oid	pg_catalog	postgres	regcollation		i	b
-10118	pg_catalog	postgres	oid	pg_catalog	postgres	regnamespace		i	b
-10040	pg_catalog	postgres	oid	pg_catalog	postgres	int8	int8	a	f
-10095	pg_catalog	postgres	oid	pg_catalog	postgres	regconfig		i	b
-10102	pg_catalog	postgres	oid	pg_catalog	postgres	regdictionary		i	b
-10067	pg_catalog	postgres	oid	pg_catalog	postgres	regoperator		i	b
-10215	pg_catalog	postgres	json	pg_catalog	postgres	jsonb		a	i
-10193	pg_catalog	postgres	xml	pg_catalog	postgres	text		a	b
-10198	pg_catalog	postgres	xml	pg_catalog	postgres	varchar		a	b
-10203	pg_catalog	postgres	xml	pg_catalog	postgres	bpchar		a	b
-10145	pg_catalog	postgres	pg_node_tree	pg_catalog	postgres	text		i	b
-10165	pg_catalog	postgres	point	pg_catalog	postgres	box	box	a	f
-10166	pg_catalog	postgres	lseg	pg_catalog	postgres	point	point	e	f
-10167	pg_catalog	postgres	path	pg_catalog	postgres	point	point	e	f
-10168	pg_catalog	postgres	path	pg_catalog	postgres	polygon	polygon	a	f
-10170	pg_catalog	postgres	box	pg_catalog	postgres	lseg	lseg	e	f
-10169	pg_catalog	postgres	box	pg_catalog	postgres	point	point	e	f
-10172	pg_catalog	postgres	box	pg_catalog	postgres	circle	circle	e	f
-10171	pg_catalog	postgres	box	pg_catalog	postgres	polygon	polygon	a	f
-10173	pg_catalog	postgres	polygon	pg_catalog	postgres	point	point	e	f
-10176	pg_catalog	postgres	polygon	pg_catalog	postgres	circle	circle	e	f
-10175	pg_catalog	postgres	polygon	pg_catalog	postgres	box	box	e	f
-10174	pg_catalog	postgres	polygon	pg_catalog	postgres	path	path	a	f
-10190	pg_catalog	postgres	cidr	pg_catalog	postgres	text	text	a	f
-10182	pg_catalog	postgres	cidr	pg_catalog	postgres	inet		i	b
-10195	pg_catalog	postgres	cidr	pg_catalog	postgres	varchar	text	a	f
-10200	pg_catalog	postgres	cidr	pg_catalog	postgres	bpchar	text	a	f
-10016	pg_catalog	postgres	float4	pg_catalog	postgres	int2	int2	a	f
-10017	pg_catalog	postgres	float4	pg_catalog	postgres	int4	int4	a	f
-10019	pg_catalog	postgres	float4	pg_catalog	postgres	numeric	numeric	a	f
-10015	pg_catalog	postgres	float4	pg_catalog	postgres	int8	int8	a	f
-10018	pg_catalog	postgres	float4	pg_catalog	postgres	float8	float8	i	f
-10023	pg_catalog	postgres	float8	pg_catalog	postgres	float4	float4	a	f
-10021	pg_catalog	postgres	float8	pg_catalog	postgres	int2	int2	a	f
-10024	pg_catalog	postgres	float8	pg_catalog	postgres	numeric	numeric	a	f
-10022	pg_catalog	postgres	float8	pg_catalog	postgres	int4	int4	a	f
-10020	pg_catalog	postgres	float8	pg_catalog	postgres	int8	int8	a	f
-10179	pg_catalog	postgres	circle	pg_catalog	postgres	polygon	polygon	e	f
-10177	pg_catalog	postgres	circle	pg_catalog	postgres	point	point	e	f
-10178	pg_catalog	postgres	circle	pg_catalog	postgres	box	box	e	f
-10181	pg_catalog	postgres	macaddr8	pg_catalog	postgres	macaddr	macaddr	i	f
-10030	pg_catalog	postgres	money	pg_catalog	postgres	numeric	numeric	a	f
-10180	pg_catalog	postgres	macaddr	pg_catalog	postgres	macaddr8	macaddr8	i	f
-10196	pg_catalog	postgres	inet	pg_catalog	postgres	varchar	text	a	f
-10201	pg_catalog	postgres	inet	pg_catalog	postgres	bpchar	text	a	f
-10183	pg_catalog	postgres	inet	pg_catalog	postgres	cidr	cidr	a	f
-10191	pg_catalog	postgres	inet	pg_catalog	postgres	text	text	a	f
-16493	pg_catalog	postgres	_text	pg_catalog	postgres	hstore	hstore	e	f
-10204	pg_catalog	postgres	bpchar	pg_catalog	postgres	xml	xml	e	f
-10127	pg_catalog	postgres	bpchar	pg_catalog	postgres	text	text	i	f
-10128	pg_catalog	postgres	bpchar	pg_catalog	postgres	varchar	text	i	f
-10138	pg_catalog	postgres	bpchar	pg_catalog	postgres	char	char	a	f
-10141	pg_catalog	postgres	bpchar	pg_catalog	postgres	name	name	i	f
-10205	pg_catalog	postgres	bpchar	pg_catalog	postgres	bpchar	bpchar	i	f
-10139	pg_catalog	postgres	varchar	pg_catalog	postgres	char	char	a	f
-10199	pg_catalog	postgres	varchar	pg_catalog	postgres	xml	xml	e	f
-10130	pg_catalog	postgres	varchar	pg_catalog	postgres	bpchar		i	b
-10142	pg_catalog	postgres	varchar	pg_catalog	postgres	name	name	i	f
-10110	pg_catalog	postgres	varchar	pg_catalog	postgres	regclass	regclass	i	f
-10129	pg_catalog	postgres	varchar	pg_catalog	postgres	text		i	b
-10206	pg_catalog	postgres	varchar	pg_catalog	postgres	varchar	varchar	i	f
-10153	pg_catalog	postgres	date	pg_catalog	postgres	timestamptz	timestamptz	i	f
-10152	pg_catalog	postgres	date	pg_catalog	postgres	timestamp	timestamp	i	f
-10207	pg_catalog	postgres	time	pg_catalog	postgres	time	time	i	f
-10155	pg_catalog	postgres	time	pg_catalog	postgres	timetz	timetz	i	f
-10154	pg_catalog	postgres	time	pg_catalog	postgres	interval	interval	i	f
-10157	pg_catalog	postgres	timestamp	pg_catalog	postgres	time	time	a	f
-10208	pg_catalog	postgres	timestamp	pg_catalog	postgres	timestamp	timestamp	i	f
-10156	pg_catalog	postgres	timestamp	pg_catalog	postgres	date	date	a	f
-10158	pg_catalog	postgres	timestamp	pg_catalog	postgres	timestamptz	timestamptz	i	f
-10161	pg_catalog	postgres	timestamptz	pg_catalog	postgres	timestamp	timestamp	a	f
-10209	pg_catalog	postgres	timestamptz	pg_catalog	postgres	timestamptz	timestamptz	i	f
-10160	pg_catalog	postgres	timestamptz	pg_catalog	postgres	time	time	a	f
-10162	pg_catalog	postgres	timestamptz	pg_catalog	postgres	timetz	timetz	a	f
-10159	pg_catalog	postgres	timestamptz	pg_catalog	postgres	date	date	a	f
-10163	pg_catalog	postgres	interval	pg_catalog	postgres	time	time	a	f
-10210	pg_catalog	postgres	interval	pg_catalog	postgres	interval	interval	i	f
-10211	pg_catalog	postgres	timetz	pg_catalog	postgres	timetz	timetz	i	f
-10164	pg_catalog	postgres	timetz	pg_catalog	postgres	time	time	a	f
-10212	pg_catalog	postgres	bit	pg_catalog	postgres	bit	bit	i	f
-10184	pg_catalog	postgres	bit	pg_catalog	postgres	varbit		i	b
-10188	pg_catalog	postgres	bit	pg_catalog	postgres	int8	int8	e	f
-10189	pg_catalog	postgres	bit	pg_catalog	postgres	int4	int4	e	f
-10185	pg_catalog	postgres	varbit	pg_catalog	postgres	bit		i	b
-10213	pg_catalog	postgres	varbit	pg_catalog	postgres	varbit	varbit	i	f
-10029	pg_catalog	postgres	numeric	pg_catalog	postgres	float8	float8	i	f
-10031	pg_catalog	postgres	numeric	pg_catalog	postgres	money	money	a	f
-10028	pg_catalog	postgres	numeric	pg_catalog	postgres	float4	float4	i	f
-10027	pg_catalog	postgres	numeric	pg_catalog	postgres	int4	int4	a	f
-10214	pg_catalog	postgres	numeric	pg_catalog	postgres	numeric	numeric	i	f
-10026	pg_catalog	postgres	numeric	pg_catalog	postgres	int2	int2	a	f
-10025	pg_catalog	postgres	numeric	pg_catalog	postgres	int8	int8	a	f
-10057	pg_catalog	postgres	regprocedure	pg_catalog	postgres	int4		a	b
-10050	pg_catalog	postgres	regprocedure	pg_catalog	postgres	regproc		i	b
-10052	pg_catalog	postgres	regprocedure	pg_catalog	postgres	oid		i	b
-10056	pg_catalog	postgres	regprocedure	pg_catalog	postgres	int8	int8	a	f
-10059	pg_catalog	postgres	regoper	pg_catalog	postgres	oid		i	b
-10063	pg_catalog	postgres	regoper	pg_catalog	postgres	int8	int8	a	f
-10064	pg_catalog	postgres	regoper	pg_catalog	postgres	int4		a	b
-10065	pg_catalog	postgres	regoper	pg_catalog	postgres	regoperator		i	b
-10072	pg_catalog	postgres	regoperator	pg_catalog	postgres	int8	int8	a	f
-10073	pg_catalog	postgres	regoperator	pg_catalog	postgres	int4		a	b
-10068	pg_catalog	postgres	regoperator	pg_catalog	postgres	oid		i	b
-10066	pg_catalog	postgres	regoperator	pg_catalog	postgres	regoper		i	b
-10079	pg_catalog	postgres	regclass	pg_catalog	postgres	int8	int8	a	f
-10075	pg_catalog	postgres	regclass	pg_catalog	postgres	oid		i	b
-10080	pg_catalog	postgres	regclass	pg_catalog	postgres	int4		a	b
-10094	pg_catalog	postgres	regtype	pg_catalog	postgres	int4		a	b
-10089	pg_catalog	postgres	regtype	pg_catalog	postgres	oid		i	b
-10093	pg_catalog	postgres	regtype	pg_catalog	postgres	int8	int8	a	f
-10146	pg_catalog	postgres	pg_ndistinct	pg_catalog	postgres	bytea		i	b
-10147	pg_catalog	postgres	pg_ndistinct	pg_catalog	postgres	text		i	i
-10149	pg_catalog	postgres	pg_dependencies	pg_catalog	postgres	text		i	i
-10148	pg_catalog	postgres	pg_dependencies	pg_catalog	postgres	bytea		i	b
-10100	pg_catalog	postgres	regconfig	pg_catalog	postgres	int8	int8	a	f
-10101	pg_catalog	postgres	regconfig	pg_catalog	postgres	int4		a	b
-10096	pg_catalog	postgres	regconfig	pg_catalog	postgres	oid		i	b
-10108	pg_catalog	postgres	regdictionary	pg_catalog	postgres	int4		a	b
-10103	pg_catalog	postgres	regdictionary	pg_catalog	postgres	oid		i	b
-10107	pg_catalog	postgres	regdictionary	pg_catalog	postgres	int8	int8	a	f
-10223	pg_catalog	postgres	jsonb	pg_catalog	postgres	float8	float8	e	f
-10216	pg_catalog	postgres	jsonb	pg_catalog	postgres	json		a	i
-10217	pg_catalog	postgres	jsonb	pg_catalog	postgres	bool	bool	e	f
-10218	pg_catalog	postgres	jsonb	pg_catalog	postgres	numeric	numeric	e	f
-10219	pg_catalog	postgres	jsonb	pg_catalog	postgres	int2	int2	e	f
-10220	pg_catalog	postgres	jsonb	pg_catalog	postgres	int4	int4	e	f
-10221	pg_catalog	postgres	jsonb	pg_catalog	postgres	int8	int8	e	f
-10222	pg_catalog	postgres	jsonb	pg_catalog	postgres	float4	float4	e	f
-10224	pg_catalog	postgres	int4range	pg_catalog	postgres	int4multirange	int4multirange	e	f
-10226	pg_catalog	postgres	numrange	pg_catalog	postgres	nummultirange	nummultirange	e	f
-10228	pg_catalog	postgres	tsrange	pg_catalog	postgres	tsmultirange	tsmultirange	e	f
-10229	pg_catalog	postgres	tstzrange	pg_catalog	postgres	tstzmultirange	tstzmultirange	e	f
-10227	pg_catalog	postgres	daterange	pg_catalog	postgres	datemultirange	datemultirange	e	f
-10225	pg_catalog	postgres	int8range	pg_catalog	postgres	int8multirange	int8multirange	e	f
-10123	pg_catalog	postgres	regnamespace	pg_catalog	postgres	int8	int8	a	f
-10124	pg_catalog	postgres	regnamespace	pg_catalog	postgres	int4		a	b
-10119	pg_catalog	postgres	regnamespace	pg_catalog	postgres	oid		i	b
-10116	pg_catalog	postgres	regrole	pg_catalog	postgres	int8	int8	a	f
-10112	pg_catalog	postgres	regrole	pg_catalog	postgres	oid		i	b
-10117	pg_catalog	postgres	regrole	pg_catalog	postgres	int4		a	b
-10087	pg_catalog	postgres	regcollation	pg_catalog	postgres	int4		a	b
-10082	pg_catalog	postgres	regcollation	pg_catalog	postgres	oid		i	b
-10086	pg_catalog	postgres	regcollation	pg_catalog	postgres	int8	int8	a	f
-10151	pg_catalog	postgres	pg_mcv_list	pg_catalog	postgres	text		i	i
-10150	pg_catalog	postgres	pg_mcv_list	pg_catalog	postgres	bytea		i	b
-10036	pg_catalog	postgres	xid8	pg_catalog	postgres	xid	xid	e	f
-16498	extension_example	postgres	hstore	extension_example	postgres	jsonb	hstore_to_jsonb	e	f
-16495	extension_example	postgres	hstore	extension_example	postgres	json	hstore_to_json	e	f
-16672	create_cast	postgres	abc	create_cast	postgres	int4	transmogrify	a	f
+source_type_schema	source_type_owner_name	source_type_name	source_type_schema	source_type_owner_name	target_type_name	cast_fn_name	castcontext	castmethod
+pg_catalog	postgres	bool	pg_catalog	postgres	text	text	a	f
+pg_catalog	postgres	bool	pg_catalog	postgres	int4	int4	e	f
+pg_catalog	postgres	bool	pg_catalog	postgres	varchar	text	a	f
+pg_catalog	postgres	bool	pg_catalog	postgres	bpchar	text	a	f
+pg_catalog	postgres	char	pg_catalog	postgres	bpchar	bpchar	a	f
+pg_catalog	postgres	char	pg_catalog	postgres	int4	int4	e	f
+pg_catalog	postgres	char	pg_catalog	postgres	varchar	text	a	f
+pg_catalog	postgres	char	pg_catalog	postgres	text	text	i	f
+pg_catalog	postgres	name	pg_catalog	postgres	text	text	i	f
+pg_catalog	postgres	name	pg_catalog	postgres	bpchar	bpchar	a	f
+pg_catalog	postgres	name	pg_catalog	postgres	varchar	varchar	a	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regrole	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regproc	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	float4	float4	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	int4	int4	a	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regprocedure	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regtype	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regdictionary	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regconfig	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	float8	float8	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regnamespace	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	bit	bit	e	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regoper	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	money	money	a	f
+pg_catalog	postgres	int8	pg_catalog	postgres	int2	int2	a	f
+pg_catalog	postgres	int8	pg_catalog	postgres	numeric	numeric	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	oid	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regoperator	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regcollation	oid	i	f
+pg_catalog	postgres	int8	pg_catalog	postgres	regclass	oid	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regclass	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regoperator	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regprocedure	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regoper	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	int8	int8	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regconfig	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regtype	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	int4	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regdictionary	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regcollation	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regnamespace	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	float4	float4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	float8	float8	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	numeric	numeric	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	oid	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regrole	int4	i	f
+pg_catalog	postgres	int2	pg_catalog	postgres	regproc	int4	i	f
+pg_catalog	postgres	int4	pg_catalog	postgres	regoperator		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	int8	int8	i	f
+pg_catalog	postgres	int4	pg_catalog	postgres	int2	int2	a	f
+pg_catalog	postgres	int4	pg_catalog	postgres	float4	float4	i	f
+pg_catalog	postgres	int4	pg_catalog	postgres	float8	float8	i	f
+pg_catalog	postgres	int4	pg_catalog	postgres	numeric	numeric	i	f
+pg_catalog	postgres	int4	pg_catalog	postgres	regnamespace		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	money	money	a	f
+pg_catalog	postgres	int4	pg_catalog	postgres	bool	bool	e	f
+pg_catalog	postgres	int4	pg_catalog	postgres	char	char	e	f
+pg_catalog	postgres	int4	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regproc		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regprocedure		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regoper		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regrole		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	bit	bit	e	f
+pg_catalog	postgres	int4	pg_catalog	postgres	regclass		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regdictionary		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regcollation		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regtype		i	b
+pg_catalog	postgres	int4	pg_catalog	postgres	regconfig		i	b
+pg_catalog	postgres	regproc	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regproc	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regproc	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regproc	pg_catalog	postgres	regprocedure		i	b
+pg_catalog	postgres	text	pg_catalog	postgres	bpchar		i	b
+pg_catalog	postgres	text	pg_catalog	postgres	varchar		i	b
+pg_catalog	postgres	text	pg_catalog	postgres	regclass	regclass	i	f
+pg_catalog	postgres	text	pg_catalog	postgres	char	char	a	f
+pg_catalog	postgres	text	pg_catalog	postgres	name	name	i	f
+pg_catalog	postgres	text	pg_catalog	postgres	xml	xml	e	f
+pg_catalog	postgres	oid	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regrole		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regoper		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regtype		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regclass		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regprocedure		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regproc		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regcollation		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regnamespace		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	oid	pg_catalog	postgres	regconfig		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regdictionary		i	b
+pg_catalog	postgres	oid	pg_catalog	postgres	regoperator		i	b
+pg_catalog	postgres	json	pg_catalog	postgres	jsonb		a	i
+pg_catalog	postgres	xml	pg_catalog	postgres	text		a	b
+pg_catalog	postgres	xml	pg_catalog	postgres	varchar		a	b
+pg_catalog	postgres	xml	pg_catalog	postgres	bpchar		a	b
+pg_catalog	postgres	pg_node_tree	pg_catalog	postgres	text		i	b
+pg_catalog	postgres	point	pg_catalog	postgres	box	box	a	f
+pg_catalog	postgres	lseg	pg_catalog	postgres	point	point	e	f
+pg_catalog	postgres	path	pg_catalog	postgres	point	point	e	f
+pg_catalog	postgres	path	pg_catalog	postgres	polygon	polygon	a	f
+pg_catalog	postgres	box	pg_catalog	postgres	lseg	lseg	e	f
+pg_catalog	postgres	box	pg_catalog	postgres	point	point	e	f
+pg_catalog	postgres	box	pg_catalog	postgres	circle	circle	e	f
+pg_catalog	postgres	box	pg_catalog	postgres	polygon	polygon	a	f
+pg_catalog	postgres	polygon	pg_catalog	postgres	point	point	e	f
+pg_catalog	postgres	polygon	pg_catalog	postgres	circle	circle	e	f
+pg_catalog	postgres	polygon	pg_catalog	postgres	box	box	e	f
+pg_catalog	postgres	polygon	pg_catalog	postgres	path	path	a	f
+pg_catalog	postgres	cidr	pg_catalog	postgres	text	text	a	f
+pg_catalog	postgres	cidr	pg_catalog	postgres	inet		i	b
+pg_catalog	postgres	cidr	pg_catalog	postgres	varchar	text	a	f
+pg_catalog	postgres	cidr	pg_catalog	postgres	bpchar	text	a	f
+pg_catalog	postgres	float4	pg_catalog	postgres	int2	int2	a	f
+pg_catalog	postgres	float4	pg_catalog	postgres	int4	int4	a	f
+pg_catalog	postgres	float4	pg_catalog	postgres	numeric	numeric	a	f
+pg_catalog	postgres	float4	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	float4	pg_catalog	postgres	float8	float8	i	f
+pg_catalog	postgres	float8	pg_catalog	postgres	float4	float4	a	f
+pg_catalog	postgres	float8	pg_catalog	postgres	int2	int2	a	f
+pg_catalog	postgres	float8	pg_catalog	postgres	numeric	numeric	a	f
+pg_catalog	postgres	float8	pg_catalog	postgres	int4	int4	a	f
+pg_catalog	postgres	float8	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	circle	pg_catalog	postgres	polygon	polygon	e	f
+pg_catalog	postgres	circle	pg_catalog	postgres	point	point	e	f
+pg_catalog	postgres	circle	pg_catalog	postgres	box	box	e	f
+pg_catalog	postgres	macaddr8	pg_catalog	postgres	macaddr	macaddr	i	f
+pg_catalog	postgres	money	pg_catalog	postgres	numeric	numeric	a	f
+pg_catalog	postgres	macaddr	pg_catalog	postgres	macaddr8	macaddr8	i	f
+pg_catalog	postgres	inet	pg_catalog	postgres	varchar	text	a	f
+pg_catalog	postgres	inet	pg_catalog	postgres	bpchar	text	a	f
+pg_catalog	postgres	inet	pg_catalog	postgres	cidr	cidr	a	f
+pg_catalog	postgres	inet	pg_catalog	postgres	text	text	a	f
+pg_catalog	postgres	_text	pg_catalog	postgres	hstore	hstore	e	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	xml	xml	e	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	text	text	i	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	varchar	text	i	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	char	char	a	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	name	name	i	f
+pg_catalog	postgres	bpchar	pg_catalog	postgres	bpchar	bpchar	i	f
+pg_catalog	postgres	varchar	pg_catalog	postgres	char	char	a	f
+pg_catalog	postgres	varchar	pg_catalog	postgres	xml	xml	e	f
+pg_catalog	postgres	varchar	pg_catalog	postgres	bpchar		i	b
+pg_catalog	postgres	varchar	pg_catalog	postgres	name	name	i	f
+pg_catalog	postgres	varchar	pg_catalog	postgres	regclass	regclass	i	f
+pg_catalog	postgres	varchar	pg_catalog	postgres	text		i	b
+pg_catalog	postgres	varchar	pg_catalog	postgres	varchar	varchar	i	f
+pg_catalog	postgres	date	pg_catalog	postgres	timestamptz	timestamptz	i	f
+pg_catalog	postgres	date	pg_catalog	postgres	timestamp	timestamp	i	f
+pg_catalog	postgres	time	pg_catalog	postgres	time	time	i	f
+pg_catalog	postgres	time	pg_catalog	postgres	timetz	timetz	i	f
+pg_catalog	postgres	time	pg_catalog	postgres	interval	interval	i	f
+pg_catalog	postgres	timestamp	pg_catalog	postgres	time	time	a	f
+pg_catalog	postgres	timestamp	pg_catalog	postgres	timestamp	timestamp	i	f
+pg_catalog	postgres	timestamp	pg_catalog	postgres	date	date	a	f
+pg_catalog	postgres	timestamp	pg_catalog	postgres	timestamptz	timestamptz	i	f
+pg_catalog	postgres	timestamptz	pg_catalog	postgres	timestamp	timestamp	a	f
+pg_catalog	postgres	timestamptz	pg_catalog	postgres	timestamptz	timestamptz	i	f
+pg_catalog	postgres	timestamptz	pg_catalog	postgres	time	time	a	f
+pg_catalog	postgres	timestamptz	pg_catalog	postgres	timetz	timetz	a	f
+pg_catalog	postgres	timestamptz	pg_catalog	postgres	date	date	a	f
+pg_catalog	postgres	interval	pg_catalog	postgres	time	time	a	f
+pg_catalog	postgres	interval	pg_catalog	postgres	interval	interval	i	f
+pg_catalog	postgres	timetz	pg_catalog	postgres	timetz	timetz	i	f
+pg_catalog	postgres	timetz	pg_catalog	postgres	time	time	a	f
+pg_catalog	postgres	bit	pg_catalog	postgres	bit	bit	i	f
+pg_catalog	postgres	bit	pg_catalog	postgres	varbit		i	b
+pg_catalog	postgres	bit	pg_catalog	postgres	int8	int8	e	f
+pg_catalog	postgres	bit	pg_catalog	postgres	int4	int4	e	f
+pg_catalog	postgres	varbit	pg_catalog	postgres	bit		i	b
+pg_catalog	postgres	varbit	pg_catalog	postgres	varbit	varbit	i	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	float8	float8	i	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	money	money	a	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	float4	float4	i	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	int4	int4	a	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	numeric	numeric	i	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	int2	int2	a	f
+pg_catalog	postgres	numeric	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regprocedure	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regprocedure	pg_catalog	postgres	regproc		i	b
+pg_catalog	postgres	regprocedure	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regprocedure	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regoper	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regoper	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regoper	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regoper	pg_catalog	postgres	regoperator		i	b
+pg_catalog	postgres	regoperator	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regoperator	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regoperator	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regoperator	pg_catalog	postgres	regoper		i	b
+pg_catalog	postgres	regclass	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regclass	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regclass	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regtype	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regtype	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regtype	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	pg_ndistinct	pg_catalog	postgres	bytea		i	b
+pg_catalog	postgres	pg_ndistinct	pg_catalog	postgres	text		i	i
+pg_catalog	postgres	pg_dependencies	pg_catalog	postgres	text		i	i
+pg_catalog	postgres	pg_dependencies	pg_catalog	postgres	bytea		i	b
+pg_catalog	postgres	regconfig	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regconfig	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regconfig	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regdictionary	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regdictionary	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regdictionary	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	float8	float8	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	json		a	i
+pg_catalog	postgres	jsonb	pg_catalog	postgres	bool	bool	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	numeric	numeric	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	int2	int2	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	int4	int4	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	int8	int8	e	f
+pg_catalog	postgres	jsonb	pg_catalog	postgres	float4	float4	e	f
+pg_catalog	postgres	int4range	pg_catalog	postgres	int4multirange	int4multirange	e	f
+pg_catalog	postgres	numrange	pg_catalog	postgres	nummultirange	nummultirange	e	f
+pg_catalog	postgres	tsrange	pg_catalog	postgres	tsmultirange	tsmultirange	e	f
+pg_catalog	postgres	tstzrange	pg_catalog	postgres	tstzmultirange	tstzmultirange	e	f
+pg_catalog	postgres	daterange	pg_catalog	postgres	datemultirange	datemultirange	e	f
+pg_catalog	postgres	int8range	pg_catalog	postgres	int8multirange	int8multirange	e	f
+pg_catalog	postgres	regnamespace	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regnamespace	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regnamespace	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regrole	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	regrole	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regrole	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regcollation	pg_catalog	postgres	int4		a	b
+pg_catalog	postgres	regcollation	pg_catalog	postgres	oid		i	b
+pg_catalog	postgres	regcollation	pg_catalog	postgres	int8	int8	a	f
+pg_catalog	postgres	pg_mcv_list	pg_catalog	postgres	text		i	i
+pg_catalog	postgres	pg_mcv_list	pg_catalog	postgres	bytea		i	b
+pg_catalog	postgres	xid8	pg_catalog	postgres	xid	xid	e	f
+extension_example	postgres	hstore	extension_example	postgres	jsonb	hstore_to_jsonb	e	f
+extension_example	postgres	hstore	extension_example	postgres	json	hstore_to_json	e	f
+create_cast	postgres	abc	create_cast	postgres	int4	transmogrify	a	f

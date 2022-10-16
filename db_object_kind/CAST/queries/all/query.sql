@@ -1,6 +1,5 @@
 SELECT
-    cast_.oid
-  , src_ns.nspname AS source_type_schema
+    src_ns.nspname AS source_type_schema
   , src_owner.rolname AS source_type_owner_name
   , src.typname AS source_type_name
   , src_ns.nspname AS source_type_schema

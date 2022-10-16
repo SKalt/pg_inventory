@@ -1,17 +1,11 @@
 SELECT
   -- namespacing and ownership
       ns.nspname AS schema_name
-    , cls.relnamespace AS schema_oid
     , cls.relname AS name
-    , cls.oid
     , cls_space.spcname AS tablespace_name
-    , cls.reltablespace AS tablespace_oid
-    , cls.relfilenode AS file_node_oid
     , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
-    , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
   -- access method details
-    , cls.relam AS access_method_oid
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views)
@@ -63,6 +57,7 @@ SELECT
       -- There must be this many corresponding entries in pg_attribute.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
+    , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
 FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON

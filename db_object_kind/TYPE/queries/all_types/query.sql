@@ -1,14 +1,11 @@
 SELECT
 -- namespacing and ownership
-    type_.typnamespace AS type_schema_oid
-  , ns.nspname AS type_schema_name
-  , type_.oid AS type_oid
+    ns.nspname AS type_schema_name
   , type_.typname AS type_name
   , type_.typlen AS byte_length -- int2
     -- for fixed-size types, the size of the internal representation of the type.
     -- for variable-length types, -1.
     -- for nulll-terminated c-strings, -2
-  , type_owner.oid AS type_owner_oid
   , type_owner.rolname AS type_owner_name
   , type_.typdefault AS default_value_expression
     -- human-readable text which can be fed to the type's input converter to
@@ -68,10 +65,12 @@ SELECT
   , type_.typdelim AS delimiter_character
     -- 1-byte char that separates two values of this type when parsing array input
     -- associate with array *element* type, not array-type
-  , type_.typsubscript AS subscripting_handler_fn_oid
-    -- regproc: references pg_proc.oid
-    -- Subscripting handler function's OID, or zero if this type doesn't support subscripting
-  , type_.typelem AS element_type_oid
+
+  , subscripting_fn_schema.nspname AS subscripting_handler_fn_schema
+  , subscripting_fn.proname AS subscripting_handler_fn
+    -- null if this type doesn't support subscripting
+  , element_type_schema.nspname AS element_type_schema
+  , element_type.typname AS element_type
     -- if nonzero, then element_type_oid references pg_type.oid to define the element type
     -- of this type.
     -- Can be zero when subscripting_handler_fn_oid is defined if the subscript-hander
@@ -81,33 +80,41 @@ SELECT
     -- by the presence of this type.
   , type_.typndims AS domain_array_dimensions
     -- number of array dimensions for a domain over an array, 0 for all others.
-  , type_.typcollation AS collation_oid
+  , collation_schema.nspname AS collation_schema
+  , collation_.collname AS "collation"
     -- references pg_collation.oid if the type supports collations, else 0
-  , type_.typarray AS array_type_oid
+  , array_type_schema.nspname AS array_type_schema
+  , array_type.typname AS array_type
   -- if nonzero, references the "true" array type with this type as the element
   -- type.
+
 -- related functions
-  , type_.typinput   AS text_conversion_input_fn_oid
-  , type_.typoutput  AS text_conversion_output_fn_oid
-  , type_.typreceive AS binary_conversion_input_fn_oid -- zero if none
-  , type_.typsend    AS binary_conversion_output_fn_oid -- zero if none
-  , type_.typmodin   AS type_modifier_input_fn_oid
+  , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
+  , text_conversion_input_fn.proname AS text_conversion_input_fn
+  , text_conversion_output_fn_schema.nspname AS text_conversion_output_fn_schema
+  , text_conversion_output_fn.proname AS text_conversion_output_fn
+  , binary_conversion_input_fn_schema.nspname AS binary_conversion_input_fn_schema
+  , binary_conversion_input_fn.proname AS binary_conversion_input_fn -- zero if none
+  , binary_conversion_output_fn_schema.nspname AS binary_conversion_output_fn_schema
+  , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
+  , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
+  , type_modifier_input_fn.proname AS type_modifier_input_fn
     -- zero of this type doesn't support modifiers
-  , type_.typanalyze AS custom_analyze_fn_oid
+  , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
+  , type_modifier_output_fn.proname AS type_modifier_output_fn
+  , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
+  , custom_analyze_fn.proname AS custom_analyze_fn
     -- zero if default analyze used
-  , type_.typrelid  AS relation_oid
-    -- only for composite types. References pg_class.oid
   , relation.relname AS relation_name
-  , type_.typbasetype AS base_type_oid
-    -- The oid of the type that this one is based on.
-    -- 0 if this type is not a domain.
-  -- TODO: join for base_type schema, owner
+    -- only for composite types.
+  -- TODO: join for base_type schema
   , base_type.typname AS base_type_name
+  , pg_catalog.pg_get_userbyid(base_type.typowner) AS base_type_owner
   , type_.typtypmod AS base_type_mod -- ???
     -- the typmod to be applied to this domain's base type
     -- -1 if the base type does not use a typmod or if this type is not a domain.
   -- TODO: consider returning type_.typdefaultbin?
-  -- , pg_catalog.format_type(type_.oid, type_.typtypmod) AS formatted
+  , pg_catalog.format_type(type_.oid, type_.typtypmod) AS formatted
 FROM pg_catalog.pg_type AS type_ --https://www.postgresql.org/docs/current/catalog-pg-type.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON type_.typnamespace = ns.oid
@@ -118,3 +125,69 @@ LEFT JOIN pg_catalog.pg_class AS relation -- https://www.postgresql.org/docs/cur
   -- TODO: join pg_catalog.pg_namespace for relation_schema_name, oid
 LEFT JOIN pg_catalog.pg_type AS base_type
   ON type_.typbasetype > 0 AND type_.typbasetype = base_type.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS subscripting_fn
+  INNER JOIN pg_catalog.pg_namespace AS subscripting_fn_schema
+    ON subscripting_fn.pronamespace = subscripting_fn_schema.oid
+) ON type_.typsubscript = subscripting_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS text_conversion_input_fn
+  INNER JOIN pg_catalog.pg_namespace AS text_conversion_input_fn_schema
+    ON text_conversion_input_fn.pronamespace = text_conversion_input_fn_schema.oid
+) ON type_.typinput = text_conversion_input_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS text_conversion_output_fn
+  INNER JOIN pg_catalog.pg_namespace AS text_conversion_output_fn_schema
+    ON text_conversion_output_fn.pronamespace = text_conversion_output_fn_schema.oid
+) ON type_.typoutput = text_conversion_output_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS binary_conversion_input_fn
+  INNER JOIN pg_catalog.pg_namespace AS binary_conversion_input_fn_schema
+    ON binary_conversion_input_fn.pronamespace = binary_conversion_input_fn_schema.oid
+) ON type_.typreceive = binary_conversion_input_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS binary_conversion_output_fn
+  INNER JOIN pg_catalog.pg_namespace AS binary_conversion_output_fn_schema
+    ON binary_conversion_output_fn.pronamespace = binary_conversion_output_fn_schema.oid
+) ON type_.typsend = binary_conversion_output_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS type_modifier_input_fn
+  INNER JOIN pg_catalog.pg_namespace AS type_modifier_input_fn_schema
+    ON type_modifier_input_fn.pronamespace = type_modifier_input_fn_schema.oid
+) ON type_.typmodin = type_modifier_input_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS type_modifier_output_fn
+  INNER JOIN pg_catalog.pg_namespace AS type_modifier_output_fn_schema
+    ON type_modifier_output_fn.pronamespace = type_modifier_output_fn_schema.oid
+) ON type_.typmodout = type_modifier_output_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_proc AS custom_analyze_fn
+  INNER JOIN pg_catalog.pg_namespace AS custom_analyze_fn_schema
+    ON custom_analyze_fn.pronamespace = custom_analyze_fn_schema.oid
+) ON type_.typanalyze = custom_analyze_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_collation AS collation_
+  INNER JOIN pg_catalog.pg_namespace AS collation_schema
+    ON collation_.collnamespace = collation_schema.oid
+) ON type_.typcollation = collation_.oid
+
+LEFT JOIN (
+  pg_catalog.pg_type AS array_type
+  INNER JOIN pg_catalog.pg_namespace AS array_type_schema
+    ON array_type.typnamespace = array_type_schema.oid
+) ON type_.typarray = array_type.oid
+
+LEFT JOIN (
+  pg_catalog.pg_type AS element_type
+  INNER JOIN pg_catalog.pg_namespace AS element_type_schema
+    ON element_type.typnamespace = element_type_schema.oid
+) ON type_.typelem = element_type.oid

@@ -1,46 +1,46 @@
-constraint_schema	constraint_schema_oid	constraint_name	constraint_oid	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_schema_oid	table_name	table_oid	partition_parent_constraint_oid	constraint_def	type_schema	type_schema_oid	type_name	type_oid	n_ancestor_constraints	constrained_column_numbers
-pg_catalog	11	pg_type_typname_nsp_index	12114	false	false	true	true	true	pg_catalog	11	pg_type	1247	0	UNIQUE (typname, typnamespace)				0	0	{2,3}
-pg_catalog	11	pg_authid_rolname_index	12169	false	false	true	true	true	pg_catalog	11	pg_authid	1260	0	UNIQUE (rolname)				0	0	{2}
-pg_catalog	11	pg_user_mapping_user_server_index	12190	false	false	true	true	true	pg_catalog	11	pg_user_mapping	1418	0	UNIQUE (umuser, umserver)				0	0	{2,3}
-pg_catalog	11	pg_subscription_subname_index	12214	false	false	true	true	true	pg_catalog	11	pg_subscription	6100	0	UNIQUE (subdbid, subname)				0	0	{2,3}
-pg_catalog	11	pg_attribute_relid_attnam_index	12115	false	false	true	true	true	pg_catalog	11	pg_attribute	1249	0	UNIQUE (attrelid, attname)				0	0	{1,2}
-pg_catalog	11	pg_proc_proname_args_nsp_index	12112	false	false	true	true	true	pg_catalog	11	pg_proc	1255	0	UNIQUE (proname, proargtypes, pronamespace)				0	0	{2,20,3}
-pg_catalog	11	pg_class_relname_nsp_index	12118	false	false	true	true	true	pg_catalog	11	pg_class	1259	0	UNIQUE (relname, relnamespace)				0	0	{2,3}
-pg_catalog	11	pg_attrdef_adrelid_adnum_index	12119	false	false	true	true	true	pg_catalog	11	pg_attrdef	2604	0	UNIQUE (adrelid, adnum)				0	0	{2,3}
-pg_catalog	11	pg_constraint_conrelid_contypid_conname_index	12121	false	false	true	true	true	pg_catalog	11	pg_constraint	2606	0	UNIQUE (conrelid, contypid, conname)				0	0	{8,9,2}
-pg_catalog	11	pg_operator_oprname_l_r_n_index	12126	false	false	true	true	true	pg_catalog	11	pg_operator	2617	0	UNIQUE (oprname, oprleft, oprright, oprnamespace)				0	0	{2,8,9,3}
-pg_catalog	11	pg_opfamily_am_name_nsp_index	12127	false	false	true	true	true	pg_catalog	11	pg_opfamily	2753	0	UNIQUE (opfmethod, opfname, opfnamespace)				0	0	{2,3,4}
-pg_catalog	11	pg_opclass_am_name_nsp_index	12129	false	false	true	true	true	pg_catalog	11	pg_opclass	2616	0	UNIQUE (opcmethod, opcname, opcnamespace)				0	0	{2,3,4}
-pg_catalog	11	pg_am_name_index	12131	false	false	true	true	true	pg_catalog	11	pg_am	2601	0	UNIQUE (amname)				0	0	{2}
-pg_catalog	11	pg_amop_opr_fam_index	12134	false	false	true	true	true	pg_catalog	11	pg_amop	2602	0	UNIQUE (amopopr, amoppurpose, amopfamily)				0	0	{7,6,2}
-pg_catalog	11	pg_amop_fam_strat_index	12133	false	false	true	true	true	pg_catalog	11	pg_amop	2602	0	UNIQUE (amopfamily, amoplefttype, amoprighttype, amopstrategy)				0	0	{2,3,4,5}
-pg_catalog	11	pg_amproc_fam_proc_index	12136	false	false	true	true	true	pg_catalog	11	pg_amproc	2603	0	UNIQUE (amprocfamily, amproclefttype, amprocrighttype, amprocnum)				0	0	{2,3,4,5}
-pg_catalog	11	pg_language_name_index	12138	false	false	true	true	true	pg_catalog	11	pg_language	2612	0	UNIQUE (lanname)				0	0	{2}
-pg_catalog	11	pg_statistic_ext_name_index	12145	false	false	true	true	true	pg_catalog	11	pg_statistic_ext	3381	0	UNIQUE (stxname, stxnamespace)				0	0	{3,4}
-pg_catalog	11	pg_rewrite_rel_rulename_index	12148	false	false	true	true	true	pg_catalog	11	pg_rewrite	2618	0	UNIQUE (ev_class, rulename)				0	0	{3,2}
-pg_catalog	11	pg_trigger_tgrelid_tgname_index	12149	false	false	true	true	true	pg_catalog	11	pg_trigger	2620	0	UNIQUE (tgrelid, tgname)				0	0	{2,4}
-pg_catalog	11	pg_event_trigger_evtname_index	12151	false	false	true	true	true	pg_catalog	11	pg_event_trigger	3466	0	UNIQUE (evtname)				0	0	{2}
-pg_catalog	11	pg_cast_source_target_index	12155	false	false	true	true	true	pg_catalog	11	pg_cast	2605	0	UNIQUE (castsource, casttarget)				0	0	{2,3}
-pg_catalog	11	pg_enum_typid_sortorder_index	12158	false	false	true	true	true	pg_catalog	11	pg_enum	3501	0	UNIQUE (enumtypid, enumsortorder)				0	0	{2,3}
-pg_catalog	11	pg_enum_typid_label_index	12157	false	false	true	true	true	pg_catalog	11	pg_enum	3501	0	UNIQUE (enumtypid, enumlabel)				0	0	{2,4}
-pg_catalog	11	pg_namespace_nspname_index	12159	false	false	true	true	true	pg_catalog	11	pg_namespace	2615	0	UNIQUE (nspname)				0	0	{2}
-pg_catalog	11	pg_conversion_name_nsp_index	12162	false	false	true	true	true	pg_catalog	11	pg_conversion	2607	0	UNIQUE (conname, connamespace)				0	0	{2,3}
-pg_catalog	11	pg_conversion_default_index	12161	false	false	true	true	true	pg_catalog	11	pg_conversion	2607	0	UNIQUE (connamespace, conforencoding, contoencoding, oid)				0	0	{3,5,6,1}
-pg_catalog	11	pg_database_datname_index	12164	false	false	true	true	true	pg_catalog	11	pg_database	1262	0	UNIQUE (datname)				0	0	{2}
-pg_catalog	11	pg_tablespace_spcname_index	12168	false	false	true	true	true	pg_catalog	11	pg_tablespace	1213	0	UNIQUE (spcname)				0	0	{2}
-pg_catalog	11	pg_auth_members_member_role_index	12172	false	false	true	true	true	pg_catalog	11	pg_auth_members	1261	0	UNIQUE (member, roleid)				0	0	{2,1}
-pg_catalog	11	pg_ts_config_cfgname_index	12174	false	false	true	true	true	pg_catalog	11	pg_ts_config	3602	0	UNIQUE (cfgname, cfgnamespace)				0	0	{2,3}
-pg_catalog	11	pg_ts_dict_dictname_index	12177	false	false	true	true	true	pg_catalog	11	pg_ts_dict	3600	0	UNIQUE (dictname, dictnamespace)				0	0	{2,3}
-pg_catalog	11	pg_ts_parser_prsname_index	12179	false	false	true	true	true	pg_catalog	11	pg_ts_parser	3601	0	UNIQUE (prsname, prsnamespace)				0	0	{2,3}
-pg_catalog	11	pg_ts_template_tmplname_index	12181	false	false	true	true	true	pg_catalog	11	pg_ts_template	3764	0	UNIQUE (tmplname, tmplnamespace)				0	0	{2,3}
-pg_catalog	11	pg_extension_name_index	12184	false	false	true	true	true	pg_catalog	11	pg_extension	3079	0	UNIQUE (extname)				0	0	{2}
-pg_catalog	11	pg_foreign_data_wrapper_name_index	12186	false	false	true	true	true	pg_catalog	11	pg_foreign_data_wrapper	2328	0	UNIQUE (fdwname)				0	0	{2}
-pg_catalog	11	pg_foreign_server_name_index	12188	false	false	true	true	true	pg_catalog	11	pg_foreign_server	1417	0	UNIQUE (srvname)				0	0	{2}
-pg_catalog	11	pg_policy_polrelid_polname_index	12193	false	false	true	true	true	pg_catalog	11	pg_policy	3256	0	UNIQUE (polrelid, polname)				0	0	{3,2}
-pg_catalog	11	pg_replication_origin_roname_index	12195	false	false	true	true	true	pg_catalog	11	pg_replication_origin	6000	0	UNIQUE (roname)				0	0	{2}
-pg_catalog	11	pg_default_acl_role_nsp_obj_index	12196	false	false	true	true	true	pg_catalog	11	pg_default_acl	826	0	UNIQUE (defaclrole, defaclnamespace, defaclobjtype)				0	0	{2,3,4}
-pg_catalog	11	pg_collation_name_enc_nsp_index	12201	false	false	true	true	true	pg_catalog	11	pg_collation	3456	0	UNIQUE (collname, collencoding, collnamespace)				0	0	{2,7,3}
-pg_catalog	11	pg_range_rngmultitypid_index	12205	false	false	true	true	true	pg_catalog	11	pg_range	3541	0	UNIQUE (rngmultitypid)				0	0	{3}
-pg_catalog	11	pg_transform_type_lang_index	12207	false	false	true	true	true	pg_catalog	11	pg_transform	3576	0	UNIQUE (trftype, trflang)				0	0	{2,3}
-pg_catalog	11	pg_publication_pubname_index	12210	false	false	true	true	true	pg_catalog	11	pg_publication	6104	0	UNIQUE (pubname)				0	0	{2}
-pg_catalog	11	pg_publication_rel_prrelid_prpubid_index	12212	false	false	true	true	true	pg_catalog	11	pg_publication_rel	6106	0	UNIQUE (prrelid, prpubid)				0	0	{3,2}
+constraint_schema	constraint_name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
+pg_catalog	pg_type_typname_nsp_index	false	false	true	true	true	pg_catalog	pg_type			UNIQUE (typname, typnamespace)			0	{2,3}
+pg_catalog	pg_authid_rolname_index	false	false	true	true	true	pg_catalog	pg_authid			UNIQUE (rolname)			0	{2}
+pg_catalog	pg_user_mapping_user_server_index	false	false	true	true	true	pg_catalog	pg_user_mapping			UNIQUE (umuser, umserver)			0	{2,3}
+pg_catalog	pg_subscription_subname_index	false	false	true	true	true	pg_catalog	pg_subscription			UNIQUE (subdbid, subname)			0	{2,3}
+pg_catalog	pg_attribute_relid_attnam_index	false	false	true	true	true	pg_catalog	pg_attribute			UNIQUE (attrelid, attname)			0	{1,2}
+pg_catalog	pg_proc_proname_args_nsp_index	false	false	true	true	true	pg_catalog	pg_proc			UNIQUE (proname, proargtypes, pronamespace)			0	{2,20,3}
+pg_catalog	pg_class_relname_nsp_index	false	false	true	true	true	pg_catalog	pg_class			UNIQUE (relname, relnamespace)			0	{2,3}
+pg_catalog	pg_attrdef_adrelid_adnum_index	false	false	true	true	true	pg_catalog	pg_attrdef			UNIQUE (adrelid, adnum)			0	{2,3}
+pg_catalog	pg_constraint_conrelid_contypid_conname_index	false	false	true	true	true	pg_catalog	pg_constraint			UNIQUE (conrelid, contypid, conname)			0	{8,9,2}
+pg_catalog	pg_operator_oprname_l_r_n_index	false	false	true	true	true	pg_catalog	pg_operator			UNIQUE (oprname, oprleft, oprright, oprnamespace)			0	{2,8,9,3}
+pg_catalog	pg_opfamily_am_name_nsp_index	false	false	true	true	true	pg_catalog	pg_opfamily			UNIQUE (opfmethod, opfname, opfnamespace)			0	{2,3,4}
+pg_catalog	pg_opclass_am_name_nsp_index	false	false	true	true	true	pg_catalog	pg_opclass			UNIQUE (opcmethod, opcname, opcnamespace)			0	{2,3,4}
+pg_catalog	pg_am_name_index	false	false	true	true	true	pg_catalog	pg_am			UNIQUE (amname)			0	{2}
+pg_catalog	pg_amop_opr_fam_index	false	false	true	true	true	pg_catalog	pg_amop			UNIQUE (amopopr, amoppurpose, amopfamily)			0	{7,6,2}
+pg_catalog	pg_amop_fam_strat_index	false	false	true	true	true	pg_catalog	pg_amop			UNIQUE (amopfamily, amoplefttype, amoprighttype, amopstrategy)			0	{2,3,4,5}
+pg_catalog	pg_amproc_fam_proc_index	false	false	true	true	true	pg_catalog	pg_amproc			UNIQUE (amprocfamily, amproclefttype, amprocrighttype, amprocnum)			0	{2,3,4,5}
+pg_catalog	pg_language_name_index	false	false	true	true	true	pg_catalog	pg_language			UNIQUE (lanname)			0	{2}
+pg_catalog	pg_statistic_ext_name_index	false	false	true	true	true	pg_catalog	pg_statistic_ext			UNIQUE (stxname, stxnamespace)			0	{3,4}
+pg_catalog	pg_rewrite_rel_rulename_index	false	false	true	true	true	pg_catalog	pg_rewrite			UNIQUE (ev_class, rulename)			0	{3,2}
+pg_catalog	pg_trigger_tgrelid_tgname_index	false	false	true	true	true	pg_catalog	pg_trigger			UNIQUE (tgrelid, tgname)			0	{2,4}
+pg_catalog	pg_event_trigger_evtname_index	false	false	true	true	true	pg_catalog	pg_event_trigger			UNIQUE (evtname)			0	{2}
+pg_catalog	pg_cast_source_target_index	false	false	true	true	true	pg_catalog	pg_cast			UNIQUE (castsource, casttarget)			0	{2,3}
+pg_catalog	pg_enum_typid_sortorder_index	false	false	true	true	true	pg_catalog	pg_enum			UNIQUE (enumtypid, enumsortorder)			0	{2,3}
+pg_catalog	pg_enum_typid_label_index	false	false	true	true	true	pg_catalog	pg_enum			UNIQUE (enumtypid, enumlabel)			0	{2,4}
+pg_catalog	pg_namespace_nspname_index	false	false	true	true	true	pg_catalog	pg_namespace			UNIQUE (nspname)			0	{2}
+pg_catalog	pg_conversion_name_nsp_index	false	false	true	true	true	pg_catalog	pg_conversion			UNIQUE (conname, connamespace)			0	{2,3}
+pg_catalog	pg_conversion_default_index	false	false	true	true	true	pg_catalog	pg_conversion			UNIQUE (connamespace, conforencoding, contoencoding, oid)			0	{3,5,6,1}
+pg_catalog	pg_database_datname_index	false	false	true	true	true	pg_catalog	pg_database			UNIQUE (datname)			0	{2}
+pg_catalog	pg_tablespace_spcname_index	false	false	true	true	true	pg_catalog	pg_tablespace			UNIQUE (spcname)			0	{2}
+pg_catalog	pg_auth_members_member_role_index	false	false	true	true	true	pg_catalog	pg_auth_members			UNIQUE (member, roleid)			0	{2,1}
+pg_catalog	pg_ts_config_cfgname_index	false	false	true	true	true	pg_catalog	pg_ts_config			UNIQUE (cfgname, cfgnamespace)			0	{2,3}
+pg_catalog	pg_ts_dict_dictname_index	false	false	true	true	true	pg_catalog	pg_ts_dict			UNIQUE (dictname, dictnamespace)			0	{2,3}
+pg_catalog	pg_ts_parser_prsname_index	false	false	true	true	true	pg_catalog	pg_ts_parser			UNIQUE (prsname, prsnamespace)			0	{2,3}
+pg_catalog	pg_ts_template_tmplname_index	false	false	true	true	true	pg_catalog	pg_ts_template			UNIQUE (tmplname, tmplnamespace)			0	{2,3}
+pg_catalog	pg_extension_name_index	false	false	true	true	true	pg_catalog	pg_extension			UNIQUE (extname)			0	{2}
+pg_catalog	pg_foreign_data_wrapper_name_index	false	false	true	true	true	pg_catalog	pg_foreign_data_wrapper			UNIQUE (fdwname)			0	{2}
+pg_catalog	pg_foreign_server_name_index	false	false	true	true	true	pg_catalog	pg_foreign_server			UNIQUE (srvname)			0	{2}
+pg_catalog	pg_policy_polrelid_polname_index	false	false	true	true	true	pg_catalog	pg_policy			UNIQUE (polrelid, polname)			0	{3,2}
+pg_catalog	pg_replication_origin_roname_index	false	false	true	true	true	pg_catalog	pg_replication_origin			UNIQUE (roname)			0	{2}
+pg_catalog	pg_default_acl_role_nsp_obj_index	false	false	true	true	true	pg_catalog	pg_default_acl			UNIQUE (defaclrole, defaclnamespace, defaclobjtype)			0	{2,3,4}
+pg_catalog	pg_collation_name_enc_nsp_index	false	false	true	true	true	pg_catalog	pg_collation			UNIQUE (collname, collencoding, collnamespace)			0	{2,7,3}
+pg_catalog	pg_range_rngmultitypid_index	false	false	true	true	true	pg_catalog	pg_range			UNIQUE (rngmultitypid)			0	{3}
+pg_catalog	pg_transform_type_lang_index	false	false	true	true	true	pg_catalog	pg_transform			UNIQUE (trftype, trflang)			0	{2,3}
+pg_catalog	pg_publication_pubname_index	false	false	true	true	true	pg_catalog	pg_publication			UNIQUE (pubname)			0	{2}
+pg_catalog	pg_publication_rel_prrelid_prpubid_index	false	false	true	true	true	pg_catalog	pg_publication_rel			UNIQUE (prrelid, prpubid)			0	{3,2}

@@ -1,9 +1,7 @@
 -- $1 : the schema name.
 SELECT
     ns.nspname           AS schema_name
-  , ns.oid               AS schema_oid
   , schema_owner.rolname AS schema_owner_name
-  , ns.nspowner          AS schema_owner_oid
   , ns.nspacl            AS schema_acl
 FROM pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
 INNER JOIN pg_catalog.pg_authid AS schema_owner -- see https://www.postgresql.org/docs/current/catalog-pg-authid.html

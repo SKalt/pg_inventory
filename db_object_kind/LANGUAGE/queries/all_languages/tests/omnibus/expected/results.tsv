@@ -1,5 +1,5 @@
-oid	language_name	owner_oid	owner_name	is_procedural	is_trusted	handler_fn_owner	access_privileges	handler_fn_oid	handler_fn_name	handler_fn_schema_oid	handler_fn_schema_name	inline_block_handler_fn_oid	inline_block_handler_fn_schema_oid	inline_block_handler_fn_schema_name	inline_block_handler_fn_name	inline_block_handler_fn_owner	validator_fn_oid	validator_fn_schema_oid	validator_fn_schema_name	validator_fn_name	validator_fn_owner
-12	internal	10	postgres	false	false			0				0					2246				
-13	c	10	postgres	false	false			0				0					2247				
-14	sql	10	postgres	false	true			0				0					2248				
-13744	plpgsql	10	postgres	true	true	postgres		13741	plpgsql_call_handler	11	pg_catalog	13742	11	pg_catalog	plpgsql_inline_handler	postgres	13743				
+language_name	owner_name	is_procedural	is_trusted	handler_fn_owner	access_privileges	handler_fn_schema_name	handler_fn_name	inline_block_handler_fn_schema_name	inline_block_handler_fn_name	inline_block_handler_fn_owner	validator_fn_schema_name	validator_fn_name	validator_fn_owner
+internal	postgres	false	false										
+c	postgres	false	false										
+sql	postgres	false	true										
+plpgsql	postgres	true	true	postgres		pg_catalog	plpgsql_call_handler	pg_catalog	plpgsql_inline_handler	postgres			

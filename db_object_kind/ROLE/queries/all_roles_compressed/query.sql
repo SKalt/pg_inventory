@@ -1,7 +1,5 @@
 SELECT
-    oid AS role_oid
-    -- oid (references pg_authid.oid) ID of role
-  , rolname AS name
+    rolname AS name
   , (
       CAST(0 AS SMALLINT)
       | CASE WHEN rolsuper       THEN 1<<8 ELSE 0 END
@@ -20,4 +18,4 @@ FROM pg_catalog.pg_roles -- https://www.postgresql.org/docs/current/view-pg-role
 -- could ORDER BY oid or name here
 
 -- before 9.4, there was rolecatupdate, the ability to mutate the system catalog directly
--- but we only support
+-- but we only support 10+

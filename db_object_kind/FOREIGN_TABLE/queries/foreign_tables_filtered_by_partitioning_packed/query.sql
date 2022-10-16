@@ -1,41 +1,31 @@
 SELECT
   -- namespacing and ownership
       tbl.schema_name
-    , tbl.schema_oid
     , tbl.name
-    , tbl.oid
     , tbl.tablespace_name
-    , tbl.tablespace_oid
-    , tbl.file_node_oid
     , tbl.owner
-    , tbl.owner_oid
   -- access method details
     , tbl.acl -- aclitem[]
   -- details
     , tbl.description
     , tbl.info
-    , tbl.type_oid
     , tbl.n_pages
     , tbl.n_pages_all_visible
     , tbl.n_user_columns
     , tbl.n_check_constraints
   -- foreign-table specific
     , foreign_table.ftoptions AS foreign_table_options
-    , foreign_table.ftserver AS server_oid
     , foreign_server.srvname AS server_name
 FROM pg_catalog.pg_foreign_table AS foreign_table
+INNER JOIN pg_catalog.pg_class AS cls ON foreign_table.ftrelid = cls.oid
+INNER JOIN pg_catalog.pg_namespace AS ns ON cls.relnamespace = ns.oid
 INNER JOIN (
   SELECT
     -- namespacing and ownership
         ns.nspname AS schema_name
-      , cls.relnamespace AS schema_oid
       , cls.relname AS name
-      , cls.oid
       , cls_space.spcname AS tablespace_name
-      , cls.reltablespace AS tablespace_oid
-      , cls.relfilenode AS file_node_oid
       , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
-      , cls.relowner AS owner_oid
       , cls.relacl AS acl -- aclitem[]
     -- access method details -- omitted for classes other than tables and indices
     -- details
@@ -69,10 +59,6 @@ INNER JOIN (
               END
             )<<11)
         )::INT2 AS info
-      , cls.reltype AS type_oid -- references pg_type.oid
-        -- The OID of the data type that corresponds to this table's row type, if
-        -- any; zero for TOAST tables, which have no pg_type entry
-        -- type name, schema, type owner should be the same as the table's.
       , cls.reltuples AS approximate_number_of_rows
       , (
           CASE
@@ -104,7 +90,6 @@ INNER JOIN (
       )
     ) ON (cls.reloftype = underlying_composite_type.oid)
   
-  ORDER BY oid
-) AS tbl ON foreign_table.ftrelid = tbl.oid
+) AS tbl ON ns.nspname = tbl.schema_name AND cls.relname = tbl.name
 INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
   ON foreign_table.ftserver = foreign_server.oid

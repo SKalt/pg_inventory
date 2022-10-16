@@ -1,254 +1,254 @@
-rel_oid	rel_name	col_name	type_oid	type_name	type_schema	stats_detail_level	col_number	dimension_number	type_length	not_null	column_identity	col_generated	expr	col_options	fdw_options
-16417	actor	actor_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('actor_actor_id_seq'::regclass)		
-16417	actor	first_name	1043	varchar	pg_catalog	-1	2	0	49	true					
-16417	actor	last_name	1043	varchar	pg_catalog	-1	3	0	49	true					
-16417	actor	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	true			now()		
-16416	actor_actor_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16416	actor_actor_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16416	actor_actor_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16448	actor_info	actor_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16448	actor_info	film_info	25	text	pg_catalog	-1	4	0	-1	false					
-16448	actor_info	first_name	1043	varchar	pg_catalog	-1	2	0	49	false					
-16448	actor_info	last_name	1043	varchar	pg_catalog	-1	3	0	49	false					
-16575	actor_pkey	actor_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16454	address	address	1043	varchar	pg_catalog	-1	2	0	54	true					
-16454	address	address2	1043	varchar	pg_catalog	-1	3	0	54	false					
-16454	address	address_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('address_address_id_seq'::regclass)		
-16454	address	city_id	21	int2	pg_catalog	-1	5	0	-1	true					
-16454	address	district	1043	varchar	pg_catalog	-1	4	0	24	true					
-16454	address	last_update	1114	timestamp	pg_catalog	-1	8	0	-1	true			now()		
-16454	address	phone	1043	varchar	pg_catalog	-1	7	0	24	true					
-16454	address	postal_code	1043	varchar	pg_catalog	-1	6	0	14	false					
-16453	address_address_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16453	address_address_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16453	address_address_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16577	address_pkey	address_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16423	category	category_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('category_category_id_seq'::regclass)		
-16423	category	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	true			now()		
-16423	category	name	1043	varchar	pg_catalog	-1	2	0	29	true					
-16422	category_category_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16422	category_category_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16422	category_category_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16579	category_pkey	category_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16460	city	city	1043	varchar	pg_catalog	-1	2	0	54	true					
-16460	city	city_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('city_city_id_seq'::regclass)		
-16460	city	country_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16460	city	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	true			now()		
-16459	city_city_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16459	city_city_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16459	city_city_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16581	city_pkey	city_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16466	country	country	1043	varchar	pg_catalog	-1	2	0	54	true					
-16466	country	country_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('country_country_id_seq'::regclass)		
-16466	country	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	true			now()		
-16465	country_country_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16465	country_country_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16465	country_country_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16583	country_pkey	country_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16407	customer	active	23	int4	pg_catalog	-1	10	0	-1	false					
-16407	customer	activebool	16	bool	pg_catalog	-1	7	0	-1	true			true		
-16407	customer	address_id	21	int2	pg_catalog	-1	6	0	-1	true					
-16407	customer	create_date	1082	date	pg_catalog	-1	8	0	-1	true			('now'::text)::date		
-16407	customer	customer_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('customer_customer_id_seq'::regclass)		
-16407	customer	email	1043	varchar	pg_catalog	-1	5	0	54	false					
-16407	customer	first_name	1043	varchar	pg_catalog	-1	3	0	49	true					
-16407	customer	last_name	1043	varchar	pg_catalog	-1	4	0	49	true					
-16407	customer	last_update	1114	timestamp	pg_catalog	-1	9	0	-1	false			now()		
-16407	customer	store_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16406	customer_customer_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16406	customer_customer_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16406	customer_customer_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16471	customer_list	address	1043	varchar	pg_catalog	-1	3	0	54	false					
-16471	customer_list	city	1043	varchar	pg_catalog	-1	6	0	54	false					
-16471	customer_list	country	1043	varchar	pg_catalog	-1	7	0	54	false					
-16471	customer_list	id	23	int4	pg_catalog	-1	1	0	-1	false					
-16471	customer_list	name	25	text	pg_catalog	-1	2	0	-1	false					
-16471	customer_list	notes	25	text	pg_catalog	-1	8	0	-1	false					
-16471	customer_list	phone	1043	varchar	pg_catalog	-1	5	0	24	false					
-16471	customer_list	sid	21	int2	pg_catalog	-1	9	0	-1	false					
-16471	customer_list	zip code	1043	varchar	pg_catalog	-1	4	0	14	false					
-16585	customer_pkey	customer_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16429	film	description	25	text	pg_catalog	-1	3	0	-1	false					
-16429	film	film_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('film_film_id_seq'::regclass)		
-16429	film	fulltext	3614	tsvector	pg_catalog	-1	14	0	-1	true					
-16429	film	language_id	21	int2	pg_catalog	-1	5	0	-1	true					
-16429	film	last_update	1114	timestamp	pg_catalog	-1	12	0	-1	true			now()		
-16429	film	length	21	int2	pg_catalog	-1	9	0	-1	false					
-16429	film	original_language_id	21	int2	pg_catalog	-1	6	0	-1	false					
-16429	film	rating	16385	mpaa_rating	public	-1	11	0	-1	false			'G'::mpaa_rating		
-16429	film	release_year	16396	year	public	-1	4	0	-1	false					
-16429	film	rental_duration	21	int2	pg_catalog	-1	7	0	-1	true			3		
-16429	film	rental_rate	1700	numeric	pg_catalog	-1	8	0	262150	true			4.99		
-16429	film	replacement_cost	1700	numeric	pg_catalog	-1	10	0	327686	true			19.99		
-16429	film	special_features	1009	_text	pg_catalog	-1	13	1	-1	false					
-16429	film	title	1043	varchar	pg_catalog	-1	2	0	259	true					
-16440	film_actor	actor_id	21	int2	pg_catalog	-1	1	0	-1	true					
-16440	film_actor	film_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16440	film_actor	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	true			now()		
-16587	film_actor_pkey	actor_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16587	film_actor_pkey	film_id	21	int2	pg_catalog	-1	2	0	-1	false					
-16444	film_category	category_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16444	film_category	film_id	21	int2	pg_catalog	-1	1	0	-1	true					
-16444	film_category	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	true			now()		
-16589	film_category_pkey	category_id	21	int2	pg_catalog	-1	2	0	-1	false					
-16589	film_category_pkey	film_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16428	film_film_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16428	film_film_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16428	film_film_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16605	film_fulltext_idx	fulltext	3642	gtsvector	pg_catalog	-1	1	0	-1	false					
-16476	film_list	actors	25	text	pg_catalog	-1	8	0	-1	false					
-16476	film_list	category	1043	varchar	pg_catalog	-1	4	0	29	false					
-16476	film_list	description	25	text	pg_catalog	-1	3	0	-1	false					
-16476	film_list	fid	23	int4	pg_catalog	-1	1	0	-1	false					
-16476	film_list	length	21	int2	pg_catalog	-1	6	0	-1	false					
-16476	film_list	price	1700	numeric	pg_catalog	-1	5	0	262150	false					
-16476	film_list	rating	16385	mpaa_rating	public	-1	7	0	-1	false					
-16476	film_list	title	1043	varchar	pg_catalog	-1	2	0	259	false					
-16591	film_pkey	film_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16606	idx_actor_last_name	last_name	1043	varchar	pg_catalog	-1	1	0	49	false					
-16607	idx_fk_address_id	address_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16608	idx_fk_city_id	city_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16609	idx_fk_country_id	country_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16610	idx_fk_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16611	idx_fk_film_id	film_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16612	idx_fk_inventory_id	inventory_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16613	idx_fk_language_id	language_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16614	idx_fk_original_language_id	original_language_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16615	idx_fk_payment_p2007_01_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16616	idx_fk_payment_p2007_01_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16617	idx_fk_payment_p2007_02_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16618	idx_fk_payment_p2007_02_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16619	idx_fk_payment_p2007_03_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16620	idx_fk_payment_p2007_03_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16621	idx_fk_payment_p2007_04_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16622	idx_fk_payment_p2007_04_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16623	idx_fk_payment_p2007_05_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16624	idx_fk_payment_p2007_05_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16625	idx_fk_payment_p2007_06_customer_id	customer_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16626	idx_fk_payment_p2007_06_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16627	idx_fk_staff_id	staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16628	idx_fk_store_id	store_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16629	idx_last_name	last_name	1043	varchar	pg_catalog	-1	1	0	49	false					
-16630	idx_store_id_film_id	film_id	21	int2	pg_catalog	-1	2	0	-1	false					
-16630	idx_store_id_film_id	store_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16631	idx_title	title	1043	varchar	pg_catalog	-1	1	0	259	false					
-16632	idx_unq_manager_staff_id	manager_staff_id	21	int2	pg_catalog	-1	1	0	-1	false					
-16633	idx_unq_rental_rental_date_inventory_id_customer_id	customer_id	21	int2	pg_catalog	-1	3	0	-1	false					
-16633	idx_unq_rental_rental_date_inventory_id_customer_id	inventory_id	23	int4	pg_catalog	-1	2	0	-1	false					
-16633	idx_unq_rental_rental_date_inventory_id_customer_id	rental_date	1114	timestamp	pg_catalog	-1	1	0	-1	false					
-16482	inventory	film_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16482	inventory	inventory_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('inventory_inventory_id_seq'::regclass)		
-16482	inventory	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	true			now()		
-16482	inventory	store_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16481	inventory_inventory_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16481	inventory_inventory_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16481	inventory_inventory_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16593	inventory_pkey	inventory_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16488	language	language_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('language_language_id_seq'::regclass)		
-16488	language	last_update	1114	timestamp	pg_catalog	-1	3	0	-1	true			now()		
-16488	language	name	1042	bpchar	pg_catalog	-1	2	0	24	true					
-16487	language_language_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16487	language_language_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16487	language_language_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16595	language_pkey	language_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16493	nicer_but_slower_film_list	actors	25	text	pg_catalog	-1	8	0	-1	false					
-16493	nicer_but_slower_film_list	category	1043	varchar	pg_catalog	-1	4	0	29	false					
-16493	nicer_but_slower_film_list	description	25	text	pg_catalog	-1	3	0	-1	false					
-16493	nicer_but_slower_film_list	fid	23	int4	pg_catalog	-1	1	0	-1	false					
-16493	nicer_but_slower_film_list	length	21	int2	pg_catalog	-1	6	0	-1	false					
-16493	nicer_but_slower_film_list	price	1700	numeric	pg_catalog	-1	5	0	262150	false					
-16493	nicer_but_slower_film_list	rating	16385	mpaa_rating	public	-1	7	0	-1	false					
-16493	nicer_but_slower_film_list	title	1043	varchar	pg_catalog	-1	2	0	259	false					
-16499	payment	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16499	payment	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16499	payment	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16499	payment	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16499	payment	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16499	payment	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16503	payment_p2007_01	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16503	payment_p2007_01	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16503	payment_p2007_01	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16503	payment_p2007_01	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16503	payment_p2007_01	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16503	payment_p2007_01	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16508	payment_p2007_02	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16508	payment_p2007_02	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16508	payment_p2007_02	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16508	payment_p2007_02	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16508	payment_p2007_02	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16508	payment_p2007_02	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16513	payment_p2007_03	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16513	payment_p2007_03	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16513	payment_p2007_03	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16513	payment_p2007_03	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16513	payment_p2007_03	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16513	payment_p2007_03	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16518	payment_p2007_04	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16518	payment_p2007_04	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16518	payment_p2007_04	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16518	payment_p2007_04	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16518	payment_p2007_04	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16518	payment_p2007_04	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16523	payment_p2007_05	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16523	payment_p2007_05	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16523	payment_p2007_05	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16523	payment_p2007_05	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16523	payment_p2007_05	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16523	payment_p2007_05	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16528	payment_p2007_06	amount	1700	numeric	pg_catalog	-1	5	0	327686	true					
-16528	payment_p2007_06	customer_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16528	payment_p2007_06	payment_date	1114	timestamp	pg_catalog	-1	6	0	-1	true					
-16528	payment_p2007_06	payment_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('payment_payment_id_seq'::regclass)		
-16528	payment_p2007_06	rental_id	23	int4	pg_catalog	-1	4	0	-1	true					
-16528	payment_p2007_06	staff_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16498	payment_payment_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16498	payment_payment_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16498	payment_payment_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16597	payment_pkey	payment_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16534	rental	customer_id	21	int2	pg_catalog	-1	4	0	-1	true					
-16534	rental	inventory_id	23	int4	pg_catalog	-1	3	0	-1	true					
-16534	rental	last_update	1114	timestamp	pg_catalog	-1	7	0	-1	true			now()		
-16534	rental	rental_date	1114	timestamp	pg_catalog	-1	2	0	-1	true					
-16534	rental	rental_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('rental_rental_id_seq'::regclass)		
-16534	rental	return_date	1114	timestamp	pg_catalog	-1	5	0	-1	false					
-16534	rental	staff_id	21	int2	pg_catalog	-1	6	0	-1	true					
-16599	rental_pkey	rental_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16533	rental_rental_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16533	rental_rental_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16533	rental_rental_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16539	sales_by_film_category	category	1043	varchar	pg_catalog	-1	1	0	29	false					
-16539	sales_by_film_category	total_sales	1700	numeric	pg_catalog	-1	2	0	-1	false					
-16559	sales_by_store	manager	25	text	pg_catalog	-1	2	0	-1	false					
-16559	sales_by_store	store	25	text	pg_catalog	-1	1	0	-1	false					
-16559	sales_by_store	total_sales	1700	numeric	pg_catalog	-1	3	0	-1	false					
-16545	staff	active	16	bool	pg_catalog	-1	7	0	-1	true			true		
-16545	staff	address_id	21	int2	pg_catalog	-1	4	0	-1	true					
-16545	staff	email	1043	varchar	pg_catalog	-1	5	0	54	false					
-16545	staff	first_name	1043	varchar	pg_catalog	-1	2	0	49	true					
-16545	staff	last_name	1043	varchar	pg_catalog	-1	3	0	49	true					
-16545	staff	last_update	1114	timestamp	pg_catalog	-1	10	0	-1	true			now()		
-16545	staff	password	1043	varchar	pg_catalog	-1	9	0	44	false					
-16545	staff	picture	17	bytea	pg_catalog	-1	11	0	-1	false					
-16545	staff	staff_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('staff_staff_id_seq'::regclass)		
-16545	staff	store_id	21	int2	pg_catalog	-1	6	0	-1	true					
-16545	staff	username	1043	varchar	pg_catalog	-1	8	0	20	true					
-16564	staff_list	address	1043	varchar	pg_catalog	-1	3	0	54	false					
-16564	staff_list	city	1043	varchar	pg_catalog	-1	6	0	54	false					
-16564	staff_list	country	1043	varchar	pg_catalog	-1	7	0	54	false					
-16564	staff_list	id	23	int4	pg_catalog	-1	1	0	-1	false					
-16564	staff_list	name	25	text	pg_catalog	-1	2	0	-1	false					
-16564	staff_list	phone	1043	varchar	pg_catalog	-1	5	0	24	false					
-16564	staff_list	sid	21	int2	pg_catalog	-1	8	0	-1	false					
-16564	staff_list	zip code	1043	varchar	pg_catalog	-1	4	0	14	false					
-16601	staff_pkey	staff_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16544	staff_staff_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16544	staff_staff_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16544	staff_staff_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
-16554	store	address_id	21	int2	pg_catalog	-1	3	0	-1	true					
-16554	store	last_update	1114	timestamp	pg_catalog	-1	4	0	-1	true			now()		
-16554	store	manager_staff_id	21	int2	pg_catalog	-1	2	0	-1	true					
-16554	store	store_id	23	int4	pg_catalog	-1	1	0	-1	true			nextval('store_store_id_seq'::regclass)		
-16603	store_pkey	store_id	23	int4	pg_catalog	-1	1	0	-1	false					
-16553	store_store_id_seq	is_called	16	bool	pg_catalog	-1	3	0	-1	true					
-16553	store_store_id_seq	last_value	20	int8	pg_catalog	-1	1	0	-1	true					
-16553	store_store_id_seq	log_cnt	20	int8	pg_catalog	-1	2	0	-1	true					
+relation_schema	relation	col_name	col_number	type_schema	type_name	stats_detail_level	dimension_number	type_length	not_null	column_identity	col_generated	expr	col_options	fdw_options	col_comment
+public	actor	actor_id	1	pg_catalog	int4	-1	0	-1	true			nextval('actor_actor_id_seq'::regclass)			
+public	actor	first_name	2	pg_catalog	varchar	-1	0	49	true						
+public	actor	last_name	3	pg_catalog	varchar	-1	0	49	true						
+public	actor	last_update	4	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	actor_actor_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	actor_actor_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	actor_actor_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	actor_info	actor_id	1	pg_catalog	int4	-1	0	-1	false						
+public	actor_info	film_info	4	pg_catalog	text	-1	0	-1	false						
+public	actor_info	first_name	2	pg_catalog	varchar	-1	0	49	false						
+public	actor_info	last_name	3	pg_catalog	varchar	-1	0	49	false						
+public	actor_pkey	actor_id	1	pg_catalog	int4	-1	0	-1	false						
+public	address	address	2	pg_catalog	varchar	-1	0	54	true						
+public	address	address2	3	pg_catalog	varchar	-1	0	54	false						
+public	address	address_id	1	pg_catalog	int4	-1	0	-1	true			nextval('address_address_id_seq'::regclass)			
+public	address	city_id	5	pg_catalog	int2	-1	0	-1	true						
+public	address	district	4	pg_catalog	varchar	-1	0	24	true						
+public	address	last_update	8	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	address	phone	7	pg_catalog	varchar	-1	0	24	true						
+public	address	postal_code	6	pg_catalog	varchar	-1	0	14	false						
+public	address_address_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	address_address_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	address_address_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	address_pkey	address_id	1	pg_catalog	int4	-1	0	-1	false						
+public	category	category_id	1	pg_catalog	int4	-1	0	-1	true			nextval('category_category_id_seq'::regclass)			
+public	category	last_update	3	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	category	name	2	pg_catalog	varchar	-1	0	29	true						
+public	category_category_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	category_category_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	category_category_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	category_pkey	category_id	1	pg_catalog	int4	-1	0	-1	false						
+public	city	city	2	pg_catalog	varchar	-1	0	54	true						
+public	city	city_id	1	pg_catalog	int4	-1	0	-1	true			nextval('city_city_id_seq'::regclass)			
+public	city	country_id	3	pg_catalog	int2	-1	0	-1	true						
+public	city	last_update	4	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	city_city_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	city_city_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	city_city_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	city_pkey	city_id	1	pg_catalog	int4	-1	0	-1	false						
+public	country	country	2	pg_catalog	varchar	-1	0	54	true						
+public	country	country_id	1	pg_catalog	int4	-1	0	-1	true			nextval('country_country_id_seq'::regclass)			
+public	country	last_update	3	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	country_country_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	country_country_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	country_country_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	country_pkey	country_id	1	pg_catalog	int4	-1	0	-1	false						
+public	customer	active	10	pg_catalog	int4	-1	0	-1	false						
+public	customer	activebool	7	pg_catalog	bool	-1	0	-1	true			true			
+public	customer	address_id	6	pg_catalog	int2	-1	0	-1	true						
+public	customer	create_date	8	pg_catalog	date	-1	0	-1	true			('now'::text)::date			
+public	customer	customer_id	1	pg_catalog	int4	-1	0	-1	true			nextval('customer_customer_id_seq'::regclass)			
+public	customer	email	5	pg_catalog	varchar	-1	0	54	false						
+public	customer	first_name	3	pg_catalog	varchar	-1	0	49	true						
+public	customer	last_name	4	pg_catalog	varchar	-1	0	49	true						
+public	customer	last_update	9	pg_catalog	timestamp	-1	0	-1	false			now()			
+public	customer	store_id	2	pg_catalog	int2	-1	0	-1	true						
+public	customer_customer_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	customer_customer_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	customer_customer_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	customer_list	address	3	pg_catalog	varchar	-1	0	54	false						
+public	customer_list	city	6	pg_catalog	varchar	-1	0	54	false						
+public	customer_list	country	7	pg_catalog	varchar	-1	0	54	false						
+public	customer_list	id	1	pg_catalog	int4	-1	0	-1	false						
+public	customer_list	name	2	pg_catalog	text	-1	0	-1	false						
+public	customer_list	notes	8	pg_catalog	text	-1	0	-1	false						
+public	customer_list	phone	5	pg_catalog	varchar	-1	0	24	false						
+public	customer_list	sid	9	pg_catalog	int2	-1	0	-1	false						
+public	customer_list	zip code	4	pg_catalog	varchar	-1	0	14	false						
+public	customer_pkey	customer_id	1	pg_catalog	int4	-1	0	-1	false						
+public	film	description	3	pg_catalog	text	-1	0	-1	false						
+public	film	film_id	1	pg_catalog	int4	-1	0	-1	true			nextval('film_film_id_seq'::regclass)			
+public	film	fulltext	14	pg_catalog	tsvector	-1	0	-1	true						
+public	film	language_id	5	pg_catalog	int2	-1	0	-1	true						
+public	film	last_update	12	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	film	length	9	pg_catalog	int2	-1	0	-1	false						
+public	film	original_language_id	6	pg_catalog	int2	-1	0	-1	false						
+public	film	rating	11	public	mpaa_rating	-1	0	-1	false			'G'::mpaa_rating			
+public	film	release_year	4	public	year	-1	0	-1	false						
+public	film	rental_duration	7	pg_catalog	int2	-1	0	-1	true			3			
+public	film	rental_rate	8	pg_catalog	numeric	-1	0	262150	true			4.99			
+public	film	replacement_cost	10	pg_catalog	numeric	-1	0	327686	true			19.99			
+public	film	special_features	13	pg_catalog	_text	-1	1	-1	false						
+public	film	title	2	pg_catalog	varchar	-1	0	259	true						
+public	film_actor	actor_id	1	pg_catalog	int2	-1	0	-1	true						
+public	film_actor	film_id	2	pg_catalog	int2	-1	0	-1	true						
+public	film_actor	last_update	3	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	film_actor_pkey	actor_id	1	pg_catalog	int2	-1	0	-1	false						
+public	film_actor_pkey	film_id	2	pg_catalog	int2	-1	0	-1	false						
+public	film_category	category_id	2	pg_catalog	int2	-1	0	-1	true						
+public	film_category	film_id	1	pg_catalog	int2	-1	0	-1	true						
+public	film_category	last_update	3	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	film_category_pkey	category_id	2	pg_catalog	int2	-1	0	-1	false						
+public	film_category_pkey	film_id	1	pg_catalog	int2	-1	0	-1	false						
+public	film_film_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	film_film_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	film_film_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	film_fulltext_idx	fulltext	1	pg_catalog	gtsvector	-1	0	-1	false						
+public	film_list	actors	8	pg_catalog	text	-1	0	-1	false						
+public	film_list	category	4	pg_catalog	varchar	-1	0	29	false						
+public	film_list	description	3	pg_catalog	text	-1	0	-1	false						
+public	film_list	fid	1	pg_catalog	int4	-1	0	-1	false						
+public	film_list	length	6	pg_catalog	int2	-1	0	-1	false						
+public	film_list	price	5	pg_catalog	numeric	-1	0	262150	false						
+public	film_list	rating	7	public	mpaa_rating	-1	0	-1	false						
+public	film_list	title	2	pg_catalog	varchar	-1	0	259	false						
+public	film_pkey	film_id	1	pg_catalog	int4	-1	0	-1	false						
+public	idx_actor_last_name	last_name	1	pg_catalog	varchar	-1	0	49	false						
+public	idx_fk_address_id	address_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_city_id	city_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_country_id	country_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_film_id	film_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_inventory_id	inventory_id	1	pg_catalog	int4	-1	0	-1	false						
+public	idx_fk_language_id	language_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_original_language_id	original_language_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_01_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_01_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_02_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_02_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_03_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_03_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_04_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_04_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_05_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_05_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_06_customer_id	customer_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_payment_p2007_06_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_staff_id	staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_fk_store_id	store_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_last_name	last_name	1	pg_catalog	varchar	-1	0	49	false						
+public	idx_store_id_film_id	film_id	2	pg_catalog	int2	-1	0	-1	false						
+public	idx_store_id_film_id	store_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_title	title	1	pg_catalog	varchar	-1	0	259	false						
+public	idx_unq_manager_staff_id	manager_staff_id	1	pg_catalog	int2	-1	0	-1	false						
+public	idx_unq_rental_rental_date_inventory_id_customer_id	customer_id	3	pg_catalog	int2	-1	0	-1	false						
+public	idx_unq_rental_rental_date_inventory_id_customer_id	inventory_id	2	pg_catalog	int4	-1	0	-1	false						
+public	idx_unq_rental_rental_date_inventory_id_customer_id	rental_date	1	pg_catalog	timestamp	-1	0	-1	false						
+public	inventory	film_id	2	pg_catalog	int2	-1	0	-1	true						
+public	inventory	inventory_id	1	pg_catalog	int4	-1	0	-1	true			nextval('inventory_inventory_id_seq'::regclass)			
+public	inventory	last_update	4	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	inventory	store_id	3	pg_catalog	int2	-1	0	-1	true						
+public	inventory_inventory_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	inventory_inventory_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	inventory_inventory_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	inventory_pkey	inventory_id	1	pg_catalog	int4	-1	0	-1	false						
+public	language	language_id	1	pg_catalog	int4	-1	0	-1	true			nextval('language_language_id_seq'::regclass)			
+public	language	last_update	3	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	language	name	2	pg_catalog	bpchar	-1	0	24	true						
+public	language_language_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	language_language_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	language_language_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	language_pkey	language_id	1	pg_catalog	int4	-1	0	-1	false						
+public	nicer_but_slower_film_list	actors	8	pg_catalog	text	-1	0	-1	false						
+public	nicer_but_slower_film_list	category	4	pg_catalog	varchar	-1	0	29	false						
+public	nicer_but_slower_film_list	description	3	pg_catalog	text	-1	0	-1	false						
+public	nicer_but_slower_film_list	fid	1	pg_catalog	int4	-1	0	-1	false						
+public	nicer_but_slower_film_list	length	6	pg_catalog	int2	-1	0	-1	false						
+public	nicer_but_slower_film_list	price	5	pg_catalog	numeric	-1	0	262150	false						
+public	nicer_but_slower_film_list	rating	7	public	mpaa_rating	-1	0	-1	false						
+public	nicer_but_slower_film_list	title	2	pg_catalog	varchar	-1	0	259	false						
+public	payment	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_01	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_01	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_01	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_01	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_01	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_01	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_02	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_02	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_02	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_02	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_02	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_02	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_03	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_03	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_03	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_03	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_03	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_03	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_04	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_04	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_04	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_04	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_04	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_04	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_05	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_05	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_05	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_05	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_05	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_05	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_06	amount	5	pg_catalog	numeric	-1	0	327686	true						
+public	payment_p2007_06	customer_id	2	pg_catalog	int2	-1	0	-1	true						
+public	payment_p2007_06	payment_date	6	pg_catalog	timestamp	-1	0	-1	true						
+public	payment_p2007_06	payment_id	1	pg_catalog	int4	-1	0	-1	true			nextval('payment_payment_id_seq'::regclass)			
+public	payment_p2007_06	rental_id	4	pg_catalog	int4	-1	0	-1	true						
+public	payment_p2007_06	staff_id	3	pg_catalog	int2	-1	0	-1	true						
+public	payment_payment_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	payment_payment_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	payment_payment_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	payment_pkey	payment_id	1	pg_catalog	int4	-1	0	-1	false						
+public	rental	customer_id	4	pg_catalog	int2	-1	0	-1	true						
+public	rental	inventory_id	3	pg_catalog	int4	-1	0	-1	true						
+public	rental	last_update	7	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	rental	rental_date	2	pg_catalog	timestamp	-1	0	-1	true						
+public	rental	rental_id	1	pg_catalog	int4	-1	0	-1	true			nextval('rental_rental_id_seq'::regclass)			
+public	rental	return_date	5	pg_catalog	timestamp	-1	0	-1	false						
+public	rental	staff_id	6	pg_catalog	int2	-1	0	-1	true						
+public	rental_pkey	rental_id	1	pg_catalog	int4	-1	0	-1	false						
+public	rental_rental_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	rental_rental_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	rental_rental_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	sales_by_film_category	category	1	pg_catalog	varchar	-1	0	29	false						
+public	sales_by_film_category	total_sales	2	pg_catalog	numeric	-1	0	-1	false						
+public	sales_by_store	manager	2	pg_catalog	text	-1	0	-1	false						
+public	sales_by_store	store	1	pg_catalog	text	-1	0	-1	false						
+public	sales_by_store	total_sales	3	pg_catalog	numeric	-1	0	-1	false						
+public	staff	active	7	pg_catalog	bool	-1	0	-1	true			true			
+public	staff	address_id	4	pg_catalog	int2	-1	0	-1	true						
+public	staff	email	5	pg_catalog	varchar	-1	0	54	false						
+public	staff	first_name	2	pg_catalog	varchar	-1	0	49	true						
+public	staff	last_name	3	pg_catalog	varchar	-1	0	49	true						
+public	staff	last_update	10	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	staff	password	9	pg_catalog	varchar	-1	0	44	false						
+public	staff	picture	11	pg_catalog	bytea	-1	0	-1	false						
+public	staff	staff_id	1	pg_catalog	int4	-1	0	-1	true			nextval('staff_staff_id_seq'::regclass)			
+public	staff	store_id	6	pg_catalog	int2	-1	0	-1	true						
+public	staff	username	8	pg_catalog	varchar	-1	0	20	true						
+public	staff_list	address	3	pg_catalog	varchar	-1	0	54	false						
+public	staff_list	city	6	pg_catalog	varchar	-1	0	54	false						
+public	staff_list	country	7	pg_catalog	varchar	-1	0	54	false						
+public	staff_list	id	1	pg_catalog	int4	-1	0	-1	false						
+public	staff_list	name	2	pg_catalog	text	-1	0	-1	false						
+public	staff_list	phone	5	pg_catalog	varchar	-1	0	24	false						
+public	staff_list	sid	8	pg_catalog	int2	-1	0	-1	false						
+public	staff_list	zip code	4	pg_catalog	varchar	-1	0	14	false						
+public	staff_pkey	staff_id	1	pg_catalog	int4	-1	0	-1	false						
+public	staff_staff_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	staff_staff_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	staff_staff_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						
+public	store	address_id	3	pg_catalog	int2	-1	0	-1	true						
+public	store	last_update	4	pg_catalog	timestamp	-1	0	-1	true			now()			
+public	store	manager_staff_id	2	pg_catalog	int2	-1	0	-1	true						
+public	store	store_id	1	pg_catalog	int4	-1	0	-1	true			nextval('store_store_id_seq'::regclass)			
+public	store_pkey	store_id	1	pg_catalog	int4	-1	0	-1	false						
+public	store_store_id_seq	is_called	3	pg_catalog	bool	-1	0	-1	true						
+public	store_store_id_seq	last_value	1	pg_catalog	int8	-1	0	-1	true						
+public	store_store_id_seq	log_cnt	2	pg_catalog	int8	-1	0	-1	true						

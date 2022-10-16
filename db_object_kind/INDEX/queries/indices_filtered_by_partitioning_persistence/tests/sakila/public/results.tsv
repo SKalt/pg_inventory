@@ -1,45 +1,45 @@
-schema_name	schema_oid	name	oid	tablespace_name	tablespace_oid	file_node_oid	owner	owner_oid	acl	access_method_oid	access_method_name	access_method_options	description	replica_identity	has_subclass	is_partition	persistence	kind	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints
-public	2200	actor_pkey	16575		0	16575	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	address_pkey	16577		0	16577	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	category_pkey	16579		0	16579	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	city_pkey	16581		0	16581	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	country_pkey	16583		0	16583	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	customer_pkey	16585		0	16585	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	film_actor_pkey	16587		0	16587	postgres	10		403	btree			n	false	false	p	i	0		1	0	2	0
-public	2200	film_category_pkey	16589		0	16589	postgres	10		403	btree			n	false	false	p	i	0		1	0	2	0
-public	2200	film_fulltext_idx	16605		0	16605	postgres	10		783	gist			n	false	false	p	i	0		1	0	1	0
-public	2200	film_pkey	16591		0	16591	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_actor_last_name	16606		0	16606	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_address_id	16607		0	16607	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_city_id	16608		0	16608	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_country_id	16609		0	16609	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_customer_id	16610		0	16610	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_film_id	16611		0	16611	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_inventory_id	16612		0	16612	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_language_id	16613		0	16613	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_original_language_id	16614		0	16614	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_01_customer_id	16615		0	16615	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_01_staff_id	16616		0	16616	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_02_customer_id	16617		0	16617	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_02_staff_id	16618		0	16618	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_03_customer_id	16619		0	16619	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_03_staff_id	16620		0	16620	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_04_customer_id	16621		0	16621	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_04_staff_id	16622		0	16622	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_05_customer_id	16623		0	16623	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_05_staff_id	16624		0	16624	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_06_customer_id	16625		0	16625	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_payment_p2007_06_staff_id	16626		0	16626	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_staff_id	16627		0	16627	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_fk_store_id	16628		0	16628	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_last_name	16629		0	16629	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_store_id_film_id	16630		0	16630	postgres	10		403	btree			n	false	false	p	i	0		1	0	2	0
-public	2200	idx_title	16631		0	16631	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_unq_manager_staff_id	16632		0	16632	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	idx_unq_rental_rental_date_inventory_id_customer_id	16633		0	16633	postgres	10		403	btree			n	false	false	p	i	0		1	0	3	0
-public	2200	inventory_pkey	16593		0	16593	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	language_pkey	16595		0	16595	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	payment_pkey	16597		0	16597	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	rental_pkey	16599		0	16599	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	staff_pkey	16601		0	16601	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
-public	2200	store_pkey	16603		0	16603	postgres	10		403	btree			n	false	false	p	i	0		1	0	1	0
+schema_name	name	tablespace_name	owner	acl	access_method_name	access_method_options	description	replica_identity	has_subclass	is_partition	persistence	kind	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	index_definition
+public	actor_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX actor_pkey ON public.actor USING btree (actor_id)
+public	address_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX address_pkey ON public.address USING btree (address_id)
+public	category_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX category_pkey ON public.category USING btree (category_id)
+public	city_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX city_pkey ON public.city USING btree (city_id)
+public	country_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX country_pkey ON public.country USING btree (country_id)
+public	customer_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX customer_pkey ON public.customer USING btree (customer_id)
+public	film_actor_pkey		postgres		btree			n	false	false	p	i	0		1	0	2	0	CREATE UNIQUE INDEX film_actor_pkey ON public.film_actor USING btree (actor_id, film_id)
+public	film_category_pkey		postgres		btree			n	false	false	p	i	0		1	0	2	0	CREATE UNIQUE INDEX film_category_pkey ON public.film_category USING btree (film_id, category_id)
+public	film_fulltext_idx		postgres		gist			n	false	false	p	i	0		1	0	1	0	CREATE INDEX film_fulltext_idx ON public.film USING gist (fulltext)
+public	film_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX film_pkey ON public.film USING btree (film_id)
+public	idx_actor_last_name		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_actor_last_name ON public.actor USING btree (last_name)
+public	idx_fk_address_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_address_id ON public.customer USING btree (address_id)
+public	idx_fk_city_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_city_id ON public.address USING btree (city_id)
+public	idx_fk_country_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_country_id ON public.city USING btree (country_id)
+public	idx_fk_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_customer_id ON public.payment USING btree (customer_id)
+public	idx_fk_film_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_film_id ON public.film_actor USING btree (film_id)
+public	idx_fk_inventory_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_inventory_id ON public.rental USING btree (inventory_id)
+public	idx_fk_language_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_language_id ON public.film USING btree (language_id)
+public	idx_fk_original_language_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_original_language_id ON public.film USING btree (original_language_id)
+public	idx_fk_payment_p2007_01_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_01_customer_id ON public.payment_p2007_01 USING btree (customer_id)
+public	idx_fk_payment_p2007_01_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_01_staff_id ON public.payment_p2007_01 USING btree (staff_id)
+public	idx_fk_payment_p2007_02_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_02_customer_id ON public.payment_p2007_02 USING btree (customer_id)
+public	idx_fk_payment_p2007_02_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_02_staff_id ON public.payment_p2007_02 USING btree (staff_id)
+public	idx_fk_payment_p2007_03_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_03_customer_id ON public.payment_p2007_03 USING btree (customer_id)
+public	idx_fk_payment_p2007_03_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_03_staff_id ON public.payment_p2007_03 USING btree (staff_id)
+public	idx_fk_payment_p2007_04_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_04_customer_id ON public.payment_p2007_04 USING btree (customer_id)
+public	idx_fk_payment_p2007_04_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_04_staff_id ON public.payment_p2007_04 USING btree (staff_id)
+public	idx_fk_payment_p2007_05_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_05_customer_id ON public.payment_p2007_05 USING btree (customer_id)
+public	idx_fk_payment_p2007_05_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_05_staff_id ON public.payment_p2007_05 USING btree (staff_id)
+public	idx_fk_payment_p2007_06_customer_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_06_customer_id ON public.payment_p2007_06 USING btree (customer_id)
+public	idx_fk_payment_p2007_06_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_payment_p2007_06_staff_id ON public.payment_p2007_06 USING btree (staff_id)
+public	idx_fk_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_staff_id ON public.payment USING btree (staff_id)
+public	idx_fk_store_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_fk_store_id ON public.customer USING btree (store_id)
+public	idx_last_name		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_last_name ON public.customer USING btree (last_name)
+public	idx_store_id_film_id		postgres		btree			n	false	false	p	i	0		1	0	2	0	CREATE INDEX idx_store_id_film_id ON public.inventory USING btree (store_id, film_id)
+public	idx_title		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE INDEX idx_title ON public.film USING btree (title)
+public	idx_unq_manager_staff_id		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX idx_unq_manager_staff_id ON public.store USING btree (manager_staff_id)
+public	idx_unq_rental_rental_date_inventory_id_customer_id		postgres		btree			n	false	false	p	i	0		1	0	3	0	CREATE UNIQUE INDEX idx_unq_rental_rental_date_inventory_id_customer_id ON public.rental USING btree (rental_date, inventory_id, customer_id)
+public	inventory_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX inventory_pkey ON public.inventory USING btree (inventory_id)
+public	language_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX language_pkey ON public.language USING btree (language_id)
+public	payment_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX payment_pkey ON public.payment USING btree (payment_id)
+public	rental_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX rental_pkey ON public.rental USING btree (rental_id)
+public	staff_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX staff_pkey ON public.staff USING btree (staff_id)
+public	store_pkey		postgres		btree			n	false	false	p	i	0		1	0	1	0	CREATE UNIQUE INDEX store_pkey ON public.store USING btree (store_id)

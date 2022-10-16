@@ -1,9 +1,7 @@
 SELECT
 -- constraint namespacing
     ns.nspname AS constraint_schema
-  , constraint_.connamespace AS constraint_schema_oid
   , constraint_.conname AS constraint_name
-  , constraint_.oid AS constraint_oid
 -- constraint enforcement info
   , (/* enforcement_info: a 2-byte struct of the form
       0000 0000 0001 1111 : bools
@@ -64,20 +62,17 @@ SELECT
   )::INT2 AS fk_info
 -- table constraint information
   , tbl_ns.nspname AS table_schema
-  , tbl.relnamespace AS table_schema_oid
   , tbl.relname AS table_name
-  , constraint_.conrelid AS table_oid
-    -- always 0 for non-table constraints
-  , constraint_.conparentid AS partition_parent_constraint_oid
+    -- always null for non-table constraints
+  , parent_constraint_schema.nspname AS parent_constraint_schema
+  , parent_constraint.conname AS parent_constraint
     -- if this is a constraint on a partition, the oid of the constraint of the
     -- parent partitioned table. Zero if the constraint doesn't correspond to
     -- a constraint on a partitioned table.
   , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
 -- domain information
   , type_ns.nspname AS type_schema
-  , type_.typnamespace AS type_schema_oid
   , type_.typname AS type_name
-  , constraint_.contypid AS type_oid
     -- always 0 for non-domain constraints
   , constraint_.coninhcount AS n_ancestor_constraints
     -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
@@ -87,13 +82,12 @@ SELECT
     -- keys, but not constraint triggers)
 -- fk referenced table info
   , referenced_tbl_ns.nspname AS referenced_table_schema
-  , referenced_tbl.relnamespace AS referenced_table_schema_oid
   , referenced_tbl.relname AS referenced_table_name
-  , constraint_.confrelid AS referenced_table_oid
   , constraint_.confkey AS foreign_key_column_numbers
     -- int2[] (each reference pg_attribute.attnum)
     -- list of the columns the FK references
 -- fk comparison operator oids: oid[] each referencing pg_catalog.pg_operator.oid
+  -- TODO: figure out how to map those OID arrays to schema-qualified names
   , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
   , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
   , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
@@ -116,3 +110,8 @@ LEFT JOIN (
   )
   ON constraint_.contypid > 0
   AND constraint_.contypid = type_.oid
+LEFT JOIN (
+  pg_catalog.pg_constraint AS parent_constraint
+  INNER JOIN pg_catalog.pg_namespace AS parent_constraint_schema
+    ON parent_constraint.connamespace = parent_constraint_schema.oid
+) ON constraint_.conparentid = parent_constraint.oid

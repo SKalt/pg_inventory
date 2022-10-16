@@ -1,15 +1,14 @@
 SELECT
-    col.attrelid AS rel_oid
-  , rel.relname AS rel_name
+    rel_schema.nspname AS relation_schema
+  , rel.relname AS relation
   , col.attname AS col_name
-  , col.atttypid AS type_oid -- zero if the column has been dropped
+  , col.attnum AS col_number -- int2: 1-indexed
+  , type_ns.nspname AS type_schema -- null if the column has been dropped
   , type_.typname AS type_name
-  , ns.nspname AS type_schema
   , col.attstattarget AS stats_detail_level -- int4: for ANALYZE
   -- , col.attlen AS type_length_bytes
      -- int2:  a copy of pg_type.typlen, internal represenation byte length.
      -- -1 for variable lengths, -2 for a null-terminated c-string.
-  , col.attnum AS col_number -- int2: 1-indexed
   , col.attndims AS dimension_number -- dimension_number > 0 means array
   , col.atttypmod AS type_length -- int4, for type-specific input and length-coersion, e.g. varchar(n)
   -- , (
@@ -59,15 +58,17 @@ SELECT
     -- either generation, identity generation, or default expression OR just null.
   , col.attoptions AS col_options -- text[], 'key=value' strings
   , col.attfdwoptions AS fdw_options -- ^same
-  , pg_catalog.col_description(col.attrelid, col.attname) AS col_comment
+  , pg_catalog.col_description(col.attrelid, col.attnum) AS col_comment
 FROM pg_catalog.pg_attribute AS col -- https://www.postgresql.org/docs/current/catalog-pg-attribute.html
 INNER JOIN pg_catalog.pg_class AS rel -- https://www.postgresql.org/docs/current/catalog-pg-class.html
   ON col.attrelid = rel.oid
+INNER JOIN pg_catalog.pg_namespace AS rel_schema -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+  ON rel.relnamespace = rel_schema.oid
 INNER JOIN pg_catalog.pg_type AS type_ -- https://www.postgresql.org/docs/current/catalog-pg-type.html
   ON col.attnum > 0 -- system columns have negative `attnum`, ordinary have >=1
   AND col.atttypid > 0 -- un-dropped columns only
   AND col.atttypid = type_.oid
-INNER JOIN pg_catalog.pg_namespace AS ns ON type_.typnamespace = ns.oid
+INNER JOIN pg_catalog.pg_namespace AS type_ns ON type_.typnamespace = type_ns.oid
 LEFT JOIN pg_catalog.pg_attrdef AS col_def -- https://www.postgresql.org/docs/current/catalog-pg-attrdef.html
   ON col.atthasdef
   AND col.attrelid = col_def.adrelid

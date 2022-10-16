@@ -1,356 +1,356 @@
-type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid
-13403	information_schema	13704	__pg_foreign_data_wrappers	-1	10	postgres			20224	,	array_subscript_handler	13705	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13716	__pg_foreign_servers	-1	10	postgres			20224	,	array_subscript_handler	13717	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13695	__pg_foreign_table_columns	-1	10	postgres			20224	,	array_subscript_handler	13696	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13729	__pg_foreign_tables	-1	10	postgres			20224	,	array_subscript_handler	13730	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13742	__pg_user_mappings	-1	10	postgres			20224	,	array_subscript_handler	13743	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13438	_administrable_role_authorizations	-1	10	postgres			20224	,	array_subscript_handler	13439	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13433	_applicable_roles	-1	10	postgres			20224	,	array_subscript_handler	13434	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13442	_attributes	-1	10	postgres			20224	,	array_subscript_handler	13443	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13416	_cardinal_number	-1	10	postgres			19968	,	array_subscript_handler	13417	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13419	_character_data	-1	10	postgres			19968	,	array_subscript_handler	13420	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13447	_character_sets	-1	10	postgres			20224	,	array_subscript_handler	13448	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13452	_check_constraint_routine_usage	-1	10	postgres			20224	,	array_subscript_handler	13453	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13457	_check_constraints	-1	10	postgres			20224	,	array_subscript_handler	13458	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13467	_collation_character_set_applicability	-1	10	postgres			20224	,	array_subscript_handler	13468	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13462	_collations	-1	10	postgres			20224	,	array_subscript_handler	13463	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13472	_column_column_usage	-1	10	postgres			20224	,	array_subscript_handler	13473	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13477	_column_domain_usage	-1	10	postgres			20224	,	array_subscript_handler	13478	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13700	_column_options	-1	10	postgres			20224	,	array_subscript_handler	13701	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13482	_column_privileges	-1	10	postgres			20224	,	array_subscript_handler	13483	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13487	_column_udt_usage	-1	10	postgres			20224	,	array_subscript_handler	13488	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13492	_columns	-1	10	postgres			20224	,	array_subscript_handler	13493	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13497	_constraint_column_usage	-1	10	postgres			20224	,	array_subscript_handler	13498	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13502	_constraint_table_usage	-1	10	postgres			20224	,	array_subscript_handler	13503	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13685	_data_type_privileges	-1	10	postgres			20224	,	array_subscript_handler	13686	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13507	_domain_constraints	-1	10	postgres			20224	,	array_subscript_handler	13508	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13512	_domain_udt_usage	-1	10	postgres			20224	,	array_subscript_handler	13513	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13517	_domains	-1	10	postgres			20224	,	array_subscript_handler	13518	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13690	_element_types	-1	10	postgres			20224	,	array_subscript_handler	13691	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13522	_enabled_roles	-1	10	postgres			20224	,	array_subscript_handler	13523	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13708	_foreign_data_wrapper_options	-1	10	postgres			20224	,	array_subscript_handler	13709	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13712	_foreign_data_wrappers	-1	10	postgres			20224	,	array_subscript_handler	13713	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13721	_foreign_server_options	-1	10	postgres			20224	,	array_subscript_handler	13722	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13725	_foreign_servers	-1	10	postgres			20224	,	array_subscript_handler	13726	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13734	_foreign_table_options	-1	10	postgres			20224	,	array_subscript_handler	13735	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13738	_foreign_tables	-1	10	postgres			20224	,	array_subscript_handler	13739	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13424	_information_schema_catalog_name	-1	10	postgres			20224	,	array_subscript_handler	13425	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13526	_key_column_usage	-1	10	postgres			20224	,	array_subscript_handler	13527	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13531	_parameters	-1	10	postgres			20224	,	array_subscript_handler	13532	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13536	_referential_constraints	-1	10	postgres			20224	,	array_subscript_handler	13537	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13541	_role_column_grants	-1	10	postgres			20224	,	array_subscript_handler	13542	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13555	_role_routine_grants	-1	10	postgres			20224	,	array_subscript_handler	13556	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13618	_role_table_grants	-1	10	postgres			20224	,	array_subscript_handler	13619	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13647	_role_udt_grants	-1	10	postgres			20224	,	array_subscript_handler	13648	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13656	_role_usage_grants	-1	10	postgres			20224	,	array_subscript_handler	13657	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13545	_routine_column_usage	-1	10	postgres			20224	,	array_subscript_handler	13546	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13550	_routine_privileges	-1	10	postgres			20224	,	array_subscript_handler	13551	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13559	_routine_routine_usage	-1	10	postgres			20224	,	array_subscript_handler	13560	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13564	_routine_sequence_usage	-1	10	postgres			20224	,	array_subscript_handler	13565	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13569	_routine_table_usage	-1	10	postgres			20224	,	array_subscript_handler	13570	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13574	_routines	-1	10	postgres			20224	,	array_subscript_handler	13575	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13579	_schemata	-1	10	postgres			20224	,	array_subscript_handler	13580	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13583	_sequences	-1	10	postgres			20224	,	array_subscript_handler	13584	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13588	_sql_features	-1	10	postgres			20224	,	array_subscript_handler	13589	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13421	_sql_identifier	-1	10	postgres			19968	,	array_subscript_handler	13422	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13593	_sql_implementation_info	-1	10	postgres			20224	,	array_subscript_handler	13594	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13598	_sql_parts	-1	10	postgres			20224	,	array_subscript_handler	13599	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13603	_sql_sizing	-1	10	postgres			20224	,	array_subscript_handler	13604	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13608	_table_constraints	-1	10	postgres			20224	,	array_subscript_handler	13609	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13613	_table_privileges	-1	10	postgres			20224	,	array_subscript_handler	13614	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13622	_tables	-1	10	postgres			20224	,	array_subscript_handler	13623	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13427	_time_stamp	-1	10	postgres			20224	,	array_subscript_handler	13428	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13627	_transforms	-1	10	postgres			20224	,	array_subscript_handler	13628	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13632	_triggered_update_columns	-1	10	postgres			20224	,	array_subscript_handler	13633	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13637	_triggers	-1	10	postgres			20224	,	array_subscript_handler	13638	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13642	_udt_privileges	-1	10	postgres			20224	,	array_subscript_handler	13643	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13651	_usage_privileges	-1	10	postgres			20224	,	array_subscript_handler	13652	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13660	_user_defined_types	-1	10	postgres			20224	,	array_subscript_handler	13661	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13747	_user_mapping_options	-1	10	postgres			20224	,	array_subscript_handler	13748	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13752	_user_mappings	-1	10	postgres			20224	,	array_subscript_handler	13753	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13665	_view_column_usage	-1	10	postgres			20224	,	array_subscript_handler	13666	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13670	_view_routine_usage	-1	10	postgres			20224	,	array_subscript_handler	13671	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13675	_view_table_usage	-1	10	postgres			20224	,	array_subscript_handler	13676	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13680	_views	-1	10	postgres			20224	,	array_subscript_handler	13681	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-13403	information_schema	13429	_yes_or_no	-1	10	postgres			19968	,	array_subscript_handler	13430	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1034	_aclitem	-1	10	postgres			19968	,	array_subscript_handler	1033	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1561	_bit	-1	10	postgres			19968	,	array_subscript_handler	1560	0	0	0	array_in	array_out	array_recv	array_send	bittypmodin	array_typanalyze
-11	pg_catalog	1000	_bool	-1	10	postgres			19968	,	array_subscript_handler	16	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1020	_box	-1	10	postgres			20224	;	array_subscript_handler	603	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1014	_bpchar	-1	10	postgres			19968	,	array_subscript_handler	1042	0	100	0	array_in	array_out	array_recv	array_send	bpchartypmodin	array_typanalyze
-11	pg_catalog	1001	_bytea	-1	10	postgres			19968	,	array_subscript_handler	17	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1002	_char	-1	10	postgres			19968	,	array_subscript_handler	18	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1012	_cid	-1	10	postgres			19968	,	array_subscript_handler	29	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	651	_cidr	-1	10	postgres			19968	,	array_subscript_handler	650	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	719	_circle	-1	10	postgres			20224	,	array_subscript_handler	718	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1263	_cstring	-1	10	postgres			19968	,	array_subscript_handler	2275	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1182	_date	-1	10	postgres			19968	,	array_subscript_handler	1082	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	6155	_datemultirange	-1	10	postgres			19968	,	array_subscript_handler	4535	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3913	_daterange	-1	10	postgres			19968	,	array_subscript_handler	3912	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1021	_float4	-1	10	postgres			19968	,	array_subscript_handler	700	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1022	_float8	-1	10	postgres			20224	,	array_subscript_handler	701	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3644	_gtsvector	-1	10	postgres			19968	,	array_subscript_handler	3642	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1041	_inet	-1	10	postgres			19968	,	array_subscript_handler	869	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1005	_int2	-1	10	postgres			19968	,	array_subscript_handler	21	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1006	_int2vector	-1	10	postgres			19968	,	array_subscript_handler	22	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1007	_int4	-1	10	postgres			19968	,	array_subscript_handler	23	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	6150	_int4multirange	-1	10	postgres			19968	,	array_subscript_handler	4451	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3905	_int4range	-1	10	postgres			19968	,	array_subscript_handler	3904	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1016	_int8	-1	10	postgres			20224	,	array_subscript_handler	20	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	6157	_int8multirange	-1	10	postgres			20224	,	array_subscript_handler	4536	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3927	_int8range	-1	10	postgres			20224	,	array_subscript_handler	3926	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1187	_interval	-1	10	postgres			20224	,	array_subscript_handler	1186	0	0	0	array_in	array_out	array_recv	array_send	intervaltypmodin	array_typanalyze
-11	pg_catalog	199	_json	-1	10	postgres			19968	,	array_subscript_handler	114	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3807	_jsonb	-1	10	postgres			19968	,	array_subscript_handler	3802	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	4073	_jsonpath	-1	10	postgres			19968	,	array_subscript_handler	4072	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	629	_line	-1	10	postgres			20224	,	array_subscript_handler	628	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1018	_lseg	-1	10	postgres			20224	,	array_subscript_handler	601	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1040	_macaddr	-1	10	postgres			19968	,	array_subscript_handler	829	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	775	_macaddr8	-1	10	postgres			19968	,	array_subscript_handler	774	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	791	_money	-1	10	postgres			20224	,	array_subscript_handler	790	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1003	_name	-1	10	postgres			19968	,	array_subscript_handler	19	0	950	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1231	_numeric	-1	10	postgres			19968	,	array_subscript_handler	1700	0	0	0	array_in	array_out	array_recv	array_send	numerictypmodin	array_typanalyze
-11	pg_catalog	6151	_nummultirange	-1	10	postgres			19968	,	array_subscript_handler	4532	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3907	_numrange	-1	10	postgres			19968	,	array_subscript_handler	3906	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1028	_oid	-1	10	postgres			19968	,	array_subscript_handler	26	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1013	_oidvector	-1	10	postgres			19968	,	array_subscript_handler	30	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1019	_path	-1	10	postgres			20224	,	array_subscript_handler	602	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12026	_pg_aggregate	-1	10	postgres			20224	,	array_subscript_handler	12027	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12014	_pg_am	-1	10	postgres			20224	,	array_subscript_handler	12015	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12016	_pg_amop	-1	10	postgres			20224	,	array_subscript_handler	12017	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12018	_pg_amproc	-1	10	postgres			20224	,	array_subscript_handler	12019	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12000	_pg_attrdef	-1	10	postgres			20224	,	array_subscript_handler	12001	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	270	_pg_attribute	-1	10	postgres			20224	,	array_subscript_handler	75	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12058	_pg_auth_members	-1	10	postgres			20224	,	array_subscript_handler	2843	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12057	_pg_authid	-1	10	postgres			20224	,	array_subscript_handler	2842	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12303	_pg_available_extension_versions	-1	10	postgres			20224	,	array_subscript_handler	12304	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12299	_pg_available_extensions	-1	10	postgres			20224	,	array_subscript_handler	12300	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12352	_pg_backend_memory_contexts	-1	10	postgres			20224	,	array_subscript_handler	12353	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12042	_pg_cast	-1	10	postgres			20224	,	array_subscript_handler	12043	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	273	_pg_class	-1	10	postgres			20224	,	array_subscript_handler	83	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12094	_pg_collation	-1	10	postgres			20224	,	array_subscript_handler	12095	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12344	_pg_config	-1	10	postgres			20224	,	array_subscript_handler	12345	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12002	_pg_constraint	-1	10	postgres			20224	,	array_subscript_handler	12003	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12048	_pg_conversion	-1	10	postgres			20224	,	array_subscript_handler	12049	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12295	_pg_cursors	-1	10	postgres			20224	,	array_subscript_handler	12296	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12052	_pg_database	-1	10	postgres			20224	,	array_subscript_handler	1248	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12053	_pg_db_role_setting	-1	10	postgres			20224	,	array_subscript_handler	12054	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12087	_pg_default_acl	-1	10	postgres			20224	,	array_subscript_handler	12088	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12050	_pg_depend	-1	10	postgres			20224	,	array_subscript_handler	12051	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12040	_pg_description	-1	10	postgres			20224	,	array_subscript_handler	12041	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12044	_pg_enum	-1	10	postgres			20224	,	array_subscript_handler	12045	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12038	_pg_event_trigger	-1	10	postgres			20224	,	array_subscript_handler	12039	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12073	_pg_extension	-1	10	postgres			20224	,	array_subscript_handler	12074	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12328	_pg_file_settings	-1	10	postgres			20224	,	array_subscript_handler	12329	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12075	_pg_foreign_data_wrapper	-1	10	postgres			20224	,	array_subscript_handler	12076	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12077	_pg_foreign_server	-1	10	postgres			20224	,	array_subscript_handler	12078	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12081	_pg_foreign_table	-1	10	postgres			20224	,	array_subscript_handler	12082	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12228	_pg_group	-1	10	postgres			20224	,	array_subscript_handler	12229	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12332	_pg_hba_file_rules	-1	10	postgres			20224	,	array_subscript_handler	12333	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12006	_pg_index	-1	10	postgres			20224	,	array_subscript_handler	12007	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12261	_pg_indexes	-1	10	postgres			20224	,	array_subscript_handler	12262	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12004	_pg_inherits	-1	10	postgres			20224	,	array_subscript_handler	12005	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12089	_pg_init_privs	-1	10	postgres			20224	,	array_subscript_handler	12090	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12020	_pg_language	-1	10	postgres			20224	,	array_subscript_handler	12021	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12024	_pg_largeobject	-1	10	postgres			20224	,	array_subscript_handler	12025	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12022	_pg_largeobject_metadata	-1	10	postgres			20224	,	array_subscript_handler	12023	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12291	_pg_locks	-1	10	postgres			20224	,	array_subscript_handler	12292	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3221	_pg_lsn	-1	10	postgres			20224	,	array_subscript_handler	3220	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12256	_pg_matviews	-1	10	postgres			20224	,	array_subscript_handler	12257	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12046	_pg_namespace	-1	10	postgres			20224	,	array_subscript_handler	12047	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12012	_pg_opclass	-1	10	postgres			20224	,	array_subscript_handler	12013	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12008	_pg_operator	-1	10	postgres			20224	,	array_subscript_handler	12009	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12010	_pg_opfamily	-1	10	postgres			20224	,	array_subscript_handler	12011	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12096	_pg_partitioned_table	-1	10	postgres			20224	,	array_subscript_handler	12097	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12236	_pg_policies	-1	10	postgres			20224	,	array_subscript_handler	12237	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12083	_pg_policy	-1	10	postgres			20224	,	array_subscript_handler	12084	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12313	_pg_prepared_statements	-1	10	postgres			20224	,	array_subscript_handler	12314	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12308	_pg_prepared_xacts	-1	10	postgres			20224	,	array_subscript_handler	12309	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	272	_pg_proc	-1	10	postgres			20224	,	array_subscript_handler	81	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12104	_pg_publication	-1	10	postgres			20224	,	array_subscript_handler	12105	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12106	_pg_publication_rel	-1	10	postgres			20224	,	array_subscript_handler	12107	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12286	_pg_publication_tables	-1	10	postgres			20224	,	array_subscript_handler	12287	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12098	_pg_range	-1	10	postgres			20224	,	array_subscript_handler	12099	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12085	_pg_replication_origin	-1	10	postgres			20224	,	array_subscript_handler	12086	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12542	_pg_replication_origin_status	-1	10	postgres			20224	,	array_subscript_handler	12543	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12467	_pg_replication_slots	-1	10	postgres			20224	,	array_subscript_handler	12468	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12034	_pg_rewrite	-1	10	postgres			20224	,	array_subscript_handler	12035	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12218	_pg_roles	-1	10	postgres			20224	,	array_subscript_handler	12219	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12241	_pg_rules	-1	10	postgres			20224	,	array_subscript_handler	12242	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12091	_pg_seclabel	-1	10	postgres			20224	,	array_subscript_handler	12092	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12317	_pg_seclabels	-1	10	postgres			20224	,	array_subscript_handler	12318	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12102	_pg_sequence	-1	10	postgres			20224	,	array_subscript_handler	12103	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12266	_pg_sequences	-1	10	postgres			20224	,	array_subscript_handler	12267	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12322	_pg_settings	-1	10	postgres			20224	,	array_subscript_handler	12323	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12223	_pg_shadow	-1	10	postgres			20224	,	array_subscript_handler	12224	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12059	_pg_shdepend	-1	10	postgres			20224	,	array_subscript_handler	12060	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12061	_pg_shdescription	-1	10	postgres			20224	,	array_subscript_handler	12062	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12348	_pg_shmem_allocations	-1	10	postgres			20224	,	array_subscript_handler	12349	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12093	_pg_shseclabel	-1	10	postgres			20224	,	array_subscript_handler	4066	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	5039	_pg_snapshot	-1	10	postgres			20224	,	array_subscript_handler	5038	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12436	_pg_stat_activity	-1	10	postgres			20224	,	array_subscript_handler	12437	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12397	_pg_stat_all_indexes	-1	10	postgres			20224	,	array_subscript_handler	12398	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12356	_pg_stat_all_tables	-1	10	postgres			20224	,	array_subscript_handler	12357	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12495	_pg_stat_archiver	-1	10	postgres			20224	,	array_subscript_handler	12496	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12499	_pg_stat_bgwriter	-1	10	postgres			20224	,	array_subscript_handler	12500	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12476	_pg_stat_database	-1	10	postgres			20224	,	array_subscript_handler	12477	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12481	_pg_stat_database_conflicts	-1	10	postgres			20224	,	array_subscript_handler	12482	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12463	_pg_stat_gssapi	-1	10	postgres			20224	,	array_subscript_handler	12464	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12507	_pg_stat_progress_analyze	-1	10	postgres			20224	,	array_subscript_handler	12508	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12527	_pg_stat_progress_basebackup	-1	10	postgres			20224	,	array_subscript_handler	12528	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12517	_pg_stat_progress_cluster	-1	10	postgres			20224	,	array_subscript_handler	12518	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12532	_pg_stat_progress_copy	-1	10	postgres			20224	,	array_subscript_handler	12533	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12522	_pg_stat_progress_create_index	-1	10	postgres			20224	,	array_subscript_handler	12523	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12512	_pg_stat_progress_vacuum	-1	10	postgres			20224	,	array_subscript_handler	12513	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12441	_pg_stat_replication	-1	10	postgres			20224	,	array_subscript_handler	12442	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12472	_pg_stat_replication_slots	-1	10	postgres			20224	,	array_subscript_handler	12473	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12446	_pg_stat_slru	-1	10	postgres			20224	,	array_subscript_handler	12447	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12459	_pg_stat_ssl	-1	10	postgres			20224	,	array_subscript_handler	12460	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12454	_pg_stat_subscription	-1	10	postgres			20224	,	array_subscript_handler	12455	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12402	_pg_stat_sys_indexes	-1	10	postgres			20224	,	array_subscript_handler	12403	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12366	_pg_stat_sys_tables	-1	10	postgres			20224	,	array_subscript_handler	12367	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12485	_pg_stat_user_functions	-1	10	postgres			20224	,	array_subscript_handler	12486	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12406	_pg_stat_user_indexes	-1	10	postgres			20224	,	array_subscript_handler	12407	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12375	_pg_stat_user_tables	-1	10	postgres			20224	,	array_subscript_handler	12376	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12503	_pg_stat_wal	-1	10	postgres			20224	,	array_subscript_handler	12504	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12450	_pg_stat_wal_receiver	-1	10	postgres			20224	,	array_subscript_handler	12451	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12361	_pg_stat_xact_all_tables	-1	10	postgres			20224	,	array_subscript_handler	12362	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12371	_pg_stat_xact_sys_tables	-1	10	postgres			20224	,	array_subscript_handler	12372	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12490	_pg_stat_xact_user_functions	-1	10	postgres			20224	,	array_subscript_handler	12491	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12380	_pg_stat_xact_user_tables	-1	10	postgres			20224	,	array_subscript_handler	12381	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12410	_pg_statio_all_indexes	-1	10	postgres			20224	,	array_subscript_handler	12411	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12423	_pg_statio_all_sequences	-1	10	postgres			20224	,	array_subscript_handler	12424	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12384	_pg_statio_all_tables	-1	10	postgres			20224	,	array_subscript_handler	12385	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12415	_pg_statio_sys_indexes	-1	10	postgres			20224	,	array_subscript_handler	12416	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12428	_pg_statio_sys_sequences	-1	10	postgres			20224	,	array_subscript_handler	12429	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12389	_pg_statio_sys_tables	-1	10	postgres			20224	,	array_subscript_handler	12390	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12419	_pg_statio_user_indexes	-1	10	postgres			20224	,	array_subscript_handler	12420	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12432	_pg_statio_user_sequences	-1	10	postgres			20224	,	array_subscript_handler	12433	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12393	_pg_statio_user_tables	-1	10	postgres			20224	,	array_subscript_handler	12394	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12028	_pg_statistic	-1	10	postgres			20224	,	array_subscript_handler	12029	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12030	_pg_statistic_ext	-1	10	postgres			20224	,	array_subscript_handler	12031	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12032	_pg_statistic_ext_data	-1	10	postgres			20224	,	array_subscript_handler	12033	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12271	_pg_stats	-1	10	postgres			20224	,	array_subscript_handler	12272	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12276	_pg_stats_ext	-1	10	postgres			20224	,	array_subscript_handler	12277	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12281	_pg_stats_ext_exprs	-1	10	postgres			20224	,	array_subscript_handler	12282	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12108	_pg_subscription	-1	10	postgres			20224	,	array_subscript_handler	6101	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12109	_pg_subscription_rel	-1	10	postgres			20224	,	array_subscript_handler	12110	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12251	_pg_tables	-1	10	postgres			20224	,	array_subscript_handler	12252	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12055	_pg_tablespace	-1	10	postgres			20224	,	array_subscript_handler	12056	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12336	_pg_timezone_abbrevs	-1	10	postgres			20224	,	array_subscript_handler	12337	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12340	_pg_timezone_names	-1	10	postgres			20224	,	array_subscript_handler	12341	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12100	_pg_transform	-1	10	postgres			20224	,	array_subscript_handler	12101	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12036	_pg_trigger	-1	10	postgres			20224	,	array_subscript_handler	12037	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12063	_pg_ts_config	-1	10	postgres			20224	,	array_subscript_handler	12064	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12065	_pg_ts_config_map	-1	10	postgres			20224	,	array_subscript_handler	12066	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12067	_pg_ts_dict	-1	10	postgres			20224	,	array_subscript_handler	12068	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12069	_pg_ts_parser	-1	10	postgres			20224	,	array_subscript_handler	12070	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12071	_pg_ts_template	-1	10	postgres			20224	,	array_subscript_handler	12072	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	210	_pg_type	-1	10	postgres			20224	,	array_subscript_handler	71	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12232	_pg_user	-1	10	postgres			20224	,	array_subscript_handler	12233	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12079	_pg_user_mapping	-1	10	postgres			20224	,	array_subscript_handler	12080	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12537	_pg_user_mappings	-1	10	postgres			20224	,	array_subscript_handler	12538	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	12246	_pg_views	-1	10	postgres			20224	,	array_subscript_handler	12247	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1017	_point	-1	10	postgres			20224	,	array_subscript_handler	600	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1027	_polygon	-1	10	postgres			20224	,	array_subscript_handler	604	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2201	_refcursor	-1	10	postgres			19968	,	array_subscript_handler	1790	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2210	_regclass	-1	10	postgres			19968	,	array_subscript_handler	2205	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	4192	_regcollation	-1	10	postgres			19968	,	array_subscript_handler	4191	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3735	_regconfig	-1	10	postgres			19968	,	array_subscript_handler	3734	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3770	_regdictionary	-1	10	postgres			19968	,	array_subscript_handler	3769	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	4090	_regnamespace	-1	10	postgres			19968	,	array_subscript_handler	4089	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2208	_regoper	-1	10	postgres			19968	,	array_subscript_handler	2203	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2209	_regoperator	-1	10	postgres			19968	,	array_subscript_handler	2204	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1008	_regproc	-1	10	postgres			19968	,	array_subscript_handler	24	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2207	_regprocedure	-1	10	postgres			19968	,	array_subscript_handler	2202	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	4097	_regrole	-1	10	postgres			19968	,	array_subscript_handler	4096	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2211	_regtype	-1	10	postgres			19968	,	array_subscript_handler	2206	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1009	_text	-1	10	postgres			19968	,	array_subscript_handler	25	0	100	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1010	_tid	-1	10	postgres			19968	,	array_subscript_handler	27	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1183	_time	-1	10	postgres			20224	,	array_subscript_handler	1083	0	0	0	array_in	array_out	array_recv	array_send	timetypmodin	array_typanalyze
-11	pg_catalog	1115	_timestamp	-1	10	postgres			20224	,	array_subscript_handler	1114	0	0	0	array_in	array_out	array_recv	array_send	timestamptypmodin	array_typanalyze
-11	pg_catalog	1185	_timestamptz	-1	10	postgres			20224	,	array_subscript_handler	1184	0	0	0	array_in	array_out	array_recv	array_send	timestamptztypmodin	array_typanalyze
-11	pg_catalog	1270	_timetz	-1	10	postgres			20224	,	array_subscript_handler	1266	0	0	0	array_in	array_out	array_recv	array_send	timetztypmodin	array_typanalyze
-11	pg_catalog	6152	_tsmultirange	-1	10	postgres			20224	,	array_subscript_handler	4533	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3645	_tsquery	-1	10	postgres			19968	,	array_subscript_handler	3615	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3909	_tsrange	-1	10	postgres			20224	,	array_subscript_handler	3908	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	6153	_tstzmultirange	-1	10	postgres			20224	,	array_subscript_handler	4534	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3911	_tstzrange	-1	10	postgres			20224	,	array_subscript_handler	3910	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	3643	_tsvector	-1	10	postgres			19968	,	array_subscript_handler	3614	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2949	_txid_snapshot	-1	10	postgres			20224	,	array_subscript_handler	2970	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2951	_uuid	-1	10	postgres			19968	,	array_subscript_handler	2950	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1563	_varbit	-1	10	postgres			19968	,	array_subscript_handler	1562	0	0	0	array_in	array_out	array_recv	array_send	varbittypmodin	array_typanalyze
-11	pg_catalog	1015	_varchar	-1	10	postgres			19968	,	array_subscript_handler	1043	0	100	0	array_in	array_out	array_recv	array_send	varchartypmodin	array_typanalyze
-11	pg_catalog	1011	_xid	-1	10	postgres			19968	,	array_subscript_handler	28	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	271	_xid8	-1	10	postgres			20224	,	array_subscript_handler	5069	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	143	_xml	-1	10	postgres			19968	,	array_subscript_handler	142	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	1033	aclitem	12	10	postgres			17088	,	-	0	0	0	1034	aclitemin	aclitemout	-	-	-	-
-11	pg_catalog	1560	bit	-1	10	postgres			20176	,	-	0	0	0	1561	bit_in	bit_out	bit_recv	bit_send	bittypmodin	-
-11	pg_catalog	16	bool	1	10	postgres			28688	,	-	0	0	0	1000	boolin	boolout	boolrecv	boolsend	-	-
-11	pg_catalog	603	box	32	10	postgres			17232	;	raw_array_subscript_handler	600	0	0	1020	box_in	box_out	box_recv	box_send	-	-
-11	pg_catalog	1042	bpchar	-1	10	postgres			20128	,	-	0	0	100	1014	bpcharin	bpcharout	bpcharrecv	bpcharsend	bpchartypmodin	-
-11	pg_catalog	17	bytea	-1	10	postgres			20160	,	-	0	0	0	1001	byteain	byteaout	bytearecv	byteasend	-	-
-11	pg_catalog	18	char	1	10	postgres			20640	,	-	0	0	0	1002	charin	charout	charrecv	charsend	-	-
-11	pg_catalog	29	cid	4	10	postgres			21184	,	-	0	0	0	1012	cidin	cidout	cidrecv	cidsend	-	-
-11	pg_catalog	650	cidr	-1	10	postgres			19040	,	-	0	0	0	651	cidr_in	cidr_out	cidr_recv	cidr_send	-	-
-11	pg_catalog	718	circle	24	10	postgres			17232	,	-	0	0	0	719	circle_in	circle_out	circle_recv	circle_send	-	-
-11	pg_catalog	1082	date	4	10	postgres			21040	,	-	0	0	0	1182	date_in	date_out	date_recv	date_send	-	-
-11	pg_catalog	700	float4	4	10	postgres			21104	,	-	0	0	0	1021	float4in	float4out	float4recv	float4send	-	-
-11	pg_catalog	701	float8	8	10	postgres			29552	,	-	0	0	0	1022	float8in	float8out	float8recv	float8send	-	-
-11	pg_catalog	3642	gtsvector	-1	10	postgres			17088	,	-	0	0	0	3644	gtsvectorin	gtsvectorout	-	-	-	-
-11	pg_catalog	869	inet	-1	10	postgres			27232	,	-	0	0	0	1041	inet_in	inet_out	inet_recv	inet_send	-	-
-11	pg_catalog	21	int2	2	10	postgres			20848	,	-	0	0	0	1005	int2in	int2out	int2recv	int2send	-	-
-11	pg_catalog	22	int2vector	-1	10	postgres			16896	,	array_subscript_handler	21	0	0	1006	int2vectorin	int2vectorout	int2vectorrecv	int2vectorsend	-	-
-11	pg_catalog	23	int4	4	10	postgres			21104	,	-	0	0	0	1007	int4in	int4out	int4recv	int4send	-	-
-11	pg_catalog	20	int8	8	10	postgres			21360	,	-	0	0	0	1016	int8in	int8out	int8recv	int8send	-	-
-11	pg_catalog	1186	interval	16	10	postgres			25520	,	-	0	0	0	1187	interval_in	interval_out	interval_recv	interval_send	intervaltypmodin	-
-11	pg_catalog	114	json	-1	10	postgres			20160	,	-	0	0	0	199	json_in	json_out	json_recv	json_send	-	-
-11	pg_catalog	3802	jsonb	-1	10	postgres			20160	,	jsonb_subscript_handler	0	0	0	3807	jsonb_in	jsonb_out	jsonb_recv	jsonb_send	-	-
-11	pg_catalog	4072	jsonpath	-1	10	postgres			20160	,	-	0	0	0	4073	jsonpath_in	jsonpath_out	jsonpath_recv	jsonpath_send	-	-
-11	pg_catalog	628	line	24	10	postgres			17232	,	raw_array_subscript_handler	701	0	0	629	line_in	line_out	line_recv	line_send	-	-
-11	pg_catalog	601	lseg	32	10	postgres			17232	,	raw_array_subscript_handler	600	0	0	1018	lseg_in	lseg_out	lseg_recv	lseg_send	-	-
-11	pg_catalog	829	macaddr	6	10	postgres			17088	,	-	0	0	0	1040	macaddr_in	macaddr_out	macaddr_recv	macaddr_send	-	-
-11	pg_catalog	774	macaddr8	8	10	postgres			17088	,	-	0	0	0	775	macaddr8_in	macaddr8_out	macaddr8_recv	macaddr8_send	-	-
-11	pg_catalog	790	money	8	10	postgres			21360	,	-	0	0	0	791	cash_in	cash_out	cash_recv	cash_send	-	-
-11	pg_catalog	19	name	64	10	postgres			16544	,	raw_array_subscript_handler	18	0	950	1003	namein	nameout	namerecv	namesend	-	-
-11	pg_catalog	1700	numeric	-1	10	postgres			19056	,	-	0	0	0	1231	numeric_in	numeric_out	numeric_recv	numeric_send	numerictypmodin	-
-11	pg_catalog	26	oid	4	10	postgres			29296	,	-	0	0	0	1028	oidin	oidout	oidrecv	oidsend	-	-
-11	pg_catalog	30	oidvector	-1	10	postgres			16896	,	array_subscript_handler	26	0	0	1013	oidvectorin	oidvectorout	oidvectorrecv	oidvectorsend	-	-
-11	pg_catalog	602	path	-1	10	postgres			20304	,	-	0	0	0	1019	path_in	path_out	path_recv	path_send	-	-
-11	pg_catalog	4600	pg_brin_bloom_summary	-1	10	postgres			20128	,	-	0	0	100	0	brin_bloom_summary_in	brin_bloom_summary_out	brin_bloom_summary_recv	brin_bloom_summary_send	-	-
-11	pg_catalog	4601	pg_brin_minmax_multi_summary	-1	10	postgres			20128	,	-	0	0	100	0	brin_minmax_multi_summary_in	brin_minmax_multi_summary_out	brin_minmax_multi_summary_recv	brin_minmax_multi_summary_send	-	-
-11	pg_catalog	3402	pg_dependencies	-1	10	postgres			20128	,	-	0	0	100	0	pg_dependencies_in	pg_dependencies_out	pg_dependencies_recv	pg_dependencies_send	-	-
-11	pg_catalog	3220	pg_lsn	8	10	postgres			21440	,	-	0	0	0	3221	pg_lsn_in	pg_lsn_out	pg_lsn_recv	pg_lsn_send	-	-
-11	pg_catalog	5017	pg_mcv_list	-1	10	postgres			20128	,	-	0	0	100	0	pg_mcv_list_in	pg_mcv_list_out	pg_mcv_list_recv	pg_mcv_list_send	-	-
-11	pg_catalog	3361	pg_ndistinct	-1	10	postgres			20128	,	-	0	0	100	0	pg_ndistinct_in	pg_ndistinct_out	pg_ndistinct_recv	pg_ndistinct_send	-	-
-11	pg_catalog	194	pg_node_tree	-1	10	postgres			20128	,	-	0	0	100	0	pg_node_tree_in	pg_node_tree_out	pg_node_tree_recv	pg_node_tree_send	-	-
-11	pg_catalog	5038	pg_snapshot	-1	10	postgres			20416	,	-	0	0	0	5039	pg_snapshot_in	pg_snapshot_out	pg_snapshot_recv	pg_snapshot_send	-	-
-11	pg_catalog	600	point	16	10	postgres			17232	,	raw_array_subscript_handler	701	0	0	1017	point_in	point_out	point_recv	point_send	-	-
-11	pg_catalog	604	polygon	-1	10	postgres			20304	,	-	0	0	0	1027	poly_in	poly_out	poly_recv	poly_send	-	-
-11	pg_catalog	1790	refcursor	-1	10	postgres			20160	,	-	0	0	0	2201	textin	textout	textrecv	textsend	-	-
-11	pg_catalog	2205	regclass	4	10	postgres			21104	,	-	0	0	0	2210	regclassin	regclassout	regclassrecv	regclasssend	-	-
-11	pg_catalog	4191	regcollation	4	10	postgres			21104	,	-	0	0	0	4192	regcollationin	regcollationout	regcollationrecv	regcollationsend	-	-
-11	pg_catalog	3734	regconfig	4	10	postgres			21104	,	-	0	0	0	3735	regconfigin	regconfigout	regconfigrecv	regconfigsend	-	-
-11	pg_catalog	3769	regdictionary	4	10	postgres			21104	,	-	0	0	0	3770	regdictionaryin	regdictionaryout	regdictionaryrecv	regdictionarysend	-	-
-11	pg_catalog	4089	regnamespace	4	10	postgres			21104	,	-	0	0	0	4090	regnamespacein	regnamespaceout	regnamespacerecv	regnamespacesend	-	-
-11	pg_catalog	2203	regoper	4	10	postgres			21104	,	-	0	0	0	2208	regoperin	regoperout	regoperrecv	regopersend	-	-
-11	pg_catalog	2204	regoperator	4	10	postgres			21104	,	-	0	0	0	2209	regoperatorin	regoperatorout	regoperatorrecv	regoperatorsend	-	-
-11	pg_catalog	24	regproc	4	10	postgres			21104	,	-	0	0	0	1008	regprocin	regprocout	regprocrecv	regprocsend	-	-
-11	pg_catalog	2202	regprocedure	4	10	postgres			21104	,	-	0	0	0	2207	regprocedurein	regprocedureout	regprocedurerecv	regproceduresend	-	-
-11	pg_catalog	4096	regrole	4	10	postgres			21104	,	-	0	0	0	4097	regrolein	regroleout	regrolerecv	regrolesend	-	-
-11	pg_catalog	2206	regtype	4	10	postgres			21104	,	-	0	0	0	2211	regtypein	regtypeout	regtyperecv	regtypesend	-	-
-11	pg_catalog	25	text	-1	10	postgres			28320	,	-	0	0	100	1009	textin	textout	textrecv	textsend	-	-
-11	pg_catalog	27	tid	6	10	postgres			16832	,	-	0	0	0	1010	tidin	tidout	tidrecv	tidsend	-	-
-11	pg_catalog	1083	time	8	10	postgres			21296	,	-	0	0	0	1183	time_in	time_out	time_recv	time_send	timetypmodin	-
-11	pg_catalog	1114	timestamp	8	10	postgres			21296	,	-	0	0	0	1115	timestamp_in	timestamp_out	timestamp_recv	timestamp_send	timestamptypmodin	-
-11	pg_catalog	1184	timestamptz	8	10	postgres			29488	,	-	0	0	0	1185	timestamptz_in	timestamptz_out	timestamptz_recv	timestamptz_send	timestamptztypmodin	-
-11	pg_catalog	1266	timetz	12	10	postgres			17200	,	-	0	0	0	1270	timetz_in	timetz_out	timetz_recv	timetz_send	timetztypmodin	-
-11	pg_catalog	3615	tsquery	-1	10	postgres			17088	,	-	0	0	0	3645	tsqueryin	tsqueryout	tsqueryrecv	tsquerysend	-	-
-11	pg_catalog	3614	tsvector	-1	10	postgres			20160	,	-	0	0	0	3643	tsvectorin	tsvectorout	tsvectorrecv	tsvectorsend	-	ts_typanalyze
-11	pg_catalog	2970	txid_snapshot	-1	10	postgres			20416	,	-	0	0	0	2949	txid_snapshot_in	txid_snapshot_out	txid_snapshot_recv	txid_snapshot_send	-	-
-11	pg_catalog	2950	uuid	16	10	postgres			16576	,	-	0	0	0	2951	uuid_in	uuid_out	uuid_recv	uuid_send	-	-
-11	pg_catalog	1562	varbit	-1	10	postgres			28368	,	-	0	0	0	1563	varbit_in	varbit_out	varbit_recv	varbit_send	varbittypmodin	-
-11	pg_catalog	1043	varchar	-1	10	postgres			20128	,	-	0	0	100	1015	varcharin	varcharout	varcharrecv	varcharsend	varchartypmodin	-
-11	pg_catalog	28	xid	4	10	postgres			21184	,	-	0	0	0	1011	xidin	xidout	xidrecv	xidsend	-	-
-11	pg_catalog	5069	xid8	8	10	postgres			21440	,	-	0	0	0	271	xid8in	xid8out	xid8recv	xid8send	-	-
-11	pg_catalog	142	xml	-1	10	postgres			20160	,	-	0	0	0	143	xml_in	xml_out	xml_recv	xml_send	-	-
+type_schema_name	type_name	byte_length	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_schema	subscripting_handler_fn	element_type_schema	element_type	domain_array_dimensions	collation_schema	collation	array_type_schema	array_type	text_conversion_input_fn_schema	text_conversion_input_fn	text_conversion_output_fn_schema	text_conversion_output_fn	binary_conversion_input_fn_schema	binary_conversion_input_fn	binary_conversion_output_fn_schema	binary_conversion_output_fn	type_modifier_input_fn_schema	type_modifier_input_fn	type_modifier_output_fn_schema	type_modifier_output_fn	custom_analyze_fn_schema	custom_analyze_fn
+information_schema	__pg_foreign_data_wrappers	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	_pg_foreign_data_wrappers	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	__pg_foreign_servers	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	_pg_foreign_servers	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	__pg_foreign_table_columns	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	_pg_foreign_table_columns	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	__pg_foreign_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	_pg_foreign_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	__pg_user_mappings	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	_pg_user_mappings	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_administrable_role_authorizations	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	administrable_role_authorizations	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_applicable_roles	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	applicable_roles	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_attributes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	attributes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_cardinal_number	-1	postgres			19968	,	pg_catalog	array_subscript_handler	information_schema	cardinal_number	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_character_data	-1	postgres			19968	,	pg_catalog	array_subscript_handler	information_schema	character_data	0	pg_catalog	C			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_character_sets	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	character_sets	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_check_constraint_routine_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	check_constraint_routine_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_check_constraints	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	check_constraints	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_collation_character_set_applicability	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	collation_character_set_applicability	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_collations	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	collations	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_column_column_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	column_column_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_column_domain_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	column_domain_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_column_options	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	column_options	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_column_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	column_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_column_udt_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	column_udt_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_columns	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	columns	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_constraint_column_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	constraint_column_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_constraint_table_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	constraint_table_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_data_type_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	data_type_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_domain_constraints	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	domain_constraints	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_domain_udt_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	domain_udt_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_domains	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	domains	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_element_types	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	element_types	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_enabled_roles	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	enabled_roles	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_data_wrapper_options	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_data_wrapper_options	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_data_wrappers	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_data_wrappers	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_server_options	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_server_options	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_servers	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_servers	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_table_options	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_table_options	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_foreign_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	foreign_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_information_schema_catalog_name	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	information_schema_catalog_name	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_key_column_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	key_column_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_parameters	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	parameters	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_referential_constraints	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	referential_constraints	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_role_column_grants	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	role_column_grants	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_role_routine_grants	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	role_routine_grants	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_role_table_grants	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	role_table_grants	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_role_udt_grants	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	role_udt_grants	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_role_usage_grants	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	role_usage_grants	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routine_column_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routine_column_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routine_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routine_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routine_routine_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routine_routine_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routine_sequence_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routine_sequence_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routine_table_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routine_table_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_routines	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	routines	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_schemata	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	schemata	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sequences	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	sequences	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sql_features	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	sql_features	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sql_identifier	-1	postgres			19968	,	pg_catalog	array_subscript_handler	information_schema	sql_identifier	0	pg_catalog	C			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sql_implementation_info	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	sql_implementation_info	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sql_parts	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	sql_parts	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_sql_sizing	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	sql_sizing	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_table_constraints	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	table_constraints	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_table_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	table_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_time_stamp	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	time_stamp	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_transforms	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	transforms	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_triggered_update_columns	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	triggered_update_columns	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_triggers	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	triggers	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_udt_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	udt_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_usage_privileges	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	usage_privileges	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_user_defined_types	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	user_defined_types	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_user_mapping_options	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	user_mapping_options	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_user_mappings	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	user_mappings	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_view_column_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	view_column_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_view_routine_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	view_routine_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_view_table_usage	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	view_table_usage	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_views	-1	postgres			20224	,	pg_catalog	array_subscript_handler	information_schema	views	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+information_schema	_yes_or_no	-1	postgres			19968	,	pg_catalog	array_subscript_handler	information_schema	yes_or_no	0	pg_catalog	C			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_aclitem	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	aclitem	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_bit	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	bit	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	bittypmodin	pg_catalog	bittypmodout	pg_catalog	array_typanalyze
+pg_catalog	_bool	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	bool	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_box	-1	postgres			20224	;	pg_catalog	array_subscript_handler	pg_catalog	box	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_bpchar	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	bpchar	0	pg_catalog	default			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	bpchartypmodin	pg_catalog	bpchartypmodout	pg_catalog	array_typanalyze
+pg_catalog	_bytea	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	bytea	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_char	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	char	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_cid	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	cid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_cidr	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	cidr	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_circle	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	circle	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_cstring	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	cstring	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_date	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	date	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_datemultirange	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	datemultirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_daterange	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	daterange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_float4	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	float4	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_float8	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	float8	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_gtsvector	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	gtsvector	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_inet	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	inet	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int2	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	int2	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int2vector	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	int2vector	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int4	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	int4	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int4multirange	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	int4multirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int4range	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	int4range	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int8	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	int8	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int8multirange	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	int8multirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_int8range	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	int8range	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_interval	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	interval	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	intervaltypmodin	pg_catalog	intervaltypmodout	pg_catalog	array_typanalyze
+pg_catalog	_json	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	json	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_jsonb	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	jsonb	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_jsonpath	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	jsonpath	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_line	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	line	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_lseg	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	lseg	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_macaddr	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	macaddr	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_macaddr8	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	macaddr8	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_money	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	money	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_name	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	name	0	pg_catalog	C			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_numeric	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	numeric	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	numerictypmodin	pg_catalog	numerictypmodout	pg_catalog	array_typanalyze
+pg_catalog	_nummultirange	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	nummultirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_numrange	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	numrange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_oid	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	oid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_oidvector	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	oidvector	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_path	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	path	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_aggregate	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_aggregate	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_am	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_am	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_amop	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_amop	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_amproc	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_amproc	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_attrdef	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_attrdef	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_attribute	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_attribute	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_auth_members	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_auth_members	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_authid	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_authid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_available_extension_versions	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_available_extension_versions	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_available_extensions	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_available_extensions	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_backend_memory_contexts	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_backend_memory_contexts	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_cast	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_cast	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_class	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_class	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_collation	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_collation	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_config	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_config	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_constraint	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_constraint	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_conversion	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_conversion	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_cursors	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_cursors	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_database	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_database	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_db_role_setting	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_db_role_setting	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_default_acl	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_default_acl	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_depend	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_depend	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_description	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_description	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_enum	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_enum	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_event_trigger	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_event_trigger	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_extension	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_extension	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_file_settings	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_file_settings	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_foreign_data_wrapper	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_foreign_data_wrapper	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_foreign_server	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_foreign_server	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_foreign_table	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_foreign_table	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_group	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_group	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_hba_file_rules	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_hba_file_rules	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_index	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_index	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_inherits	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_inherits	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_init_privs	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_init_privs	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_language	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_language	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_largeobject	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_largeobject	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_largeobject_metadata	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_largeobject_metadata	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_locks	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_locks	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_lsn	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_lsn	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_matviews	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_matviews	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_namespace	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_namespace	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_opclass	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_opclass	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_operator	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_operator	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_opfamily	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_opfamily	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_partitioned_table	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_partitioned_table	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_policies	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_policies	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_policy	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_policy	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_prepared_statements	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_prepared_statements	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_prepared_xacts	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_prepared_xacts	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_proc	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_proc	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_publication	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_publication	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_publication_rel	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_publication_rel	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_publication_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_publication_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_range	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_range	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_replication_origin	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_replication_origin	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_replication_origin_status	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_replication_origin_status	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_replication_slots	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_replication_slots	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_rewrite	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_rewrite	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_roles	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_roles	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_rules	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_rules	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_seclabel	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_seclabel	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_seclabels	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_seclabels	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_sequence	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_sequence	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_sequences	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_sequences	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_settings	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_settings	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_shadow	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_shadow	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_shdepend	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_shdepend	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_shdescription	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_shdescription	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_shmem_allocations	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_shmem_allocations	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_shseclabel	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_shseclabel	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_snapshot	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_snapshot	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_activity	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_activity	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_all_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_all_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_all_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_all_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_archiver	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_archiver	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_bgwriter	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_bgwriter	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_database	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_database	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_database_conflicts	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_database_conflicts	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_gssapi	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_gssapi	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_analyze	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_analyze	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_basebackup	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_basebackup	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_cluster	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_cluster	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_copy	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_copy	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_create_index	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_create_index	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_progress_vacuum	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_progress_vacuum	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_replication	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_replication	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_replication_slots	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_replication_slots	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_slru	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_slru	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_ssl	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_ssl	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_subscription	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_subscription	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_sys_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_sys_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_sys_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_sys_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_user_functions	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_user_functions	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_user_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_user_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_user_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_user_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_wal	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_wal	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_wal_receiver	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_wal_receiver	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_xact_all_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_xact_all_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_xact_sys_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_xact_sys_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_xact_user_functions	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_xact_user_functions	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stat_xact_user_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stat_xact_user_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_all_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_all_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_all_sequences	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_all_sequences	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_all_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_all_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_sys_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_sys_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_sys_sequences	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_sys_sequences	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_sys_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_sys_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_user_indexes	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_user_indexes	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_user_sequences	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_user_sequences	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statio_user_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statio_user_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statistic	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statistic	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statistic_ext	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statistic_ext	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_statistic_ext_data	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_statistic_ext_data	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stats	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stats	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stats_ext	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stats_ext	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_stats_ext_exprs	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_stats_ext_exprs	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_subscription	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_subscription	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_subscription_rel	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_subscription_rel	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_tables	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_tables	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_tablespace	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_tablespace	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_timezone_abbrevs	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_timezone_abbrevs	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_timezone_names	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_timezone_names	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_transform	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_transform	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_trigger	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_trigger	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_ts_config	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_ts_config	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_ts_config_map	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_ts_config_map	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_ts_dict	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_ts_dict	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_ts_parser	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_ts_parser	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_ts_template	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_ts_template	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_type	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_type	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_user	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_user	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_user_mapping	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_user_mapping	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_user_mappings	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_user_mappings	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_pg_views	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	pg_views	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_point	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	point	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_polygon	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	polygon	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_refcursor	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	refcursor	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regclass	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regclass	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regcollation	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regcollation	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regconfig	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regconfig	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regdictionary	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regdictionary	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regnamespace	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regnamespace	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regoper	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regoper	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regoperator	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regoperator	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regproc	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regproc	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regprocedure	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regprocedure	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regrole	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regrole	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_regtype	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	regtype	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_text	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	text	0	pg_catalog	default			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tid	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	tid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_time	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	time	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	timetypmodin	pg_catalog	timetypmodout	pg_catalog	array_typanalyze
+pg_catalog	_timestamp	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	timestamp	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	timestamptypmodin	pg_catalog	timestamptypmodout	pg_catalog	array_typanalyze
+pg_catalog	_timestamptz	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	timestamptz	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	timestamptztypmodin	pg_catalog	timestamptztypmodout	pg_catalog	array_typanalyze
+pg_catalog	_timetz	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	timetz	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	timetztypmodin	pg_catalog	timetztypmodout	pg_catalog	array_typanalyze
+pg_catalog	_tsmultirange	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	tsmultirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tsquery	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	tsquery	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tsrange	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	tsrange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tstzmultirange	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	tstzmultirange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tstzrange	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	tstzrange	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_tsvector	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	tsvector	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_txid_snapshot	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	txid_snapshot	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_uuid	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	uuid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_varbit	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	varbit	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	varbittypmodin	pg_catalog	varbittypmodout	pg_catalog	array_typanalyze
+pg_catalog	_varchar	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	varchar	0	pg_catalog	default			pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send	pg_catalog	varchartypmodin	pg_catalog	varchartypmodout	pg_catalog	array_typanalyze
+pg_catalog	_xid	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	xid	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_xid8	-1	postgres			20224	,	pg_catalog	array_subscript_handler	pg_catalog	xid8	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	_xml	-1	postgres			19968	,	pg_catalog	array_subscript_handler	pg_catalog	xml	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	aclitem	12	postgres			17088	,					0			pg_catalog	_aclitem	pg_catalog	aclitemin	pg_catalog	aclitemout										
+pg_catalog	bit	-1	postgres			20176	,					0			pg_catalog	_bit	pg_catalog	bit_in	pg_catalog	bit_out	pg_catalog	bit_recv	pg_catalog	bit_send	pg_catalog	bittypmodin	pg_catalog	bittypmodout		
+pg_catalog	bool	1	postgres			28688	,					0			pg_catalog	_bool	pg_catalog	boolin	pg_catalog	boolout	pg_catalog	boolrecv	pg_catalog	boolsend						
+pg_catalog	box	32	postgres			17232	;	pg_catalog	raw_array_subscript_handler	pg_catalog	point	0			pg_catalog	_box	pg_catalog	box_in	pg_catalog	box_out	pg_catalog	box_recv	pg_catalog	box_send						
+pg_catalog	bpchar	-1	postgres			20128	,					0	pg_catalog	default	pg_catalog	_bpchar	pg_catalog	bpcharin	pg_catalog	bpcharout	pg_catalog	bpcharrecv	pg_catalog	bpcharsend	pg_catalog	bpchartypmodin	pg_catalog	bpchartypmodout		
+pg_catalog	bytea	-1	postgres			20160	,					0			pg_catalog	_bytea	pg_catalog	byteain	pg_catalog	byteaout	pg_catalog	bytearecv	pg_catalog	byteasend						
+pg_catalog	char	1	postgres			20640	,					0			pg_catalog	_char	pg_catalog	charin	pg_catalog	charout	pg_catalog	charrecv	pg_catalog	charsend						
+pg_catalog	cid	4	postgres			21184	,					0			pg_catalog	_cid	pg_catalog	cidin	pg_catalog	cidout	pg_catalog	cidrecv	pg_catalog	cidsend						
+pg_catalog	cidr	-1	postgres			19040	,					0			pg_catalog	_cidr	pg_catalog	cidr_in	pg_catalog	cidr_out	pg_catalog	cidr_recv	pg_catalog	cidr_send						
+pg_catalog	circle	24	postgres			17232	,					0			pg_catalog	_circle	pg_catalog	circle_in	pg_catalog	circle_out	pg_catalog	circle_recv	pg_catalog	circle_send						
+pg_catalog	date	4	postgres			21040	,					0			pg_catalog	_date	pg_catalog	date_in	pg_catalog	date_out	pg_catalog	date_recv	pg_catalog	date_send						
+pg_catalog	float4	4	postgres			21104	,					0			pg_catalog	_float4	pg_catalog	float4in	pg_catalog	float4out	pg_catalog	float4recv	pg_catalog	float4send						
+pg_catalog	float8	8	postgres			29552	,					0			pg_catalog	_float8	pg_catalog	float8in	pg_catalog	float8out	pg_catalog	float8recv	pg_catalog	float8send						
+pg_catalog	gtsvector	-1	postgres			17088	,					0			pg_catalog	_gtsvector	pg_catalog	gtsvectorin	pg_catalog	gtsvectorout										
+pg_catalog	inet	-1	postgres			27232	,					0			pg_catalog	_inet	pg_catalog	inet_in	pg_catalog	inet_out	pg_catalog	inet_recv	pg_catalog	inet_send						
+pg_catalog	int2	2	postgres			20848	,					0			pg_catalog	_int2	pg_catalog	int2in	pg_catalog	int2out	pg_catalog	int2recv	pg_catalog	int2send						
+pg_catalog	int2vector	-1	postgres			16896	,	pg_catalog	array_subscript_handler	pg_catalog	int2	0			pg_catalog	_int2vector	pg_catalog	int2vectorin	pg_catalog	int2vectorout	pg_catalog	int2vectorrecv	pg_catalog	int2vectorsend						
+pg_catalog	int4	4	postgres			21104	,					0			pg_catalog	_int4	pg_catalog	int4in	pg_catalog	int4out	pg_catalog	int4recv	pg_catalog	int4send						
+pg_catalog	int8	8	postgres			21360	,					0			pg_catalog	_int8	pg_catalog	int8in	pg_catalog	int8out	pg_catalog	int8recv	pg_catalog	int8send						
+pg_catalog	interval	16	postgres			25520	,					0			pg_catalog	_interval	pg_catalog	interval_in	pg_catalog	interval_out	pg_catalog	interval_recv	pg_catalog	interval_send	pg_catalog	intervaltypmodin	pg_catalog	intervaltypmodout		
+pg_catalog	json	-1	postgres			20160	,					0			pg_catalog	_json	pg_catalog	json_in	pg_catalog	json_out	pg_catalog	json_recv	pg_catalog	json_send						
+pg_catalog	jsonb	-1	postgres			20160	,	pg_catalog	jsonb_subscript_handler			0			pg_catalog	_jsonb	pg_catalog	jsonb_in	pg_catalog	jsonb_out	pg_catalog	jsonb_recv	pg_catalog	jsonb_send						
+pg_catalog	jsonpath	-1	postgres			20160	,					0			pg_catalog	_jsonpath	pg_catalog	jsonpath_in	pg_catalog	jsonpath_out	pg_catalog	jsonpath_recv	pg_catalog	jsonpath_send						
+pg_catalog	line	24	postgres			17232	,	pg_catalog	raw_array_subscript_handler	pg_catalog	float8	0			pg_catalog	_line	pg_catalog	line_in	pg_catalog	line_out	pg_catalog	line_recv	pg_catalog	line_send						
+pg_catalog	lseg	32	postgres			17232	,	pg_catalog	raw_array_subscript_handler	pg_catalog	point	0			pg_catalog	_lseg	pg_catalog	lseg_in	pg_catalog	lseg_out	pg_catalog	lseg_recv	pg_catalog	lseg_send						
+pg_catalog	macaddr	6	postgres			17088	,					0			pg_catalog	_macaddr	pg_catalog	macaddr_in	pg_catalog	macaddr_out	pg_catalog	macaddr_recv	pg_catalog	macaddr_send						
+pg_catalog	macaddr8	8	postgres			17088	,					0			pg_catalog	_macaddr8	pg_catalog	macaddr8_in	pg_catalog	macaddr8_out	pg_catalog	macaddr8_recv	pg_catalog	macaddr8_send						
+pg_catalog	money	8	postgres			21360	,					0			pg_catalog	_money	pg_catalog	cash_in	pg_catalog	cash_out	pg_catalog	cash_recv	pg_catalog	cash_send						
+pg_catalog	name	64	postgres			16544	,	pg_catalog	raw_array_subscript_handler	pg_catalog	char	0	pg_catalog	C	pg_catalog	_name	pg_catalog	namein	pg_catalog	nameout	pg_catalog	namerecv	pg_catalog	namesend						
+pg_catalog	numeric	-1	postgres			19056	,					0			pg_catalog	_numeric	pg_catalog	numeric_in	pg_catalog	numeric_out	pg_catalog	numeric_recv	pg_catalog	numeric_send	pg_catalog	numerictypmodin	pg_catalog	numerictypmodout		
+pg_catalog	oid	4	postgres			29296	,					0			pg_catalog	_oid	pg_catalog	oidin	pg_catalog	oidout	pg_catalog	oidrecv	pg_catalog	oidsend						
+pg_catalog	oidvector	-1	postgres			16896	,	pg_catalog	array_subscript_handler	pg_catalog	oid	0			pg_catalog	_oidvector	pg_catalog	oidvectorin	pg_catalog	oidvectorout	pg_catalog	oidvectorrecv	pg_catalog	oidvectorsend						
+pg_catalog	path	-1	postgres			20304	,					0			pg_catalog	_path	pg_catalog	path_in	pg_catalog	path_out	pg_catalog	path_recv	pg_catalog	path_send						
+pg_catalog	pg_brin_bloom_summary	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	brin_bloom_summary_in	pg_catalog	brin_bloom_summary_out	pg_catalog	brin_bloom_summary_recv	pg_catalog	brin_bloom_summary_send						
+pg_catalog	pg_brin_minmax_multi_summary	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	brin_minmax_multi_summary_in	pg_catalog	brin_minmax_multi_summary_out	pg_catalog	brin_minmax_multi_summary_recv	pg_catalog	brin_minmax_multi_summary_send						
+pg_catalog	pg_dependencies	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	pg_dependencies_in	pg_catalog	pg_dependencies_out	pg_catalog	pg_dependencies_recv	pg_catalog	pg_dependencies_send						
+pg_catalog	pg_lsn	8	postgres			21440	,					0			pg_catalog	_pg_lsn	pg_catalog	pg_lsn_in	pg_catalog	pg_lsn_out	pg_catalog	pg_lsn_recv	pg_catalog	pg_lsn_send						
+pg_catalog	pg_mcv_list	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	pg_mcv_list_in	pg_catalog	pg_mcv_list_out	pg_catalog	pg_mcv_list_recv	pg_catalog	pg_mcv_list_send						
+pg_catalog	pg_ndistinct	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	pg_ndistinct_in	pg_catalog	pg_ndistinct_out	pg_catalog	pg_ndistinct_recv	pg_catalog	pg_ndistinct_send						
+pg_catalog	pg_node_tree	-1	postgres			20128	,					0	pg_catalog	default			pg_catalog	pg_node_tree_in	pg_catalog	pg_node_tree_out	pg_catalog	pg_node_tree_recv	pg_catalog	pg_node_tree_send						
+pg_catalog	pg_snapshot	-1	postgres			20416	,					0			pg_catalog	_pg_snapshot	pg_catalog	pg_snapshot_in	pg_catalog	pg_snapshot_out	pg_catalog	pg_snapshot_recv	pg_catalog	pg_snapshot_send						
+pg_catalog	point	16	postgres			17232	,	pg_catalog	raw_array_subscript_handler	pg_catalog	float8	0			pg_catalog	_point	pg_catalog	point_in	pg_catalog	point_out	pg_catalog	point_recv	pg_catalog	point_send						
+pg_catalog	polygon	-1	postgres			20304	,					0			pg_catalog	_polygon	pg_catalog	poly_in	pg_catalog	poly_out	pg_catalog	poly_recv	pg_catalog	poly_send						
+pg_catalog	refcursor	-1	postgres			20160	,					0			pg_catalog	_refcursor	pg_catalog	textin	pg_catalog	textout	pg_catalog	textrecv	pg_catalog	textsend						
+pg_catalog	regclass	4	postgres			21104	,					0			pg_catalog	_regclass	pg_catalog	regclassin	pg_catalog	regclassout	pg_catalog	regclassrecv	pg_catalog	regclasssend						
+pg_catalog	regcollation	4	postgres			21104	,					0			pg_catalog	_regcollation	pg_catalog	regcollationin	pg_catalog	regcollationout	pg_catalog	regcollationrecv	pg_catalog	regcollationsend						
+pg_catalog	regconfig	4	postgres			21104	,					0			pg_catalog	_regconfig	pg_catalog	regconfigin	pg_catalog	regconfigout	pg_catalog	regconfigrecv	pg_catalog	regconfigsend						
+pg_catalog	regdictionary	4	postgres			21104	,					0			pg_catalog	_regdictionary	pg_catalog	regdictionaryin	pg_catalog	regdictionaryout	pg_catalog	regdictionaryrecv	pg_catalog	regdictionarysend						
+pg_catalog	regnamespace	4	postgres			21104	,					0			pg_catalog	_regnamespace	pg_catalog	regnamespacein	pg_catalog	regnamespaceout	pg_catalog	regnamespacerecv	pg_catalog	regnamespacesend						
+pg_catalog	regoper	4	postgres			21104	,					0			pg_catalog	_regoper	pg_catalog	regoperin	pg_catalog	regoperout	pg_catalog	regoperrecv	pg_catalog	regopersend						
+pg_catalog	regoperator	4	postgres			21104	,					0			pg_catalog	_regoperator	pg_catalog	regoperatorin	pg_catalog	regoperatorout	pg_catalog	regoperatorrecv	pg_catalog	regoperatorsend						
+pg_catalog	regproc	4	postgres			21104	,					0			pg_catalog	_regproc	pg_catalog	regprocin	pg_catalog	regprocout	pg_catalog	regprocrecv	pg_catalog	regprocsend						
+pg_catalog	regprocedure	4	postgres			21104	,					0			pg_catalog	_regprocedure	pg_catalog	regprocedurein	pg_catalog	regprocedureout	pg_catalog	regprocedurerecv	pg_catalog	regproceduresend						
+pg_catalog	regrole	4	postgres			21104	,					0			pg_catalog	_regrole	pg_catalog	regrolein	pg_catalog	regroleout	pg_catalog	regrolerecv	pg_catalog	regrolesend						
+pg_catalog	regtype	4	postgres			21104	,					0			pg_catalog	_regtype	pg_catalog	regtypein	pg_catalog	regtypeout	pg_catalog	regtyperecv	pg_catalog	regtypesend						
+pg_catalog	text	-1	postgres			28320	,					0	pg_catalog	default	pg_catalog	_text	pg_catalog	textin	pg_catalog	textout	pg_catalog	textrecv	pg_catalog	textsend						
+pg_catalog	tid	6	postgres			16832	,					0			pg_catalog	_tid	pg_catalog	tidin	pg_catalog	tidout	pg_catalog	tidrecv	pg_catalog	tidsend						
+pg_catalog	time	8	postgres			21296	,					0			pg_catalog	_time	pg_catalog	time_in	pg_catalog	time_out	pg_catalog	time_recv	pg_catalog	time_send	pg_catalog	timetypmodin	pg_catalog	timetypmodout		
+pg_catalog	timestamp	8	postgres			21296	,					0			pg_catalog	_timestamp	pg_catalog	timestamp_in	pg_catalog	timestamp_out	pg_catalog	timestamp_recv	pg_catalog	timestamp_send	pg_catalog	timestamptypmodin	pg_catalog	timestamptypmodout		
+pg_catalog	timestamptz	8	postgres			29488	,					0			pg_catalog	_timestamptz	pg_catalog	timestamptz_in	pg_catalog	timestamptz_out	pg_catalog	timestamptz_recv	pg_catalog	timestamptz_send	pg_catalog	timestamptztypmodin	pg_catalog	timestamptztypmodout		
+pg_catalog	timetz	12	postgres			17200	,					0			pg_catalog	_timetz	pg_catalog	timetz_in	pg_catalog	timetz_out	pg_catalog	timetz_recv	pg_catalog	timetz_send	pg_catalog	timetztypmodin	pg_catalog	timetztypmodout		
+pg_catalog	tsquery	-1	postgres			17088	,					0			pg_catalog	_tsquery	pg_catalog	tsqueryin	pg_catalog	tsqueryout	pg_catalog	tsqueryrecv	pg_catalog	tsquerysend						
+pg_catalog	tsvector	-1	postgres			20160	,					0			pg_catalog	_tsvector	pg_catalog	tsvectorin	pg_catalog	tsvectorout	pg_catalog	tsvectorrecv	pg_catalog	tsvectorsend					pg_catalog	ts_typanalyze
+pg_catalog	txid_snapshot	-1	postgres			20416	,					0			pg_catalog	_txid_snapshot	pg_catalog	txid_snapshot_in	pg_catalog	txid_snapshot_out	pg_catalog	txid_snapshot_recv	pg_catalog	txid_snapshot_send						
+pg_catalog	uuid	16	postgres			16576	,					0			pg_catalog	_uuid	pg_catalog	uuid_in	pg_catalog	uuid_out	pg_catalog	uuid_recv	pg_catalog	uuid_send						
+pg_catalog	varbit	-1	postgres			28368	,					0			pg_catalog	_varbit	pg_catalog	varbit_in	pg_catalog	varbit_out	pg_catalog	varbit_recv	pg_catalog	varbit_send	pg_catalog	varbittypmodin	pg_catalog	varbittypmodout		
+pg_catalog	varchar	-1	postgres			20128	,					0	pg_catalog	default	pg_catalog	_varchar	pg_catalog	varcharin	pg_catalog	varcharout	pg_catalog	varcharrecv	pg_catalog	varcharsend	pg_catalog	varchartypmodin	pg_catalog	varchartypmodout		
+pg_catalog	xid	4	postgres			21184	,					0			pg_catalog	_xid	pg_catalog	xidin	pg_catalog	xidout	pg_catalog	xidrecv	pg_catalog	xidsend						
+pg_catalog	xid8	8	postgres			21440	,					0			pg_catalog	_xid8	pg_catalog	xid8in	pg_catalog	xid8out	pg_catalog	xid8recv	pg_catalog	xid8send						
+pg_catalog	xml	-1	postgres			20160	,					0			pg_catalog	_xml	pg_catalog	xml_in	pg_catalog	xml_out	pg_catalog	xml_recv	pg_catalog	xml_send						

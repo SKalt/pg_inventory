@@ -33,7 +33,7 @@ Each SQL query is tested against a number of example databases.
 ### Database Object Kinds
 
 - [ ] [ACCESS_METHOD](./db_object_kind/ACCESS_METHOD/)
-- [~] [AGGREGATE](./db_object_kind/AGGREGATE/)
+- [x] [AGGREGATE](./db_object_kind/AGGREGATE/) <!-- might be missing some function information? -->
 - [x] [CAST](./db_object_kind/CAST/)
 - [x] [COLLATION](./db_object_kind/COLLATION/)
 - [x] [COLUMN](./db_object_kind/COLUMN/README.md)
@@ -49,12 +49,12 @@ Each SQL query is tested against a number of example databases.
 - [x] [INDEX](./db_object_kind/INDEX/)
 - [x] [LANGUAGE](./db_object_kind/LANGUAGE/)
 - [x] [MATERIALIZED_VIEW](./db_object_kind/MATERIALIZED_VIEW/)
-- [ ] [OPERATOR](./db_object_kind/OPERATOR/)
+- [x] [OPERATOR](./db_object_kind/OPERATOR/)
 - [ ] [OPERATOR_CLASS](./db_object_kind/OPERATOR_CLASS/)
 - [ ] [OPERATOR_FAMILY](./db_object_kind/OPERATOR_FAMILY/)
 - [x] [POLICY](./db_object_kind/POLICY/)
 - [x] [PROCEDURE](./db_object_kind/PROCEDURE/)
-- [ ] [PUBLICATION](./db_object_kind/PUBLICATION/) <!--  for replication -->
+- [ ] [PUBLICATION](./db_object_kind/PUBLICATION/) <!-- for replication -->
 - [x] [ROLE](./db_object_kind/ROLE/)
 <!-- - [ ] [RULE](./db_object_kind/RULE/) not gonna support this -->
 - [x] [SCHEMA](./db_object_kind/SCHEMA/)
@@ -69,7 +69,7 @@ Each SQL query is tested against a number of example databases.
 - [ ] [TEXT_SEARCH_PARSER](./db_object_kind/TEXT_SEARCH_PARSER/)
 - [ ] [TEXT_SEARCH_TEMPLATE](./db_object_kind/TEXT_SEARCH_TEMPLATE/)
 - [ ] [TRANSFORM](./db_object_kind/TRANSFORM/)
-- [~] [TRIGGER](./db_object_kind/TRIGGER/) <!-- missing some, but psql also misses some triggers -->
-- [~] [TYPE](./db_object_kind/TYPE/) <!-- unable to recreate enum definitions -->
+- [x] [TRIGGER](./db_object_kind/TRIGGER/)
+- [x] [TYPE](./db_object_kind/TYPE/)
 - [x] [USER_MAPPING](./db_object_kind/USER_MAPPING/)
 - [x] [VIEW](./db_object_kind/VIEW/)

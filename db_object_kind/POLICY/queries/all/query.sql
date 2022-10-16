@@ -1,8 +1,6 @@
 SELECT
     ns.nspname AS schema_name
-  , ns.oid AS schema_oid
   , tbl.relname AS table_name
-  , tbl.oid AS table_oid
   , policy_.polname AS policy_name
   , policy_.polcmd AS policy_cmd_type
     -- 'r' => SELECT

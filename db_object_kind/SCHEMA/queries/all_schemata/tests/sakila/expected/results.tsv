@@ -1,5 +1,5 @@
-schema_name	schema_oid	schema_owner_name	schema_owner_oid	schema_acl
-pg_toast	99	postgres	10	
-pg_catalog	11	postgres	10	{postgres=UC/postgres,=U/postgres}
-public	2200	postgres	10	{postgres=UC/postgres,=UC/postgres}
-information_schema	13403	postgres	10	{postgres=UC/postgres,=U/postgres}
+schema_name	schema_owner_name	schema_acl
+pg_toast	postgres	
+pg_catalog	postgres	{postgres=UC/postgres,=U/postgres}
+public	postgres	{postgres=UC/postgres,=UC/postgres}
+information_schema	postgres	{postgres=UC/postgres,=U/postgres}

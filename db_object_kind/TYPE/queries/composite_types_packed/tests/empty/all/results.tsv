@@ -1,204 +1,204 @@
-type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid	relation_oid	relation_name
-13403	information_schema	13705	_pg_foreign_data_wrappers	-1	10	postgres			20256	,	-	0	0	0	13704	record_in	record_out	record_recv	record_send	-	-	13703	_pg_foreign_data_wrappers
-13403	information_schema	13717	_pg_foreign_servers	-1	10	postgres			20256	,	-	0	0	0	13716	record_in	record_out	record_recv	record_send	-	-	13715	_pg_foreign_servers
-13403	information_schema	13696	_pg_foreign_table_columns	-1	10	postgres			20256	,	-	0	0	0	13695	record_in	record_out	record_recv	record_send	-	-	13694	_pg_foreign_table_columns
-13403	information_schema	13730	_pg_foreign_tables	-1	10	postgres			20256	,	-	0	0	0	13729	record_in	record_out	record_recv	record_send	-	-	13728	_pg_foreign_tables
-13403	information_schema	13743	_pg_user_mappings	-1	10	postgres			20256	,	-	0	0	0	13742	record_in	record_out	record_recv	record_send	-	-	13741	_pg_user_mappings
-13403	information_schema	13439	administrable_role_authorizations	-1	10	postgres			20256	,	-	0	0	0	13438	record_in	record_out	record_recv	record_send	-	-	13437	administrable_role_authorizations
-13403	information_schema	13434	applicable_roles	-1	10	postgres			20256	,	-	0	0	0	13433	record_in	record_out	record_recv	record_send	-	-	13432	applicable_roles
-13403	information_schema	13443	attributes	-1	10	postgres			20256	,	-	0	0	0	13442	record_in	record_out	record_recv	record_send	-	-	13441	attributes
-13403	information_schema	13448	character_sets	-1	10	postgres			20256	,	-	0	0	0	13447	record_in	record_out	record_recv	record_send	-	-	13446	character_sets
-13403	information_schema	13453	check_constraint_routine_usage	-1	10	postgres			20256	,	-	0	0	0	13452	record_in	record_out	record_recv	record_send	-	-	13451	check_constraint_routine_usage
-13403	information_schema	13458	check_constraints	-1	10	postgres			20256	,	-	0	0	0	13457	record_in	record_out	record_recv	record_send	-	-	13456	check_constraints
-13403	information_schema	13468	collation_character_set_applicability	-1	10	postgres			20256	,	-	0	0	0	13467	record_in	record_out	record_recv	record_send	-	-	13466	collation_character_set_applicability
-13403	information_schema	13463	collations	-1	10	postgres			20256	,	-	0	0	0	13462	record_in	record_out	record_recv	record_send	-	-	13461	collations
-13403	information_schema	13473	column_column_usage	-1	10	postgres			20256	,	-	0	0	0	13472	record_in	record_out	record_recv	record_send	-	-	13471	column_column_usage
-13403	information_schema	13478	column_domain_usage	-1	10	postgres			20256	,	-	0	0	0	13477	record_in	record_out	record_recv	record_send	-	-	13476	column_domain_usage
-13403	information_schema	13701	column_options	-1	10	postgres			20256	,	-	0	0	0	13700	record_in	record_out	record_recv	record_send	-	-	13699	column_options
-13403	information_schema	13483	column_privileges	-1	10	postgres			20256	,	-	0	0	0	13482	record_in	record_out	record_recv	record_send	-	-	13481	column_privileges
-13403	information_schema	13488	column_udt_usage	-1	10	postgres			20256	,	-	0	0	0	13487	record_in	record_out	record_recv	record_send	-	-	13486	column_udt_usage
-13403	information_schema	13493	columns	-1	10	postgres			20256	,	-	0	0	0	13492	record_in	record_out	record_recv	record_send	-	-	13491	columns
-13403	information_schema	13498	constraint_column_usage	-1	10	postgres			20256	,	-	0	0	0	13497	record_in	record_out	record_recv	record_send	-	-	13496	constraint_column_usage
-13403	information_schema	13503	constraint_table_usage	-1	10	postgres			20256	,	-	0	0	0	13502	record_in	record_out	record_recv	record_send	-	-	13501	constraint_table_usage
-13403	information_schema	13686	data_type_privileges	-1	10	postgres			20256	,	-	0	0	0	13685	record_in	record_out	record_recv	record_send	-	-	13684	data_type_privileges
-13403	information_schema	13508	domain_constraints	-1	10	postgres			20256	,	-	0	0	0	13507	record_in	record_out	record_recv	record_send	-	-	13506	domain_constraints
-13403	information_schema	13513	domain_udt_usage	-1	10	postgres			20256	,	-	0	0	0	13512	record_in	record_out	record_recv	record_send	-	-	13511	domain_udt_usage
-13403	information_schema	13518	domains	-1	10	postgres			20256	,	-	0	0	0	13517	record_in	record_out	record_recv	record_send	-	-	13516	domains
-13403	information_schema	13691	element_types	-1	10	postgres			20256	,	-	0	0	0	13690	record_in	record_out	record_recv	record_send	-	-	13689	element_types
-13403	information_schema	13523	enabled_roles	-1	10	postgres			20256	,	-	0	0	0	13522	record_in	record_out	record_recv	record_send	-	-	13521	enabled_roles
-13403	information_schema	13709	foreign_data_wrapper_options	-1	10	postgres			20256	,	-	0	0	0	13708	record_in	record_out	record_recv	record_send	-	-	13707	foreign_data_wrapper_options
-13403	information_schema	13713	foreign_data_wrappers	-1	10	postgres			20256	,	-	0	0	0	13712	record_in	record_out	record_recv	record_send	-	-	13711	foreign_data_wrappers
-13403	information_schema	13722	foreign_server_options	-1	10	postgres			20256	,	-	0	0	0	13721	record_in	record_out	record_recv	record_send	-	-	13720	foreign_server_options
-13403	information_schema	13726	foreign_servers	-1	10	postgres			20256	,	-	0	0	0	13725	record_in	record_out	record_recv	record_send	-	-	13724	foreign_servers
-13403	information_schema	13735	foreign_table_options	-1	10	postgres			20256	,	-	0	0	0	13734	record_in	record_out	record_recv	record_send	-	-	13733	foreign_table_options
-13403	information_schema	13739	foreign_tables	-1	10	postgres			20256	,	-	0	0	0	13738	record_in	record_out	record_recv	record_send	-	-	13737	foreign_tables
-13403	information_schema	13425	information_schema_catalog_name	-1	10	postgres			20256	,	-	0	0	0	13424	record_in	record_out	record_recv	record_send	-	-	13423	information_schema_catalog_name
-13403	information_schema	13527	key_column_usage	-1	10	postgres			20256	,	-	0	0	0	13526	record_in	record_out	record_recv	record_send	-	-	13525	key_column_usage
-13403	information_schema	13532	parameters	-1	10	postgres			20256	,	-	0	0	0	13531	record_in	record_out	record_recv	record_send	-	-	13530	parameters
-13403	information_schema	13537	referential_constraints	-1	10	postgres			20256	,	-	0	0	0	13536	record_in	record_out	record_recv	record_send	-	-	13535	referential_constraints
-13403	information_schema	13542	role_column_grants	-1	10	postgres			20256	,	-	0	0	0	13541	record_in	record_out	record_recv	record_send	-	-	13540	role_column_grants
-13403	information_schema	13556	role_routine_grants	-1	10	postgres			20256	,	-	0	0	0	13555	record_in	record_out	record_recv	record_send	-	-	13554	role_routine_grants
-13403	information_schema	13619	role_table_grants	-1	10	postgres			20256	,	-	0	0	0	13618	record_in	record_out	record_recv	record_send	-	-	13617	role_table_grants
-13403	information_schema	13648	role_udt_grants	-1	10	postgres			20256	,	-	0	0	0	13647	record_in	record_out	record_recv	record_send	-	-	13646	role_udt_grants
-13403	information_schema	13657	role_usage_grants	-1	10	postgres			20256	,	-	0	0	0	13656	record_in	record_out	record_recv	record_send	-	-	13655	role_usage_grants
-13403	information_schema	13546	routine_column_usage	-1	10	postgres			20256	,	-	0	0	0	13545	record_in	record_out	record_recv	record_send	-	-	13544	routine_column_usage
-13403	information_schema	13551	routine_privileges	-1	10	postgres			20256	,	-	0	0	0	13550	record_in	record_out	record_recv	record_send	-	-	13549	routine_privileges
-13403	information_schema	13560	routine_routine_usage	-1	10	postgres			20256	,	-	0	0	0	13559	record_in	record_out	record_recv	record_send	-	-	13558	routine_routine_usage
-13403	information_schema	13565	routine_sequence_usage	-1	10	postgres			20256	,	-	0	0	0	13564	record_in	record_out	record_recv	record_send	-	-	13563	routine_sequence_usage
-13403	information_schema	13570	routine_table_usage	-1	10	postgres			20256	,	-	0	0	0	13569	record_in	record_out	record_recv	record_send	-	-	13568	routine_table_usage
-13403	information_schema	13575	routines	-1	10	postgres			20256	,	-	0	0	0	13574	record_in	record_out	record_recv	record_send	-	-	13573	routines
-13403	information_schema	13580	schemata	-1	10	postgres			20256	,	-	0	0	0	13579	record_in	record_out	record_recv	record_send	-	-	13578	schemata
-13403	information_schema	13584	sequences	-1	10	postgres			20256	,	-	0	0	0	13583	record_in	record_out	record_recv	record_send	-	-	13582	sequences
-13403	information_schema	13589	sql_features	-1	10	postgres			20256	,	-	0	0	0	13588	record_in	record_out	record_recv	record_send	-	-	13587	sql_features
-13403	information_schema	13594	sql_implementation_info	-1	10	postgres			20256	,	-	0	0	0	13593	record_in	record_out	record_recv	record_send	-	-	13592	sql_implementation_info
-13403	information_schema	13599	sql_parts	-1	10	postgres			20256	,	-	0	0	0	13598	record_in	record_out	record_recv	record_send	-	-	13597	sql_parts
-13403	information_schema	13604	sql_sizing	-1	10	postgres			20256	,	-	0	0	0	13603	record_in	record_out	record_recv	record_send	-	-	13602	sql_sizing
-13403	information_schema	13609	table_constraints	-1	10	postgres			20256	,	-	0	0	0	13608	record_in	record_out	record_recv	record_send	-	-	13607	table_constraints
-13403	information_schema	13614	table_privileges	-1	10	postgres			20256	,	-	0	0	0	13613	record_in	record_out	record_recv	record_send	-	-	13612	table_privileges
-13403	information_schema	13623	tables	-1	10	postgres			20256	,	-	0	0	0	13622	record_in	record_out	record_recv	record_send	-	-	13621	tables
-13403	information_schema	13628	transforms	-1	10	postgres			20256	,	-	0	0	0	13627	record_in	record_out	record_recv	record_send	-	-	13626	transforms
-13403	information_schema	13633	triggered_update_columns	-1	10	postgres			20256	,	-	0	0	0	13632	record_in	record_out	record_recv	record_send	-	-	13631	triggered_update_columns
-13403	information_schema	13638	triggers	-1	10	postgres			20256	,	-	0	0	0	13637	record_in	record_out	record_recv	record_send	-	-	13636	triggers
-13403	information_schema	13643	udt_privileges	-1	10	postgres			20256	,	-	0	0	0	13642	record_in	record_out	record_recv	record_send	-	-	13641	udt_privileges
-13403	information_schema	13652	usage_privileges	-1	10	postgres			20256	,	-	0	0	0	13651	record_in	record_out	record_recv	record_send	-	-	13650	usage_privileges
-13403	information_schema	13661	user_defined_types	-1	10	postgres			20256	,	-	0	0	0	13660	record_in	record_out	record_recv	record_send	-	-	13659	user_defined_types
-13403	information_schema	13748	user_mapping_options	-1	10	postgres			20256	,	-	0	0	0	13747	record_in	record_out	record_recv	record_send	-	-	13746	user_mapping_options
-13403	information_schema	13753	user_mappings	-1	10	postgres			20256	,	-	0	0	0	13752	record_in	record_out	record_recv	record_send	-	-	13751	user_mappings
-13403	information_schema	13666	view_column_usage	-1	10	postgres			20256	,	-	0	0	0	13665	record_in	record_out	record_recv	record_send	-	-	13664	view_column_usage
-13403	information_schema	13671	view_routine_usage	-1	10	postgres			20256	,	-	0	0	0	13670	record_in	record_out	record_recv	record_send	-	-	13669	view_routine_usage
-13403	information_schema	13676	view_table_usage	-1	10	postgres			20256	,	-	0	0	0	13675	record_in	record_out	record_recv	record_send	-	-	13674	view_table_usage
-13403	information_schema	13681	views	-1	10	postgres			20256	,	-	0	0	0	13680	record_in	record_out	record_recv	record_send	-	-	13679	views
-11	pg_catalog	12027	pg_aggregate	-1	10	postgres			20256	,	-	0	0	0	12026	record_in	record_out	record_recv	record_send	-	-	2600	pg_aggregate
-11	pg_catalog	12015	pg_am	-1	10	postgres			20256	,	-	0	0	0	12014	record_in	record_out	record_recv	record_send	-	-	2601	pg_am
-11	pg_catalog	12017	pg_amop	-1	10	postgres			20256	,	-	0	0	0	12016	record_in	record_out	record_recv	record_send	-	-	2602	pg_amop
-11	pg_catalog	12019	pg_amproc	-1	10	postgres			20256	,	-	0	0	0	12018	record_in	record_out	record_recv	record_send	-	-	2603	pg_amproc
-11	pg_catalog	12001	pg_attrdef	-1	10	postgres			20256	,	-	0	0	0	12000	record_in	record_out	record_recv	record_send	-	-	2604	pg_attrdef
-11	pg_catalog	75	pg_attribute	-1	10	postgres			20256	,	-	0	0	0	270	record_in	record_out	record_recv	record_send	-	-	1249	pg_attribute
-11	pg_catalog	2843	pg_auth_members	-1	10	postgres			20256	,	-	0	0	0	12058	record_in	record_out	record_recv	record_send	-	-	1261	pg_auth_members
-11	pg_catalog	2842	pg_authid	-1	10	postgres			20256	,	-	0	0	0	12057	record_in	record_out	record_recv	record_send	-	-	1260	pg_authid
-11	pg_catalog	12304	pg_available_extension_versions	-1	10	postgres			20256	,	-	0	0	0	12303	record_in	record_out	record_recv	record_send	-	-	12302	pg_available_extension_versions
-11	pg_catalog	12300	pg_available_extensions	-1	10	postgres			20256	,	-	0	0	0	12299	record_in	record_out	record_recv	record_send	-	-	12298	pg_available_extensions
-11	pg_catalog	12353	pg_backend_memory_contexts	-1	10	postgres			20256	,	-	0	0	0	12352	record_in	record_out	record_recv	record_send	-	-	12351	pg_backend_memory_contexts
-11	pg_catalog	12043	pg_cast	-1	10	postgres			20256	,	-	0	0	0	12042	record_in	record_out	record_recv	record_send	-	-	2605	pg_cast
-11	pg_catalog	83	pg_class	-1	10	postgres			20256	,	-	0	0	0	273	record_in	record_out	record_recv	record_send	-	-	1259	pg_class
-11	pg_catalog	12095	pg_collation	-1	10	postgres			20256	,	-	0	0	0	12094	record_in	record_out	record_recv	record_send	-	-	3456	pg_collation
-11	pg_catalog	12345	pg_config	-1	10	postgres			20256	,	-	0	0	0	12344	record_in	record_out	record_recv	record_send	-	-	12343	pg_config
-11	pg_catalog	12003	pg_constraint	-1	10	postgres			20256	,	-	0	0	0	12002	record_in	record_out	record_recv	record_send	-	-	2606	pg_constraint
-11	pg_catalog	12049	pg_conversion	-1	10	postgres			20256	,	-	0	0	0	12048	record_in	record_out	record_recv	record_send	-	-	2607	pg_conversion
-11	pg_catalog	12296	pg_cursors	-1	10	postgres			20256	,	-	0	0	0	12295	record_in	record_out	record_recv	record_send	-	-	12294	pg_cursors
-11	pg_catalog	1248	pg_database	-1	10	postgres			20256	,	-	0	0	0	12052	record_in	record_out	record_recv	record_send	-	-	1262	pg_database
-11	pg_catalog	12054	pg_db_role_setting	-1	10	postgres			20256	,	-	0	0	0	12053	record_in	record_out	record_recv	record_send	-	-	2964	pg_db_role_setting
-11	pg_catalog	12088	pg_default_acl	-1	10	postgres			20256	,	-	0	0	0	12087	record_in	record_out	record_recv	record_send	-	-	826	pg_default_acl
-11	pg_catalog	12051	pg_depend	-1	10	postgres			20256	,	-	0	0	0	12050	record_in	record_out	record_recv	record_send	-	-	2608	pg_depend
-11	pg_catalog	12041	pg_description	-1	10	postgres			20256	,	-	0	0	0	12040	record_in	record_out	record_recv	record_send	-	-	2609	pg_description
-11	pg_catalog	12045	pg_enum	-1	10	postgres			20256	,	-	0	0	0	12044	record_in	record_out	record_recv	record_send	-	-	3501	pg_enum
-11	pg_catalog	12039	pg_event_trigger	-1	10	postgres			20256	,	-	0	0	0	12038	record_in	record_out	record_recv	record_send	-	-	3466	pg_event_trigger
-11	pg_catalog	12074	pg_extension	-1	10	postgres			20256	,	-	0	0	0	12073	record_in	record_out	record_recv	record_send	-	-	3079	pg_extension
-11	pg_catalog	12329	pg_file_settings	-1	10	postgres			20256	,	-	0	0	0	12328	record_in	record_out	record_recv	record_send	-	-	12327	pg_file_settings
-11	pg_catalog	12076	pg_foreign_data_wrapper	-1	10	postgres			20256	,	-	0	0	0	12075	record_in	record_out	record_recv	record_send	-	-	2328	pg_foreign_data_wrapper
-11	pg_catalog	12078	pg_foreign_server	-1	10	postgres			20256	,	-	0	0	0	12077	record_in	record_out	record_recv	record_send	-	-	1417	pg_foreign_server
-11	pg_catalog	12082	pg_foreign_table	-1	10	postgres			20256	,	-	0	0	0	12081	record_in	record_out	record_recv	record_send	-	-	3118	pg_foreign_table
-11	pg_catalog	12229	pg_group	-1	10	postgres			20256	,	-	0	0	0	12228	record_in	record_out	record_recv	record_send	-	-	12227	pg_group
-11	pg_catalog	12333	pg_hba_file_rules	-1	10	postgres			20256	,	-	0	0	0	12332	record_in	record_out	record_recv	record_send	-	-	12331	pg_hba_file_rules
-11	pg_catalog	12007	pg_index	-1	10	postgres			20256	,	-	0	0	0	12006	record_in	record_out	record_recv	record_send	-	-	2610	pg_index
-11	pg_catalog	12262	pg_indexes	-1	10	postgres			20256	,	-	0	0	0	12261	record_in	record_out	record_recv	record_send	-	-	12260	pg_indexes
-11	pg_catalog	12005	pg_inherits	-1	10	postgres			20256	,	-	0	0	0	12004	record_in	record_out	record_recv	record_send	-	-	2611	pg_inherits
-11	pg_catalog	12090	pg_init_privs	-1	10	postgres			20256	,	-	0	0	0	12089	record_in	record_out	record_recv	record_send	-	-	3394	pg_init_privs
-11	pg_catalog	12021	pg_language	-1	10	postgres			20256	,	-	0	0	0	12020	record_in	record_out	record_recv	record_send	-	-	2612	pg_language
-11	pg_catalog	12025	pg_largeobject	-1	10	postgres			20256	,	-	0	0	0	12024	record_in	record_out	record_recv	record_send	-	-	2613	pg_largeobject
-11	pg_catalog	12023	pg_largeobject_metadata	-1	10	postgres			20256	,	-	0	0	0	12022	record_in	record_out	record_recv	record_send	-	-	2995	pg_largeobject_metadata
-11	pg_catalog	12292	pg_locks	-1	10	postgres			20256	,	-	0	0	0	12291	record_in	record_out	record_recv	record_send	-	-	12290	pg_locks
-11	pg_catalog	12257	pg_matviews	-1	10	postgres			20256	,	-	0	0	0	12256	record_in	record_out	record_recv	record_send	-	-	12255	pg_matviews
-11	pg_catalog	12047	pg_namespace	-1	10	postgres			20256	,	-	0	0	0	12046	record_in	record_out	record_recv	record_send	-	-	2615	pg_namespace
-11	pg_catalog	12013	pg_opclass	-1	10	postgres			20256	,	-	0	0	0	12012	record_in	record_out	record_recv	record_send	-	-	2616	pg_opclass
-11	pg_catalog	12009	pg_operator	-1	10	postgres			20256	,	-	0	0	0	12008	record_in	record_out	record_recv	record_send	-	-	2617	pg_operator
-11	pg_catalog	12011	pg_opfamily	-1	10	postgres			20256	,	-	0	0	0	12010	record_in	record_out	record_recv	record_send	-	-	2753	pg_opfamily
-11	pg_catalog	12097	pg_partitioned_table	-1	10	postgres			20256	,	-	0	0	0	12096	record_in	record_out	record_recv	record_send	-	-	3350	pg_partitioned_table
-11	pg_catalog	12237	pg_policies	-1	10	postgres			20256	,	-	0	0	0	12236	record_in	record_out	record_recv	record_send	-	-	12235	pg_policies
-11	pg_catalog	12084	pg_policy	-1	10	postgres			20256	,	-	0	0	0	12083	record_in	record_out	record_recv	record_send	-	-	3256	pg_policy
-11	pg_catalog	12314	pg_prepared_statements	-1	10	postgres			20256	,	-	0	0	0	12313	record_in	record_out	record_recv	record_send	-	-	12312	pg_prepared_statements
-11	pg_catalog	12309	pg_prepared_xacts	-1	10	postgres			20256	,	-	0	0	0	12308	record_in	record_out	record_recv	record_send	-	-	12307	pg_prepared_xacts
-11	pg_catalog	81	pg_proc	-1	10	postgres			20256	,	-	0	0	0	272	record_in	record_out	record_recv	record_send	-	-	1255	pg_proc
-11	pg_catalog	12105	pg_publication	-1	10	postgres			20256	,	-	0	0	0	12104	record_in	record_out	record_recv	record_send	-	-	6104	pg_publication
-11	pg_catalog	12107	pg_publication_rel	-1	10	postgres			20256	,	-	0	0	0	12106	record_in	record_out	record_recv	record_send	-	-	6106	pg_publication_rel
-11	pg_catalog	12287	pg_publication_tables	-1	10	postgres			20256	,	-	0	0	0	12286	record_in	record_out	record_recv	record_send	-	-	12285	pg_publication_tables
-11	pg_catalog	12099	pg_range	-1	10	postgres			20256	,	-	0	0	0	12098	record_in	record_out	record_recv	record_send	-	-	3541	pg_range
-11	pg_catalog	12086	pg_replication_origin	-1	10	postgres			20256	,	-	0	0	0	12085	record_in	record_out	record_recv	record_send	-	-	6000	pg_replication_origin
-11	pg_catalog	12543	pg_replication_origin_status	-1	10	postgres			20256	,	-	0	0	0	12542	record_in	record_out	record_recv	record_send	-	-	12541	pg_replication_origin_status
-11	pg_catalog	12468	pg_replication_slots	-1	10	postgres			20256	,	-	0	0	0	12467	record_in	record_out	record_recv	record_send	-	-	12466	pg_replication_slots
-11	pg_catalog	12035	pg_rewrite	-1	10	postgres			20256	,	-	0	0	0	12034	record_in	record_out	record_recv	record_send	-	-	2618	pg_rewrite
-11	pg_catalog	12219	pg_roles	-1	10	postgres			20256	,	-	0	0	0	12218	record_in	record_out	record_recv	record_send	-	-	12217	pg_roles
-11	pg_catalog	12242	pg_rules	-1	10	postgres			20256	,	-	0	0	0	12241	record_in	record_out	record_recv	record_send	-	-	12240	pg_rules
-11	pg_catalog	12092	pg_seclabel	-1	10	postgres			20256	,	-	0	0	0	12091	record_in	record_out	record_recv	record_send	-	-	3596	pg_seclabel
-11	pg_catalog	12318	pg_seclabels	-1	10	postgres			20256	,	-	0	0	0	12317	record_in	record_out	record_recv	record_send	-	-	12316	pg_seclabels
-11	pg_catalog	12103	pg_sequence	-1	10	postgres			20256	,	-	0	0	0	12102	record_in	record_out	record_recv	record_send	-	-	2224	pg_sequence
-11	pg_catalog	12267	pg_sequences	-1	10	postgres			20256	,	-	0	0	0	12266	record_in	record_out	record_recv	record_send	-	-	12265	pg_sequences
-11	pg_catalog	12323	pg_settings	-1	10	postgres			20256	,	-	0	0	0	12322	record_in	record_out	record_recv	record_send	-	-	12321	pg_settings
-11	pg_catalog	12224	pg_shadow	-1	10	postgres			20256	,	-	0	0	0	12223	record_in	record_out	record_recv	record_send	-	-	12222	pg_shadow
-11	pg_catalog	12060	pg_shdepend	-1	10	postgres			20256	,	-	0	0	0	12059	record_in	record_out	record_recv	record_send	-	-	1214	pg_shdepend
-11	pg_catalog	12062	pg_shdescription	-1	10	postgres			20256	,	-	0	0	0	12061	record_in	record_out	record_recv	record_send	-	-	2396	pg_shdescription
-11	pg_catalog	12349	pg_shmem_allocations	-1	10	postgres			20256	,	-	0	0	0	12348	record_in	record_out	record_recv	record_send	-	-	12347	pg_shmem_allocations
-11	pg_catalog	4066	pg_shseclabel	-1	10	postgres			20256	,	-	0	0	0	12093	record_in	record_out	record_recv	record_send	-	-	3592	pg_shseclabel
-11	pg_catalog	12437	pg_stat_activity	-1	10	postgres			20256	,	-	0	0	0	12436	record_in	record_out	record_recv	record_send	-	-	12435	pg_stat_activity
-11	pg_catalog	12398	pg_stat_all_indexes	-1	10	postgres			20256	,	-	0	0	0	12397	record_in	record_out	record_recv	record_send	-	-	12396	pg_stat_all_indexes
-11	pg_catalog	12357	pg_stat_all_tables	-1	10	postgres			20256	,	-	0	0	0	12356	record_in	record_out	record_recv	record_send	-	-	12355	pg_stat_all_tables
-11	pg_catalog	12496	pg_stat_archiver	-1	10	postgres			20256	,	-	0	0	0	12495	record_in	record_out	record_recv	record_send	-	-	12494	pg_stat_archiver
-11	pg_catalog	12500	pg_stat_bgwriter	-1	10	postgres			20256	,	-	0	0	0	12499	record_in	record_out	record_recv	record_send	-	-	12498	pg_stat_bgwriter
-11	pg_catalog	12477	pg_stat_database	-1	10	postgres			20256	,	-	0	0	0	12476	record_in	record_out	record_recv	record_send	-	-	12475	pg_stat_database
-11	pg_catalog	12482	pg_stat_database_conflicts	-1	10	postgres			20256	,	-	0	0	0	12481	record_in	record_out	record_recv	record_send	-	-	12480	pg_stat_database_conflicts
-11	pg_catalog	12464	pg_stat_gssapi	-1	10	postgres			20256	,	-	0	0	0	12463	record_in	record_out	record_recv	record_send	-	-	12462	pg_stat_gssapi
-11	pg_catalog	12508	pg_stat_progress_analyze	-1	10	postgres			20256	,	-	0	0	0	12507	record_in	record_out	record_recv	record_send	-	-	12506	pg_stat_progress_analyze
-11	pg_catalog	12528	pg_stat_progress_basebackup	-1	10	postgres			20256	,	-	0	0	0	12527	record_in	record_out	record_recv	record_send	-	-	12526	pg_stat_progress_basebackup
-11	pg_catalog	12518	pg_stat_progress_cluster	-1	10	postgres			20256	,	-	0	0	0	12517	record_in	record_out	record_recv	record_send	-	-	12516	pg_stat_progress_cluster
-11	pg_catalog	12533	pg_stat_progress_copy	-1	10	postgres			20256	,	-	0	0	0	12532	record_in	record_out	record_recv	record_send	-	-	12531	pg_stat_progress_copy
-11	pg_catalog	12523	pg_stat_progress_create_index	-1	10	postgres			20256	,	-	0	0	0	12522	record_in	record_out	record_recv	record_send	-	-	12521	pg_stat_progress_create_index
-11	pg_catalog	12513	pg_stat_progress_vacuum	-1	10	postgres			20256	,	-	0	0	0	12512	record_in	record_out	record_recv	record_send	-	-	12511	pg_stat_progress_vacuum
-11	pg_catalog	12442	pg_stat_replication	-1	10	postgres			20256	,	-	0	0	0	12441	record_in	record_out	record_recv	record_send	-	-	12440	pg_stat_replication
-11	pg_catalog	12473	pg_stat_replication_slots	-1	10	postgres			20256	,	-	0	0	0	12472	record_in	record_out	record_recv	record_send	-	-	12471	pg_stat_replication_slots
-11	pg_catalog	12447	pg_stat_slru	-1	10	postgres			20256	,	-	0	0	0	12446	record_in	record_out	record_recv	record_send	-	-	12445	pg_stat_slru
-11	pg_catalog	12460	pg_stat_ssl	-1	10	postgres			20256	,	-	0	0	0	12459	record_in	record_out	record_recv	record_send	-	-	12458	pg_stat_ssl
-11	pg_catalog	12455	pg_stat_subscription	-1	10	postgres			20256	,	-	0	0	0	12454	record_in	record_out	record_recv	record_send	-	-	12453	pg_stat_subscription
-11	pg_catalog	12403	pg_stat_sys_indexes	-1	10	postgres			20256	,	-	0	0	0	12402	record_in	record_out	record_recv	record_send	-	-	12401	pg_stat_sys_indexes
-11	pg_catalog	12367	pg_stat_sys_tables	-1	10	postgres			20256	,	-	0	0	0	12366	record_in	record_out	record_recv	record_send	-	-	12365	pg_stat_sys_tables
-11	pg_catalog	12486	pg_stat_user_functions	-1	10	postgres			20256	,	-	0	0	0	12485	record_in	record_out	record_recv	record_send	-	-	12484	pg_stat_user_functions
-11	pg_catalog	12407	pg_stat_user_indexes	-1	10	postgres			20256	,	-	0	0	0	12406	record_in	record_out	record_recv	record_send	-	-	12405	pg_stat_user_indexes
-11	pg_catalog	12376	pg_stat_user_tables	-1	10	postgres			20256	,	-	0	0	0	12375	record_in	record_out	record_recv	record_send	-	-	12374	pg_stat_user_tables
-11	pg_catalog	12504	pg_stat_wal	-1	10	postgres			20256	,	-	0	0	0	12503	record_in	record_out	record_recv	record_send	-	-	12502	pg_stat_wal
-11	pg_catalog	12451	pg_stat_wal_receiver	-1	10	postgres			20256	,	-	0	0	0	12450	record_in	record_out	record_recv	record_send	-	-	12449	pg_stat_wal_receiver
-11	pg_catalog	12362	pg_stat_xact_all_tables	-1	10	postgres			20256	,	-	0	0	0	12361	record_in	record_out	record_recv	record_send	-	-	12360	pg_stat_xact_all_tables
-11	pg_catalog	12372	pg_stat_xact_sys_tables	-1	10	postgres			20256	,	-	0	0	0	12371	record_in	record_out	record_recv	record_send	-	-	12370	pg_stat_xact_sys_tables
-11	pg_catalog	12491	pg_stat_xact_user_functions	-1	10	postgres			20256	,	-	0	0	0	12490	record_in	record_out	record_recv	record_send	-	-	12489	pg_stat_xact_user_functions
-11	pg_catalog	12381	pg_stat_xact_user_tables	-1	10	postgres			20256	,	-	0	0	0	12380	record_in	record_out	record_recv	record_send	-	-	12379	pg_stat_xact_user_tables
-11	pg_catalog	12411	pg_statio_all_indexes	-1	10	postgres			20256	,	-	0	0	0	12410	record_in	record_out	record_recv	record_send	-	-	12409	pg_statio_all_indexes
-11	pg_catalog	12424	pg_statio_all_sequences	-1	10	postgres			20256	,	-	0	0	0	12423	record_in	record_out	record_recv	record_send	-	-	12422	pg_statio_all_sequences
-11	pg_catalog	12385	pg_statio_all_tables	-1	10	postgres			20256	,	-	0	0	0	12384	record_in	record_out	record_recv	record_send	-	-	12383	pg_statio_all_tables
-11	pg_catalog	12416	pg_statio_sys_indexes	-1	10	postgres			20256	,	-	0	0	0	12415	record_in	record_out	record_recv	record_send	-	-	12414	pg_statio_sys_indexes
-11	pg_catalog	12429	pg_statio_sys_sequences	-1	10	postgres			20256	,	-	0	0	0	12428	record_in	record_out	record_recv	record_send	-	-	12427	pg_statio_sys_sequences
-11	pg_catalog	12390	pg_statio_sys_tables	-1	10	postgres			20256	,	-	0	0	0	12389	record_in	record_out	record_recv	record_send	-	-	12388	pg_statio_sys_tables
-11	pg_catalog	12420	pg_statio_user_indexes	-1	10	postgres			20256	,	-	0	0	0	12419	record_in	record_out	record_recv	record_send	-	-	12418	pg_statio_user_indexes
-11	pg_catalog	12433	pg_statio_user_sequences	-1	10	postgres			20256	,	-	0	0	0	12432	record_in	record_out	record_recv	record_send	-	-	12431	pg_statio_user_sequences
-11	pg_catalog	12394	pg_statio_user_tables	-1	10	postgres			20256	,	-	0	0	0	12393	record_in	record_out	record_recv	record_send	-	-	12392	pg_statio_user_tables
-11	pg_catalog	12029	pg_statistic	-1	10	postgres			20256	,	-	0	0	0	12028	record_in	record_out	record_recv	record_send	-	-	2619	pg_statistic
-11	pg_catalog	12031	pg_statistic_ext	-1	10	postgres			20256	,	-	0	0	0	12030	record_in	record_out	record_recv	record_send	-	-	3381	pg_statistic_ext
-11	pg_catalog	12033	pg_statistic_ext_data	-1	10	postgres			20256	,	-	0	0	0	12032	record_in	record_out	record_recv	record_send	-	-	3429	pg_statistic_ext_data
-11	pg_catalog	12272	pg_stats	-1	10	postgres			20256	,	-	0	0	0	12271	record_in	record_out	record_recv	record_send	-	-	12270	pg_stats
-11	pg_catalog	12277	pg_stats_ext	-1	10	postgres			20256	,	-	0	0	0	12276	record_in	record_out	record_recv	record_send	-	-	12275	pg_stats_ext
-11	pg_catalog	12282	pg_stats_ext_exprs	-1	10	postgres			20256	,	-	0	0	0	12281	record_in	record_out	record_recv	record_send	-	-	12280	pg_stats_ext_exprs
-11	pg_catalog	6101	pg_subscription	-1	10	postgres			20256	,	-	0	0	0	12108	record_in	record_out	record_recv	record_send	-	-	6100	pg_subscription
-11	pg_catalog	12110	pg_subscription_rel	-1	10	postgres			20256	,	-	0	0	0	12109	record_in	record_out	record_recv	record_send	-	-	6102	pg_subscription_rel
-11	pg_catalog	12252	pg_tables	-1	10	postgres			20256	,	-	0	0	0	12251	record_in	record_out	record_recv	record_send	-	-	12250	pg_tables
-11	pg_catalog	12056	pg_tablespace	-1	10	postgres			20256	,	-	0	0	0	12055	record_in	record_out	record_recv	record_send	-	-	1213	pg_tablespace
-11	pg_catalog	12337	pg_timezone_abbrevs	-1	10	postgres			20256	,	-	0	0	0	12336	record_in	record_out	record_recv	record_send	-	-	12335	pg_timezone_abbrevs
-11	pg_catalog	12341	pg_timezone_names	-1	10	postgres			20256	,	-	0	0	0	12340	record_in	record_out	record_recv	record_send	-	-	12339	pg_timezone_names
-11	pg_catalog	12101	pg_transform	-1	10	postgres			20256	,	-	0	0	0	12100	record_in	record_out	record_recv	record_send	-	-	3576	pg_transform
-11	pg_catalog	12037	pg_trigger	-1	10	postgres			20256	,	-	0	0	0	12036	record_in	record_out	record_recv	record_send	-	-	2620	pg_trigger
-11	pg_catalog	12064	pg_ts_config	-1	10	postgres			20256	,	-	0	0	0	12063	record_in	record_out	record_recv	record_send	-	-	3602	pg_ts_config
-11	pg_catalog	12066	pg_ts_config_map	-1	10	postgres			20256	,	-	0	0	0	12065	record_in	record_out	record_recv	record_send	-	-	3603	pg_ts_config_map
-11	pg_catalog	12068	pg_ts_dict	-1	10	postgres			20256	,	-	0	0	0	12067	record_in	record_out	record_recv	record_send	-	-	3600	pg_ts_dict
-11	pg_catalog	12070	pg_ts_parser	-1	10	postgres			20256	,	-	0	0	0	12069	record_in	record_out	record_recv	record_send	-	-	3601	pg_ts_parser
-11	pg_catalog	12072	pg_ts_template	-1	10	postgres			20256	,	-	0	0	0	12071	record_in	record_out	record_recv	record_send	-	-	3764	pg_ts_template
-11	pg_catalog	71	pg_type	-1	10	postgres			20256	,	-	0	0	0	210	record_in	record_out	record_recv	record_send	-	-	1247	pg_type
-11	pg_catalog	12233	pg_user	-1	10	postgres			20256	,	-	0	0	0	12232	record_in	record_out	record_recv	record_send	-	-	12231	pg_user
-11	pg_catalog	12080	pg_user_mapping	-1	10	postgres			20256	,	-	0	0	0	12079	record_in	record_out	record_recv	record_send	-	-	1418	pg_user_mapping
-11	pg_catalog	12538	pg_user_mappings	-1	10	postgres			20256	,	-	0	0	0	12537	record_in	record_out	record_recv	record_send	-	-	12536	pg_user_mappings
-11	pg_catalog	12247	pg_views	-1	10	postgres			20256	,	-	0	0	0	12246	record_in	record_out	record_recv	record_send	-	-	12245	pg_views
+type_schema_name	type_name	byte_length	type_owner_name	default_value_expression	access_privileges	info	delimiter_character	subscripting_handler_fn_schema	subscripting_handler_fn	element_type_schema	element_type	domain_array_dimensions	collation_schema	collation	array_type_schema	array_type	text_conversion_input_fn_schema	text_conversion_input_fn	text_conversion_output_fn_schema	text_conversion_output_fn	binary_conversion_input_fn_schema	binary_conversion_input_fn	binary_conversion_output_fn_schema	binary_conversion_output_fn	type_modifier_input_fn_schema	type_modifier_input_fn	type_modifier_output_fn_schema	type_modifier_output_fn	custom_analyze_fn_schema	custom_analyze_fn	relation_name
+information_schema	_pg_foreign_data_wrappers	-1	postgres			20256	,					0			information_schema	__pg_foreign_data_wrappers	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							_pg_foreign_data_wrappers
+information_schema	_pg_foreign_servers	-1	postgres			20256	,					0			information_schema	__pg_foreign_servers	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							_pg_foreign_servers
+information_schema	_pg_foreign_table_columns	-1	postgres			20256	,					0			information_schema	__pg_foreign_table_columns	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							_pg_foreign_table_columns
+information_schema	_pg_foreign_tables	-1	postgres			20256	,					0			information_schema	__pg_foreign_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							_pg_foreign_tables
+information_schema	_pg_user_mappings	-1	postgres			20256	,					0			information_schema	__pg_user_mappings	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							_pg_user_mappings
+information_schema	administrable_role_authorizations	-1	postgres			20256	,					0			information_schema	_administrable_role_authorizations	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							administrable_role_authorizations
+information_schema	applicable_roles	-1	postgres			20256	,					0			information_schema	_applicable_roles	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							applicable_roles
+information_schema	attributes	-1	postgres			20256	,					0			information_schema	_attributes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							attributes
+information_schema	character_sets	-1	postgres			20256	,					0			information_schema	_character_sets	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							character_sets
+information_schema	check_constraint_routine_usage	-1	postgres			20256	,					0			information_schema	_check_constraint_routine_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							check_constraint_routine_usage
+information_schema	check_constraints	-1	postgres			20256	,					0			information_schema	_check_constraints	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							check_constraints
+information_schema	collation_character_set_applicability	-1	postgres			20256	,					0			information_schema	_collation_character_set_applicability	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							collation_character_set_applicability
+information_schema	collations	-1	postgres			20256	,					0			information_schema	_collations	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							collations
+information_schema	column_column_usage	-1	postgres			20256	,					0			information_schema	_column_column_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							column_column_usage
+information_schema	column_domain_usage	-1	postgres			20256	,					0			information_schema	_column_domain_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							column_domain_usage
+information_schema	column_options	-1	postgres			20256	,					0			information_schema	_column_options	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							column_options
+information_schema	column_privileges	-1	postgres			20256	,					0			information_schema	_column_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							column_privileges
+information_schema	column_udt_usage	-1	postgres			20256	,					0			information_schema	_column_udt_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							column_udt_usage
+information_schema	columns	-1	postgres			20256	,					0			information_schema	_columns	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							columns
+information_schema	constraint_column_usage	-1	postgres			20256	,					0			information_schema	_constraint_column_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							constraint_column_usage
+information_schema	constraint_table_usage	-1	postgres			20256	,					0			information_schema	_constraint_table_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							constraint_table_usage
+information_schema	data_type_privileges	-1	postgres			20256	,					0			information_schema	_data_type_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							data_type_privileges
+information_schema	domain_constraints	-1	postgres			20256	,					0			information_schema	_domain_constraints	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							domain_constraints
+information_schema	domain_udt_usage	-1	postgres			20256	,					0			information_schema	_domain_udt_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							domain_udt_usage
+information_schema	domains	-1	postgres			20256	,					0			information_schema	_domains	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							domains
+information_schema	element_types	-1	postgres			20256	,					0			information_schema	_element_types	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							element_types
+information_schema	enabled_roles	-1	postgres			20256	,					0			information_schema	_enabled_roles	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							enabled_roles
+information_schema	foreign_data_wrapper_options	-1	postgres			20256	,					0			information_schema	_foreign_data_wrapper_options	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_data_wrapper_options
+information_schema	foreign_data_wrappers	-1	postgres			20256	,					0			information_schema	_foreign_data_wrappers	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_data_wrappers
+information_schema	foreign_server_options	-1	postgres			20256	,					0			information_schema	_foreign_server_options	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_server_options
+information_schema	foreign_servers	-1	postgres			20256	,					0			information_schema	_foreign_servers	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_servers
+information_schema	foreign_table_options	-1	postgres			20256	,					0			information_schema	_foreign_table_options	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_table_options
+information_schema	foreign_tables	-1	postgres			20256	,					0			information_schema	_foreign_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							foreign_tables
+information_schema	information_schema_catalog_name	-1	postgres			20256	,					0			information_schema	_information_schema_catalog_name	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							information_schema_catalog_name
+information_schema	key_column_usage	-1	postgres			20256	,					0			information_schema	_key_column_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							key_column_usage
+information_schema	parameters	-1	postgres			20256	,					0			information_schema	_parameters	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							parameters
+information_schema	referential_constraints	-1	postgres			20256	,					0			information_schema	_referential_constraints	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							referential_constraints
+information_schema	role_column_grants	-1	postgres			20256	,					0			information_schema	_role_column_grants	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							role_column_grants
+information_schema	role_routine_grants	-1	postgres			20256	,					0			information_schema	_role_routine_grants	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							role_routine_grants
+information_schema	role_table_grants	-1	postgres			20256	,					0			information_schema	_role_table_grants	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							role_table_grants
+information_schema	role_udt_grants	-1	postgres			20256	,					0			information_schema	_role_udt_grants	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							role_udt_grants
+information_schema	role_usage_grants	-1	postgres			20256	,					0			information_schema	_role_usage_grants	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							role_usage_grants
+information_schema	routine_column_usage	-1	postgres			20256	,					0			information_schema	_routine_column_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routine_column_usage
+information_schema	routine_privileges	-1	postgres			20256	,					0			information_schema	_routine_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routine_privileges
+information_schema	routine_routine_usage	-1	postgres			20256	,					0			information_schema	_routine_routine_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routine_routine_usage
+information_schema	routine_sequence_usage	-1	postgres			20256	,					0			information_schema	_routine_sequence_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routine_sequence_usage
+information_schema	routine_table_usage	-1	postgres			20256	,					0			information_schema	_routine_table_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routine_table_usage
+information_schema	routines	-1	postgres			20256	,					0			information_schema	_routines	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							routines
+information_schema	schemata	-1	postgres			20256	,					0			information_schema	_schemata	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							schemata
+information_schema	sequences	-1	postgres			20256	,					0			information_schema	_sequences	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							sequences
+information_schema	sql_features	-1	postgres			20256	,					0			information_schema	_sql_features	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							sql_features
+information_schema	sql_implementation_info	-1	postgres			20256	,					0			information_schema	_sql_implementation_info	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							sql_implementation_info
+information_schema	sql_parts	-1	postgres			20256	,					0			information_schema	_sql_parts	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							sql_parts
+information_schema	sql_sizing	-1	postgres			20256	,					0			information_schema	_sql_sizing	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							sql_sizing
+information_schema	table_constraints	-1	postgres			20256	,					0			information_schema	_table_constraints	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							table_constraints
+information_schema	table_privileges	-1	postgres			20256	,					0			information_schema	_table_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							table_privileges
+information_schema	tables	-1	postgres			20256	,					0			information_schema	_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							tables
+information_schema	transforms	-1	postgres			20256	,					0			information_schema	_transforms	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							transforms
+information_schema	triggered_update_columns	-1	postgres			20256	,					0			information_schema	_triggered_update_columns	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							triggered_update_columns
+information_schema	triggers	-1	postgres			20256	,					0			information_schema	_triggers	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							triggers
+information_schema	udt_privileges	-1	postgres			20256	,					0			information_schema	_udt_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							udt_privileges
+information_schema	usage_privileges	-1	postgres			20256	,					0			information_schema	_usage_privileges	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							usage_privileges
+information_schema	user_defined_types	-1	postgres			20256	,					0			information_schema	_user_defined_types	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							user_defined_types
+information_schema	user_mapping_options	-1	postgres			20256	,					0			information_schema	_user_mapping_options	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							user_mapping_options
+information_schema	user_mappings	-1	postgres			20256	,					0			information_schema	_user_mappings	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							user_mappings
+information_schema	view_column_usage	-1	postgres			20256	,					0			information_schema	_view_column_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							view_column_usage
+information_schema	view_routine_usage	-1	postgres			20256	,					0			information_schema	_view_routine_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							view_routine_usage
+information_schema	view_table_usage	-1	postgres			20256	,					0			information_schema	_view_table_usage	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							view_table_usage
+information_schema	views	-1	postgres			20256	,					0			information_schema	_views	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							views
+pg_catalog	pg_aggregate	-1	postgres			20256	,					0			pg_catalog	_pg_aggregate	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_aggregate
+pg_catalog	pg_am	-1	postgres			20256	,					0			pg_catalog	_pg_am	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_am
+pg_catalog	pg_amop	-1	postgres			20256	,					0			pg_catalog	_pg_amop	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_amop
+pg_catalog	pg_amproc	-1	postgres			20256	,					0			pg_catalog	_pg_amproc	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_amproc
+pg_catalog	pg_attrdef	-1	postgres			20256	,					0			pg_catalog	_pg_attrdef	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_attrdef
+pg_catalog	pg_attribute	-1	postgres			20256	,					0			pg_catalog	_pg_attribute	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_attribute
+pg_catalog	pg_auth_members	-1	postgres			20256	,					0			pg_catalog	_pg_auth_members	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_auth_members
+pg_catalog	pg_authid	-1	postgres			20256	,					0			pg_catalog	_pg_authid	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_authid
+pg_catalog	pg_available_extension_versions	-1	postgres			20256	,					0			pg_catalog	_pg_available_extension_versions	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_available_extension_versions
+pg_catalog	pg_available_extensions	-1	postgres			20256	,					0			pg_catalog	_pg_available_extensions	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_available_extensions
+pg_catalog	pg_backend_memory_contexts	-1	postgres			20256	,					0			pg_catalog	_pg_backend_memory_contexts	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_backend_memory_contexts
+pg_catalog	pg_cast	-1	postgres			20256	,					0			pg_catalog	_pg_cast	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_cast
+pg_catalog	pg_class	-1	postgres			20256	,					0			pg_catalog	_pg_class	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_class
+pg_catalog	pg_collation	-1	postgres			20256	,					0			pg_catalog	_pg_collation	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_collation
+pg_catalog	pg_config	-1	postgres			20256	,					0			pg_catalog	_pg_config	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_config
+pg_catalog	pg_constraint	-1	postgres			20256	,					0			pg_catalog	_pg_constraint	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_constraint
+pg_catalog	pg_conversion	-1	postgres			20256	,					0			pg_catalog	_pg_conversion	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_conversion
+pg_catalog	pg_cursors	-1	postgres			20256	,					0			pg_catalog	_pg_cursors	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_cursors
+pg_catalog	pg_database	-1	postgres			20256	,					0			pg_catalog	_pg_database	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_database
+pg_catalog	pg_db_role_setting	-1	postgres			20256	,					0			pg_catalog	_pg_db_role_setting	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_db_role_setting
+pg_catalog	pg_default_acl	-1	postgres			20256	,					0			pg_catalog	_pg_default_acl	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_default_acl
+pg_catalog	pg_depend	-1	postgres			20256	,					0			pg_catalog	_pg_depend	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_depend
+pg_catalog	pg_description	-1	postgres			20256	,					0			pg_catalog	_pg_description	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_description
+pg_catalog	pg_enum	-1	postgres			20256	,					0			pg_catalog	_pg_enum	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_enum
+pg_catalog	pg_event_trigger	-1	postgres			20256	,					0			pg_catalog	_pg_event_trigger	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_event_trigger
+pg_catalog	pg_extension	-1	postgres			20256	,					0			pg_catalog	_pg_extension	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_extension
+pg_catalog	pg_file_settings	-1	postgres			20256	,					0			pg_catalog	_pg_file_settings	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_file_settings
+pg_catalog	pg_foreign_data_wrapper	-1	postgres			20256	,					0			pg_catalog	_pg_foreign_data_wrapper	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_foreign_data_wrapper
+pg_catalog	pg_foreign_server	-1	postgres			20256	,					0			pg_catalog	_pg_foreign_server	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_foreign_server
+pg_catalog	pg_foreign_table	-1	postgres			20256	,					0			pg_catalog	_pg_foreign_table	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_foreign_table
+pg_catalog	pg_group	-1	postgres			20256	,					0			pg_catalog	_pg_group	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_group
+pg_catalog	pg_hba_file_rules	-1	postgres			20256	,					0			pg_catalog	_pg_hba_file_rules	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_hba_file_rules
+pg_catalog	pg_index	-1	postgres			20256	,					0			pg_catalog	_pg_index	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_index
+pg_catalog	pg_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_indexes
+pg_catalog	pg_inherits	-1	postgres			20256	,					0			pg_catalog	_pg_inherits	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_inherits
+pg_catalog	pg_init_privs	-1	postgres			20256	,					0			pg_catalog	_pg_init_privs	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_init_privs
+pg_catalog	pg_language	-1	postgres			20256	,					0			pg_catalog	_pg_language	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_language
+pg_catalog	pg_largeobject	-1	postgres			20256	,					0			pg_catalog	_pg_largeobject	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_largeobject
+pg_catalog	pg_largeobject_metadata	-1	postgres			20256	,					0			pg_catalog	_pg_largeobject_metadata	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_largeobject_metadata
+pg_catalog	pg_locks	-1	postgres			20256	,					0			pg_catalog	_pg_locks	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_locks
+pg_catalog	pg_matviews	-1	postgres			20256	,					0			pg_catalog	_pg_matviews	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_matviews
+pg_catalog	pg_namespace	-1	postgres			20256	,					0			pg_catalog	_pg_namespace	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_namespace
+pg_catalog	pg_opclass	-1	postgres			20256	,					0			pg_catalog	_pg_opclass	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_opclass
+pg_catalog	pg_operator	-1	postgres			20256	,					0			pg_catalog	_pg_operator	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_operator
+pg_catalog	pg_opfamily	-1	postgres			20256	,					0			pg_catalog	_pg_opfamily	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_opfamily
+pg_catalog	pg_partitioned_table	-1	postgres			20256	,					0			pg_catalog	_pg_partitioned_table	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_partitioned_table
+pg_catalog	pg_policies	-1	postgres			20256	,					0			pg_catalog	_pg_policies	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_policies
+pg_catalog	pg_policy	-1	postgres			20256	,					0			pg_catalog	_pg_policy	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_policy
+pg_catalog	pg_prepared_statements	-1	postgres			20256	,					0			pg_catalog	_pg_prepared_statements	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_prepared_statements
+pg_catalog	pg_prepared_xacts	-1	postgres			20256	,					0			pg_catalog	_pg_prepared_xacts	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_prepared_xacts
+pg_catalog	pg_proc	-1	postgres			20256	,					0			pg_catalog	_pg_proc	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_proc
+pg_catalog	pg_publication	-1	postgres			20256	,					0			pg_catalog	_pg_publication	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_publication
+pg_catalog	pg_publication_rel	-1	postgres			20256	,					0			pg_catalog	_pg_publication_rel	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_publication_rel
+pg_catalog	pg_publication_tables	-1	postgres			20256	,					0			pg_catalog	_pg_publication_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_publication_tables
+pg_catalog	pg_range	-1	postgres			20256	,					0			pg_catalog	_pg_range	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_range
+pg_catalog	pg_replication_origin	-1	postgres			20256	,					0			pg_catalog	_pg_replication_origin	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_replication_origin
+pg_catalog	pg_replication_origin_status	-1	postgres			20256	,					0			pg_catalog	_pg_replication_origin_status	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_replication_origin_status
+pg_catalog	pg_replication_slots	-1	postgres			20256	,					0			pg_catalog	_pg_replication_slots	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_replication_slots
+pg_catalog	pg_rewrite	-1	postgres			20256	,					0			pg_catalog	_pg_rewrite	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_rewrite
+pg_catalog	pg_roles	-1	postgres			20256	,					0			pg_catalog	_pg_roles	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_roles
+pg_catalog	pg_rules	-1	postgres			20256	,					0			pg_catalog	_pg_rules	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_rules
+pg_catalog	pg_seclabel	-1	postgres			20256	,					0			pg_catalog	_pg_seclabel	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_seclabel
+pg_catalog	pg_seclabels	-1	postgres			20256	,					0			pg_catalog	_pg_seclabels	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_seclabels
+pg_catalog	pg_sequence	-1	postgres			20256	,					0			pg_catalog	_pg_sequence	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_sequence
+pg_catalog	pg_sequences	-1	postgres			20256	,					0			pg_catalog	_pg_sequences	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_sequences
+pg_catalog	pg_settings	-1	postgres			20256	,					0			pg_catalog	_pg_settings	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_settings
+pg_catalog	pg_shadow	-1	postgres			20256	,					0			pg_catalog	_pg_shadow	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_shadow
+pg_catalog	pg_shdepend	-1	postgres			20256	,					0			pg_catalog	_pg_shdepend	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_shdepend
+pg_catalog	pg_shdescription	-1	postgres			20256	,					0			pg_catalog	_pg_shdescription	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_shdescription
+pg_catalog	pg_shmem_allocations	-1	postgres			20256	,					0			pg_catalog	_pg_shmem_allocations	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_shmem_allocations
+pg_catalog	pg_shseclabel	-1	postgres			20256	,					0			pg_catalog	_pg_shseclabel	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_shseclabel
+pg_catalog	pg_stat_activity	-1	postgres			20256	,					0			pg_catalog	_pg_stat_activity	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_activity
+pg_catalog	pg_stat_all_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_stat_all_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_all_indexes
+pg_catalog	pg_stat_all_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_all_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_all_tables
+pg_catalog	pg_stat_archiver	-1	postgres			20256	,					0			pg_catalog	_pg_stat_archiver	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_archiver
+pg_catalog	pg_stat_bgwriter	-1	postgres			20256	,					0			pg_catalog	_pg_stat_bgwriter	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_bgwriter
+pg_catalog	pg_stat_database	-1	postgres			20256	,					0			pg_catalog	_pg_stat_database	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_database
+pg_catalog	pg_stat_database_conflicts	-1	postgres			20256	,					0			pg_catalog	_pg_stat_database_conflicts	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_database_conflicts
+pg_catalog	pg_stat_gssapi	-1	postgres			20256	,					0			pg_catalog	_pg_stat_gssapi	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_gssapi
+pg_catalog	pg_stat_progress_analyze	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_analyze	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_analyze
+pg_catalog	pg_stat_progress_basebackup	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_basebackup	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_basebackup
+pg_catalog	pg_stat_progress_cluster	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_cluster	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_cluster
+pg_catalog	pg_stat_progress_copy	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_copy	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_copy
+pg_catalog	pg_stat_progress_create_index	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_create_index	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_create_index
+pg_catalog	pg_stat_progress_vacuum	-1	postgres			20256	,					0			pg_catalog	_pg_stat_progress_vacuum	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_progress_vacuum
+pg_catalog	pg_stat_replication	-1	postgres			20256	,					0			pg_catalog	_pg_stat_replication	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_replication
+pg_catalog	pg_stat_replication_slots	-1	postgres			20256	,					0			pg_catalog	_pg_stat_replication_slots	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_replication_slots
+pg_catalog	pg_stat_slru	-1	postgres			20256	,					0			pg_catalog	_pg_stat_slru	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_slru
+pg_catalog	pg_stat_ssl	-1	postgres			20256	,					0			pg_catalog	_pg_stat_ssl	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_ssl
+pg_catalog	pg_stat_subscription	-1	postgres			20256	,					0			pg_catalog	_pg_stat_subscription	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_subscription
+pg_catalog	pg_stat_sys_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_stat_sys_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_sys_indexes
+pg_catalog	pg_stat_sys_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_sys_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_sys_tables
+pg_catalog	pg_stat_user_functions	-1	postgres			20256	,					0			pg_catalog	_pg_stat_user_functions	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_user_functions
+pg_catalog	pg_stat_user_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_stat_user_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_user_indexes
+pg_catalog	pg_stat_user_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_user_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_user_tables
+pg_catalog	pg_stat_wal	-1	postgres			20256	,					0			pg_catalog	_pg_stat_wal	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_wal
+pg_catalog	pg_stat_wal_receiver	-1	postgres			20256	,					0			pg_catalog	_pg_stat_wal_receiver	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_wal_receiver
+pg_catalog	pg_stat_xact_all_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_xact_all_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_xact_all_tables
+pg_catalog	pg_stat_xact_sys_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_xact_sys_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_xact_sys_tables
+pg_catalog	pg_stat_xact_user_functions	-1	postgres			20256	,					0			pg_catalog	_pg_stat_xact_user_functions	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_xact_user_functions
+pg_catalog	pg_stat_xact_user_tables	-1	postgres			20256	,					0			pg_catalog	_pg_stat_xact_user_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stat_xact_user_tables
+pg_catalog	pg_statio_all_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_statio_all_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_all_indexes
+pg_catalog	pg_statio_all_sequences	-1	postgres			20256	,					0			pg_catalog	_pg_statio_all_sequences	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_all_sequences
+pg_catalog	pg_statio_all_tables	-1	postgres			20256	,					0			pg_catalog	_pg_statio_all_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_all_tables
+pg_catalog	pg_statio_sys_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_statio_sys_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_sys_indexes
+pg_catalog	pg_statio_sys_sequences	-1	postgres			20256	,					0			pg_catalog	_pg_statio_sys_sequences	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_sys_sequences
+pg_catalog	pg_statio_sys_tables	-1	postgres			20256	,					0			pg_catalog	_pg_statio_sys_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_sys_tables
+pg_catalog	pg_statio_user_indexes	-1	postgres			20256	,					0			pg_catalog	_pg_statio_user_indexes	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_user_indexes
+pg_catalog	pg_statio_user_sequences	-1	postgres			20256	,					0			pg_catalog	_pg_statio_user_sequences	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_user_sequences
+pg_catalog	pg_statio_user_tables	-1	postgres			20256	,					0			pg_catalog	_pg_statio_user_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statio_user_tables
+pg_catalog	pg_statistic	-1	postgres			20256	,					0			pg_catalog	_pg_statistic	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statistic
+pg_catalog	pg_statistic_ext	-1	postgres			20256	,					0			pg_catalog	_pg_statistic_ext	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statistic_ext
+pg_catalog	pg_statistic_ext_data	-1	postgres			20256	,					0			pg_catalog	_pg_statistic_ext_data	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_statistic_ext_data
+pg_catalog	pg_stats	-1	postgres			20256	,					0			pg_catalog	_pg_stats	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stats
+pg_catalog	pg_stats_ext	-1	postgres			20256	,					0			pg_catalog	_pg_stats_ext	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stats_ext
+pg_catalog	pg_stats_ext_exprs	-1	postgres			20256	,					0			pg_catalog	_pg_stats_ext_exprs	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_stats_ext_exprs
+pg_catalog	pg_subscription	-1	postgres			20256	,					0			pg_catalog	_pg_subscription	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_subscription
+pg_catalog	pg_subscription_rel	-1	postgres			20256	,					0			pg_catalog	_pg_subscription_rel	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_subscription_rel
+pg_catalog	pg_tables	-1	postgres			20256	,					0			pg_catalog	_pg_tables	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_tables
+pg_catalog	pg_tablespace	-1	postgres			20256	,					0			pg_catalog	_pg_tablespace	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_tablespace
+pg_catalog	pg_timezone_abbrevs	-1	postgres			20256	,					0			pg_catalog	_pg_timezone_abbrevs	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_timezone_abbrevs
+pg_catalog	pg_timezone_names	-1	postgres			20256	,					0			pg_catalog	_pg_timezone_names	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_timezone_names
+pg_catalog	pg_transform	-1	postgres			20256	,					0			pg_catalog	_pg_transform	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_transform
+pg_catalog	pg_trigger	-1	postgres			20256	,					0			pg_catalog	_pg_trigger	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_trigger
+pg_catalog	pg_ts_config	-1	postgres			20256	,					0			pg_catalog	_pg_ts_config	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_ts_config
+pg_catalog	pg_ts_config_map	-1	postgres			20256	,					0			pg_catalog	_pg_ts_config_map	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_ts_config_map
+pg_catalog	pg_ts_dict	-1	postgres			20256	,					0			pg_catalog	_pg_ts_dict	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_ts_dict
+pg_catalog	pg_ts_parser	-1	postgres			20256	,					0			pg_catalog	_pg_ts_parser	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_ts_parser
+pg_catalog	pg_ts_template	-1	postgres			20256	,					0			pg_catalog	_pg_ts_template	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_ts_template
+pg_catalog	pg_type	-1	postgres			20256	,					0			pg_catalog	_pg_type	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_type
+pg_catalog	pg_user	-1	postgres			20256	,					0			pg_catalog	_pg_user	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_user
+pg_catalog	pg_user_mapping	-1	postgres			20256	,					0			pg_catalog	_pg_user_mapping	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_user_mapping
+pg_catalog	pg_user_mappings	-1	postgres			20256	,					0			pg_catalog	_pg_user_mappings	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_user_mappings
+pg_catalog	pg_views	-1	postgres			20256	,					0			pg_catalog	_pg_views	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send							pg_views

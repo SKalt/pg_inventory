@@ -1,1 +1,0 @@
-../TABLE/many.sql.tpl

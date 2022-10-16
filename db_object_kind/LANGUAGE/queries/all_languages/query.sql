@@ -1,8 +1,6 @@
 SELECT
-    lang.oid
-  , lang.lanname AS language_name
+    lang.lanname AS language_name
 
-  , lang.lanowner AS owner_oid
   , lang_owner.rolname AS owner_name
   , lang.lanispl AS is_procedural
     -- This is false for internal languages (such as SQL) and true for
@@ -14,29 +12,23 @@ SELECT
   , pg_catalog.pg_get_userbyid(handler_fn.proowner) AS handler_fn_owner
   , lang.lanacl AS access_privileges -- aclitem[]
 
-  , lang.lanplcallfoid AS handler_fn_oid
+  , handler_fn_ns.nspname AS handler_fn_schema_name
+  , handler_fn.proname AS handler_fn_name
     -- For noninternal languages this references the language handler, which is
     -- a special function that is responsible for executing all functions that
     -- are written in the particular language. Zero for internal languages.
-  , handler_fn.proname AS handler_fn_name
-  , handler_fn.pronamespace AS handler_fn_schema_oid
-  , handler_fn_ns.nspname AS handler_fn_schema_name
 
-  , lang.laninline AS inline_block_handler_fn_oid
-    -- This references a function that is responsible for executing "inline"
-    -- anonymous code blocks (DO blocks). Zero if inline blocks are not supported.
-  , inline_block_handler_fn.pronamespace AS inline_block_handler_fn_schema_oid
   , inline_block_handler_fn_ns.nspname AS inline_block_handler_fn_schema_name
   , inline_block_handler_fn.proname AS inline_block_handler_fn_name
+    -- This references a function that is responsible for executing "inline"
+    -- anonymous code blocks (DO blocks). Zero if inline blocks are not supported.
   , pg_catalog.pg_get_userbyid(inline_block_handler_fn.proowner) AS inline_block_handler_fn_owner
 
-  , lang.lanvalidator AS validator_fn_oid
+  , validator_fn_ns.nspname AS validator_fn_schema_name
+  , validator_fn.proname AS validator_fn_name
     -- This references a language validator function that is responsible for
     -- checking the syntax and validity of new functions when they are created.
     -- Zero if no validator is provided.
-  , validator_fn.pronamespace AS validator_fn_schema_oid
-  , validator_fn_ns.nspname AS validator_fn_schema_name
-  , validator_fn.proname AS validator_fn_name
   , pg_catalog.pg_get_userbyid(validator_fn.proowner) AS validator_fn_owner
 FROM pg_catalog.pg_language AS lang
 LEFT JOIN (

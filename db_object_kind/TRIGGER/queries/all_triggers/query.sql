@@ -1,17 +1,14 @@
 SELECT
   -- namespacing
       ns.nspname AS schema_name
-    , ns.oid AS schema_oid
     , tbl.relname AS table_name
-    , trigger_.tgrelid AS table_oid
-    , trigger_.oid
     , trigger_.tgname AS "name" -- must be unique among triggers of same table
     , trigger_.tgparentid AS parent_trigger_oid
       -- Parent trigger that this trigger is cloned from (this happens when
       -- partitions are created or attached to a partitioned table); zero if not
       -- a clone
-    , trigger_.tgfoid AS handler_fn_oid
-    -- TODO: proname, pronamespace
+    , handler_fn_schema.nspname AS handler_fn_schema
+    , handler_fn.proname AS handler_fn
     , trigger_.tgtype -- int2 bitmask identifying trigger firing conditions
     , trigger_.tgisinternal AS is_internal
       -- if trigger is internally generated (usually, to enforce the constraint
@@ -28,16 +25,14 @@ SELECT
   , trigger_.tgattr
     -- int2vector (references pg_attribute.attnum)
     -- Column numbers, if trigger is column-specific; otherwise an empty array
-  , trigger_.tgconstrrelid AS referenced_table_oid
+  , ref_schema.nspname AS referenced_table_schema
+  , ref.relname AS referenced_table_name
     -- The table referenced by a referential integrity constraint (zero if
     -- trigger is not for a referential integrity constraint)
-  , ref.relname AS referenced_table_name
-    -- TODO: referenced_table_schema_name
+  , constraint_schema.nspname AS constraint_schema
   , constraint_.conname AS constraint_name
-  , trigger_.tgconstraint AS constraint_oid
     -- The pg_constraint entry associated with the trigger (zero if trigger is
     -- not for a constraint)
-  -- TODO: constraint_schema_name
   , trigger_.tgconstrindid
     -- The index supporting a unique, primary key, referential integrity, or
     -- exclusion constraint (zero if trigger is not for one of these types of
@@ -51,6 +46,21 @@ FROM pg_catalog.pg_trigger AS trigger_
 INNER JOIN pg_catalog.pg_class AS tbl
   ON trigger_.tgrelid = tbl.oid
 INNER JOIN pg_catalog.pg_namespace AS ns ON tbl.relnamespace = ns.oid
-LEFT JOIN pg_catalog.pg_class AS ref ON trigger_.tgconstrrelid = ref.oid
-LEFT JOIN pg_catalog.pg_constraint AS constraint_ ON
-  trigger_.tgconstraint > 0 AND trigger_.tgconstraint = constraint_.oid
+
+LEFT JOIN ( -- TODO: inner join?
+  pg_catalog.pg_proc AS handler_fn
+  INNER JOIN pg_catalog.pg_namespace AS handler_fn_schema
+  ON handler_fn.pronamespace = handler_fn_schema.oid
+) ON trigger_.tgfoid = handler_fn.oid
+
+LEFT JOIN (
+  pg_catalog.pg_class AS ref
+  INNER JOIN pg_catalog.pg_namespace AS ref_schema
+    ON ref.relnamespace = ref_schema.oid
+) ON trigger_.tgconstrrelid = ref.oid
+
+LEFT JOIN (
+  pg_catalog.pg_constraint AS constraint_
+  INNER JOIN pg_catalog.pg_namespace AS constraint_schema
+    ON constraint_.connamespace = constraint_schema.oid
+) ON trigger_.tgconstraint > 0 AND trigger_.tgconstraint = constraint_.oid

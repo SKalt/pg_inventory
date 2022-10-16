@@ -1,7 +1,5 @@
 SELECT
-    oid AS role_oid
-    -- oid (references pg_authid.oid) ID of role
-  , rolname AS name
+    rolname AS name
   , rolsuper AS is_superuser
   , rolinherit AS inherits_permissions
   , rolcreaterole AS can_create_roles
@@ -14,4 +12,3 @@ SELECT
   , rolconfig AS runtime_config_var_defaults
 FROM pg_catalog.pg_roles -- https://www.postgresql.org/docs/current/view-pg-roles.html
 -- see also: https://www.postgresql.org/docs/current/catalog-pg-authid.html
--- could ORDER BY oid or name here

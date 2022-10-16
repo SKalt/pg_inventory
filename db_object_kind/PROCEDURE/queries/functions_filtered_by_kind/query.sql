@@ -1,21 +1,19 @@
 SELECT
-    fn.pronamespace AS schema_oid
-  , ns.nspname AS schema_name
-  , fn.oid AS function_oid
+    ns.nspname AS schema_name
   , fn.proname AS function_name
-  , fn.proowner AS owner_oid
   , pg_catalog.pg_get_userbyid(fn.proowner) AS owner_name
   , fn.proacl AS access_privileges--  aclitem[]
-  , fn.prolang AS language_oid
     -- Implementation language or call interface of this function
   , fn.procost AS estimated_execution_cost
     -- float4 (in units of cpu_operator_cost); if proretset, this is cost per row returned
   , fn.prorows AS estimated_n_rows -- float4
     -- Estimated number of result rows (zero if not proretset)
-  , fn.provariadic AS arg_array_type_oid -- oid (references pg_type.oid)
+  , variadic_type_schema.nspname AS variadic_type_schema
+  , variadic_type.typname AS variadic_type
   -- Data type of the variadic array parameter's elements, or zero if the
   -- function does not have a variadic parameter
-  , fn.prosupport AS planner_support_fn_oid -- zero if none
+  , planner_support_fn_schema.nspname AS planner_support_fn_schema
+  , planner_support_fn.proname AS planner_support_fn -- null if none
   , fn.provolatile AS volatility
     -- whether the function's result depends only on its input arguments, or is affected by outside factors.
     -- 'i' => "immutable" functions: always deliver the same result for the same inputs.
@@ -42,7 +40,8 @@ SELECT
     -- fn returns multiple values of the specified data type
   , fn.pronargs AS n_args -- int2
   , fn.pronargdefaults AS n_args_with_defaults -- int2
-  , fn.prorettype AS return_type_oid
+  , return_type_schema.nspname AS return_type_schema
+  , return_type.typname AS return_type
   , pg_catalog.pg_get_function_arguments(fn.oid) AS call_signature
     -- text with argument defaults
   , pg_catalog.pg_get_function_result(fn.oid) AS return_signature
@@ -90,4 +89,18 @@ INNER JOIN pg_catalog.pg_namespace AS ns ON
   fn.pronamespace = ns.oid
 INNER JOIN pg_catalog.pg_language AS lang ON
   fn.prolang = lang.oid
-
+LEFT JOIN (
+  pg_catalog.pg_type AS variadic_type
+  INNER JOIN pg_catalog.pg_namespace AS variadic_type_schema
+    ON variadic_type.typnamespace = variadic_type_schema.oid
+) ON fn.provariadic = variadic_type.oid
+LEFT JOIN (
+  pg_catalog.pg_type AS return_type
+  INNER JOIN pg_catalog.pg_namespace AS return_type_schema
+    ON return_type.typnamespace = return_type_schema.oid
+) ON fn.prorettype = return_type.oid
+LEFT JOIN (
+  pg_catalog.pg_proc AS planner_support_fn
+  INNER JOIN pg_catalog.pg_namespace AS planner_support_fn_schema
+    ON planner_support_fn.pronamespace = planner_support_fn_schema.oid
+) ON fn.prosupport = planner_support_fn.oid

@@ -1,20 +1,13 @@
 SELECT
   -- namespacing and ownership
       ns.nspname AS schema_name
-    , cls.relnamespace AS schema_oid
     , cls.relname AS name
-    , cls.oid
     , cls_space.spcname AS tablespace_name
-    , cls.reltablespace AS tablespace_oid
-    , cls.relfilenode AS file_node_oid
     , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
-    , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
   -- access method details
-    -- TODO: fetch access method name, etc.
-    , cls.relam AS access_method_oid
       -- If this is a table or an index, the access method used (heap, B-tree,
-      -- hash, etc.); otherwise zero (zero occurs for sequences, as well as
+      -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views)
     , access_method.amname AS access_method_name
     , cls.reloptions AS access_method_options
@@ -52,16 +45,9 @@ SELECT
             END
           )<<11)
       )::INT2 AS info
-    , cls.reltype AS type_oid -- references pg_type.oid
-      -- The OID of the data type that corresponds to this table's row type, if
-      -- any; zero for TOAST tables, which have no pg_type entry
-      -- type name, schema, type owner should be the same as the table's.
-    , cls.reloftype AS underlying_composite_type_oid
-      -- For typed tables, the OID of the underlying composite type; zero for all
-      -- other relations
-      -- Q: does this apply to partitioned tables?
-    -- TODO: split out query identifying typed tables
-    , underlying_composite_type.typname AS underlying_composite_type_name
+    , underlying_type_ns.nspname AS underlying_type_schema
+    , underlying_composite_type.typname AS underlying_composite_type
+      -- for typed tables
     , cls.reltuples AS approximate_number_of_rows
     , (
         CASE

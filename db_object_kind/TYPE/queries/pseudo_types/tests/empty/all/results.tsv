@@ -1,27 +1,27 @@
-type_schema_oid	type_schema_name	type_oid	type_name	byte_length	type_owner_oid	type_owner_name	default_value_expression	access_privileges	type_category	pass_by_value	storage_alignment_code	storage_kind	is_preferred	is_defined	delimiter_character	subscripting_handler_fn_oid	element_type_oid	domain_array_dimensions	collation_oid	array_type_oid	text_conversion_input_fn_oid	text_conversion_output_fn_oid	binary_conversion_input_fn_oid	binary_conversion_output_fn_oid	type_modifier_input_fn_oid	custom_analyze_fn_oid
-11	pg_catalog	2287	_record	-1	10	postgres			P	false	d	x	false	true	,	array_subscript_handler	2249	0	0	0	array_in	array_out	array_recv	array_send	-	array_typanalyze
-11	pg_catalog	2276	any	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	any_in	any_out	-	-	-	-
-11	pg_catalog	2277	anyarray	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anyarray_in	anyarray_out	anyarray_recv	anyarray_send	-	-
-11	pg_catalog	5077	anycompatible	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	anycompatible_in	anycompatible_out	-	-	-	-
-11	pg_catalog	5078	anycompatiblearray	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anycompatiblearray_in	anycompatiblearray_out	anycompatiblearray_recv	anycompatiblearray_send	-	-
-11	pg_catalog	4538	anycompatiblemultirange	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anycompatiblemultirange_in	anycompatiblemultirange_out	-	-	-	-
-11	pg_catalog	5079	anycompatiblenonarray	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	anycompatiblenonarray_in	anycompatiblenonarray_out	-	-	-	-
-11	pg_catalog	5080	anycompatiblerange	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anycompatiblerange_in	anycompatiblerange_out	-	-	-	-
-11	pg_catalog	2283	anyelement	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	anyelement_in	anyelement_out	-	-	-	-
-11	pg_catalog	3500	anyenum	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	anyenum_in	anyenum_out	-	-	-	-
-11	pg_catalog	4537	anymultirange	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anymultirange_in	anymultirange_out	-	-	-	-
-11	pg_catalog	2776	anynonarray	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	anynonarray_in	anynonarray_out	-	-	-	-
-11	pg_catalog	3831	anyrange	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	0	anyrange_in	anyrange_out	-	-	-	-
-11	pg_catalog	2275	cstring	-2	10	postgres			P	false	c	p	false	true	,	-	0	0	0	1263	cstring_in	cstring_out	cstring_recv	cstring_send	-	-
-11	pg_catalog	3838	event_trigger	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	event_trigger_in	event_trigger_out	-	-	-	-
-11	pg_catalog	3115	fdw_handler	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	fdw_handler_in	fdw_handler_out	-	-	-	-
-11	pg_catalog	325	index_am_handler	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	index_am_handler_in	index_am_handler_out	-	-	-	-
-11	pg_catalog	2281	internal	8	10	postgres			P	true	d	p	false	true	,	-	0	0	0	0	internal_in	internal_out	-	-	-	-
-11	pg_catalog	2280	language_handler	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	language_handler_in	language_handler_out	-	-	-	-
-11	pg_catalog	32	pg_ddl_command	8	10	postgres			P	true	d	p	false	true	,	-	0	0	0	0	pg_ddl_command_in	pg_ddl_command_out	pg_ddl_command_recv	pg_ddl_command_send	-	-
-11	pg_catalog	2249	record	-1	10	postgres			P	false	d	x	false	true	,	-	0	0	0	2287	record_in	record_out	record_recv	record_send	-	-
-11	pg_catalog	269	table_am_handler	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	table_am_handler_in	table_am_handler_out	-	-	-	-
-11	pg_catalog	2279	trigger	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	trigger_in	trigger_out	-	-	-	-
-11	pg_catalog	3310	tsm_handler	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	tsm_handler_in	tsm_handler_out	-	-	-	-
-11	pg_catalog	705	unknown	-2	10	postgres			X	false	c	p	false	true	,	-	0	0	0	0	unknownin	unknownout	unknownrecv	unknownsend	-	-
-11	pg_catalog	2278	void	4	10	postgres			P	true	i	p	false	true	,	-	0	0	0	0	void_in	void_out	void_recv	void_send	-	-
+type_schema_name	type_name	byte_length	type_owner_name	default_value_expression	access_privileges	type_category	pass_by_value	storage_alignment_code	storage_kind	is_preferred	is_defined	delimiter_character	subscripting_handler_fn_schema	subscripting_handler_fn	element_type_schema	element_type	domain_array_dimensions	collation_schema	collation	array_type_schema	array_type	text_conversion_input_fn_schema	text_conversion_input_fn	text_conversion_output_fn_schema	text_conversion_output_fn	binary_conversion_input_fn_schema	binary_conversion_input_fn	binary_conversion_output_fn_schema	binary_conversion_output_fn	type_modifier_input_fn_schema	type_modifier_input_fn	type_modifier_output_fn_schema	type_modifier_output_fn	custom_analyze_fn_schema	custom_analyze_fn
+pg_catalog	_record	-1	postgres			P	false	d	x	false	true	,	pg_catalog	array_subscript_handler	pg_catalog	record	0					pg_catalog	array_in	pg_catalog	array_out	pg_catalog	array_recv	pg_catalog	array_send					pg_catalog	array_typanalyze
+pg_catalog	any	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	any_in	pg_catalog	any_out										
+pg_catalog	anyarray	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anyarray_in	pg_catalog	anyarray_out	pg_catalog	anyarray_recv	pg_catalog	anyarray_send						
+pg_catalog	anycompatible	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	anycompatible_in	pg_catalog	anycompatible_out										
+pg_catalog	anycompatiblearray	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anycompatiblearray_in	pg_catalog	anycompatiblearray_out	pg_catalog	anycompatiblearray_recv	pg_catalog	anycompatiblearray_send						
+pg_catalog	anycompatiblemultirange	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anycompatiblemultirange_in	pg_catalog	anycompatiblemultirange_out										
+pg_catalog	anycompatiblenonarray	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	anycompatiblenonarray_in	pg_catalog	anycompatiblenonarray_out										
+pg_catalog	anycompatiblerange	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anycompatiblerange_in	pg_catalog	anycompatiblerange_out										
+pg_catalog	anyelement	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	anyelement_in	pg_catalog	anyelement_out										
+pg_catalog	anyenum	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	anyenum_in	pg_catalog	anyenum_out										
+pg_catalog	anymultirange	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anymultirange_in	pg_catalog	anymultirange_out										
+pg_catalog	anynonarray	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	anynonarray_in	pg_catalog	anynonarray_out										
+pg_catalog	anyrange	-1	postgres			P	false	d	x	false	true	,					0					pg_catalog	anyrange_in	pg_catalog	anyrange_out										
+pg_catalog	cstring	-2	postgres			P	false	c	p	false	true	,					0			pg_catalog	_cstring	pg_catalog	cstring_in	pg_catalog	cstring_out	pg_catalog	cstring_recv	pg_catalog	cstring_send						
+pg_catalog	event_trigger	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	event_trigger_in	pg_catalog	event_trigger_out										
+pg_catalog	fdw_handler	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	fdw_handler_in	pg_catalog	fdw_handler_out										
+pg_catalog	index_am_handler	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	index_am_handler_in	pg_catalog	index_am_handler_out										
+pg_catalog	internal	8	postgres			P	true	d	p	false	true	,					0					pg_catalog	internal_in	pg_catalog	internal_out										
+pg_catalog	language_handler	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	language_handler_in	pg_catalog	language_handler_out										
+pg_catalog	pg_ddl_command	8	postgres			P	true	d	p	false	true	,					0					pg_catalog	pg_ddl_command_in	pg_catalog	pg_ddl_command_out	pg_catalog	pg_ddl_command_recv	pg_catalog	pg_ddl_command_send						
+pg_catalog	record	-1	postgres			P	false	d	x	false	true	,					0			pg_catalog	_record	pg_catalog	record_in	pg_catalog	record_out	pg_catalog	record_recv	pg_catalog	record_send						
+pg_catalog	table_am_handler	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	table_am_handler_in	pg_catalog	table_am_handler_out										
+pg_catalog	trigger	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	trigger_in	pg_catalog	trigger_out										
+pg_catalog	tsm_handler	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	tsm_handler_in	pg_catalog	tsm_handler_out										
+pg_catalog	unknown	-2	postgres			X	false	c	p	false	true	,					0					pg_catalog	unknownin	pg_catalog	unknownout	pg_catalog	unknownrecv	pg_catalog	unknownsend						
+pg_catalog	void	4	postgres			P	true	i	p	false	true	,					0					pg_catalog	void_in	pg_catalog	void_out	pg_catalog	void_recv	pg_catalog	void_send						

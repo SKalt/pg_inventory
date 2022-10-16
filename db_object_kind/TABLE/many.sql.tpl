@@ -28,18 +28,12 @@
 SELECT
   -- namespacing and ownership
       ns.nspname AS schema_name
-    , cls.relnamespace AS schema_oid
     , cls.relname AS name
-    , cls.oid
     , cls_space.spcname AS tablespace_name
-    , cls.reltablespace AS tablespace_oid
-    , cls.relfilenode AS file_node_oid
     , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
-    , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
   -- access method details
   {{- if or $is_table $is_index $is_materialized_view }}
-    , cls.relam AS access_method_oid
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views)
@@ -164,21 +158,10 @@ SELECT
       -- c => composite type
       -- f => foreign table
   {{- end}}
-  {{- if not (or $is_index $is_sequence $is_toast) }}
-    , cls.reltype AS type_oid -- references pg_type.oid
-      -- The OID of the data type that corresponds to this table's row type, if
-      -- any; zero for TOAST tables, which have no pg_type entry
-      -- type name, schema, type owner should be the same as the table's.
-  {{- end }}
   {{- if $is_table }}
-    , cls.reloftype AS underlying_composite_type_oid
-      -- For typed tables, the OID of the underlying composite type; zero for all
-      -- other relations
-      -- Q: does this apply to partitioned tables?
-    -- TODO: split out query identifying typed tables
-  {{- end }}
-  {{- if $is_table }}
-    , underlying_composite_type.typname AS underlying_composite_type_name
+    , underlying_type_ns.nspname AS underlying_type_schema
+    , underlying_composite_type.typname AS underlying_composite_type
+      -- for typed tables
   {{- end }}
     , cls.reltuples AS approximate_number_of_rows
     , (
@@ -196,6 +179,8 @@ SELECT
       -- int2; see pg_constraint catalog
   {{- if or $is_view $is_materialized_view }}
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
+  {{ else if $is_index }}
+    , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
   {{- end }}
 FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
