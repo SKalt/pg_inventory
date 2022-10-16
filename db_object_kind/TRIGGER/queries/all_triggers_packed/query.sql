@@ -52,7 +52,7 @@ SELECT
     -- Argument strings to pass to trigger, each NULL-terminated
   , trigger_.tgoldtable AS old_table_name -- in REFERENCING clause, if any
   , trigger_.tgnewtable AS old_table_name -- in REFERENCING clause, if any
-  , pg_catalog.pg_get_expr(trigger_.tgqual, tbl.oid) AS trigger_when_clause
+  , pg_catalog.pg_get_triggerdef(trigger_.oid, true) AS trigger_def
 FROM pg_catalog.pg_trigger AS trigger_
 INNER JOIN pg_catalog.pg_class AS tbl
   ON trigger_.tgrelid = tbl.oid

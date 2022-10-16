@@ -1,1 +1,2 @@
-where = "NOT tgisinternal"
+order_by = "ns.nspname, tbl.relname, trigger_.tgname"
+where = "not trigger_.tgisinternal"
