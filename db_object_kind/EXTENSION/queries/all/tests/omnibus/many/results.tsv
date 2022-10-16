@@ -1,0 +1,4 @@
+oid	name	owner_name	schema_oid	schema_name	can_be_moved_between_schemata	extension_version	config_table_oids	config_table_filters
+13740	plpgsql	postgres	11	pg_catalog	false	1.0		
+16453	hstore	postgres	16442	extension_example	true	1.8		
+16581	postgres_fdw	postgres	16444	foreign_db_example	true	1.1		
