@@ -22,6 +22,14 @@ make bin/test_query && bin/test_query ./db_object_kind # run tests serially
 
 Finally, submit a PR referencing your issue.
 
+### development environment
+
+Required software:
+
+- `docker compose` v2.x
+- `go` >= v1.19
+- GNU make
+
 ## SQL Style guide
 
 - `snake_case` names
