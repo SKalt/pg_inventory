@@ -1,5 +1,5 @@
-oid	name	owner_oid	owner_name	location	access_privileges	options
-1663	pg_default	10	postgres			
-1664	pg_global	10	postgres			
-16424	example_tablespace	10	postgres	/data/example_tablespace		
-16425	indexspace	16423	tablespace_owner	/data/indices_tablespace		
+name	owner_name	location	access_privileges	options
+pg_default	postgres			
+pg_global	postgres			
+example_tablespace	postgres	/data/example_tablespace		
+indexspace	tablespace_owner	/data/indices_tablespace		

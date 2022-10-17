@@ -1,53 +1,53 @@
-role_oid	name	permission_bits	connection_count_limit	password_expiry_time	runtime_config_var_defaults
-6171	pg_database_owner	128	-1		
-6181	pg_read_all_data	128	-1		
-6182	pg_write_all_data	128	-1		
-3373	pg_monitor	128	-1		
-3374	pg_read_all_settings	128	-1		
-3375	pg_read_all_stats	128	-1		
-3377	pg_stat_scan_tables	128	-1		
-4569	pg_read_server_files	128	-1		
-4570	pg_write_server_files	128	-1		
-4571	pg_execute_server_program	128	-1		
-4200	pg_signal_backend	128	-1		
-16409	regress_rls_bob	128	-1		
-16384	alice	144	-1		
-16385	am_owner	144	-1		
-16386	base_type_owner	144	-1		
-16387	blade_runner	128	-1		
-16388	bob	144	-1		
-16389	carl	144	-1		
-16390	castor	144	-1		
-16391	composite_type_owner	144	-1		
-16392	conversion_owner	144	-1		
-16393	db_consumer	128	-1		
-16394	db_creator	160	-1		
-16395	db_owner	144	-1		
-16396	domain_owner	144	-1		
-16397	enum_owner	144	-1		
-16398	example_users	128	-1		
-16399	extension_user	144	-1		
-16400	fn_owner	144	-1		
-16401	foreign_db_owner	144	-1		
-16402	inheritor	128	-1		
-16403	no_create_role	128	-1		
-16404	no_rls	132	-1		
-16405	nope	0	-1		
-16406	normal_user	128	-1		
-16407	ordinary_table_owner	128	-1		
-10	postgres	508	-1		
-16408	regress_rls_alice	128	-1		
-16410	regress_rls_carol	128	-1		
-16411	regress_rls_dave	128	-1		
-16412	regress_rls_dob_role1	128	-1		
-16413	regress_rls_dob_role2	128	-1		
-16414	regress_rls_eve	128	-1		
-16415	regress_rls_exempt_user	132	-1		
-16416	regress_rls_frank	128	-1		
-16417	regress_rls_group1	128	-1		
-16418	regress_rls_group2	128	-1		
-16419	replicant	136	-1		
-16420	rls_enforced	128	-1		
-16421	role_progenitor	192	-1		
-16422	super_user	384	-1		
-16423	tablespace_owner	144	-1		
+name	permission_bits	connection_count_limit	password_expiry_time	runtime_config_var_defaults
+pg_database_owner	128	-1		
+pg_read_all_data	128	-1		
+pg_write_all_data	128	-1		
+pg_monitor	128	-1		
+pg_read_all_settings	128	-1		
+pg_read_all_stats	128	-1		
+pg_stat_scan_tables	128	-1		
+pg_read_server_files	128	-1		
+pg_write_server_files	128	-1		
+pg_execute_server_program	128	-1		
+pg_signal_backend	128	-1		
+regress_rls_bob	128	-1		
+alice	144	-1		
+am_owner	144	-1		
+base_type_owner	144	-1		
+blade_runner	128	-1		
+bob	144	-1		
+carl	144	-1		
+castor	144	-1		
+composite_type_owner	144	-1		
+conversion_owner	144	-1		
+db_consumer	128	-1		
+db_creator	160	-1		
+db_owner	144	-1		
+domain_owner	144	-1		
+enum_owner	144	-1		
+example_users	128	-1		
+extension_user	144	-1		
+fn_owner	144	-1		
+foreign_db_owner	144	-1		
+inheritor	128	-1		
+no_create_role	128	-1		
+no_rls	132	-1		
+nope	0	-1		
+normal_user	128	-1		
+ordinary_table_owner	128	-1		
+postgres	508	-1		
+regress_rls_alice	128	-1		
+regress_rls_carol	128	-1		
+regress_rls_dave	128	-1		
+regress_rls_dob_role1	128	-1		
+regress_rls_dob_role2	128	-1		
+regress_rls_eve	128	-1		
+regress_rls_exempt_user	132	-1		
+regress_rls_frank	128	-1		
+regress_rls_group1	128	-1		
+regress_rls_group2	128	-1		
+replicant	136	-1		
+rls_enforced	128	-1		
+role_progenitor	192	-1		
+super_user	384	-1		
+tablespace_owner	144	-1		
