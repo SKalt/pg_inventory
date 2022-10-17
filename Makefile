@@ -1,5 +1,4 @@
 .PHONY: all ls-lint
-
 ls-lint: bin/ls-lint .ls-lint.yml
 	@bin/ls-lint
 bin/ls-lint: ./scripts/dev_env/install_ls_lint.sh
