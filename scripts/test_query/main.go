@@ -19,9 +19,7 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 
-	// TODO: use pg driver
 	_ "github.com/lib/pq"
-	// _ "github.com/docker/cli/cli/compose/types"
 )
 
 func crashIfErrNotNil(err error) {
@@ -67,17 +65,6 @@ func newDbServicePool(repoRoot string) *dbServicePool {
 	}
 }
 
-// func (pool *dbServicePool) ensure(serviceName string) (db *sql.DB) {
-// 	db = pool.get(serviceName)
-// 	if db != nil {
-// 		return db
-// 	}
-// 	var err error
-// 	db, err = pool.waitFor(serviceName)
-// 	crashIfErrNotNil(err)
-// 	return db
-// }
-
 func (pool *dbServicePool) get(name string) (db *sql.DB) {
 	db, ok := pool.cache[name]
 	if ok {
@@ -114,6 +101,7 @@ func (pool *dbServicePool) waitFor(serviceName string) (db *sql.DB, err error) {
 	}
 	db, err = checkConnection(dsn)
 	if db != nil {
+		pool.cache[serviceName] = db
 		return
 	}
 	cmd := exec.Command("docker", "compose", "up", "--wait", serviceName)
@@ -189,6 +177,9 @@ func (c *testCase) queryFile() string {
 }
 func (c *testCase) targetTsvPath() string {
 	return filepath.Join(c.testDir, "results.tsv")
+}
+func (c *testCase) targetExplainPath() string {
+	return filepath.Join(c.testDir, "explain.yaml")
 }
 func getThisDir() string {
 	_, file, _, _ := runtime.Caller(0)
@@ -384,6 +375,15 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 		query += "\n" + suffix.(string)
 	}
 	db, err := pool.waitFor(c.dbName())
+	if err != nil {
+		return err
+	}
+	row := db.QueryRow("EXPLAIN (ANALYZE, COSTS, VERBOSE, BUFFERS, FORMAT YAML) " + query)
+	var explain string
+	if err = row.Scan(&explain); err != nil {
+		return err
+	}
+	err = os.WriteFile(c.targetExplainPath(), []byte(explain), 0666)
 	if err != nil {
 		return err
 	}
