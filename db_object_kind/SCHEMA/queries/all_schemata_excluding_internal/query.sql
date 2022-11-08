@@ -1,4 +1,3 @@
--- $1 : the schema name.
 SELECT
     ns.nspname           AS schema_name
   , schema_owner.rolname AS schema_owner_name
