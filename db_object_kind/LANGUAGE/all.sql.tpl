@@ -30,9 +30,9 @@ SELECT
     -- checking the syntax and validity of new functions when they are created.
     -- Zero if no validator is provided.
   , pg_catalog.pg_get_userbyid(validator_fn.proowner) AS validator_fn_owner
-FROM pg_catalog.pg_language AS lang
+FROM pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
 LEFT JOIN (
-    pg_catalog.pg_proc AS handler_fn
+    pg_catalog.pg_proc AS handler_fn -- -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
     INNER JOIN pg_catalog.pg_namespace AS handler_fn_ns
       ON handler_fn.pronamespace = handler_fn_ns.oid
   )
