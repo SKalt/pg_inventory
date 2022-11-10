@@ -8,6 +8,6 @@ SELECT
   , srv.srvacl AS access_privileges
   , srv.srvoptions
     -- Foreign server specific options, as "keyword=value" strings
-FROM pg_catalog.pg_foreign_server AS srv
-LEFT JOIN pg_catalog.pg_foreign_data_wrapper AS fdw
+FROM pg_catalog.pg_foreign_server AS srv -- https://www.postgresql.org/docs/current/catalog-pg-foreign-server.html
+LEFT JOIN pg_catalog.pg_foreign_data_wrapper AS fdw -- https://www.postgresql.org/docs/current/catalog-pg-foreign-data-wrapper.html
   ON srv.srvfdw = fdw.oid
