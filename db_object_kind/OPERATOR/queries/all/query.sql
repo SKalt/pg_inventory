@@ -28,10 +28,11 @@ SELECT
   , join_fn.proname AS join_fn
   , join_selectivity_estimation_fn_schema.nspname AS join_selectivity_estimation_fn_schema
   , join_selectivity_estimation_fn.proname AS join_selectivity_estimation_fn
-FROM pg_catalog.pg_operator AS op
-INNER JOIN pg_catalog.pg_namespace AS ns ON op.oprnamespace = ns.oid
+FROM pg_catalog.pg_operator AS op -- https://www.postgresql.org/docs/current/catalog-pg-operator.html
+INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+  ON op.oprnamespace = ns.oid
 LEFT JOIN (
-  pg_catalog.pg_type AS left_operand_type
+  pg_catalog.pg_type AS left_operand_type -- https://www.postgresql.org/docs/current/catalog-pg-type.html
   INNER JOIN pg_catalog.pg_namespace AS left_operand_type_schema
     ON left_operand_type.typnamespace = left_operand_type_schema.oid
 ) ON op.oprleft = left_operand_type.oid
@@ -61,7 +62,7 @@ LEFT JOIN (
 ) ON op.oprnegate = negator_operator.oid
 
 LEFT JOIN (
-  pg_catalog.pg_proc AS fn
+  pg_catalog.pg_proc AS fn -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
   INNER JOIN pg_namespace AS fn_schema
     ON fn.pronamespace = fn_schema.oid
 ) ON op.oprcode = fn.oid
