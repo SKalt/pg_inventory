@@ -17,6 +17,6 @@ SELECT
     ) AS roles
   , pg_catalog.pg_get_expr(policy_.polqual, policy_.polrelid) AS security_barrier_qualifications
   , pg_catalog.pg_get_expr(policy_.polwithcheck, policy_.polrelid) AS with_check_qualifications
-FROM pg_catalog.pg_policy AS policy_
+FROM pg_catalog.pg_policy AS policy_ -- https://www.postgresql.org/docs/current/catalog-pg-policy.html
 INNER JOIN pg_catalog.pg_class AS tbl ON policy_.polrelid = tbl.oid
 INNER JOIN pg_catalog.pg_namespace AS ns ON tbl.relnamespace = ns.oid
