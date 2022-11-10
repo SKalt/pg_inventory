@@ -11,6 +11,6 @@ SELECT
   , ext.extcondition AS config_table_filters
     -- Array of WHERE-clause filter conditions for the extension's configuration
     -- table(s), or NULL if none
-FROM pg_catalog.pg_extension AS ext
-INNER JOIN pg_catalog.pg_namespace AS ns
+FROM pg_catalog.pg_extension AS ext -- https://www.postgresql.org/docs/current/catalog-pg-extension.html
+INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON ext.extnamespace = ns.oid
