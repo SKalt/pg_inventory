@@ -10,4 +10,4 @@ SELECT
   , db.datacl AS access_privileges -- aclitem[]
   -- , db.datfrozenxid AS min_unfrozen_xid
   -- , db.datminmxid AS min_multixact_id
-FROM pg_catalog.pg_database AS db -- TODO: link
+FROM pg_catalog.pg_database AS db -- https://www.postgresql.org/docs/current/catalog-pg-database.html
