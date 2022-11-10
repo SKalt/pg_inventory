@@ -17,9 +17,9 @@ SELECT
       -- options for foreign servers and user mappings using the foreign-data
       -- wrapper. Zero if no validator is provided
     , pg_catalog.pg_get_userbyid(validator_fn.proowner) AS validator_fn_owner
-FROM pg_catalog.pg_foreign_data_wrapper AS fdw
+FROM pg_catalog.pg_foreign_data_wrapper AS fdw -- https://www.postgresql.org/docs/current/catalog-pg-foreign-data-wrapper.html
 LEFT JOIN (
-    pg_catalog.pg_proc AS handler_fn
+    pg_catalog.pg_proc AS handler_fn -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
     INNER JOIN pg_catalog.pg_namespace AS handler_fn_ns
       ON handler_fn.pronamespace = handler_fn_ns.oid
   )
