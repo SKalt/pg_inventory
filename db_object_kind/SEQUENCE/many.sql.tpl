@@ -32,7 +32,7 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/curr
 INNER JOIN (
   {{ include . "file://./../TABLE/many.sql.tpl" | indent 1 }}
 ) AS rel ON ns.nspname = rel.schema_name AND cls.relname = rel.name
-INNER JOIN pg_catalog.pg_type AS type_
+INNER JOIN pg_catalog.pg_type AS type_ -- https://www.postgresql.org/docs/current/catalog-pg-type.html
   ON seq.seqtypid = type_.oid
 INNER JOIN pg_catalog.pg_namespace as type_schema
   ON type_.typnamespace = type_schema.oid
