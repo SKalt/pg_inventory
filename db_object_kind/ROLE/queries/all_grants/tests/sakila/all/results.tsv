@@ -1,0 +1,4 @@
+parent_role	child_role	grantor_role	member_can_also_grant_membership
+pg_read_all_settings	pg_monitor	postgres	false
+pg_read_all_stats	pg_monitor	postgres	false
+pg_stat_scan_tables	pg_monitor	postgres	false
