@@ -55,7 +55,6 @@ SELECT
   , type_.typdelim AS delimiter_character
     -- 1-byte char that separates two values of this type when parsing array input
     -- associate with array *element* type, not array-type
-
   , subscripting_fn_schema.nspname AS subscripting_handler_fn_schema
   , subscripting_fn.proname AS subscripting_handler_fn
     -- null if this type doesn't support subscripting
@@ -68,8 +67,6 @@ SELECT
     -- A element_type_oid dependency is considered to imply physical containment of the
     -- element type in this type; so DDL changes on the element type might be restricted
     -- by the presence of this type.
-  , type_.typndims AS domain_array_dimensions
-    -- number of array dimensions for a domain over an array, 0 for all others.
   , collation_schema.nspname AS collation_schema
   , collation_.collname AS "collation"
     -- references pg_collation.oid if the type supports collations, else 0
@@ -77,7 +74,6 @@ SELECT
   , array_type.typname AS array_type
   -- if nonzero, references the "true" array type with this type as the element
   -- type.
-
 -- related functions
   , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
   , text_conversion_input_fn.proname AS text_conversion_input_fn
@@ -100,7 +96,6 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/curr
   ON type_.typtype = 'r' AND type_.typnamespace = ns.oid
 INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs/current/catalog-pg-authid.html
   ON type_.typowner = type_owner.oid
-
 
 
 LEFT JOIN (

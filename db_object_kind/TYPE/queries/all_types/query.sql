@@ -65,7 +65,6 @@ SELECT
   , type_.typdelim AS delimiter_character
     -- 1-byte char that separates two values of this type when parsing array input
     -- associate with array *element* type, not array-type
-
   , subscripting_fn_schema.nspname AS subscripting_handler_fn_schema
   , subscripting_fn.proname AS subscripting_handler_fn
     -- null if this type doesn't support subscripting
@@ -87,7 +86,6 @@ SELECT
   , array_type.typname AS array_type
   -- if nonzero, references the "true" array type with this type as the element
   -- type.
-
 -- related functions
   , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
   , text_conversion_input_fn.proname AS text_conversion_input_fn
@@ -123,7 +121,7 @@ INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs
 LEFT JOIN pg_catalog.pg_class AS relation -- https://www.postgresql.org/docs/current/catalog-pg-class.html
   ON type_.typrelid > 0 AND type_.typrelid = relation.oid
   -- TODO: join pg_catalog.pg_namespace for relation_schema_name, oid
-LEFT JOIN pg_catalog.pg_type AS base_type
+  LEFT JOIN pg_catalog.pg_type AS base_type
   ON type_.typbasetype > 0 AND type_.typbasetype = base_type.oid
 
 LEFT JOIN (

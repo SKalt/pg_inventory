@@ -51,33 +51,7 @@ SELECT
     -- if false, a placeholder for a TBD (to-be-defined) type. If false, only
     -- type_name, type_schema, type_oid are valid
 
--- array handling
-  , type_.typdelim AS delimiter_character
-    -- 1-byte char that separates two values of this type when parsing array input
-    -- associate with array *element* type, not array-type
-
-  , subscripting_fn_schema.nspname AS subscripting_handler_fn_schema
-  , subscripting_fn.proname AS subscripting_handler_fn
-    -- null if this type doesn't support subscripting
-  , element_type_schema.nspname AS element_type_schema
-  , element_type.typname AS element_type
-    -- if nonzero, then element_type_oid references pg_type.oid to define the element type
-    -- of this type.
-    -- Can be zero when subscripting_handler_fn_oid is defined if the subscript-hander
-    -- already knows what the element type is.
-    -- A element_type_oid dependency is considered to imply physical containment of the
-    -- element type in this type; so DDL changes on the element type might be restricted
-    -- by the presence of this type.
-  , type_.typndims AS domain_array_dimensions
-    -- number of array dimensions for a domain over an array, 0 for all others.
-  , collation_schema.nspname AS collation_schema
-  , collation_.collname AS "collation"
-    -- references pg_collation.oid if the type supports collations, else 0
-  , array_type_schema.nspname AS array_type_schema
-  , array_type.typname AS array_type
-  -- if nonzero, references the "true" array type with this type as the element
-  -- type.
-
+-- array handling -- omitted
 -- related functions
   , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
   , text_conversion_input_fn.proname AS text_conversion_input_fn
@@ -95,9 +69,9 @@ SELECT
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
   , custom_analyze_fn.proname AS custom_analyze_fn
     -- zero if default analyze used
-, ARRAY((
+  , ARRAY((
     SELECT enumlabel
-    FROM pg_catalog.pg_enum
+    FROM pg_catalog.pg_enum -- https://www.postgresql.org/docs/current/catalog-pg-enum.html
     WHERE enumtypid = type_.oid
     ORDER BY enumsortorder
   )) AS enum_items
@@ -106,7 +80,6 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/curr
   ON type_.typtype = 'e' AND type_.typnamespace = ns.oid
 INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs/current/catalog-pg-authid.html
   ON type_.typowner = type_owner.oid
-
 
 
 LEFT JOIN (

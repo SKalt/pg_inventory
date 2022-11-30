@@ -158,10 +158,11 @@ SELECT
     -- type_name, type_schema, type_oid are valid
 {{ end }}
 -- array handling
+{{- if $is_enum }} -- omitted
+{{- else }}
   , type_.typdelim AS delimiter_character
     -- 1-byte char that separates two values of this type when parsing array input
     -- associate with array *element* type, not array-type
-
   , subscripting_fn_schema.nspname AS subscripting_handler_fn_schema
   , subscripting_fn.proname AS subscripting_handler_fn
     -- null if this type doesn't support subscripting
@@ -174,8 +175,10 @@ SELECT
     -- A element_type_oid dependency is considered to imply physical containment of the
     -- element type in this type; so DDL changes on the element type might be restricted
     -- by the presence of this type.
+  {{- if $show_domain }}
   , type_.typndims AS domain_array_dimensions
     -- number of array dimensions for a domain over an array, 0 for all others.
+  {{- end }}
   , collation_schema.nspname AS collation_schema
   , collation_.collname AS "collation"
     -- references pg_collation.oid if the type supports collations, else 0
@@ -183,7 +186,7 @@ SELECT
   , array_type.typname AS array_type
   -- if nonzero, references the "true" array type with this type as the element
   -- type.
-
+{{- end }}
 -- related functions
   , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
   , text_conversion_input_fn.proname AS text_conversion_input_fn
@@ -217,7 +220,7 @@ SELECT
   , pg_catalog.format_type(type_.oid, type_.typtypmod) AS formatted
 {{- end }}
 {{- if $is_enum }}
-, ARRAY((
+  , ARRAY((
     SELECT enumlabel
     FROM pg_catalog.pg_enum -- https://www.postgresql.org/docs/current/catalog-pg-enum.html
     WHERE enumtypid = type_.oid
@@ -239,8 +242,8 @@ INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs
   ON {{ if not $is_composite -}} type_.typrelid > 0 AND {{ end -}} type_.typrelid = relation.oid
   -- TODO: join pg_catalog.pg_namespace for relation_schema_name, oid
 {{- end }}
-{{ if $show_domain -}}
-  {{- if $is_domain -}} INNER {{- else -}} LEFT {{- end }} JOIN pg_catalog.pg_type AS base_type
+{{- if $show_domain }}
+  {{ if $is_domain -}} INNER {{- else -}} LEFT {{- end }} JOIN pg_catalog.pg_type AS base_type
   ON {{ if not $is_domain -}} type_.typbasetype > 0 AND {{ end -}} type_.typbasetype = base_type.oid
 {{- end }}
 
