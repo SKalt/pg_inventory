@@ -187,6 +187,7 @@ SELECT
   -- if nonzero, references the "true" array type with this type as the element
   -- type.
 {{- end }}
+{{- if not $is_enum }}{{/* enums can't have their typmod_*, send/recieve, or analyze functions altered */}}
 -- related functions
   , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
   , text_conversion_input_fn.proname AS text_conversion_input_fn
@@ -204,7 +205,7 @@ SELECT
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
   , custom_analyze_fn.proname AS custom_analyze_fn
     -- zero if default analyze used
-
+{{- end }}
 {{- if $show_composite }}
   , relation.relname AS relation_name
     -- only for composite types.

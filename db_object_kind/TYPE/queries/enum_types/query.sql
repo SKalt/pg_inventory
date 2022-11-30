@@ -52,23 +52,6 @@ SELECT
     -- type_name, type_schema, type_oid are valid
 
 -- array handling -- omitted
--- related functions
-  , text_conversion_input_fn_schema.nspname AS text_conversion_input_fn_schema
-  , text_conversion_input_fn.proname AS text_conversion_input_fn
-  , text_conversion_output_fn_schema.nspname AS text_conversion_output_fn_schema
-  , text_conversion_output_fn.proname AS text_conversion_output_fn
-  , binary_conversion_input_fn_schema.nspname AS binary_conversion_input_fn_schema
-  , binary_conversion_input_fn.proname AS binary_conversion_input_fn -- zero if none
-  , binary_conversion_output_fn_schema.nspname AS binary_conversion_output_fn_schema
-  , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
-  , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
-  , type_modifier_input_fn.proname AS type_modifier_input_fn
-    -- zero of this type doesn't support modifiers
-  , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
-  , type_modifier_output_fn.proname AS type_modifier_output_fn
-  , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
-  , custom_analyze_fn.proname AS custom_analyze_fn
-    -- zero if default analyze used
   , ARRAY((
     SELECT enumlabel
     FROM pg_catalog.pg_enum -- https://www.postgresql.org/docs/current/catalog-pg-enum.html
