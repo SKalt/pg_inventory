@@ -13,42 +13,44 @@ SELECT
   , type_.typacl AS access_privileges -- aclitem[]
 -- misc type info
   , (/* info: a 2-byte packed struct of the form:
-      1110 0000 0000 0000: kind
-      0000 1111 0000 0000: category
-      0000 0000 1100 0000: storage alignment
-      0000 0000 0011 0000: storage type
-      0001 0000 0000 1110: bools
+      0000 0000 0000 0111 : kind
+      0000 0000 1111 0000 : category
+      0000 0011 0000 0000 : storage alignment
+      0000 1100 0000 0000 : storage type
+      0111 0000 0000 1000 : bools
       */
       0::INT2
-      -- kind: 1110 0000 0000 0000 -- omitted
-      | (( -- category: 0000 1111 0000 0000
+      -- 0000 0000 0000 0111 : kind -- omitted
+      -- 0000 0000 0000 1000 domain not null -- omitted
+      | ((-- 0000 0000 1111 0000 : category
           CASE type_.typcategory
-            WHEN 'A' THEN 0  -- Array
-            WHEN 'B' THEN 1  -- Boolean
-            WHEN 'C' THEN 2  -- Composite
-            WHEN 'D' THEN 3  -- Date/time
-            WHEN 'E' THEN 4  -- Enum
-            WHEN 'G' THEN 5  -- Geometric
-            WHEN 'I' THEN 6  -- Network address
-            WHEN 'N' THEN 7  -- Numeric
-            WHEN 'P' THEN 8  -- Pseudo-types
-            WHEN 'R' THEN 9  -- Range
-            WHEN 'S' THEN 10 -- String
-            WHEN 'T' THEN 11 -- Timespan
-            WHEN 'U' THEN 12 -- User-defined
-            WHEN 'V' THEN 13 -- Bit-string
-            WHEN 'X' THEN 14 -- unknown
+            WHEN 'A' THEN 1  -- Array
+            WHEN 'B' THEN 2  -- Boolean
+            WHEN 'C' THEN 3  -- Composite
+            WHEN 'D' THEN 4  -- Date/time
+            WHEN 'E' THEN 5  -- Enum
+            WHEN 'G' THEN 6  -- Geometric
+            WHEN 'I' THEN 7  -- Network address
+            WHEN 'N' THEN 8  -- Numeric
+            WHEN 'P' THEN 9  -- Pseudo-types
+            WHEN 'R' THEN 10  -- Range
+            WHEN 'S' THEN 11 -- String
+            WHEN 'T' THEN 12 -- Timespan
+            WHEN 'U' THEN 13 -- User-defined
+            WHEN 'V' THEN 14 -- Bit-string
+            WHEN 'X' THEN 15 -- unknown
+            ELSE 0
           END
         )<<4)
-      | (( -- storage alignment: 0000 0000 1100 0000
+      | ((-- 0000 0011 0000 0000 : storage alignment
           CASE type_.typalign
-            WHEN 'c' THEN 0-- char alignment, i.e., no alignment needed.
+            WHEN 'c' THEN 0 -- char alignment, i.e., no alignment needed.
             WHEN 's' THEN 1 -- short alignment (2 bytes on most machines).
             WHEN 'i' THEN 2 -- int alignment (4 bytes on most machines).
             WHEN 'd' THEN 3 -- double alignment (8 bytes on many machines, but by no means all).
           END
         )<<8)
-      | (( -- storage code: 0000 0000 0011 0000
+      | ((-- 0000 1100 0000 0000 : storage type
           -- for varlena types (those with typlen = -1), whether the type is prepared
           -- for TOASTing and what the default strategy for attributes of this type
           -- should be. Possible values are:
@@ -65,13 +67,15 @@ SELECT
               --  relation.
           END
         )<<10)
-    -- bools: 0001 0000 0000 1110
-      | CASE WHEN type_.typbyval       THEN 1<<12 ELSE 0 END
-      | CASE WHEN type_.typispreferred THEN 1<<13 ELSE 0 END
-        -- bool: preferred cast target in type catagory
-      | CASE WHEN type_.typisdefined   THEN 1<<14 ELSE 0 END
-        -- if false, a placeholder for a TBD (to-be-defined) type. If false, only
+    --     0111 0000 0000 0000 : bools
+      | -- 0001 0000 0000 0000 : pass-by-value
+        CASE WHEN type_.typbyval       THEN 1<<12 ELSE 0 END
+      | -- 0010 0000 0000 0000 : is_preferred case target in type category
+        CASE WHEN type_.typispreferred THEN 1<<13 ELSE 0 END
+      | -- 0100 0000 0000 0000 : is defined
+        -- if false, a placeholder for a TBD (to-be-defined) type, and only
         -- type_name, type_schema, type_oid are valid
+        CASE WHEN type_.typisdefined   THEN 1<<14 ELSE 0 END
     )::INT2 AS info
 -- array handling
   , type_.typdelim AS delimiter_character
