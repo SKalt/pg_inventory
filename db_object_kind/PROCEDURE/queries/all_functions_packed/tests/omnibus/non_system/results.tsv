@@ -1,41 +1,41 @@
-schema_name	function_name	owner_name	access_privileges	estimated_execution_cost	estimated_n_rows	variadic_type_schema	variadic_type	planner_support_fn_schema	planner_support_fn	info	n_args	n_args_with_defaults	return_type_schema	return_type	call_signature	return_signature	fn_src	how_to_invoke	runtime_config_vars
-agg_ex	avg_finalfn	postgres		100	0					61	1	0	pg_catalog	int4	state agg_ex.avg_state	integer	"\nbegin\n	if state is null then\n		return NULL;\n	else\n		return state.total / state.count;\n	end if;\nend\n"		
-agg_ex	avg_transfn	postgres		100	0					61	2	0	agg_ex	avg_state	state agg_ex.avg_state, n integer	agg_ex.avg_state	"\ndeclare new_state agg_ex.avg_state;\nbegin\n	raise notice 'agg_ex.avg_transfn called with %', n;\n	if state is null then\n		if n is not null then\n			new_state.total := n;\n			new_state.count := 1;\n			return new_state;\n		end if;\n		return null;\n	elsif n is not null then\n		state.total := state.total + n;\n		state.count := state.count + 1;\n		return state;\n	end if;\n\n	return null;\nend\n"		
-agg_ex	my_avg	postgres		1	0					55	1	0	pg_catalog	int4	integer	integer	aggregate_dummy		
-agg_ex	my_sum	postgres		1	0					55	1	0	pg_catalog	int4	integer	integer	aggregate_dummy		
-agg_ex	sum_finalfn	postgres		100	0					61	1	0	pg_catalog	int4	state agg_ex.avg_state	integer	"\nbegin\n	if state is null then\n		return NULL;\n	else\n		return state.total;\n	end if;\nend\n"		
-base_type_examples	base_fn_in	postgres		1	0					309	1	0	base_type_examples	base_type	cstring	base_type_examples.base_type	boolin		
-base_type_examples	base_fn_out	postgres		1	0					309	1	0	pg_catalog	cstring	base_type_examples.base_type	cstring	boolout		
-base_type_examples	fake_op	postgres		100	0					53	2	0	pg_catalog	bool	point, base_type_examples.int42	boolean	" select true "		
-base_type_examples	get_default_test	postgres		100	1000					573	0	0	base_type_examples	default_test_row		SETOF base_type_examples.default_test_row	\n  SELECT * FROM base_type_examples.default_test;\n		
-base_type_examples	int42_in	postgres		1	0					309	1	0	base_type_examples	int42	cstring	base_type_examples.int42	int4in		
-base_type_examples	int42_out	postgres		1	0					309	1	0	pg_catalog	cstring	base_type_examples.int42	cstring	int4out		
-base_type_examples	myvarcharin	postgres		1	0					277	3	0	base_type_examples	myvarchar	cstring, oid, integer	base_type_examples.myvarchar	varcharin		
-base_type_examples	myvarcharout	postgres		1	0					277	1	0	pg_catalog	cstring	base_type_examples.myvarchar	cstring	varcharout		
-base_type_examples	myvarcharrecv	postgres		1	0					281	3	0	base_type_examples	myvarchar	internal, oid, integer	base_type_examples.myvarchar	varcharrecv		
-base_type_examples	myvarcharsend	postgres		1	0					281	1	0	pg_catalog	bytea	base_type_examples.myvarchar	bytea	varcharsend		
-base_type_examples	text_w_default_in	postgres		1	0					309	1	0	base_type_examples	text_w_default	cstring	base_type_examples.text_w_default	textin		
-base_type_examples	text_w_default_out	postgres		1	0					309	1	0	pg_catalog	cstring	base_type_examples.text_w_default	cstring	textout		
-composite_type_examples	get_basic	postgres		100	1000					573	0	0	composite_type_examples	basic_comp_type		SETOF composite_type_examples.basic_comp_type	\n  SELECT f1, f2 FROM composite_type_examples.equivalent_rowtype\n		
-create_cast	transmogrify	postgres		100	0					53	1	0	pg_catalog	int4	input create_cast.abc	integer	\n  SELECT 1;\n		
-domain_examples	is_even	postgres		100	0					53	1	0	pg_catalog	bool	i domain_examples.positive_number	boolean	\n  SELECT (i % 2) = 0\n		
-domain_examples	is_positive	postgres		100	0					53	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT i > 0\n		
-enum_example	make_bug_info	postgres		100	0					53	2	0	enum_example	bug_info	status enum_example.bug_status, severity enum_example.bug_severity	enum_example.bug_info	\n    SELECT status, severity\n  		
-enum_example	should_raise_alarm	postgres		100	0					53	1	0	pg_catalog	bool	info enum_example.bug_info	boolean	\n    SELECT info.status = 'new' AND info.severity = 'high'\n  		
-extension_example	_hstore	postgres		100	0					309	1	0	extension_example	hstore	r record	extension_example.hstore	\n    BEGIN\n      return extension_example.hstore(r);\n    END;\n  		
-fn_examples	depends_on_table_column	postgres		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.ordinary_table LIMIT 1\n		
-fn_examples	depends_on_table_column_type	postgres		100	0					61	0	0	pg_catalog	int4		integer	\n    SELECT id FROM fn_examples.ordinary_table LIMIT 1\n  		
-fn_examples	depends_on_table_rowtype	postgres		100	0					61	0	0	fn_examples	ordinary_table		fn_examples.ordinary_table	\n  SELECT * FROM fn_examples.ordinary_table LIMIT 1\n		
-fn_examples	depends_on_view_column	postgres		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.basic_view LIMIT 1\n		
-fn_examples	depends_on_view_column_type	postgres		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.basic_view LIMIT 1\n		
-fn_examples	insert_to_table	postgres		100	0					62	0	0	pg_catalog	void			\n  BEGIN\n    IF fn_examples.is_even(2) THEN\n      INSERT INTO fn_examples.ordinary_table(id) VALUES (1);\n    END IF;\n  END;\n		
-fn_examples	is_even	postgres		100	0					61	1	0	pg_catalog	bool	i integer	boolean	\nBEGIN\n  IF i % 2 = 0 THEN\n    RETURN true;\n  ELSE\n    RETURN false;\n  end if;\nEND;\n		
-fn_examples	is_odd	postgres		100	0					61	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT (fn_examples.is_even(i) IS NOT true)\n		
-fn_examples	polyf	postgres		100	0					61	1	0	pg_catalog	anyelement	x anyelement	anyelement	\n  select x + 1\n		
-foreign_db_example	is_positive	postgres		100	0					53	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT i > 0\n		
-public	log_table_alteration	postgres		100	0					61	0	0	pg_catalog	event_trigger		event_trigger	\nBEGIN\n  RAISE NOTICE 'command % issued', tg_tag;\nEND;\n		
-regress_rls_schema	f_leak	postgres		1e-07	0					61	1	0	pg_catalog	bool	text	boolean	BEGIN RAISE NOTICE 'f_leak => %', $1; RETURN true; END		
-regress_rls_schema	op_leak	regress_rls_alice		100	0					61	2	0	pg_catalog	bool	integer, integer	boolean	BEGIN RAISE NOTICE 'op_leak => %, %', $1, $2; RETURN $1 < $2; END		
-trigger_test	check_account_update	postgres		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      RAISE NOTICE 'trigger_func(%) called: action = %, when = %, level = %, old = %, new = %',\n                        TG_ARGV[0], TG_OP, TG_WHEN, TG_LEVEL, OLD, NEW;\n      RETURN NULL;\n    END;\n  		
-trigger_test	log_account_update	postgres		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      INSERT INTO trigger_test.update_log(account_id) VALUES (1);\n      RETURN NULL;\n    END;\n  		
-trigger_test	view_insert_row	postgres		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      INSERT INTO trigger_test.accounts(id, balance) VALUES (NEW.id, NEW.balance);\n      RETURN NEW;\n    END;\n  		
+schema_name	function_name	owner_name	language_name	access_privileges	estimated_execution_cost	estimated_n_rows	variadic_type_schema	variadic_type	planner_support_fn_schema	planner_support_fn	info	n_args	n_args_with_defaults	return_type_schema	return_type	call_signature	return_signature	fn_src	how_to_invoke	runtime_config_vars
+agg_ex	avg_finalfn	postgres	plpgsql		100	0					61	1	0	pg_catalog	int4	state agg_ex.avg_state	integer	"\nbegin\n	if state is null then\n		return NULL;\n	else\n		return state.total / state.count;\n	end if;\nend\n"		
+agg_ex	avg_transfn	postgres	plpgsql		100	0					61	2	0	agg_ex	avg_state	state agg_ex.avg_state, n integer	agg_ex.avg_state	"\ndeclare new_state agg_ex.avg_state;\nbegin\n	raise notice 'agg_ex.avg_transfn called with %', n;\n	if state is null then\n		if n is not null then\n			new_state.total := n;\n			new_state.count := 1;\n			return new_state;\n		end if;\n		return null;\n	elsif n is not null then\n		state.total := state.total + n;\n		state.count := state.count + 1;\n		return state;\n	end if;\n\n	return null;\nend\n"		
+agg_ex	my_avg	postgres	internal		1	0					55	1	0	pg_catalog	int4	integer	integer	aggregate_dummy		
+agg_ex	my_sum	postgres	internal		1	0					55	1	0	pg_catalog	int4	integer	integer	aggregate_dummy		
+agg_ex	sum_finalfn	postgres	plpgsql		100	0					61	1	0	pg_catalog	int4	state agg_ex.avg_state	integer	"\nbegin\n	if state is null then\n		return NULL;\n	else\n		return state.total;\n	end if;\nend\n"		
+base_type_examples	base_fn_in	postgres	internal		1	0					309	1	0	base_type_examples	base_type	cstring	base_type_examples.base_type	boolin		
+base_type_examples	base_fn_out	postgres	internal		1	0					309	1	0	pg_catalog	cstring	base_type_examples.base_type	cstring	boolout		
+base_type_examples	fake_op	postgres	sql		100	0					53	2	0	pg_catalog	bool	point, base_type_examples.int42	boolean	" select true "		
+base_type_examples	get_default_test	postgres	sql		100	1000					573	0	0	base_type_examples	default_test_row		SETOF base_type_examples.default_test_row	\n  SELECT * FROM base_type_examples.default_test;\n		
+base_type_examples	int42_in	postgres	internal		1	0					309	1	0	base_type_examples	int42	cstring	base_type_examples.int42	int4in		
+base_type_examples	int42_out	postgres	internal		1	0					309	1	0	pg_catalog	cstring	base_type_examples.int42	cstring	int4out		
+base_type_examples	myvarcharin	postgres	internal		1	0					277	3	0	base_type_examples	myvarchar	cstring, oid, integer	base_type_examples.myvarchar	varcharin		
+base_type_examples	myvarcharout	postgres	internal		1	0					277	1	0	pg_catalog	cstring	base_type_examples.myvarchar	cstring	varcharout		
+base_type_examples	myvarcharrecv	postgres	internal		1	0					281	3	0	base_type_examples	myvarchar	internal, oid, integer	base_type_examples.myvarchar	varcharrecv		
+base_type_examples	myvarcharsend	postgres	internal		1	0					281	1	0	pg_catalog	bytea	base_type_examples.myvarchar	bytea	varcharsend		
+base_type_examples	text_w_default_in	postgres	internal		1	0					309	1	0	base_type_examples	text_w_default	cstring	base_type_examples.text_w_default	textin		
+base_type_examples	text_w_default_out	postgres	internal		1	0					309	1	0	pg_catalog	cstring	base_type_examples.text_w_default	cstring	textout		
+composite_type_examples	get_basic	postgres	sql		100	1000					573	0	0	composite_type_examples	basic_comp_type		SETOF composite_type_examples.basic_comp_type	\n  SELECT f1, f2 FROM composite_type_examples.equivalent_rowtype\n		
+create_cast	transmogrify	postgres	sql		100	0					53	1	0	pg_catalog	int4	input create_cast.abc	integer	\n  SELECT 1;\n		
+domain_examples	is_even	postgres	sql		100	0					53	1	0	pg_catalog	bool	i domain_examples.positive_number	boolean	\n  SELECT (i % 2) = 0\n		
+domain_examples	is_positive	postgres	sql		100	0					53	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT i > 0\n		
+enum_example	make_bug_info	postgres	sql		100	0					53	2	0	enum_example	bug_info	status enum_example.bug_status, severity enum_example.bug_severity	enum_example.bug_info	\n    SELECT status, severity\n  		
+enum_example	should_raise_alarm	postgres	sql		100	0					53	1	0	pg_catalog	bool	info enum_example.bug_info	boolean	\n    SELECT info.status = 'new' AND info.severity = 'high'\n  		
+extension_example	_hstore	postgres	plpgsql		100	0					309	1	0	extension_example	hstore	r record	extension_example.hstore	\n    BEGIN\n      return extension_example.hstore(r);\n    END;\n  		
+fn_examples	depends_on_table_column	postgres	sql		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.ordinary_table LIMIT 1\n		
+fn_examples	depends_on_table_column_type	postgres	sql		100	0					61	0	0	pg_catalog	int4		integer	\n    SELECT id FROM fn_examples.ordinary_table LIMIT 1\n  		
+fn_examples	depends_on_table_rowtype	postgres	sql		100	0					61	0	0	fn_examples	ordinary_table		fn_examples.ordinary_table	\n  SELECT * FROM fn_examples.ordinary_table LIMIT 1\n		
+fn_examples	depends_on_view_column	postgres	sql		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.basic_view LIMIT 1\n		
+fn_examples	depends_on_view_column_type	postgres	sql		100	0					61	0	0	pg_catalog	int4		integer	\n  SELECT id FROM fn_examples.basic_view LIMIT 1\n		
+fn_examples	insert_to_table	postgres	plpgsql		100	0					62	0	0	pg_catalog	void			\n  BEGIN\n    IF fn_examples.is_even(2) THEN\n      INSERT INTO fn_examples.ordinary_table(id) VALUES (1);\n    END IF;\n  END;\n		
+fn_examples	is_even	postgres	plpgsql		100	0					61	1	0	pg_catalog	bool	i integer	boolean	\nBEGIN\n  IF i % 2 = 0 THEN\n    RETURN true;\n  ELSE\n    RETURN false;\n  end if;\nEND;\n		
+fn_examples	is_odd	postgres	sql		100	0					61	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT (fn_examples.is_even(i) IS NOT true)\n		
+fn_examples	polyf	postgres	sql		100	0					61	1	0	pg_catalog	anyelement	x anyelement	anyelement	\n  select x + 1\n		
+foreign_db_example	is_positive	postgres	sql		100	0					53	1	0	pg_catalog	bool	i integer	boolean	\n  SELECT i > 0\n		
+public	log_table_alteration	postgres	plpgsql		100	0					61	0	0	pg_catalog	event_trigger		event_trigger	\nBEGIN\n  RAISE NOTICE 'command % issued', tg_tag;\nEND;\n		
+regress_rls_schema	f_leak	postgres	plpgsql		1e-07	0					61	1	0	pg_catalog	bool	text	boolean	BEGIN RAISE NOTICE 'f_leak => %', $1; RETURN true; END		
+regress_rls_schema	op_leak	regress_rls_alice	plpgsql		100	0					61	2	0	pg_catalog	bool	integer, integer	boolean	BEGIN RAISE NOTICE 'op_leak => %, %', $1, $2; RETURN $1 < $2; END		
+trigger_test	check_account_update	postgres	plpgsql		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      RAISE NOTICE 'trigger_func(%) called: action = %, when = %, level = %, old = %, new = %',\n                        TG_ARGV[0], TG_OP, TG_WHEN, TG_LEVEL, OLD, NEW;\n      RETURN NULL;\n    END;\n  		
+trigger_test	log_account_update	postgres	plpgsql		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      INSERT INTO trigger_test.update_log(account_id) VALUES (1);\n      RETURN NULL;\n    END;\n  		
+trigger_test	view_insert_row	postgres	plpgsql		100	0					61	0	0	pg_catalog	trigger		trigger	\n    BEGIN\n      INSERT INTO trigger_test.accounts(id, balance) VALUES (NEW.id, NEW.balance);\n      RETURN NEW;\n    END;\n  		

@@ -2,6 +2,7 @@ SELECT
     ns.nspname AS schema_name
   , fn.proname AS function_name
   , pg_catalog.pg_get_userbyid(fn.proowner) AS owner_name
+  , lang.lanname AS language_name
   , fn.proacl AS access_privileges--  aclitem[]
     -- Implementation language or call interface of this function
   , fn.procost AS estimated_execution_cost

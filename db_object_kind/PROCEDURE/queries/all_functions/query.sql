@@ -2,6 +2,7 @@ SELECT
     ns.nspname AS schema_name
   , fn.proname AS function_name
   , pg_catalog.pg_get_userbyid(fn.proowner) AS owner_name
+  , lang.lanname AS language_name
   , fn.proacl AS access_privileges--  aclitem[]
     -- Implementation language or call interface of this function
   , fn.procost AS estimated_execution_cost
@@ -60,7 +61,7 @@ SELECT
     -- text: Additional information about how to invoke the function. Again, the
     -- interpretation is language-specific.
   , fn.proconfig as runtime_config_vars
-FROM pg_catalog.pg_proc AS fn
+FROM pg_catalog.pg_proc AS fn -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
 INNER JOIN pg_catalog.pg_namespace AS ns ON
   NOT EXISTS ( -- filter out schemata that are managed by extensions
     SELECT 1
@@ -82,8 +83,8 @@ INNER JOIN pg_catalog.pg_namespace AS ns ON
     LIMIT 1
   ) AND
   fn.pronamespace = ns.oid
-INNER JOIN pg_catalog.pg_language AS lang ON
-  fn.prolang = lang.oid
+INNER JOIN pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
+  ON fn.prolang = lang.oid
 LEFT JOIN (
   pg_catalog.pg_type AS variadic_type
   INNER JOIN pg_catalog.pg_namespace AS variadic_type_schema
