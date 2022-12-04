@@ -1,5 +1,7 @@
 {{- $is_fk := (eq .kind "f") -}}
+{{- $is_domain := (eq .kind "d") -}}
 {{- $show_fk := or (not .kind) ($is_fk) -}}
+{{- $show_domain := or (not .kind) ($is_domain) -}}
 SELECT
 -- constraint namespacing
     ns.nspname AS constraint_schema
@@ -136,9 +138,13 @@ SELECT
     -- a constraint on a partitioned table.
   , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
 -- domain information
+  {{- if not $show_domain }} -- omitted
+  {{- else }}
   , type_ns.nspname AS type_schema
   , type_.typname AS type_name
-    -- always 0 for non-domain constraints
+    -- always null for non-domain constraints
+  {{- end }}
+-- inheritence
   , constraint_.coninhcount AS n_ancestor_constraints
     -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
   , constraint_.conkey AS constrained_column_numbers

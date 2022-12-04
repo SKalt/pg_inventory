@@ -1,18 +1,18 @@
-constraint_schema	constraint_name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
-domain_examples	us_snail_addy_pkey	false	false	true	true	true	domain_examples	us_snail_addy			PRIMARY KEY (address_id)			0	{1}
-idx_ex	films_pkey	false	false	true	true	true	idx_ex	films			PRIMARY KEY (id)			0	{1}
-ordinary_tables	binary_examples_pkey	false	false	true	true	true	ordinary_tables	binary_examples			PRIMARY KEY (bytes)			0	{1}
-ordinary_tables	character_examples_pkey	false	false	true	true	true	ordinary_tables	character_examples			PRIMARY KEY (id)			0	{1}
-ordinary_tables	numeric_type_examples_pkey	false	false	true	true	true	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)			0	{1}
-regress_rls_schema	category_pkey	false	false	true	true	true	regress_rls_schema	category			PRIMARY KEY (cid)			0	{1}
-regress_rls_schema	document_pkey	false	false	true	true	true	regress_rls_schema	document			PRIMARY KEY (did)			0	{1}
-regress_rls_schema	r1_3_pkey	false	false	true	true	true	regress_rls_schema	r1_3			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_4_pkey	false	false	true	true	true	regress_rls_schema	r1_4			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_5_pkey	false	false	true	true	true	regress_rls_schema	r1_5			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_pkey	false	false	true	true	true	regress_rls_schema	r1			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	t1_pkey	false	false	true	true	true	regress_rls_schema	t1			PRIMARY KEY (id)			0	{1}
-regress_rls_schema	t3_3_pkey	false	false	true	true	true	regress_rls_schema	t3_3			PRIMARY KEY (id)			0	{3}
-regress_rls_schema	uaccount_pkey	false	false	true	true	true	regress_rls_schema	uaccount			PRIMARY KEY (pguser)			0	{1}
-tablespace_dependencies	example_table_pk	false	false	true	true	true	tablespace_dependencies	example_table			PRIMARY KEY (id)			0	{1}
-trigger_test	accounts_pkey	false	false	true	true	true	trigger_test	accounts			PRIMARY KEY (id)			0	{1}
-trigger_test	update_log_pk	false	false	true	true	true	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"			0	{1,2}
+constraint_schema	constraint_name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	n_ancestor_constraints	constrained_column_numbers
+domain_examples	us_snail_addy_pkey	false	false	true	true	true	domain_examples	us_snail_addy			PRIMARY KEY (address_id)	0	{1}
+idx_ex	films_pkey	false	false	true	true	true	idx_ex	films			PRIMARY KEY (id)	0	{1}
+ordinary_tables	binary_examples_pkey	false	false	true	true	true	ordinary_tables	binary_examples			PRIMARY KEY (bytes)	0	{1}
+ordinary_tables	character_examples_pkey	false	false	true	true	true	ordinary_tables	character_examples			PRIMARY KEY (id)	0	{1}
+ordinary_tables	numeric_type_examples_pkey	false	false	true	true	true	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)	0	{1}
+regress_rls_schema	category_pkey	false	false	true	true	true	regress_rls_schema	category			PRIMARY KEY (cid)	0	{1}
+regress_rls_schema	document_pkey	false	false	true	true	true	regress_rls_schema	document			PRIMARY KEY (did)	0	{1}
+regress_rls_schema	r1_3_pkey	false	false	true	true	true	regress_rls_schema	r1_3			PRIMARY KEY (a)	0	{1}
+regress_rls_schema	r1_4_pkey	false	false	true	true	true	regress_rls_schema	r1_4			PRIMARY KEY (a)	0	{1}
+regress_rls_schema	r1_5_pkey	false	false	true	true	true	regress_rls_schema	r1_5			PRIMARY KEY (a)	0	{1}
+regress_rls_schema	r1_pkey	false	false	true	true	true	regress_rls_schema	r1			PRIMARY KEY (a)	0	{1}
+regress_rls_schema	t1_pkey	false	false	true	true	true	regress_rls_schema	t1			PRIMARY KEY (id)	0	{1}
+regress_rls_schema	t3_3_pkey	false	false	true	true	true	regress_rls_schema	t3_3			PRIMARY KEY (id)	0	{3}
+regress_rls_schema	uaccount_pkey	false	false	true	true	true	regress_rls_schema	uaccount			PRIMARY KEY (pguser)	0	{1}
+tablespace_dependencies	example_table_pk	false	false	true	true	true	tablespace_dependencies	example_table			PRIMARY KEY (id)	0	{1}
+trigger_test	accounts_pkey	false	false	true	true	true	trigger_test	accounts			PRIMARY KEY (id)	0	{1}
+trigger_test	update_log_pk	false	false	true	true	true	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"	0	{1,2}
