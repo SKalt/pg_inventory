@@ -1,36 +1,36 @@
-constraint_schema	constraint_name	enforcement_info	fk_info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids
-composite_type_examples	check_f1_gt_1	44	0	composite_type_examples	ordinary_table			CHECK ((basic_).f1 > 1)			0	{1}						
-composite_type_examples	check_f1_gt_1	36	0	composite_type_examples	inherited_table			CHECK ((basic_).f1 > 1)			1	{1}						
-composite_type_examples	check_f1_gt_1_again	36	0	composite_type_examples	inherited_table			CHECK ((_basic).f1 > 1)			1	{2}						
-composite_type_examples	check_f1_gt_1_again	44	0	composite_type_examples	ordinary_table			CHECK ((_basic).f1 > 1)			0	{2}						
-composite_type_examples	check_nested_f1_gt_1	36	0	composite_type_examples	inherited_table			CHECK ((nested).foo.f1 > 1)			1	{3}						
-composite_type_examples	check_nested_f1_gt_1	44	0	composite_type_examples	ordinary_table			CHECK ((nested).foo.f1 > 1)			0	{3}						
-composite_type_examples	check_nested_f1_gt_1_again	44	0	composite_type_examples	ordinary_table			CHECK ((_nested).foo.f1 > 1)			0	{4}						
-composite_type_examples	check_nested_f1_gt_1_again	36	0	composite_type_examples	inherited_table			CHECK ((_nested).foo.f1 > 1)			1	{4}						
-domain_examples	check_postal_code_regex	44	0					CHECK (VALUE ~ '^\d{5}$'::text OR VALUE ~ '^\d{5}-\d{4}$'::text)	domain_examples	us_postal_code	0							
-domain_examples	should_be_even	44	0					CHECK (domain_examples.is_even(VALUE))	domain_examples	positive_even_number	0							
-domain_examples	should_be_positive	44	0					CHECK (domain_examples.is_positive(VALUE))	domain_examples	positive_number	0							
-domain_examples	us_snail_addy_pkey	124	0	domain_examples	us_snail_addy			PRIMARY KEY (address_id)			0	{1}						
-foreign_db_example	imaginary_table_id_gt_1	44	0	foreign_db_example	technically_doesnt_exist			CHECK (id > 1)			0	{1}						
-foreign_db_example	positive_number_check	44	0					CHECK (foreign_db_example.is_positive(VALUE))	foreign_db_example	positive_number	0							
-idx_ex	films_pkey	124	0	idx_ex	films			PRIMARY KEY (id)			0	{1}						
-ordinary_tables	binary_examples_pkey	124	0	ordinary_tables	binary_examples			PRIMARY KEY (bytes)			0	{1}						
-ordinary_tables	character_examples_pkey	124	0	ordinary_tables	character_examples			PRIMARY KEY (id)			0	{1}						
-ordinary_tables	numeric_type_examples_pkey	124	0	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)			0	{1}						
-regress_rls_schema	category_pkey	124	0	regress_rls_schema	category			PRIMARY KEY (cid)			0	{1}						
-regress_rls_schema	document_cid_fkey	92	39	regress_rls_schema	document			FOREIGN KEY (cid) REFERENCES regress_rls_schema.category(cid)			0	{2}	regress_rls_schema	category	{1}	{96}	{96}	{96}
-regress_rls_schema	document_pkey	124	0	regress_rls_schema	document			PRIMARY KEY (did)			0	{1}						
-regress_rls_schema	r1_3_pkey	124	0	regress_rls_schema	r1_3			PRIMARY KEY (a)			0	{1}						
-regress_rls_schema	r1_4_pkey	124	0	regress_rls_schema	r1_4			PRIMARY KEY (a)			0	{1}						
-regress_rls_schema	r1_5_pkey	124	0	regress_rls_schema	r1_5			PRIMARY KEY (a)			0	{1}						
-regress_rls_schema	r1_pkey	124	0	regress_rls_schema	r1			PRIMARY KEY (a)			0	{1}						
-regress_rls_schema	r2_3_a_fkey	92	39	regress_rls_schema	r2_3			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a)			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
-regress_rls_schema	r2_4_a_fkey	92	103	regress_rls_schema	r2_4			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a) ON DELETE CASCADE			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
-regress_rls_schema	r2_5_a_fkey	92	47	regress_rls_schema	r2_5			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a) ON UPDATE CASCADE			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
-regress_rls_schema	t1_pkey	124	0	regress_rls_schema	t1			PRIMARY KEY (id)			0	{1}						
-regress_rls_schema	t3_3_pkey	124	0	regress_rls_schema	t3_3			PRIMARY KEY (id)			0	{3}						
-regress_rls_schema	uaccount_pkey	124	0	regress_rls_schema	uaccount			PRIMARY KEY (pguser)			0	{1}						
-tablespace_dependencies	example_table_pk	124	0	tablespace_dependencies	example_table			PRIMARY KEY (id)			0	{1}						
-trigger_test	accounts_pkey	124	0	trigger_test	accounts			PRIMARY KEY (id)			0	{1}						
-trigger_test	update_log_account_id_fkey	92	39	trigger_test	update_log			FOREIGN KEY (account_id) REFERENCES trigger_test.accounts(id)			0	{2}	trigger_test	accounts	{1}	{96}	{96}	{96}
-trigger_test	update_log_pk	124	0	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"			0	{1,2}						
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids
+composite_type_examples	check_f1_gt_1	8193	composite_type_examples	ordinary_table			CHECK ((basic_).f1 > 1)			0	{1}						
+composite_type_examples	check_f1_gt_1	1	composite_type_examples	inherited_table			CHECK ((basic_).f1 > 1)			1	{1}						
+composite_type_examples	check_f1_gt_1_again	1	composite_type_examples	inherited_table			CHECK ((_basic).f1 > 1)			1	{2}						
+composite_type_examples	check_f1_gt_1_again	8193	composite_type_examples	ordinary_table			CHECK ((_basic).f1 > 1)			0	{2}						
+composite_type_examples	check_nested_f1_gt_1	1	composite_type_examples	inherited_table			CHECK ((nested).foo.f1 > 1)			1	{3}						
+composite_type_examples	check_nested_f1_gt_1	8193	composite_type_examples	ordinary_table			CHECK ((nested).foo.f1 > 1)			0	{3}						
+composite_type_examples	check_nested_f1_gt_1_again	8193	composite_type_examples	ordinary_table			CHECK ((_nested).foo.f1 > 1)			0	{4}						
+composite_type_examples	check_nested_f1_gt_1_again	1	composite_type_examples	inherited_table			CHECK ((_nested).foo.f1 > 1)			1	{4}						
+domain_examples	check_postal_code_regex	8193					CHECK (VALUE ~ '^\d{5}$'::text OR VALUE ~ '^\d{5}-\d{4}$'::text)	domain_examples	us_postal_code	0							
+domain_examples	should_be_even	8193					CHECK (domain_examples.is_even(VALUE))	domain_examples	positive_even_number	0							
+domain_examples	should_be_positive	8193					CHECK (domain_examples.is_positive(VALUE))	domain_examples	positive_number	0							
+domain_examples	us_snail_addy_pkey	24579	domain_examples	us_snail_addy			PRIMARY KEY (address_id)			0	{1}						
+foreign_db_example	imaginary_table_id_gt_1	8193	foreign_db_example	technically_doesnt_exist			CHECK (id > 1)			0	{1}						
+foreign_db_example	positive_number_check	8193					CHECK (foreign_db_example.is_positive(VALUE))	foreign_db_example	positive_number	0							
+idx_ex	films_pkey	24579	idx_ex	films			PRIMARY KEY (id)			0	{1}						
+ordinary_tables	binary_examples_pkey	24579	ordinary_tables	binary_examples			PRIMARY KEY (bytes)			0	{1}						
+ordinary_tables	character_examples_pkey	24579	ordinary_tables	character_examples			PRIMARY KEY (id)			0	{1}						
+ordinary_tables	numeric_type_examples_pkey	24579	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)			0	{1}						
+regress_rls_schema	category_pkey	24579	regress_rls_schema	category			PRIMARY KEY (cid)			0	{1}						
+regress_rls_schema	document_cid_fkey	24922	regress_rls_schema	document			FOREIGN KEY (cid) REFERENCES regress_rls_schema.category(cid)			0	{2}	regress_rls_schema	category	{1}	{96}	{96}	{96}
+regress_rls_schema	document_pkey	24579	regress_rls_schema	document			PRIMARY KEY (did)			0	{1}						
+regress_rls_schema	r1_3_pkey	24579	regress_rls_schema	r1_3			PRIMARY KEY (a)			0	{1}						
+regress_rls_schema	r1_4_pkey	24579	regress_rls_schema	r1_4			PRIMARY KEY (a)			0	{1}						
+regress_rls_schema	r1_5_pkey	24579	regress_rls_schema	r1_5			PRIMARY KEY (a)			0	{1}						
+regress_rls_schema	r1_pkey	24579	regress_rls_schema	r1			PRIMARY KEY (a)			0	{1}						
+regress_rls_schema	r2_3_a_fkey	24922	regress_rls_schema	r2_3			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a)			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
+regress_rls_schema	r2_4_a_fkey	25434	regress_rls_schema	r2_4			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a) ON DELETE CASCADE			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
+regress_rls_schema	r2_5_a_fkey	25050	regress_rls_schema	r2_5			FOREIGN KEY (a) REFERENCES regress_rls_schema.r1(a) ON UPDATE CASCADE			0	{1}	regress_rls_schema	r1	{1}	{96}	{96}	{96}
+regress_rls_schema	t1_pkey	24579	regress_rls_schema	t1			PRIMARY KEY (id)			0	{1}						
+regress_rls_schema	t3_3_pkey	24579	regress_rls_schema	t3_3			PRIMARY KEY (id)			0	{3}						
+regress_rls_schema	uaccount_pkey	24579	regress_rls_schema	uaccount			PRIMARY KEY (pguser)			0	{1}						
+tablespace_dependencies	example_table_pk	24579	tablespace_dependencies	example_table			PRIMARY KEY (id)			0	{1}						
+trigger_test	accounts_pkey	24579	trigger_test	accounts			PRIMARY KEY (id)			0	{1}						
+trigger_test	update_log_account_id_fkey	24922	trigger_test	update_log			FOREIGN KEY (account_id) REFERENCES trigger_test.accounts(id)			0	{2}	trigger_test	accounts	{1}	{96}	{96}	{96}
+trigger_test	update_log_pk	24579	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"			0	{1,2}						

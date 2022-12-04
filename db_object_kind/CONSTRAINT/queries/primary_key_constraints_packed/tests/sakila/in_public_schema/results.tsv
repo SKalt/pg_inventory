@@ -1,16 +1,16 @@
-constraint_schema	constraint_name	enforcement_info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
-public	actor_pkey	28	public	actor			PRIMARY KEY (actor_id)			0	{1}
-public	film_pkey	28	public	film			PRIMARY KEY (film_id)			0	{1}
-public	address_pkey	28	public	address			PRIMARY KEY (address_id)			0	{1}
-public	category_pkey	28	public	category			PRIMARY KEY (category_id)			0	{1}
-public	city_pkey	28	public	city			PRIMARY KEY (city_id)			0	{1}
-public	country_pkey	28	public	country			PRIMARY KEY (country_id)			0	{1}
-public	customer_pkey	28	public	customer			PRIMARY KEY (customer_id)			0	{1}
-public	film_actor_pkey	28	public	film_actor			PRIMARY KEY (actor_id, film_id)			0	{1,2}
-public	film_category_pkey	28	public	film_category			PRIMARY KEY (film_id, category_id)			0	{1,2}
-public	inventory_pkey	28	public	inventory			PRIMARY KEY (inventory_id)			0	{1}
-public	language_pkey	28	public	language			PRIMARY KEY (language_id)			0	{1}
-public	rental_pkey	28	public	rental			PRIMARY KEY (rental_id)			0	{1}
-public	staff_pkey	28	public	staff			PRIMARY KEY (staff_id)			0	{1}
-public	store_pkey	28	public	store			PRIMARY KEY (store_id)			0	{1}
-public	payment_pkey	28	public	payment			PRIMARY KEY (payment_id)			0	{1}
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
+public	actor_pkey	24576	public	actor			PRIMARY KEY (actor_id)			0	{1}
+public	film_pkey	24576	public	film			PRIMARY KEY (film_id)			0	{1}
+public	address_pkey	24576	public	address			PRIMARY KEY (address_id)			0	{1}
+public	category_pkey	24576	public	category			PRIMARY KEY (category_id)			0	{1}
+public	city_pkey	24576	public	city			PRIMARY KEY (city_id)			0	{1}
+public	country_pkey	24576	public	country			PRIMARY KEY (country_id)			0	{1}
+public	customer_pkey	24576	public	customer			PRIMARY KEY (customer_id)			0	{1}
+public	film_actor_pkey	24576	public	film_actor			PRIMARY KEY (actor_id, film_id)			0	{1,2}
+public	film_category_pkey	24576	public	film_category			PRIMARY KEY (film_id, category_id)			0	{1,2}
+public	inventory_pkey	24576	public	inventory			PRIMARY KEY (inventory_id)			0	{1}
+public	language_pkey	24576	public	language			PRIMARY KEY (language_id)			0	{1}
+public	rental_pkey	24576	public	rental			PRIMARY KEY (rental_id)			0	{1}
+public	staff_pkey	24576	public	staff			PRIMARY KEY (staff_id)			0	{1}
+public	store_pkey	24576	public	store			PRIMARY KEY (store_id)			0	{1}
+public	payment_pkey	24576	public	payment			PRIMARY KEY (payment_id)			0	{1}

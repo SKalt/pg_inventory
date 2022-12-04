@@ -3,17 +3,23 @@ SELECT
     ns.nspname AS constraint_schema
   , constraint_.conname AS constraint_name
 -- constraint enforcement info
-  , (/* enforcement_info: a 2-byte struct of the form
-      0000 0000 0001 1111 : bools
-      0000 0000 1110 0000 : constraint type
-    */
-    CAST(0 as INT2)
-    | CASE WHEN constraint_.condeferrable THEN 1<<0 ELSE 0 END
-    | CASE WHEN constraint_.condeferred   THEN 1<<1 ELSE 0 END
-    | CASE WHEN constraint_.convalidated  THEN 1<<2 ELSE 0 END
-    | CASE WHEN constraint_.conislocal    THEN 1<<3 ELSE 0 END
-    | CASE WHEN constraint_.connoinherit  THEN 1<<4 ELSE 0 END
-    )::INT2 AS enforcement_info
+  , (-- info: a 2-byte packed int.
+    0
+    -- 0000 0000 0000 0111 : constraint type -- omitted since constraint type is specified
+    -- 0000 0000 0011 1000 : FK update action -- omitted since only non-FK constraints matched
+    -- 0000 0000 1100 0000 : FK match type -- omitted since only non-FK constraints matched
+    -- 0000 0111 0000 0000 : FK delete action -- omitted since only non-FK constraints matched
+    -- 0000 1000 0000 0000 : is_deferrable
+      | CASE WHEN constraint_.condeferrable THEN 1<<11 ELSE 0 END
+    -- 0001 0000 0000 0000 : is_deferred_by_default
+      | CASE WHEN constraint_.condeferred   THEN 1<<12 ELSE 0 END
+    -- 0010 0000 0000 0000 : is_local (to a relation; heritable)
+      | CASE WHEN constraint_.conislocal    THEN 1<<13 ELSE 0 END
+    -- 0100 0000 0000 0000 : not_inheritable
+      | CASE WHEN constraint_.connoinherit  THEN 1<<14 ELSE 0 END
+    -- 1000 0000 0000 0000 : is_validated
+      * CASE WHEN constraint_.convalidated  THEN 1 ELSE -1 END
+    )::INT2 AS info
 -- table constraint information
   , tbl_ns.nspname AS table_schema
   , tbl.relname AS table_name

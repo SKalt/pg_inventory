@@ -1,8 +1,8 @@
-constraint_schema	constraint_name	enforcement_info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
-public	payment_p2007_02_payment_date_check	12	public	payment_p2007_02			CHECK (payment_date >= '2007-02-01 00:00:00'::timestamp without time zone AND payment_date < '2007-03-01 00:00:00'::timestamp without time zone)			0	{6}
-public	payment_p2007_03_payment_date_check	12	public	payment_p2007_03			CHECK (payment_date >= '2007-03-01 00:00:00'::timestamp without time zone AND payment_date < '2007-04-01 00:00:00'::timestamp without time zone)			0	{6}
-public	payment_p2007_04_payment_date_check	12	public	payment_p2007_04			CHECK (payment_date >= '2007-04-01 00:00:00'::timestamp without time zone AND payment_date < '2007-05-01 00:00:00'::timestamp without time zone)			0	{6}
-public	payment_p2007_06_payment_date_check	12	public	payment_p2007_06			CHECK (payment_date >= '2007-06-01 00:00:00'::timestamp without time zone AND payment_date < '2007-07-01 00:00:00'::timestamp without time zone)			0	{6}
-public	payment_p2007_01_payment_date_check	12	public	payment_p2007_01			CHECK (payment_date >= '2007-01-01 00:00:00'::timestamp without time zone AND payment_date < '2007-02-01 00:00:00'::timestamp without time zone)			0	{6}
-public	payment_p2007_05_payment_date_check	12	public	payment_p2007_05			CHECK (payment_date >= '2007-05-01 00:00:00'::timestamp without time zone AND payment_date < '2007-06-01 00:00:00'::timestamp without time zone)			0	{6}
-public	year_check	12					CHECK (VALUE >= 1901 AND VALUE <= 2155)	public	year	0	
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
+public	payment_p2007_02_payment_date_check	8192	public	payment_p2007_02			CHECK (payment_date >= '2007-02-01 00:00:00'::timestamp without time zone AND payment_date < '2007-03-01 00:00:00'::timestamp without time zone)			0	{6}
+public	payment_p2007_03_payment_date_check	8192	public	payment_p2007_03			CHECK (payment_date >= '2007-03-01 00:00:00'::timestamp without time zone AND payment_date < '2007-04-01 00:00:00'::timestamp without time zone)			0	{6}
+public	payment_p2007_04_payment_date_check	8192	public	payment_p2007_04			CHECK (payment_date >= '2007-04-01 00:00:00'::timestamp without time zone AND payment_date < '2007-05-01 00:00:00'::timestamp without time zone)			0	{6}
+public	payment_p2007_06_payment_date_check	8192	public	payment_p2007_06			CHECK (payment_date >= '2007-06-01 00:00:00'::timestamp without time zone AND payment_date < '2007-07-01 00:00:00'::timestamp without time zone)			0	{6}
+public	payment_p2007_01_payment_date_check	8192	public	payment_p2007_01			CHECK (payment_date >= '2007-01-01 00:00:00'::timestamp without time zone AND payment_date < '2007-02-01 00:00:00'::timestamp without time zone)			0	{6}
+public	payment_p2007_05_payment_date_check	8192	public	payment_p2007_05			CHECK (payment_date >= '2007-05-01 00:00:00'::timestamp without time zone AND payment_date < '2007-06-01 00:00:00'::timestamp without time zone)			0	{6}
+public	year_check	8192					CHECK (VALUE >= 1901 AND VALUE <= 2155)	public	year	0	

@@ -1,18 +1,18 @@
-constraint_schema	constraint_name	enforcement_info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
-domain_examples	us_snail_addy_pkey	28	domain_examples	us_snail_addy			PRIMARY KEY (address_id)			0	{1}
-idx_ex	films_pkey	28	idx_ex	films			PRIMARY KEY (id)			0	{1}
-ordinary_tables	binary_examples_pkey	28	ordinary_tables	binary_examples			PRIMARY KEY (bytes)			0	{1}
-ordinary_tables	character_examples_pkey	28	ordinary_tables	character_examples			PRIMARY KEY (id)			0	{1}
-ordinary_tables	numeric_type_examples_pkey	28	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)			0	{1}
-regress_rls_schema	category_pkey	28	regress_rls_schema	category			PRIMARY KEY (cid)			0	{1}
-regress_rls_schema	document_pkey	28	regress_rls_schema	document			PRIMARY KEY (did)			0	{1}
-regress_rls_schema	r1_3_pkey	28	regress_rls_schema	r1_3			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_4_pkey	28	regress_rls_schema	r1_4			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_5_pkey	28	regress_rls_schema	r1_5			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	r1_pkey	28	regress_rls_schema	r1			PRIMARY KEY (a)			0	{1}
-regress_rls_schema	t1_pkey	28	regress_rls_schema	t1			PRIMARY KEY (id)			0	{1}
-regress_rls_schema	t3_3_pkey	28	regress_rls_schema	t3_3			PRIMARY KEY (id)			0	{3}
-regress_rls_schema	uaccount_pkey	28	regress_rls_schema	uaccount			PRIMARY KEY (pguser)			0	{1}
-tablespace_dependencies	example_table_pk	28	tablespace_dependencies	example_table			PRIMARY KEY (id)			0	{1}
-trigger_test	accounts_pkey	28	trigger_test	accounts			PRIMARY KEY (id)			0	{1}
-trigger_test	update_log_pk	28	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"			0	{1,2}
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers
+domain_examples	us_snail_addy_pkey	24576	domain_examples	us_snail_addy			PRIMARY KEY (address_id)			0	{1}
+idx_ex	films_pkey	24576	idx_ex	films			PRIMARY KEY (id)			0	{1}
+ordinary_tables	binary_examples_pkey	24576	ordinary_tables	binary_examples			PRIMARY KEY (bytes)			0	{1}
+ordinary_tables	character_examples_pkey	24576	ordinary_tables	character_examples			PRIMARY KEY (id)			0	{1}
+ordinary_tables	numeric_type_examples_pkey	24576	ordinary_tables	numeric_type_examples			PRIMARY KEY (id)			0	{1}
+regress_rls_schema	category_pkey	24576	regress_rls_schema	category			PRIMARY KEY (cid)			0	{1}
+regress_rls_schema	document_pkey	24576	regress_rls_schema	document			PRIMARY KEY (did)			0	{1}
+regress_rls_schema	r1_3_pkey	24576	regress_rls_schema	r1_3			PRIMARY KEY (a)			0	{1}
+regress_rls_schema	r1_4_pkey	24576	regress_rls_schema	r1_4			PRIMARY KEY (a)			0	{1}
+regress_rls_schema	r1_5_pkey	24576	regress_rls_schema	r1_5			PRIMARY KEY (a)			0	{1}
+regress_rls_schema	r1_pkey	24576	regress_rls_schema	r1			PRIMARY KEY (a)			0	{1}
+regress_rls_schema	t1_pkey	24576	regress_rls_schema	t1			PRIMARY KEY (id)			0	{1}
+regress_rls_schema	t3_3_pkey	24576	regress_rls_schema	t3_3			PRIMARY KEY (id)			0	{3}
+regress_rls_schema	uaccount_pkey	24576	regress_rls_schema	uaccount			PRIMARY KEY (pguser)			0	{1}
+tablespace_dependencies	example_table_pk	24576	tablespace_dependencies	example_table			PRIMARY KEY (id)			0	{1}
+trigger_test	accounts_pkey	24576	trigger_test	accounts			PRIMARY KEY (id)			0	{1}
+trigger_test	update_log_pk	24576	trigger_test	update_log			"PRIMARY KEY (""timestamp"", account_id)"			0	{1,2}
