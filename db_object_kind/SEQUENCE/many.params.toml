@@ -12,5 +12,3 @@ sequences
 [filter_on_persistence]
   all = false
   one = true
-[packed]
-  "" = false

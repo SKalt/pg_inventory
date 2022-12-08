@@ -144,7 +144,7 @@ SELECT
   , type_.typname AS type_name
     -- always null for non-domain constraints
   {{- end }}
--- inheritence
+-- other
   , constraint_.coninhcount AS n_ancestor_constraints
     -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
   , constraint_.conkey AS constrained_column_numbers

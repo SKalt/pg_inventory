@@ -22,9 +22,11 @@ SELECT
   , type_.typname AS sequence_type
   , type_schema.nspname AS sequence_type_schema_name
   , pg_catalog.pg_get_userbyid(type_.typowner) AS sequence_type_owner_name
-FROM pg_catalog.pg_sequence AS seq
-INNER JOIN pg_catalog.pg_class AS cls ON seq.seqrelid = cls.oid
-INNER JOIN pg_catalog.pg_namespace AS ns ON cls.relnamespace = ns.oid
+FROM pg_catalog.pg_sequence AS seq -- https://www.postgresql.org/docs/current/catalog-pg-sequence.html
+INNER JOIN pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+  ON seq.seqrelid = cls.oid
+INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+  ON cls.relnamespace = ns.oid
 INNER JOIN (
   SELECT
     -- namespacing and ownership
@@ -80,7 +82,7 @@ INNER JOIN (
     ON (cls.reltablespace = cls_space.oid)
   
 ) AS rel ON ns.nspname = rel.schema_name AND cls.relname = rel.name
-INNER JOIN pg_catalog.pg_type AS type_
+INNER JOIN pg_catalog.pg_type AS type_ -- https://www.postgresql.org/docs/current/catalog-pg-type.html
   ON seq.seqtypid = type_.oid
 INNER JOIN pg_catalog.pg_namespace as type_schema
   ON type_.typnamespace = type_schema.oid

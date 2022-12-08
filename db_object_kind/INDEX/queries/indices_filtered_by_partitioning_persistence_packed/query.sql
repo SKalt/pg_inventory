@@ -15,15 +15,22 @@ SELECT
   -- details
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "description" -- comment?
     , (-- info: 2-byte int
-       -- 0000 0001 1111 1111 : bools
-       -- 0000 1110 0000 0000 : replica identity
         0
-        
+      -- 0000 0000 0000 0001 : has_index -- omitted: table-only
+      -- 0000 0000 0000 0010 : is_shared -- omitted: table-only
+      -- 0000 0000 0000 0100 : has_rules-- omitted: table-only
+      -- 0000 0000 0000 1000 : has_triggers
         | (CASE WHEN cls.relhastriggers      THEN 1<<3 ELSE 0 END)
+      -- 0000 0000 0001 0000 : has_subclass
         | (CASE WHEN cls.relhassubclass      THEN 1<<4 ELSE 0 END)
+      -- 0000 0000 0010 0000 : has_row_level_security
         | (CASE WHEN cls.relrowsecurity      THEN 1<<5 ELSE 0 END)
+      -- 0000 0000 0100 0000 : row_level_security_enforced_on_owner
         | (CASE WHEN cls.relforcerowsecurity THEN 1<<6 ELSE 0 END)
+      -- 0000 0000 1000 0000 : row_level_security_enforced_on_owner
         | (CASE WHEN cls.relispartition      THEN 1<<7 ELSE 0 END)
+      -- 0000 0001 0000 0000 : is_populated -- omitted: only for materialized/regular views
+      -- 0000 1110 0000 0000 : replica identity
         | ((
             CASE cls.relreplident
               WHEN 'd' THEN 1 -- default (primary key, if any),
@@ -34,6 +41,7 @@ SELECT
               ELSE          0
             END
           )<<9)
+      -- 0011 0000 0000 0000 : persistence
         | ((
             CASE cls.relpersistence
               WHEN 'p' THEN 1

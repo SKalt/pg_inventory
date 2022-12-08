@@ -46,31 +46,41 @@ SELECT
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "description" -- comment?
   {{- if .packed }}
     , (-- info: 2-byte int
-       -- 0000 0001 1111 1111 : bools
-       -- 0000 1110 0000 0000 : replica identity
-       {{- if not .filter_on_persistence }}
-       -- 0011 0000 0000 0000 : persistence
-       {{- end }}
         0
-        {{- if $is_table }}
+      -- 0000 0000 0000 0001 : has_index
+        {{- if not $is_table }} -- omitted: table-only
+        {{- else }}
         | (CASE WHEN cls.relhasindex         THEN 1<<0 ELSE 0 END)
         {{- end }}
-        {{- if $is_table }}
+      -- 0000 0000 0000 0010 : is_shared
+        {{- if not $is_table }} -- omitted: table-only
+        {{- else }}
         | (CASE WHEN cls.relisshared         THEN 1<<1 ELSE 0 END)
         {{- end }}
-        {{ if $is_table -}}
+      -- 0000 0000 0000 0100 : has_rules
+        {{- if not $is_table -}} -- omitted: table-only
+        {{- else }}
         | (CASE WHEN cls.relhasrules         THEN 1<<2 ELSE 0 END)
         {{- end }}
+      -- 0000 0000 0000 1000 : has_triggers
         | (CASE WHEN cls.relhastriggers      THEN 1<<3 ELSE 0 END)
+      -- 0000 0000 0001 0000 : has_subclass
         | (CASE WHEN cls.relhassubclass      THEN 1<<4 ELSE 0 END)
+      -- 0000 0000 0010 0000 : has_row_level_security
         | (CASE WHEN cls.relrowsecurity      THEN 1<<5 ELSE 0 END)
+      -- 0000 0000 0100 0000 : row_level_security_enforced_on_owner
         | (CASE WHEN cls.relforcerowsecurity THEN 1<<6 ELSE 0 END)
+      -- 0000 0000 1000 0000 : row_level_security_enforced_on_owner
         {{- if $is_partitionable }}
         | (CASE WHEN cls.relispartition      THEN 1<<7 ELSE 0 END)
+        {{- else }} -- omitted: only applicable to tables or indices
         {{- end }}
+      -- 0000 0001 0000 0000 : is_populated
         {{- if (or $is_materialized_view $is_view) }}
         | (CASE WHEN cls.relispopulated      THEN 1<<8 ELSE 0 END)
+        {{- else }} -- omitted: only for materialized/regular views
         {{- end }}
+      -- 0000 1110 0000 0000 : replica identity
         | ((
             CASE cls.relreplident
               WHEN 'd' THEN 1 -- default (primary key, if any),
@@ -81,6 +91,7 @@ SELECT
               ELSE          0
             END
           )<<9)
+      -- 0011 0000 0000 0000 : persistence
         {{- if or (not .filter_on_persistence) (not $is_materialized_view) }}
         | ((
             CASE cls.relpersistence
@@ -90,6 +101,7 @@ SELECT
               ELSE          0
             END
           )<<11)
+        {{- else }} -- omitted
         {{- end }}
       )::INT2 AS info
   {{- else }}
@@ -179,7 +191,7 @@ SELECT
       -- int2; see pg_constraint catalog
   {{- if or $is_view $is_materialized_view }}
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
-  {{ else if $is_index }}
+  {{- else if $is_index }}
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
   {{- end }}
 FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
