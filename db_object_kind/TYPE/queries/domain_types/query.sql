@@ -88,7 +88,7 @@ SELECT
   , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
   , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
   , type_modifier_input_fn.proname AS type_modifier_input_fn
-    -- zero of this type doesn't support modifiers
+    -- zero if this type doesn't support modifiers
   , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
   , type_modifier_output_fn.proname AS type_modifier_output_fn
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
@@ -108,7 +108,7 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/curr
 INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs/current/catalog-pg-authid.html
   ON type_.typowner = type_owner.oid
 
-  INNER JOIN pg_catalog.pg_type AS base_type
+INNER JOIN pg_catalog.pg_type AS base_type
   ON type_.typbasetype = base_type.oid
 
 LEFT JOIN (

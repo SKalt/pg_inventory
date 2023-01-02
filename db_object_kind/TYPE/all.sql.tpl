@@ -1,9 +1,13 @@
 {{- /* variable definitions*/ -}}
-  {{- $show_all := (not .kind) -}}
-  {{- $is_domain := (eq .kind "d") -}}
-  {{- $is_composite := (eq .kind "c") -}}
-  {{- $is_enum := (eq .kind "e") -}}
-  {{- $show_domain := or $show_all $is_domain -}}
+  {{- $show_all       := (not .kind)                -}}
+  {{- $is_domain      := (eq .kind "d")             -}}
+  {{- $is_composite   := (eq .kind "c")             -}}
+  {{- $is_enum        := (eq .kind "e")             -}}
+  {{- $is_pseudo      := (eq .kind "p")             -}}
+  {{- $is_range       := (eq .kind "r")             -}}
+  {{- $is_multirange  := (eq .kind "m")             -}}
+  {{- $show_domain    := or $show_all $is_domain    -}}
+  {{- $show_range     := or $show_all $is_range     -}}
   {{- $show_composite := or $show_all $is_composite -}}
 SELECT
 -- namespacing and ownership
@@ -14,20 +18,15 @@ SELECT
     -- for variable-length types, -1.
     -- for nulll-terminated c-strings, -2
   , type_owner.rolname AS type_owner_name
+  {{ if $is_pseudo -}} -- omitted for pseudo-types: {{end -}}
   , type_.typdefault AS default_value_expression
     -- human-readable text which can be fed to the type's input converter to
     -- produce a constant or null if the type has no associated default value.
   , type_.typacl AS access_privileges -- aclitem[]
 -- misc type info
 {{- if .packed }}
-  , (/* info: a 2-byte packed struct of the form:
-      0000 0000 0000 0111 : kind
-      0000 0000 1111 0000 : category
-      0000 0011 0000 0000 : storage alignment
-      0000 1100 0000 0000 : storage type
-      0111 0000 0000 1000 : bools
-      */
-      0::INT2
+  , ( -- info: a 2-byte packed struct
+      0
       -- 0000 0000 0000 0111 : kind
     {{- if $show_all }}
       | (
@@ -199,7 +198,7 @@ SELECT
   , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
   , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
   , type_modifier_input_fn.proname AS type_modifier_input_fn
-    -- zero of this type doesn't support modifiers
+    -- zero if this type doesn't support modifiers
   , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
   , type_modifier_output_fn.proname AS type_modifier_output_fn
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
@@ -244,8 +243,12 @@ INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs
   -- TODO: join pg_catalog.pg_namespace for relation_schema_name, oid
 {{- end }}
 {{- if $show_domain }}
-  {{ if $is_domain -}} INNER {{- else -}} LEFT {{- end }} JOIN pg_catalog.pg_type AS base_type
+{{ if $is_domain -}} INNER {{- else -}} LEFT {{- end }} JOIN pg_catalog.pg_type AS base_type
   ON {{ if not $is_domain -}} type_.typbasetype > 0 AND {{ end -}} type_.typbasetype = base_type.oid
+{{- end }}
+{{- if $show_range }}
+{{ if $is_range -}} INNER {{- else -}} LEFT {{- end }} JOIN pg_catalog.pg_range AS range_ -- https://www.postgresql.org/docs/current/catalog-pg-range.html
+  ON type_.oid = range_.rngtypid
 {{- end }}
 
 LEFT JOIN (

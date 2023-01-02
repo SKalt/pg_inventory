@@ -12,14 +12,8 @@ SELECT
     -- produce a constant or null if the type has no associated default value.
   , type_.typacl AS access_privileges -- aclitem[]
 -- misc type info
-  , (/* info: a 2-byte packed struct of the form:
-      0000 0000 0000 0111 : kind
-      0000 0000 1111 0000 : category
-      0000 0011 0000 0000 : storage alignment
-      0000 1100 0000 0000 : storage type
-      0111 0000 0000 1000 : bools
-      */
-      0::INT2
+  , ( -- info: a 2-byte packed struct
+      0
       -- 0000 0000 0000 0111 : kind -- omitted
       -- 0000 0000 0000 1000 domain not null -- omitted
       | ((-- 0000 0000 1111 0000 : category

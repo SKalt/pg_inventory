@@ -97,7 +97,7 @@ SELECT
   , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
   , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
   , type_modifier_input_fn.proname AS type_modifier_input_fn
-    -- zero of this type doesn't support modifiers
+    -- zero if this type doesn't support modifiers
   , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
   , type_modifier_output_fn.proname AS type_modifier_output_fn
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
@@ -121,8 +121,10 @@ INNER JOIN pg_catalog.pg_authid AS type_owner -- https://www.postgresql.org/docs
 LEFT JOIN pg_catalog.pg_class AS relation -- https://www.postgresql.org/docs/current/catalog-pg-class.html
   ON type_.typrelid > 0 AND type_.typrelid = relation.oid
   -- TODO: join pg_catalog.pg_namespace for relation_schema_name, oid
-  LEFT JOIN pg_catalog.pg_type AS base_type
+LEFT JOIN pg_catalog.pg_type AS base_type
   ON type_.typbasetype > 0 AND type_.typbasetype = base_type.oid
+LEFT JOIN pg_catalog.pg_range AS range_ -- https://www.postgresql.org/docs/current/catalog-pg-range.html
+  ON type_.oid = range_.rngtypid
 
 LEFT JOIN (
   pg_catalog.pg_proc AS subscripting_fn

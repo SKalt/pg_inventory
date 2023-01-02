@@ -7,7 +7,7 @@ SELECT
     -- for variable-length types, -1.
     -- for nulll-terminated c-strings, -2
   , type_owner.rolname AS type_owner_name
-  , type_.typdefault AS default_value_expression
+  -- omitted for pseudo-types: , type_.typdefault AS default_value_expression
     -- human-readable text which can be fed to the type's input converter to
     -- produce a constant or null if the type has no associated default value.
   , type_.typacl AS access_privileges -- aclitem[]
@@ -85,7 +85,7 @@ SELECT
   , binary_conversion_output_fn.proname AS binary_conversion_output_fn -- zero if none
   , type_modifier_input_fn_schema.nspname AS type_modifier_input_fn_schema
   , type_modifier_input_fn.proname AS type_modifier_input_fn
-    -- zero of this type doesn't support modifiers
+    -- zero if this type doesn't support modifiers
   , type_modifier_output_fn_schema.nspname AS type_modifier_output_fn_schema
   , type_modifier_output_fn.proname AS type_modifier_output_fn
   , custom_analyze_fn_schema.nspname AS custom_analyze_fn_schema
