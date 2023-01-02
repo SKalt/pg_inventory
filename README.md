@@ -43,7 +43,7 @@ Each SQL query is tested against a number of example databases.
 - [x] [DATABASE](./db_object_kind/DATABASE/)
 - [x] [DOMAIN](./db_object_kind/TYPE/)
 - [x] [ENUM](./db_object_kind/TYPE/)
-- [~] [EVENT_TRIGGER](./db_object_kind/EVENT_TRIGGER/)
+- [x] [EVENT_TRIGGER](./db_object_kind/EVENT_TRIGGER/)
 - [x] [EXTENSION](./db_object_kind/EXTENSION/)
 - [x] [FOREIGN_DATA_WRAPPER](./db_object_kind/FOREIGN_DATA_WRAPPER/)
 - [x] [FOREIGN_TABLE](./db_object_kind/FOREIGN_TABLE/)
