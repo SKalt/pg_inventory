@@ -254,7 +254,7 @@ LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/c
   ON cls.relam > 0 AND cls.relam = access_method.oid
 LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
   ON (cls.reltablespace = cls_space.oid)
-{{- if not (or $is_sequence $is_toast) }}
+{{- if $is_table }}
 LEFT JOIN (
     pg_catalog.pg_type AS underlying_composite_type
     INNER JOIN pg_namespace AS underlying_type_ns ON (

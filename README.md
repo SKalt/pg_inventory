@@ -32,7 +32,7 @@ Each SQL query is tested against a number of example databases.
 
 ### Database Object Kinds
 
-- [ ] [ACCESS_METHOD](./db_object_kind/ACCESS_METHOD/)
+- [x] [ACCESS_METHOD](./db_object_kind/ACCESS_METHOD/)
 - [x] [AGGREGATE](./db_object_kind/AGGREGATE/) <!-- might be missing some function information? -->
 - [x] [CAST](./db_object_kind/CAST/)
 - [x] [COLLATION](./db_object_kind/COLLATION/)
