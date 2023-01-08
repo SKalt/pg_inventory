@@ -1,1 +1,1 @@
-schema_name	name	tablespace_name	owner	acl	description	replica_identity	is_populated	persistence	approximate_number_of_rows	n_user_columns	n_check_constraints	view_definition
+schema_name	name	tablespace_name	owner	acl	description	replica_identity	is_populated	persistence	n_user_columns	n_check_constraints	view_definition

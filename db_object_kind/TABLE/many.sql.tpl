@@ -175,6 +175,7 @@ SELECT
     , underlying_composite_type.typname AS underlying_composite_type
       -- for typed tables
   {{- end }}
+    {{ if $is_view -}} -- omitted: {{ end -}}
     , cls.reltuples AS approximate_number_of_rows
   {{- if $is_partitionable }}
     , (
@@ -184,9 +185,9 @@ SELECT
         END
       ) AS partition_bound
   {{- end }}
-    {{ if $is_view -}} -- omitted {{ end -}}
+    {{ if $is_view -}} -- omitted: {{ end -}}
     , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
-    {{ if $is_view -}} -- omitted {{ end -}}
+    {{ if $is_view -}} -- omitted: {{ end -}}
     , cls.relallvisible AS n_pages_all_visible
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
