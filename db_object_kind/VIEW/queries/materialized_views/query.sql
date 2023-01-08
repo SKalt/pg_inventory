@@ -27,12 +27,6 @@ SELECT
       -- u => unlogged table: not dropped at a session
       -- t => temporary table: unlogged **and** dropped at the end of a session.
     , cls.reltuples AS approximate_number_of_rows
-    , (
-        CASE
-          WHEN cls.relispartition THEN pg_catalog.pg_get_expr(cls.relpartbound, cls.oid, true)
-          ELSE NULL
-        END
-      ) AS partition_bound
     , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
     , cls.relallvisible AS n_pages_all_visible
     , cls.relnatts AS n_user_columns

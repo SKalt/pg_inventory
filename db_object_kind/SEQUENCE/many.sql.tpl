@@ -10,7 +10,6 @@ SELECT
   , rel.persistence
 {{- end }}
   , rel.approximate_number_of_rows
-  , rel.partition_bound
   , rel.n_pages
   , rel.n_pages_all_visible
   , rel.n_user_columns
