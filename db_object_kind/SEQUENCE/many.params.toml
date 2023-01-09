@@ -3,6 +3,7 @@ name_template = """
 
 {{- if (not $filter_on_persistence) -}}all_{{- end -}}
 sequences
+{{- if .packed }}_packed{{- end -}}
 {{- if $filter_on_persistence -}}_filtered_by_persistence{{- end -}}
 """
 [pg_class_category]
@@ -12,3 +13,6 @@ sequences
 [filter_on_persistence]
   all = false
   one = true
+[packed]
+  "" = false
+  packed = true

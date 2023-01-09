@@ -5,8 +5,12 @@ SELECT
   , rel.owner
   , rel.acl
   , rel.description
+{{- if not .packed }}
   , rel.replica_identity
-{{- if not .filter_by_persistence }}
+{{- else }}
+  , rel.info
+{{- end }}
+{{- if not (or .filter_by_persistence .packed) }}
   , rel.persistence
 {{- end }}
   , rel.approximate_number_of_rows
