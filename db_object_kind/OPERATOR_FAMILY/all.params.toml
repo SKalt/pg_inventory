@@ -1,0 +1,4 @@
+name_template = """all_operator_families{{.oid}}"""
+[oid]
+  "" = false
+  _raw = true
