@@ -1,0 +1,9 @@
+where = """
+op_class.oid >= 16384 -- https://github.com/postgres/postgres/blob/18b81258ab60cdd172329fe80dd2314d587bd551/src/include/access/transam.h#L197
+AND not exists (
+  SELECT 1
+  FROM pg_catalog.pg_depend AS d
+  WHERE op_class.oid = d.objid AND d.deptype = 'e'
+  LIMIT 1
+)
+"""

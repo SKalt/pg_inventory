@@ -1,0 +1,3 @@
+where = """
+op_class.oid > 16384 -- https://github.com/postgres/postgres/blob/18b81258ab60cdd172329fe80dd2314d587bd551/src/include/access/transam.h#L197
+"""
