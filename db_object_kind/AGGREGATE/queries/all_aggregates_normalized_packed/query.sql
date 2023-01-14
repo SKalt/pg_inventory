@@ -1,12 +1,5 @@
 SELECT
-  {{- if .oid }}
   agg.aggfnoid AS fn_oid
-  {{- else }}
-    -- TODO: figure out how to re-use some of the PROCEDURE template here
-    ns.nspname AS schema_name
-  , fn.proname AS fn
-  {{- end }}
-  {{- if .packed }}
   , ( -- info: int2
       0
       -- 0000 0000 0000 0011 -- kind
@@ -44,27 +37,6 @@ SELECT
             END
           )
     )::INT2 AS info
-  {{- else }}
-  , agg.aggkind AS kind
-    -- 'n' => "normal"
-    -- 'o' => "ordered-set"
-    -- 'h' => "hypothetical-set"
-
-  , agg.aggfinalextra AS pass_extra_dummy_args_to_final_fn
-  , agg.aggfinalmodify AS final_fn_modifies_transition_state_value
-    -- Whether the final function modifies the transition state value:
-    -- 'r' => the transition state value is read-only
-    -- 's' => the aggtransfn cannot be applied after the aggfinalfn
-    -- 'w' => it writes on the value
-
-  , agg.aggmfinalextra AS pass_extra_dummy_args_to_moving_aggregate_final_fn
-  , agg.aggmfinalmodify moving_aggregate_final_fn_modifies_transition_state_value
-    -- Whether the moving-aggregate final function modifies the transition state value:
-    -- 'r' => it is read-only
-    -- 's' => the aggtransfn cannot be applied after the aggfinalfn
-    -- 'w' => it writes on the value
-  {{- end }}
-  {{- if .oid }}
   , agg.aggtransfn::OID AS transition_fn_oid
   , agg.aggfinalfn::OID AS final_fn_OID
   , agg.aggcombinefn::OID AS combine_fn_oid
@@ -76,49 +48,6 @@ SELECT
   , agg.aggtranstype AS transition_type_oid
   , agg.aggmtranstype AS moving_agg_transition_state_type_oid
   , agg.aggsortop AS sort_op_oid
-  {{- else }}
-  , agg.aggnumdirectargs AS n_direct_arguments -- int2
-    -- Number of direct (non-aggregated) arguments of an ordered-set or
-    -- hypothetical-set aggregate, counting a variadic array as one argument.
-    -- If equal to pronargs, the aggregate must be variadic and the variadic array
-    -- describes the aggregated arguments as well as the final direct arguments.
-    -- Always zero for normal aggregates.
-
-  , transition_fn_schema.nspname AS transition_fn_schema_name
-  , transition_fn.proname AS transition_fn_name
-
-  , transition_type_schema.nspname AS transition_type_schema_name
-  , transition_type.typname AS transition_state_type_name
-  , agg.aggtransspace AS approx_transiton_state_avg_bytes
-    -- int4; 0 to use a default estimate
-
-  , final_fn_schema.nspname AS final_fn_schema_name
-  , final_fn.proname AS final_fn_name
-
-  , combine_fn_schema.nspname AS combine_fn_schema_name
-  , combine_fn.proname AS combine_fn_name
-
-  , serialization_fn_schema.nspname AS serialization_fn_schema_name
-  , serialization_fn.proname AS serialization_fn_name
-
-  , deserialization_fn_schema.nspname AS deserialization_fn_schema_name
-  , deserialization_fn.proname AS deserialization_fn_name
-
-  , moving_agg_forward_transition_fn_schema.nspname AS moving_agg_forward_transition_fn_schema_name
-  , moving_agg_forward_transition_fn.proname AS moving_agg_forward_transition_fn_name
-
-  , moving_agg_inverse_transition_fn_schema.nspname AS moving_agg_inverse_transition_fn_schema_name
-  , moving_agg_inverse_transition_fn.proname AS moving_agg_inverse_transition_fn_name
-
-  , moving_agg_final_fn_schema.nspname AS moving_agg_final_fn_schema_name
-  , moving_agg_final_fn.proname AS moving_agg_final_fn_name
-
-  , sort_op_schema.nspname AS sort_operator_schema
-  , sort_op.oprname AS sort_operator
-
-  , moving_agg_transition_state_type_schema.nspname AS moving_agg_transition_state_type_schema_name
-  , moving_agg_transition_state_type.typname AS moving_agg_transition_state_type_name
-  {{- end }}
   , agg.aggmtransspace AS moving_agg_transition_state_avg_bytes -- int4; 0 to use default estimate
 
   , agg.agginitval AS initial_value -- text string repr or null
