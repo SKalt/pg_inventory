@@ -83,5 +83,5 @@ LEFT JOIN (
   pg_catalog.pg_proc AS join_selectivity_estimation_fn
   INNER JOIN pg_namespace AS join_selectivity_estimation_fn_schema
     ON join_selectivity_estimation_fn.pronamespace = join_selectivity_estimation_fn_schema.oid
-) ON op.oprcode = join_selectivity_estimation_fn.oid
+) ON op.oprjoin = join_selectivity_estimation_fn.oid
 
