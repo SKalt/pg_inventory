@@ -127,6 +127,7 @@ SELECT
     -- If this field is null, the transition state value starts out null.
   , agg.aggminitval AS moving_agg_initial_value -- text or null
 FROM pg_catalog.pg_aggregate AS agg -- postgresql.org/docs/current/catalog-pg-aggregate.html
+{{- if not .oid }}
 INNER JOIN pg_catalog.pg_proc AS fn ON agg.aggfnoid = fn.oid
 INNER JOIN pg_catalog.pg_namespace AS ns ON fn.pronamespace = ns.oid
 LEFT JOIN (
@@ -194,3 +195,4 @@ LEFT JOIN (
   INNER JOIN pg_catalog.pg_namespace AS sort_op_schema
     ON sort_op.oprnamespace = sort_op_schema.oid
 ) ON agg.aggsortop = sort_op.oid
+{{- end }}
