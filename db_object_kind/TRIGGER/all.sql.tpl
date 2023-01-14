@@ -9,7 +9,7 @@ SELECT
       -- a clone
     , handler_fn_schema.nspname AS handler_fn_schema
     , handler_fn.proname AS handler_fn
-    , trigger_.tgtype -- int2 bitmask identifying trigger firing conditions
+    , trigger_.tgtype AS trigger_type -- int2 bitmask identifying trigger firing conditions
   {{- if .packed }}
     , ( -- info: int2
         -- 0000 0000 0000 0111 -- bools
@@ -42,7 +42,7 @@ SELECT
       --  'A' => always.
   {{- end }}
   , trigger_.tgnargs AS n_args -- int2, number of args for trigger fn
-  , trigger_.tgattr
+  , trigger_.tgattr AS col_numbers
     -- int2vector (references pg_attribute.attnum)
     -- Column numbers, if trigger is column-specific; otherwise an empty array
   , ref_schema.nspname AS referenced_table_schema
@@ -53,7 +53,7 @@ SELECT
   , constraint_.conname AS constraint_name
     -- The pg_constraint entry associated with the trigger (zero if trigger is
     -- not for a constraint)
-  , trigger_.tgconstrindid
+  , trigger_.tgconstrindid AS constraint_index_oid
     -- The index supporting a unique, primary key, referential integrity, or
     -- exclusion constraint (zero if trigger is not for one of these types of
     --  constraint)
