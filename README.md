@@ -52,13 +52,13 @@ Each SQL query is tested against a number of example databases.
 - [x] [LANGUAGE](./db_object_kind/LANGUAGE/)
 - [x] [MATERIALIZED_VIEW](./db_object_kind/MATERIALIZED_VIEW/)
 - [x] [OPERATOR](./db_object_kind/OPERATOR/)
-- [ ] [OPERATOR_CLASS](./db_object_kind/OPERATOR_CLASS/)
-- [ ] [OPERATOR_FAMILY](./db_object_kind/OPERATOR_FAMILY/)
+- [x] [OPERATOR_CLASS](./db_object_kind/OPERATOR_CLASS/)
+- [x] [OPERATOR_FAMILY](./db_object_kind/OPERATOR_FAMILY/)
 - [x] [POLICY](./db_object_kind/POLICY/)
 - [x] [PROCEDURE](./db_object_kind/PROCEDURE/)
 - [ ] [PUBLICATION](./db_object_kind/PUBLICATION/) <!-- for replication -->
 - [x] [ROLE](./db_object_kind/ROLE/)
-<!-- - [ ] [RULE](./db_object_kind/RULE/) not gonna support this -->
+- [x] [RULE](./db_object_kind/RULE/)
 - [x] [SCHEMA](./db_object_kind/SCHEMA/)
 - [x] [SEQUENCE](./db_object_kind/SEQUENCE/)
 - [x] [SERVER](./db_object_kind/SERVER/)

@@ -1,0 +1,7 @@
+name_template = "all_rewrite_rules_{{.oid}}{{.packed}}"
+[oid]
+  denormalized = false
+  normalized = true
+[packed]
+  "" = false
+  _packed = true

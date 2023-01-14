@@ -1,0 +1,1 @@
+where = "r.oid >= 16384 AND r.rulename <> '_RETURN'"

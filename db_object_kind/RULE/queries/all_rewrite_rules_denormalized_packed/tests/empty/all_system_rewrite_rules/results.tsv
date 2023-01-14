@@ -1,0 +1,3 @@
+schema_name	relation	name	info	definition
+pg_catalog	pg_settings	pg_settings_u	20	CREATE RULE pg_settings_u AS\n    ON UPDATE TO pg_catalog.pg_settings\n   WHERE (new.name = old.name) DO  SELECT set_config(old.name, new.setting, false) AS set_config;
+pg_catalog	pg_settings	pg_settings_n	21	CREATE RULE pg_settings_n AS\n    ON UPDATE TO pg_catalog.pg_settings DO INSTEAD NOTHING;
