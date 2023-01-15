@@ -40,7 +40,7 @@ SELECT
               ELSE 0
             END
           )
-      ) AS info
+      )::INT2 AS info
   {{- else }}
     , trigger_.tgisinternal AS is_internal
       -- if trigger is internally generated (usually, to enforce the constraint

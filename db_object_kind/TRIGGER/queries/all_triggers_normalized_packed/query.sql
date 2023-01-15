@@ -25,7 +25,7 @@ SELECT
               ELSE 0
             END
           )
-      ) AS info
+      )::INT2 AS info
     , trigger_.tgnargs AS n_args -- int2, number of args for trigger fn
     , trigger_.tgattr AS col_numbers
       -- int2vector (references pg_attribute.attnum)
