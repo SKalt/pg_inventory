@@ -11,21 +11,23 @@ SELECT
     , handler_fn.proname AS handler_fn
     , trigger_.tgtype AS trigger_type -- int2 bitmask identifying trigger firing conditions
     , ( -- info: int2
-        -- 0000 0000 0000 0111 -- bools
-        -- 0000 0000 0011 0000 -- session_replication_role_firing_mode
         0
-        | CASE WHEN trigger_.tgisinternal THEN 1<<0 ELSE 0 END
-        | CASE WHEN trigger_.tgdeferrable THEN 1<<1 ELSE 0 END
-        | CASE WHEN trigger_.tginitdeferred THEN 1<<2 ELSE 0 END
-        | (
-            CASE trigger_.tgenabled
-              WHEN 'O' THEN 1<<4 -- in "origin" and "local" modes
-              WHEN 'D' THEN 2<<4 -- disabled
-              WHEN 'R' THEN 3<<4 -- in "replica" mode
-              WHEN 'A' THEN 4<<4 -- always.
-              ELSE 0
-            END
-          )
+        -- 0000 0000 0000 0001 -- is_internal
+          | CASE WHEN trigger_.tgisinternal THEN 1<<0 ELSE 0 END
+        -- 0000 0000 0000 0010 -- is_deferrable
+          | CASE WHEN trigger_.tgdeferrable THEN 1<<1 ELSE 0 END
+        -- 0000 0000 0000 0100 -- is_deferred
+          | CASE WHEN trigger_.tginitdeferred THEN 1<<2 ELSE 0 END
+        -- 0000 0000 0011 1000 -- session_replication_role_firing_mode
+          | (
+              CASE trigger_.tgenabled
+                WHEN 'O' THEN 1<<4 -- in "origin" and "local" modes
+                WHEN 'D' THEN 2<<4 -- disabled
+                WHEN 'R' THEN 3<<4 -- in "replica" mode
+                WHEN 'A' THEN 4<<4 -- always.
+                ELSE 0
+              END
+            )
       )::INT2 AS info
     , trigger_.tgnargs AS n_args -- int2, number of args for trigger fn
     , trigger_.tgattr AS col_numbers
@@ -46,7 +48,7 @@ SELECT
     , trigger_.tgargs AS args -- bytea
       -- Argument strings to pass to trigger, each NULL-terminated
     , trigger_.tgoldtable AS old_table_name -- in REFERENCING clause, if any
-    , trigger_.tgnewtable AS old_table_name -- in REFERENCING clause, if any
+    , trigger_.tgnewtable AS new_table_name -- in REFERENCING clause, if any
     , pg_catalog.pg_get_triggerdef(trigger_.oid, true) AS trigger_def
 FROM pg_catalog.pg_trigger AS trigger_ -- https://www.postgresql.org/docs/current/catalog-pg-trigger.html
 

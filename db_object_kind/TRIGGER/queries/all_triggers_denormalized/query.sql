@@ -40,7 +40,7 @@ SELECT
     , trigger_.tgargs AS args -- bytea
       -- Argument strings to pass to trigger, each NULL-terminated
     , trigger_.tgoldtable AS old_table_name -- in REFERENCING clause, if any
-    , trigger_.tgnewtable AS old_table_name -- in REFERENCING clause, if any
+    , trigger_.tgnewtable AS new_table_name -- in REFERENCING clause, if any
     , pg_catalog.pg_get_triggerdef(trigger_.oid, true) AS trigger_def
 FROM pg_catalog.pg_trigger AS trigger_ -- https://www.postgresql.org/docs/current/catalog-pg-trigger.html
 
