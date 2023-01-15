@@ -1,13 +1,14 @@
 SELECT
   oid
-  , ev_class AS table_oid
-  , rulename AS name
-  , ev_type AS event_type
+  , r.ev_class AS table_oid
+  , r.rulename AS name
+  , r.is_instead
+  , r.ev_type AS event_type
     -- '1' => select
     -- '2' => update
     -- '3' => insert
     -- '4' => delete
-  ,  ev_enabled AS session_replication_roles
+  , r.ev_enabled AS session_replication_roles
     -- 'O' => origin, local modes
     -- 'D' => disabled
     -- 'R' => "replica" mode

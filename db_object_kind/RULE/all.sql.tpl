@@ -1,26 +1,26 @@
 SELECT
   {{- if .oid }}
   oid
-  , ev_class AS table_oid
+  , r.ev_class AS table_oid
   {{- else }}
   ns.nspname AS schema_name
   , cls.relname AS relation
   {{- end }}
-  , rulename AS name
+  , r.rulename AS name
   {{- if .packed }}
   , ( -- info: int2
       0
       -- 0000 0000 0000 0001 : is_instead
-        | CASE WHEN is_instead THEN 1<<0 ELSE 0 END
+        | CASE WHEN r.is_instead THEN 1<<0 ELSE 0 END
       -- 0000 0000 0000 1110 : event_type
-        | (CASE ev_type
-            WHEN '1' THEN 1<<1 -- select
-            WHEN '2' THEN 2<<1 -- update
-            WHEN '3' THEN 3<<1 -- insert
-            WHEN '4' THEN 4<<1 -- delete
-          END)
+        | ((CASE r.ev_type
+            WHEN '1' THEN 1 -- select
+            WHEN '2' THEN 2 -- update
+            WHEN '3' THEN 3 -- insert
+            WHEN '4' THEN 4 -- delete
+          END)<<1)
       -- 0000 0000 0111  0000 : session_replication_roles
-        | ((CASE ev_enabled
+        | ((CASE r.ev_enabled
             WHEN 'O' THEN 1 -- origin, local modes
             WHEN 'D' THEN 2 -- disabled
             WHEN 'R' THEN 3 -- "replica" mode
@@ -28,12 +28,13 @@ SELECT
           END)<<4)
     )::INT2 AS info
   {{- else }}
-  , ev_type AS event_type
+  , r.is_instead
+  , r.ev_type AS event_type
     -- '1' => select
     -- '2' => update
     -- '3' => insert
     -- '4' => delete
-  ,  ev_enabled AS session_replication_roles
+  , r.ev_enabled AS session_replication_roles
     -- 'O' => origin, local modes
     -- 'D' => disabled
     -- 'R' => "replica" mode
