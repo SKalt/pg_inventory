@@ -1,4 +1,7 @@
-name_template = "all_triggers{{if .packed}}_packed{{end}}"
+name_template = "all_triggers_{{.oid}}{{.packed}}"
 [packed]
   "" = false
-  packed = true
+  _packed = true
+[oid]
+  normalized = true
+  denormalized = false
