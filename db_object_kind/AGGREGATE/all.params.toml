@@ -1,7 +1,7 @@
 name_template = "all_aggregates_{{.oid}}{{.packed}}"
-[packed]
-  "" = false
-  _packed = true
 [oid]
   normalized = true
   denormalized = false
+[packed]
+  "" = false
+  _packed = true

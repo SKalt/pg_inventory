@@ -1,5 +1,4 @@
 SELECT
-    -- TODO: figure out how to re-use some of the PROCEDURE template here
     ns.nspname AS schema_name
   , fn.proname AS fn
   , ( -- info: int2
@@ -87,7 +86,8 @@ SELECT
     -- containing the initial value in its external string representation.
     -- If this field is null, the transition state value starts out null.
   , agg.aggminitval AS moving_agg_initial_value -- text or null
-FROM pg_catalog.pg_aggregate AS agg -- postgresql.org/docs/current/catalog-pg-aggregate.html
+  -- comments are stored related to the fn in pg_proc that aggfnoid references
+FROM pg_catalog.pg_aggregate AS agg -- https://postgresql.org/docs/current/catalog-pg-aggregate.html
 INNER JOIN pg_catalog.pg_proc AS fn ON agg.aggfnoid = fn.oid
 INNER JOIN pg_catalog.pg_namespace AS ns ON fn.pronamespace = ns.oid
 LEFT JOIN (
