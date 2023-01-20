@@ -16,6 +16,7 @@ SELECT
   -- Provider-specific version of the collation. This is recorded when the
   -- collation is created and then checked when it is used, to detect changes in
   -- the collation definition that could lead to data corruption.
+  , pg_catalog.obj_description(c.oid, 'pg_collation') AS "comment"
 FROM pg_catalog.pg_collation as c
 INNER JOIN pg_catalog.pg_namespace AS ns
   ON c.collnamespace = ns.oid

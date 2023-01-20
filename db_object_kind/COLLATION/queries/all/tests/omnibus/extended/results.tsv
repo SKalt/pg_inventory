@@ -1,4 +1,4 @@
-schema_name	encoding	name	owner_name	collprovider	is_deterministic	lc_collate	lc_ctype	collversion
-collation_ex	-1	german_phonebook	postgres	i	true	de-u-co-phonebk	de-u-co-phonebk	153.14.37
-collation_ex	6	bad_french	postgres	c	true	fr_FR.utf8	fr_FR.utf8	
-collation_ex	6	french	postgres	c	true	fr_FR.utf8	fr_FR.utf8	
+schema_name	encoding	name	owner_name	collprovider	is_deterministic	lc_collate	lc_ctype	collversion	comment
+collation_ex	-1	german_phonebook	postgres	i	true	de-u-co-phonebk	de-u-co-phonebk	153.14.37	
+collation_ex	6	bad_french	postgres	c	true	fr_FR.utf8	fr_FR.utf8		
+collation_ex	6	french	postgres	c	true	fr_FR.utf8	fr_FR.utf8		
