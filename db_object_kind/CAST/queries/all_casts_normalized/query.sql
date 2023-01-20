@@ -1,11 +1,8 @@
 SELECT
-    src_ns.nspname AS source_type_schema
-  , src_owner.rolname AS source_type_owner_name
-  , src.typname AS source_type_name
-  , src_ns.nspname AS source_type_schema
-  , src_owner.rolname AS source_type_owner_name
-  , target_.typname AS target_type_name
-  , fn.proname AS cast_fn_name
+  cast_.oid
+  , cast_.castsource AS source_type_oid
+  , cast_.casttarget AS target_type_oid
+  , cast_.castfunc AS cast_fn_oid
   , cast_.castcontext
     -- 'e' => only as an explicit cast
     -- 'a' => implicitly in assignment OR as an explicit cast
@@ -13,6 +10,7 @@ SELECT
   , cast_.castmethod
     -- 'f' => the function specified in the castfunc field is used
     -- 'i' => the input/output functions are used. b means that the types are binary-coercible, thus no conversion is required.
+  , pg_catalog.obj_description(cast_.oid, 'pg_cast') AS "comment"
 FROM pg_catalog.pg_cast AS cast_ -- https://www.postgresql.org/docs/current/catalog-pg-cast.html
 INNER JOIN pg_catalog.pg_type AS src -- https://www.postgresql.org/docs/current/catalog-pg-type.html
   ON cast_.castsource = src.oid
