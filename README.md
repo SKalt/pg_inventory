@@ -30,15 +30,20 @@ Each SQL query is tested against a number of example databases.
 └── README.md
 ```
 
+#### Naming Conventions
+
+1. queries named like `${thing}_normalized/query.sql` preserve `oid`s, while queries named like `${thing}_denormalized/query.sql` join other catalogs for object names and do not contain any oids. This is important for testing, since `oid`s aren't stable across different instantiations of the same schema in a fresh server.
+2. `pg_namespace` is always joined `AS ns` and referenced as `ns.nspname AS schema_name`.
+3. comments are always fetched `AS "comment"`.
+
 ### Database Object Kinds
 
 - [x] [ACCESS_METHOD](./db_object_kind/ACCESS_METHOD/)
-- [x] [AGGREGATE](./db_object_kind/AGGREGATE/) <!-- might be missing some function information? -->
+- [x] [AGGREGATE](./db_object_kind/AGGREGATE/)
 - [x] [CAST](./db_object_kind/CAST/)
 - [x] [COLLATION](./db_object_kind/COLLATION/)
 - [x] [COLUMN](./db_object_kind/COLUMN/README.md)
 - [x] [CONSTRAINT](./db_object_kind/CONSTRAINT/)
-- [ ] [COMMENT](#)
 - [x] [CONVERSION](./db_object_kind/CONVERSION/)
 - [x] [DATABASE](./db_object_kind/DATABASE/)
 - [x] [DOMAIN](./db_object_kind/TYPE/)
