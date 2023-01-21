@@ -1,2 +1,0 @@
-name	event_name	owner_name	fn_name	session_replication_role_modes	tags	description
-log_table_alteration	table_rewrite	postgres	log_table_alteration	O		

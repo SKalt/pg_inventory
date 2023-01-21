@@ -1,0 +1,4 @@
+name_template = "all_event_triggers_{{.oid}}"
+[oid]
+  normalized = true
+  denormalized = false
