@@ -1,4 +1,7 @@
-[informative]
-packed = false
-[minimal]
-packed = true
+name_template = "all_columns_{{.oid}}{{.packed}}"
+[oid]
+  normalized = true
+  denormalized = false
+[packed]
+  "" = false
+  _packed = true
