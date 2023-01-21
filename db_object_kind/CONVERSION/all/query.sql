@@ -8,6 +8,7 @@ SELECT
   , fn.proname AS fn_name
   , pg_catalog.pg_get_userbyid(fn.proowner) AS fn_owner_name
   , conversion_.condefault AS is_default -- bool
+  , pg_catalog.obj_description(conversion_.oid, 'pg_conversion') AS "comment"
 FROM pg_catalog.pg_conversion AS conversion_
 INNER JOIN pg_catalog.pg_namespace AS ns ON conversion_.connamespace = ns.oid
 INNER JOIN pg_catalog.pg_proc AS fn ON conversion_.conproc = fn.oid

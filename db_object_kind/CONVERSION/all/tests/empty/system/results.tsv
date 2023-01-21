@@ -1,129 +1,129 @@
-schema_name	name	owner_name	source_encoding_id	dest_encoding_id	fn_schema_name	fn_name	fn_owner_name	is_default
-pg_catalog	big5_to_euc_tw	postgres	36	4	pg_catalog	big5_to_euc_tw	postgres	true
-pg_catalog	big5_to_mic	postgres	36	7	pg_catalog	big5_to_mic	postgres	true
-pg_catalog	big5_to_utf8	postgres	36	6	pg_catalog	big5_to_utf8	postgres	true
-pg_catalog	euc_cn_to_mic	postgres	2	7	pg_catalog	euc_cn_to_mic	postgres	true
-pg_catalog	euc_cn_to_utf8	postgres	2	6	pg_catalog	euc_cn_to_utf8	postgres	true
-pg_catalog	euc_jis_2004_to_shift_jis_2004	postgres	5	41	pg_catalog	euc_jis_2004_to_shift_jis_2004	postgres	true
-pg_catalog	euc_jis_2004_to_utf8	postgres	5	6	pg_catalog	euc_jis_2004_to_utf8	postgres	true
-pg_catalog	euc_jp_to_mic	postgres	1	7	pg_catalog	euc_jp_to_mic	postgres	true
-pg_catalog	euc_jp_to_sjis	postgres	1	35	pg_catalog	euc_jp_to_sjis	postgres	true
-pg_catalog	euc_jp_to_utf8	postgres	1	6	pg_catalog	euc_jp_to_utf8	postgres	true
-pg_catalog	euc_kr_to_mic	postgres	3	7	pg_catalog	euc_kr_to_mic	postgres	true
-pg_catalog	euc_kr_to_utf8	postgres	3	6	pg_catalog	euc_kr_to_utf8	postgres	true
-pg_catalog	euc_tw_to_big5	postgres	4	36	pg_catalog	euc_tw_to_big5	postgres	true
-pg_catalog	euc_tw_to_mic	postgres	4	7	pg_catalog	euc_tw_to_mic	postgres	true
-pg_catalog	euc_tw_to_utf8	postgres	4	6	pg_catalog	euc_tw_to_utf8	postgres	true
-pg_catalog	gb18030_to_utf8	postgres	39	6	pg_catalog	gb18030_to_utf8	postgres	true
-pg_catalog	gbk_to_utf8	postgres	37	6	pg_catalog	gbk_to_utf8	postgres	true
-pg_catalog	iso_8859_10_to_utf8	postgres	13	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_13_to_utf8	postgres	14	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_14_to_utf8	postgres	15	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_15_to_utf8	postgres	16	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_16_to_utf8	postgres	17	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_1_to_mic	postgres	8	7	pg_catalog	latin1_to_mic	postgres	true
-pg_catalog	iso_8859_1_to_utf8	postgres	8	6	pg_catalog	iso8859_1_to_utf8	postgres	true
-pg_catalog	iso_8859_2_to_mic	postgres	9	7	pg_catalog	latin2_to_mic	postgres	true
-pg_catalog	iso_8859_2_to_utf8	postgres	9	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_2_to_windows_1250	postgres	9	29	pg_catalog	latin2_to_win1250	postgres	true
-pg_catalog	iso_8859_3_to_mic	postgres	10	7	pg_catalog	latin3_to_mic	postgres	true
-pg_catalog	iso_8859_3_to_utf8	postgres	10	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_4_to_mic	postgres	11	7	pg_catalog	latin4_to_mic	postgres	true
-pg_catalog	iso_8859_4_to_utf8	postgres	11	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_5_to_koi8_r	postgres	25	22	pg_catalog	iso_to_koi8r	postgres	true
-pg_catalog	iso_8859_5_to_mic	postgres	25	7	pg_catalog	iso_to_mic	postgres	true
-pg_catalog	iso_8859_5_to_utf8	postgres	25	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_5_to_windows_1251	postgres	25	23	pg_catalog	iso_to_win1251	postgres	true
-pg_catalog	iso_8859_5_to_windows_866	postgres	25	20	pg_catalog	iso_to_win866	postgres	true
-pg_catalog	iso_8859_6_to_utf8	postgres	26	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_7_to_utf8	postgres	27	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_8_to_utf8	postgres	28	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	iso_8859_9_to_utf8	postgres	12	6	pg_catalog	iso8859_to_utf8	postgres	true
-pg_catalog	johab_to_utf8	postgres	40	6	pg_catalog	johab_to_utf8	postgres	true
-pg_catalog	koi8_r_to_iso_8859_5	postgres	22	25	pg_catalog	koi8r_to_iso	postgres	true
-pg_catalog	koi8_r_to_mic	postgres	22	7	pg_catalog	koi8r_to_mic	postgres	true
-pg_catalog	koi8_r_to_utf8	postgres	22	6	pg_catalog	koi8r_to_utf8	postgres	true
-pg_catalog	koi8_r_to_windows_1251	postgres	22	23	pg_catalog	koi8r_to_win1251	postgres	true
-pg_catalog	koi8_r_to_windows_866	postgres	22	20	pg_catalog	koi8r_to_win866	postgres	true
-pg_catalog	koi8_u_to_utf8	postgres	34	6	pg_catalog	koi8u_to_utf8	postgres	true
-pg_catalog	mic_to_big5	postgres	7	36	pg_catalog	mic_to_big5	postgres	true
-pg_catalog	mic_to_euc_cn	postgres	7	2	pg_catalog	mic_to_euc_cn	postgres	true
-pg_catalog	mic_to_euc_jp	postgres	7	1	pg_catalog	mic_to_euc_jp	postgres	true
-pg_catalog	mic_to_euc_kr	postgres	7	3	pg_catalog	mic_to_euc_kr	postgres	true
-pg_catalog	mic_to_euc_tw	postgres	7	4	pg_catalog	mic_to_euc_tw	postgres	true
-pg_catalog	mic_to_iso_8859_1	postgres	7	8	pg_catalog	mic_to_latin1	postgres	true
-pg_catalog	mic_to_iso_8859_2	postgres	7	9	pg_catalog	mic_to_latin2	postgres	true
-pg_catalog	mic_to_iso_8859_3	postgres	7	10	pg_catalog	mic_to_latin3	postgres	true
-pg_catalog	mic_to_iso_8859_4	postgres	7	11	pg_catalog	mic_to_latin4	postgres	true
-pg_catalog	mic_to_iso_8859_5	postgres	7	25	pg_catalog	mic_to_iso	postgres	true
-pg_catalog	mic_to_koi8_r	postgres	7	22	pg_catalog	mic_to_koi8r	postgres	true
-pg_catalog	mic_to_sjis	postgres	7	35	pg_catalog	mic_to_sjis	postgres	true
-pg_catalog	mic_to_windows_1250	postgres	7	29	pg_catalog	mic_to_win1250	postgres	true
-pg_catalog	mic_to_windows_1251	postgres	7	23	pg_catalog	mic_to_win1251	postgres	true
-pg_catalog	mic_to_windows_866	postgres	7	20	pg_catalog	mic_to_win866	postgres	true
-pg_catalog	shift_jis_2004_to_euc_jis_2004	postgres	41	5	pg_catalog	shift_jis_2004_to_euc_jis_2004	postgres	true
-pg_catalog	shift_jis_2004_to_utf8	postgres	41	6	pg_catalog	shift_jis_2004_to_utf8	postgres	true
-pg_catalog	sjis_to_euc_jp	postgres	35	1	pg_catalog	sjis_to_euc_jp	postgres	true
-pg_catalog	sjis_to_mic	postgres	35	7	pg_catalog	sjis_to_mic	postgres	true
-pg_catalog	sjis_to_utf8	postgres	35	6	pg_catalog	sjis_to_utf8	postgres	true
-pg_catalog	uhc_to_utf8	postgres	38	6	pg_catalog	uhc_to_utf8	postgres	true
-pg_catalog	utf8_to_big5	postgres	6	36	pg_catalog	utf8_to_big5	postgres	true
-pg_catalog	utf8_to_euc_cn	postgres	6	2	pg_catalog	utf8_to_euc_cn	postgres	true
-pg_catalog	utf8_to_euc_jis_2004	postgres	6	5	pg_catalog	utf8_to_euc_jis_2004	postgres	true
-pg_catalog	utf8_to_euc_jp	postgres	6	1	pg_catalog	utf8_to_euc_jp	postgres	true
-pg_catalog	utf8_to_euc_kr	postgres	6	3	pg_catalog	utf8_to_euc_kr	postgres	true
-pg_catalog	utf8_to_euc_tw	postgres	6	4	pg_catalog	utf8_to_euc_tw	postgres	true
-pg_catalog	utf8_to_gb18030	postgres	6	39	pg_catalog	utf8_to_gb18030	postgres	true
-pg_catalog	utf8_to_gbk	postgres	6	37	pg_catalog	utf8_to_gbk	postgres	true
-pg_catalog	utf8_to_iso_8859_1	postgres	6	8	pg_catalog	utf8_to_iso8859_1	postgres	true
-pg_catalog	utf8_to_iso_8859_10	postgres	6	13	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_13	postgres	6	14	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_14	postgres	6	15	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_15	postgres	6	16	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_16	postgres	6	17	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_2	postgres	6	9	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_3	postgres	6	10	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_4	postgres	6	11	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_5	postgres	6	25	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_6	postgres	6	26	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_7	postgres	6	27	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_8	postgres	6	28	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_iso_8859_9	postgres	6	12	pg_catalog	utf8_to_iso8859	postgres	true
-pg_catalog	utf8_to_johab	postgres	6	40	pg_catalog	utf8_to_johab	postgres	true
-pg_catalog	utf8_to_koi8_r	postgres	6	22	pg_catalog	utf8_to_koi8r	postgres	true
-pg_catalog	utf8_to_koi8_u	postgres	6	34	pg_catalog	utf8_to_koi8u	postgres	true
-pg_catalog	utf8_to_shift_jis_2004	postgres	6	41	pg_catalog	utf8_to_shift_jis_2004	postgres	true
-pg_catalog	utf8_to_sjis	postgres	6	35	pg_catalog	utf8_to_sjis	postgres	true
-pg_catalog	utf8_to_uhc	postgres	6	38	pg_catalog	utf8_to_uhc	postgres	true
-pg_catalog	utf8_to_windows_1250	postgres	6	29	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1251	postgres	6	23	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1252	postgres	6	24	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1253	postgres	6	30	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1254	postgres	6	31	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1255	postgres	6	32	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1256	postgres	6	18	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1257	postgres	6	33	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_1258	postgres	6	19	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_866	postgres	6	20	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	utf8_to_windows_874	postgres	6	21	pg_catalog	utf8_to_win	postgres	true
-pg_catalog	windows_1250_to_iso_8859_2	postgres	29	9	pg_catalog	win1250_to_latin2	postgres	true
-pg_catalog	windows_1250_to_mic	postgres	29	7	pg_catalog	win1250_to_mic	postgres	true
-pg_catalog	windows_1250_to_utf8	postgres	29	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1251_to_iso_8859_5	postgres	23	25	pg_catalog	win1251_to_iso	postgres	true
-pg_catalog	windows_1251_to_koi8_r	postgres	23	22	pg_catalog	win1251_to_koi8r	postgres	true
-pg_catalog	windows_1251_to_mic	postgres	23	7	pg_catalog	win1251_to_mic	postgres	true
-pg_catalog	windows_1251_to_utf8	postgres	23	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1251_to_windows_866	postgres	23	20	pg_catalog	win1251_to_win866	postgres	true
-pg_catalog	windows_1252_to_utf8	postgres	24	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1253_to_utf8	postgres	30	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1254_to_utf8	postgres	31	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1255_to_utf8	postgres	32	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1256_to_utf8	postgres	18	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1257_to_utf8	postgres	33	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_1258_to_utf8	postgres	19	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_866_to_iso_8859_5	postgres	20	25	pg_catalog	win866_to_iso	postgres	true
-pg_catalog	windows_866_to_koi8_r	postgres	20	22	pg_catalog	win866_to_koi8r	postgres	true
-pg_catalog	windows_866_to_mic	postgres	20	7	pg_catalog	win866_to_mic	postgres	true
-pg_catalog	windows_866_to_utf8	postgres	20	6	pg_catalog	win_to_utf8	postgres	true
-pg_catalog	windows_866_to_windows_1251	postgres	20	23	pg_catalog	win866_to_win1251	postgres	true
-pg_catalog	windows_874_to_utf8	postgres	21	6	pg_catalog	win_to_utf8	postgres	true
+schema_name	name	owner_name	source_encoding_id	dest_encoding_id	fn_schema_name	fn_name	fn_owner_name	is_default	comment
+pg_catalog	big5_to_euc_tw	postgres	36	4	pg_catalog	big5_to_euc_tw	postgres	true	conversion for BIG5 to EUC_TW
+pg_catalog	big5_to_mic	postgres	36	7	pg_catalog	big5_to_mic	postgres	true	conversion for BIG5 to MULE_INTERNAL
+pg_catalog	big5_to_utf8	postgres	36	6	pg_catalog	big5_to_utf8	postgres	true	conversion for BIG5 to UTF8
+pg_catalog	euc_cn_to_mic	postgres	2	7	pg_catalog	euc_cn_to_mic	postgres	true	conversion for EUC_CN to MULE_INTERNAL
+pg_catalog	euc_cn_to_utf8	postgres	2	6	pg_catalog	euc_cn_to_utf8	postgres	true	conversion for EUC_CN to UTF8
+pg_catalog	euc_jis_2004_to_shift_jis_2004	postgres	5	41	pg_catalog	euc_jis_2004_to_shift_jis_2004	postgres	true	conversion for EUC_JIS_2004 to SHIFT_JIS_2004
+pg_catalog	euc_jis_2004_to_utf8	postgres	5	6	pg_catalog	euc_jis_2004_to_utf8	postgres	true	conversion for EUC_JIS_2004 to UTF8
+pg_catalog	euc_jp_to_mic	postgres	1	7	pg_catalog	euc_jp_to_mic	postgres	true	conversion for EUC_JP to MULE_INTERNAL
+pg_catalog	euc_jp_to_sjis	postgres	1	35	pg_catalog	euc_jp_to_sjis	postgres	true	conversion for EUC_JP to SJIS
+pg_catalog	euc_jp_to_utf8	postgres	1	6	pg_catalog	euc_jp_to_utf8	postgres	true	conversion for EUC_JP to UTF8
+pg_catalog	euc_kr_to_mic	postgres	3	7	pg_catalog	euc_kr_to_mic	postgres	true	conversion for EUC_KR to MULE_INTERNAL
+pg_catalog	euc_kr_to_utf8	postgres	3	6	pg_catalog	euc_kr_to_utf8	postgres	true	conversion for EUC_KR to UTF8
+pg_catalog	euc_tw_to_big5	postgres	4	36	pg_catalog	euc_tw_to_big5	postgres	true	conversion for EUC_TW to BIG5
+pg_catalog	euc_tw_to_mic	postgres	4	7	pg_catalog	euc_tw_to_mic	postgres	true	conversion for EUC_TW to MULE_INTERNAL
+pg_catalog	euc_tw_to_utf8	postgres	4	6	pg_catalog	euc_tw_to_utf8	postgres	true	conversion for EUC_TW to UTF8
+pg_catalog	gb18030_to_utf8	postgres	39	6	pg_catalog	gb18030_to_utf8	postgres	true	conversion for GB18030 to UTF8
+pg_catalog	gbk_to_utf8	postgres	37	6	pg_catalog	gbk_to_utf8	postgres	true	conversion for GBK to UTF8
+pg_catalog	iso_8859_10_to_utf8	postgres	13	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN6 to UTF8
+pg_catalog	iso_8859_13_to_utf8	postgres	14	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN7 to UTF8
+pg_catalog	iso_8859_14_to_utf8	postgres	15	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN8 to UTF8
+pg_catalog	iso_8859_15_to_utf8	postgres	16	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN9 to UTF8
+pg_catalog	iso_8859_16_to_utf8	postgres	17	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN10 to UTF8
+pg_catalog	iso_8859_1_to_mic	postgres	8	7	pg_catalog	latin1_to_mic	postgres	true	conversion for LATIN1 to MULE_INTERNAL
+pg_catalog	iso_8859_1_to_utf8	postgres	8	6	pg_catalog	iso8859_1_to_utf8	postgres	true	conversion for LATIN1 to UTF8
+pg_catalog	iso_8859_2_to_mic	postgres	9	7	pg_catalog	latin2_to_mic	postgres	true	conversion for LATIN2 to MULE_INTERNAL
+pg_catalog	iso_8859_2_to_utf8	postgres	9	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN2 to UTF8
+pg_catalog	iso_8859_2_to_windows_1250	postgres	9	29	pg_catalog	latin2_to_win1250	postgres	true	conversion for LATIN2 to WIN1250
+pg_catalog	iso_8859_3_to_mic	postgres	10	7	pg_catalog	latin3_to_mic	postgres	true	conversion for LATIN3 to MULE_INTERNAL
+pg_catalog	iso_8859_3_to_utf8	postgres	10	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN3 to UTF8
+pg_catalog	iso_8859_4_to_mic	postgres	11	7	pg_catalog	latin4_to_mic	postgres	true	conversion for LATIN4 to MULE_INTERNAL
+pg_catalog	iso_8859_4_to_utf8	postgres	11	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN4 to UTF8
+pg_catalog	iso_8859_5_to_koi8_r	postgres	25	22	pg_catalog	iso_to_koi8r	postgres	true	conversion for ISO-8859-5 to KOI8R
+pg_catalog	iso_8859_5_to_mic	postgres	25	7	pg_catalog	iso_to_mic	postgres	true	conversion for ISO-8859-5 to MULE_INTERNAL
+pg_catalog	iso_8859_5_to_utf8	postgres	25	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for ISO-8859-5 to UTF8
+pg_catalog	iso_8859_5_to_windows_1251	postgres	25	23	pg_catalog	iso_to_win1251	postgres	true	conversion for ISO-8859-5 to WIN1251
+pg_catalog	iso_8859_5_to_windows_866	postgres	25	20	pg_catalog	iso_to_win866	postgres	true	conversion for ISO-8859-5 to WIN866
+pg_catalog	iso_8859_6_to_utf8	postgres	26	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for ISO-8859-6 to UTF8
+pg_catalog	iso_8859_7_to_utf8	postgres	27	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for ISO-8859-7 to UTF8
+pg_catalog	iso_8859_8_to_utf8	postgres	28	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for ISO-8859-8 to UTF8
+pg_catalog	iso_8859_9_to_utf8	postgres	12	6	pg_catalog	iso8859_to_utf8	postgres	true	conversion for LATIN5 to UTF8
+pg_catalog	johab_to_utf8	postgres	40	6	pg_catalog	johab_to_utf8	postgres	true	conversion for JOHAB to UTF8
+pg_catalog	koi8_r_to_iso_8859_5	postgres	22	25	pg_catalog	koi8r_to_iso	postgres	true	conversion for KOI8R to ISO-8859-5
+pg_catalog	koi8_r_to_mic	postgres	22	7	pg_catalog	koi8r_to_mic	postgres	true	conversion for KOI8R to MULE_INTERNAL
+pg_catalog	koi8_r_to_utf8	postgres	22	6	pg_catalog	koi8r_to_utf8	postgres	true	conversion for KOI8R to UTF8
+pg_catalog	koi8_r_to_windows_1251	postgres	22	23	pg_catalog	koi8r_to_win1251	postgres	true	conversion for KOI8R to WIN1251
+pg_catalog	koi8_r_to_windows_866	postgres	22	20	pg_catalog	koi8r_to_win866	postgres	true	conversion for KOI8R to WIN866
+pg_catalog	koi8_u_to_utf8	postgres	34	6	pg_catalog	koi8u_to_utf8	postgres	true	conversion for KOI8U to UTF8
+pg_catalog	mic_to_big5	postgres	7	36	pg_catalog	mic_to_big5	postgres	true	conversion for MULE_INTERNAL to BIG5
+pg_catalog	mic_to_euc_cn	postgres	7	2	pg_catalog	mic_to_euc_cn	postgres	true	conversion for MULE_INTERNAL to EUC_CN
+pg_catalog	mic_to_euc_jp	postgres	7	1	pg_catalog	mic_to_euc_jp	postgres	true	conversion for MULE_INTERNAL to EUC_JP
+pg_catalog	mic_to_euc_kr	postgres	7	3	pg_catalog	mic_to_euc_kr	postgres	true	conversion for MULE_INTERNAL to EUC_KR
+pg_catalog	mic_to_euc_tw	postgres	7	4	pg_catalog	mic_to_euc_tw	postgres	true	conversion for MULE_INTERNAL to EUC_TW
+pg_catalog	mic_to_iso_8859_1	postgres	7	8	pg_catalog	mic_to_latin1	postgres	true	conversion for MULE_INTERNAL to LATIN1
+pg_catalog	mic_to_iso_8859_2	postgres	7	9	pg_catalog	mic_to_latin2	postgres	true	conversion for MULE_INTERNAL to LATIN2
+pg_catalog	mic_to_iso_8859_3	postgres	7	10	pg_catalog	mic_to_latin3	postgres	true	conversion for MULE_INTERNAL to LATIN3
+pg_catalog	mic_to_iso_8859_4	postgres	7	11	pg_catalog	mic_to_latin4	postgres	true	conversion for MULE_INTERNAL to LATIN4
+pg_catalog	mic_to_iso_8859_5	postgres	7	25	pg_catalog	mic_to_iso	postgres	true	conversion for MULE_INTERNAL to ISO-8859-5
+pg_catalog	mic_to_koi8_r	postgres	7	22	pg_catalog	mic_to_koi8r	postgres	true	conversion for MULE_INTERNAL to KOI8R
+pg_catalog	mic_to_sjis	postgres	7	35	pg_catalog	mic_to_sjis	postgres	true	conversion for MULE_INTERNAL to SJIS
+pg_catalog	mic_to_windows_1250	postgres	7	29	pg_catalog	mic_to_win1250	postgres	true	conversion for MULE_INTERNAL to WIN1250
+pg_catalog	mic_to_windows_1251	postgres	7	23	pg_catalog	mic_to_win1251	postgres	true	conversion for MULE_INTERNAL to WIN1251
+pg_catalog	mic_to_windows_866	postgres	7	20	pg_catalog	mic_to_win866	postgres	true	conversion for MULE_INTERNAL to WIN866
+pg_catalog	shift_jis_2004_to_euc_jis_2004	postgres	41	5	pg_catalog	shift_jis_2004_to_euc_jis_2004	postgres	true	conversion for SHIFT_JIS_2004 to EUC_JIS_2004
+pg_catalog	shift_jis_2004_to_utf8	postgres	41	6	pg_catalog	shift_jis_2004_to_utf8	postgres	true	conversion for SHIFT_JIS_2004 to UTF8
+pg_catalog	sjis_to_euc_jp	postgres	35	1	pg_catalog	sjis_to_euc_jp	postgres	true	conversion for SJIS to EUC_JP
+pg_catalog	sjis_to_mic	postgres	35	7	pg_catalog	sjis_to_mic	postgres	true	conversion for SJIS to MULE_INTERNAL
+pg_catalog	sjis_to_utf8	postgres	35	6	pg_catalog	sjis_to_utf8	postgres	true	conversion for SJIS to UTF8
+pg_catalog	uhc_to_utf8	postgres	38	6	pg_catalog	uhc_to_utf8	postgres	true	conversion for UHC to UTF8
+pg_catalog	utf8_to_big5	postgres	6	36	pg_catalog	utf8_to_big5	postgres	true	conversion for UTF8 to BIG5
+pg_catalog	utf8_to_euc_cn	postgres	6	2	pg_catalog	utf8_to_euc_cn	postgres	true	conversion for UTF8 to EUC_CN
+pg_catalog	utf8_to_euc_jis_2004	postgres	6	5	pg_catalog	utf8_to_euc_jis_2004	postgres	true	conversion for UTF8 to EUC_JIS_2004
+pg_catalog	utf8_to_euc_jp	postgres	6	1	pg_catalog	utf8_to_euc_jp	postgres	true	conversion for UTF8 to EUC_JP
+pg_catalog	utf8_to_euc_kr	postgres	6	3	pg_catalog	utf8_to_euc_kr	postgres	true	conversion for UTF8 to EUC_KR
+pg_catalog	utf8_to_euc_tw	postgres	6	4	pg_catalog	utf8_to_euc_tw	postgres	true	conversion for UTF8 to EUC_TW
+pg_catalog	utf8_to_gb18030	postgres	6	39	pg_catalog	utf8_to_gb18030	postgres	true	conversion for UTF8 to GB18030
+pg_catalog	utf8_to_gbk	postgres	6	37	pg_catalog	utf8_to_gbk	postgres	true	conversion for UTF8 to GBK
+pg_catalog	utf8_to_iso_8859_1	postgres	6	8	pg_catalog	utf8_to_iso8859_1	postgres	true	conversion for UTF8 to LATIN1
+pg_catalog	utf8_to_iso_8859_10	postgres	6	13	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN6
+pg_catalog	utf8_to_iso_8859_13	postgres	6	14	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN7
+pg_catalog	utf8_to_iso_8859_14	postgres	6	15	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN8
+pg_catalog	utf8_to_iso_8859_15	postgres	6	16	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN9
+pg_catalog	utf8_to_iso_8859_16	postgres	6	17	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN10
+pg_catalog	utf8_to_iso_8859_2	postgres	6	9	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN2
+pg_catalog	utf8_to_iso_8859_3	postgres	6	10	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN3
+pg_catalog	utf8_to_iso_8859_4	postgres	6	11	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN4
+pg_catalog	utf8_to_iso_8859_5	postgres	6	25	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to ISO-8859-5
+pg_catalog	utf8_to_iso_8859_6	postgres	6	26	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to ISO-8859-6
+pg_catalog	utf8_to_iso_8859_7	postgres	6	27	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to ISO-8859-7
+pg_catalog	utf8_to_iso_8859_8	postgres	6	28	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to ISO-8859-8
+pg_catalog	utf8_to_iso_8859_9	postgres	6	12	pg_catalog	utf8_to_iso8859	postgres	true	conversion for UTF8 to LATIN5
+pg_catalog	utf8_to_johab	postgres	6	40	pg_catalog	utf8_to_johab	postgres	true	conversion for UTF8 to JOHAB
+pg_catalog	utf8_to_koi8_r	postgres	6	22	pg_catalog	utf8_to_koi8r	postgres	true	conversion for UTF8 to KOI8R
+pg_catalog	utf8_to_koi8_u	postgres	6	34	pg_catalog	utf8_to_koi8u	postgres	true	conversion for UTF8 to KOI8U
+pg_catalog	utf8_to_shift_jis_2004	postgres	6	41	pg_catalog	utf8_to_shift_jis_2004	postgres	true	conversion for UTF8 to SHIFT_JIS_2004
+pg_catalog	utf8_to_sjis	postgres	6	35	pg_catalog	utf8_to_sjis	postgres	true	conversion for UTF8 to SJIS
+pg_catalog	utf8_to_uhc	postgres	6	38	pg_catalog	utf8_to_uhc	postgres	true	conversion for UTF8 to UHC
+pg_catalog	utf8_to_windows_1250	postgres	6	29	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1250
+pg_catalog	utf8_to_windows_1251	postgres	6	23	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1251
+pg_catalog	utf8_to_windows_1252	postgres	6	24	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1252
+pg_catalog	utf8_to_windows_1253	postgres	6	30	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1253
+pg_catalog	utf8_to_windows_1254	postgres	6	31	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1254
+pg_catalog	utf8_to_windows_1255	postgres	6	32	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1255
+pg_catalog	utf8_to_windows_1256	postgres	6	18	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1256
+pg_catalog	utf8_to_windows_1257	postgres	6	33	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1257
+pg_catalog	utf8_to_windows_1258	postgres	6	19	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN1258
+pg_catalog	utf8_to_windows_866	postgres	6	20	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN866
+pg_catalog	utf8_to_windows_874	postgres	6	21	pg_catalog	utf8_to_win	postgres	true	conversion for UTF8 to WIN874
+pg_catalog	windows_1250_to_iso_8859_2	postgres	29	9	pg_catalog	win1250_to_latin2	postgres	true	conversion for WIN1250 to LATIN2
+pg_catalog	windows_1250_to_mic	postgres	29	7	pg_catalog	win1250_to_mic	postgres	true	conversion for WIN1250 to MULE_INTERNAL
+pg_catalog	windows_1250_to_utf8	postgres	29	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1250 to UTF8
+pg_catalog	windows_1251_to_iso_8859_5	postgres	23	25	pg_catalog	win1251_to_iso	postgres	true	conversion for WIN1251 to ISO-8859-5
+pg_catalog	windows_1251_to_koi8_r	postgres	23	22	pg_catalog	win1251_to_koi8r	postgres	true	conversion for WIN1251 to KOI8R
+pg_catalog	windows_1251_to_mic	postgres	23	7	pg_catalog	win1251_to_mic	postgres	true	conversion for WIN1251 to MULE_INTERNAL
+pg_catalog	windows_1251_to_utf8	postgres	23	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1251 to UTF8
+pg_catalog	windows_1251_to_windows_866	postgres	23	20	pg_catalog	win1251_to_win866	postgres	true	conversion for WIN1251 to WIN866
+pg_catalog	windows_1252_to_utf8	postgres	24	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1252 to UTF8
+pg_catalog	windows_1253_to_utf8	postgres	30	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1253 to UTF8
+pg_catalog	windows_1254_to_utf8	postgres	31	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1254 to UTF8
+pg_catalog	windows_1255_to_utf8	postgres	32	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1255 to UTF8
+pg_catalog	windows_1256_to_utf8	postgres	18	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1256 to UTF8
+pg_catalog	windows_1257_to_utf8	postgres	33	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1257 to UTF8
+pg_catalog	windows_1258_to_utf8	postgres	19	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN1258 to UTF8
+pg_catalog	windows_866_to_iso_8859_5	postgres	20	25	pg_catalog	win866_to_iso	postgres	true	conversion for WIN866 to ISO-8859-5
+pg_catalog	windows_866_to_koi8_r	postgres	20	22	pg_catalog	win866_to_koi8r	postgres	true	conversion for WIN866 to KOI8R
+pg_catalog	windows_866_to_mic	postgres	20	7	pg_catalog	win866_to_mic	postgres	true	conversion for WIN866 to MULE_INTERNAL
+pg_catalog	windows_866_to_utf8	postgres	20	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN866 to UTF8
+pg_catalog	windows_866_to_windows_1251	postgres	20	23	pg_catalog	win866_to_win1251	postgres	true	conversion for WIN866 to WIN1251
+pg_catalog	windows_874_to_utf8	postgres	21	6	pg_catalog	win_to_utf8	postgres	true	conversion for WIN874 to UTF8

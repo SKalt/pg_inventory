@@ -1,2 +1,2 @@
-schema_name	name	owner_name	source_encoding_id	dest_encoding_id	fn_schema_name	fn_name	fn_owner_name	is_default
-conversion_example	myconv	postgres	8	6	pg_catalog	iso8859_1_to_utf8	postgres	false
+schema_name	name	owner_name	source_encoding_id	dest_encoding_id	fn_schema_name	fn_name	fn_owner_name	is_default	comment
+conversion_example	myconv	postgres	8	6	pg_catalog	iso8859_1_to_utf8	postgres	false	
