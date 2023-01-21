@@ -1,0 +1,146 @@
+schema_name	fn	info	n_direct_arguments	transition_fn_schema_name	transition_fn_name	transition_type_schema_name	transition_state_type_name	approx_transiton_state_avg_bytes	final_fn_schema_name	final_fn_name	combine_fn_schema_name	combine_fn_name	serialization_fn_schema_name	serialization_fn_name	deserialization_fn_schema_name	deserialization_fn_name	moving_agg_forward_transition_fn_schema_name	moving_agg_forward_transition_fn_name	moving_agg_inverse_transition_fn_schema_name	moving_agg_inverse_transition_fn_name	moving_agg_final_fn_schema_name	moving_agg_final_fn_name	sort_operator_schema	sort_operator	moving_agg_transition_state_type_schema_name	moving_agg_transition_state_type_name	moving_agg_transition_state_avg_bytes	initial_value	moving_agg_initial_value
+pg_catalog	array_agg	77	0	pg_catalog	array_agg_transfn	pg_catalog	internal	0	pg_catalog	array_agg_finalfn																	0		
+pg_catalog	array_agg	77	0	pg_catalog	array_agg_array_transfn	pg_catalog	internal	0	pg_catalog	array_agg_array_finalfn																	0		
+pg_catalog	avg	73	0	pg_catalog	int4_avg_accum	pg_catalog	_int8	0	pg_catalog	int8_avg	pg_catalog	int4_avg_combine			pg_catalog	int4_avg_accum	pg_catalog	int4_avg_accum	pg_catalog	int4_avg_accum_inv	pg_catalog	int8_avg			pg_catalog	_int8	0	{0,0}	{0,0}
+pg_catalog	avg	73	0	pg_catalog	interval_accum	pg_catalog	_interval	0	pg_catalog	interval_avg	pg_catalog	interval_combine			pg_catalog	interval_accum	pg_catalog	interval_accum	pg_catalog	interval_accum_inv	pg_catalog	interval_avg			pg_catalog	_interval	0	{0 second,0 second}	{0 second,0 second}
+pg_catalog	avg	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_avg	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	avg	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_avg	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	avg	73	0	pg_catalog	int8_avg_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_avg	pg_catalog	int8_avg_combine	pg_catalog	int8_avg_serialize	pg_catalog	int8_avg_accum	pg_catalog	int8_avg_accum	pg_catalog	int8_avg_accum_inv	pg_catalog	numeric_poly_avg			pg_catalog	internal	48		
+pg_catalog	avg	73	0	pg_catalog	int2_avg_accum	pg_catalog	_int8	0	pg_catalog	int8_avg	pg_catalog	int4_avg_combine			pg_catalog	int2_avg_accum	pg_catalog	int2_avg_accum	pg_catalog	int2_avg_accum_inv	pg_catalog	int8_avg			pg_catalog	_int8	0	{0,0}	{0,0}
+pg_catalog	avg	73	0	pg_catalog	numeric_avg_accum	pg_catalog	internal	128	pg_catalog	numeric_avg	pg_catalog	numeric_avg_combine	pg_catalog	numeric_avg_serialize	pg_catalog	numeric_avg_accum	pg_catalog	numeric_avg_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_avg			pg_catalog	internal	128		
+pg_catalog	bit_and	73	0	pg_catalog	bitand	pg_catalog	bit	0			pg_catalog	bitand															0		
+pg_catalog	bit_and	73	0	pg_catalog	int2and	pg_catalog	int2	0			pg_catalog	int2and															0		
+pg_catalog	bit_and	73	0	pg_catalog	int8and	pg_catalog	int8	0			pg_catalog	int8and															0		
+pg_catalog	bit_and	73	0	pg_catalog	int4and	pg_catalog	int4	0			pg_catalog	int4and															0		
+pg_catalog	bit_or	73	0	pg_catalog	int8or	pg_catalog	int8	0			pg_catalog	int8or															0		
+pg_catalog	bit_or	73	0	pg_catalog	bitor	pg_catalog	bit	0			pg_catalog	bitor															0		
+pg_catalog	bit_or	73	0	pg_catalog	int2or	pg_catalog	int2	0			pg_catalog	int2or															0		
+pg_catalog	bit_or	73	0	pg_catalog	int4or	pg_catalog	int4	0			pg_catalog	int4or															0		
+pg_catalog	bit_xor	73	0	pg_catalog	bitxor	pg_catalog	bit	0			pg_catalog	bitxor															0		
+pg_catalog	bit_xor	73	0	pg_catalog	int8xor	pg_catalog	int8	0			pg_catalog	int8xor															0		
+pg_catalog	bit_xor	73	0	pg_catalog	int4xor	pg_catalog	int4	0			pg_catalog	int4xor															0		
+pg_catalog	bit_xor	73	0	pg_catalog	int2xor	pg_catalog	int2	0			pg_catalog	int2xor															0		
+pg_catalog	bool_and	73	0	pg_catalog	booland_statefunc	pg_catalog	bool	0			pg_catalog	booland_statefunc			pg_catalog	bool_accum	pg_catalog	bool_accum	pg_catalog	bool_accum_inv	pg_catalog	bool_alltrue	pg_catalog	<	pg_catalog	internal	16		
+pg_catalog	bool_or	73	0	pg_catalog	boolor_statefunc	pg_catalog	bool	0			pg_catalog	boolor_statefunc			pg_catalog	bool_accum	pg_catalog	bool_accum	pg_catalog	bool_accum_inv	pg_catalog	bool_anytrue	pg_catalog	>	pg_catalog	internal	16		
+pg_catalog	corr	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_corr	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	count	73	0	pg_catalog	int8inc_any	pg_catalog	int8	0			pg_catalog	int8pl			pg_catalog	int8inc_any	pg_catalog	int8inc_any	pg_catalog	int8dec_any					pg_catalog	int8	0	0	0
+pg_catalog	count	73	0	pg_catalog	int8inc	pg_catalog	int8	0			pg_catalog	int8pl			pg_catalog	int8inc	pg_catalog	int8inc	pg_catalog	int8dec					pg_catalog	int8	0	0	0
+pg_catalog	covar_pop	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_covar_pop	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	covar_samp	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_covar_samp	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	cume_dist	223	1	pg_catalog	ordered_set_transition_multi	pg_catalog	internal	0	pg_catalog	cume_dist_final																	0		
+pg_catalog	dense_rank	223	1	pg_catalog	ordered_set_transition_multi	pg_catalog	internal	0	pg_catalog	dense_rank_final																	0		
+pg_catalog	every	73	0	pg_catalog	booland_statefunc	pg_catalog	bool	0			pg_catalog	booland_statefunc			pg_catalog	bool_accum	pg_catalog	bool_accum	pg_catalog	bool_accum_inv	pg_catalog	bool_alltrue	pg_catalog	<	pg_catalog	internal	16		
+pg_catalog	json_agg	73	0	pg_catalog	json_agg_transfn	pg_catalog	internal	0	pg_catalog	json_agg_finalfn																	0		
+pg_catalog	json_object_agg	73	0	pg_catalog	json_object_agg_transfn	pg_catalog	internal	0	pg_catalog	json_object_agg_finalfn																	0		
+pg_catalog	jsonb_agg	73	0	pg_catalog	jsonb_agg_transfn	pg_catalog	internal	0	pg_catalog	jsonb_agg_finalfn																	0		
+pg_catalog	jsonb_object_agg	73	0	pg_catalog	jsonb_object_agg_transfn	pg_catalog	internal	0	pg_catalog	jsonb_object_agg_finalfn																	0		
+pg_catalog	max	73	0	pg_catalog	interval_larger	pg_catalog	interval	0			pg_catalog	interval_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	oidlarger	pg_catalog	oid	0			pg_catalog	oidlarger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	cashlarger	pg_catalog	money	0			pg_catalog	cashlarger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	int8larger	pg_catalog	int8	0			pg_catalog	int8larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	network_larger	pg_catalog	inet	0			pg_catalog	network_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	text_larger	pg_catalog	text	0			pg_catalog	text_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	int4larger	pg_catalog	int4	0			pg_catalog	int4larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	int2larger	pg_catalog	int2	0			pg_catalog	int2larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	bpchar_larger	pg_catalog	bpchar	0			pg_catalog	bpchar_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	array_larger	pg_catalog	anyarray	0			pg_catalog	array_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	numeric_larger	pg_catalog	numeric	0			pg_catalog	numeric_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	date_larger	pg_catalog	date	0			pg_catalog	date_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	time_larger	pg_catalog	time	0			pg_catalog	time_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	timestamp_larger	pg_catalog	timestamp	0			pg_catalog	timestamp_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	timetz_larger	pg_catalog	timetz	0			pg_catalog	timetz_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	pg_lsn_larger	pg_catalog	pg_lsn	0			pg_catalog	pg_lsn_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	timestamptz_larger	pg_catalog	timestamptz	0			pg_catalog	timestamptz_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	tidlarger	pg_catalog	tid	0			pg_catalog	tidlarger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	float4larger	pg_catalog	float4	0			pg_catalog	float4larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	enum_larger	pg_catalog	anyenum	0			pg_catalog	enum_larger											pg_catalog	>			0		
+pg_catalog	max	73	0	pg_catalog	float8larger	pg_catalog	float8	0			pg_catalog	float8larger											pg_catalog	>			0		
+pg_catalog	min	73	0	pg_catalog	array_smaller	pg_catalog	anyarray	0			pg_catalog	array_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	int8smaller	pg_catalog	int8	0			pg_catalog	int8smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	int2smaller	pg_catalog	int2	0			pg_catalog	int2smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	int4smaller	pg_catalog	int4	0			pg_catalog	int4smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	text_smaller	pg_catalog	text	0			pg_catalog	text_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	oidsmaller	pg_catalog	oid	0			pg_catalog	oidsmaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	tidsmaller	pg_catalog	tid	0			pg_catalog	tidsmaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	float4smaller	pg_catalog	float4	0			pg_catalog	float4smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	float8smaller	pg_catalog	float8	0			pg_catalog	float8smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	cashsmaller	pg_catalog	money	0			pg_catalog	cashsmaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	network_smaller	pg_catalog	inet	0			pg_catalog	network_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	bpchar_smaller	pg_catalog	bpchar	0			pg_catalog	bpchar_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	date_smaller	pg_catalog	date	0			pg_catalog	date_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	time_smaller	pg_catalog	time	0			pg_catalog	time_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	timestamp_smaller	pg_catalog	timestamp	0			pg_catalog	timestamp_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	timestamptz_smaller	pg_catalog	timestamptz	0			pg_catalog	timestamptz_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	interval_smaller	pg_catalog	interval	0			pg_catalog	interval_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	timetz_smaller	pg_catalog	timetz	0			pg_catalog	timetz_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	numeric_smaller	pg_catalog	numeric	0			pg_catalog	numeric_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	pg_lsn_smaller	pg_catalog	pg_lsn	0			pg_catalog	pg_lsn_smaller											pg_catalog	<			0		
+pg_catalog	min	73	0	pg_catalog	enum_smaller	pg_catalog	anyenum	0			pg_catalog	enum_smaller											pg_catalog	<			0		
+pg_catalog	mode	150	0	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	mode_final																	0		
+pg_catalog	percent_rank	223	1	pg_catalog	ordered_set_transition_multi	pg_catalog	internal	0	pg_catalog	percent_rank_final																	0		
+pg_catalog	percentile_cont	146	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_cont_interval_final																	0		
+pg_catalog	percentile_cont	146	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_cont_float8_final																	0		
+pg_catalog	percentile_cont	146	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_cont_float8_multi_final																	0		
+pg_catalog	percentile_cont	146	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_cont_interval_multi_final																	0		
+pg_catalog	percentile_disc	150	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_disc_multi_final																	0		
+pg_catalog	percentile_disc	150	1	pg_catalog	ordered_set_transition	pg_catalog	internal	0	pg_catalog	percentile_disc_final																	0		
+pg_catalog	range_agg	77	0	pg_catalog	range_agg_transfn	pg_catalog	internal	0	pg_catalog	range_agg_finalfn																	0		
+pg_catalog	range_intersect_agg	73	0	pg_catalog	range_intersect_agg_transfn	pg_catalog	anyrange	0			pg_catalog	range_intersect_agg_transfn															0		
+pg_catalog	range_intersect_agg	73	0	pg_catalog	multirange_intersect_agg_transfn	pg_catalog	anymultirange	0			pg_catalog	multirange_intersect_agg_transfn															0		
+pg_catalog	rank	223	1	pg_catalog	ordered_set_transition_multi	pg_catalog	internal	0	pg_catalog	rank_final																	0		
+pg_catalog	regr_avgx	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_avgx	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_avgy	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_avgy	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_count	73	0	pg_catalog	int8inc_float8_float8	pg_catalog	int8	0			pg_catalog	int8pl															0	0	
+pg_catalog	regr_intercept	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_intercept	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_r2	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_r2	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_slope	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_slope	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_sxx	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_sxx	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_sxy	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_sxy	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	regr_syy	73	0	pg_catalog	float8_regr_accum	pg_catalog	_float8	0	pg_catalog	float8_regr_syy	pg_catalog	float8_regr_combine															0	{0,0,0,0,0,0}	
+pg_catalog	stddev	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_stddev_samp			pg_catalog	internal	128		
+pg_catalog	stddev	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_stddev_samp			pg_catalog	internal	48		
+pg_catalog	stddev	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_stddev_samp			pg_catalog	internal	48		
+pg_catalog	stddev	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_stddev_samp			pg_catalog	internal	128		
+pg_catalog	stddev_pop	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_pop	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_stddev_pop			pg_catalog	internal	128		
+pg_catalog	stddev_pop	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_pop	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev_pop	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_pop	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev_pop	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_pop	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_stddev_pop			pg_catalog	internal	128		
+pg_catalog	stddev_pop	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_pop	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_stddev_pop			pg_catalog	internal	48		
+pg_catalog	stddev_pop	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_pop	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_stddev_pop			pg_catalog	internal	48		
+pg_catalog	stddev_samp	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_stddev_samp			pg_catalog	internal	48		
+pg_catalog	stddev_samp	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_stddev_samp			pg_catalog	internal	128		
+pg_catalog	stddev_samp	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_stddev_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_stddev_samp			pg_catalog	internal	128		
+pg_catalog	stddev_samp	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev_samp	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_stddev_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	stddev_samp	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_stddev_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_stddev_samp			pg_catalog	internal	48		
+pg_catalog	string_agg	73	0	pg_catalog	bytea_string_agg_transfn	pg_catalog	internal	0	pg_catalog	bytea_string_agg_finalfn																	0		
+pg_catalog	string_agg	73	0	pg_catalog	string_agg_transfn	pg_catalog	internal	0	pg_catalog	string_agg_finalfn																	0		
+pg_catalog	sum	73	0	pg_catalog	int2_sum	pg_catalog	int8	0			pg_catalog	int8pl			pg_catalog	int2_avg_accum	pg_catalog	int2_avg_accum	pg_catalog	int2_avg_accum_inv	pg_catalog	int2int4_sum			pg_catalog	_int8	0		{0,0}
+pg_catalog	sum	73	0	pg_catalog	int8_avg_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_sum	pg_catalog	int8_avg_combine	pg_catalog	int8_avg_serialize	pg_catalog	int8_avg_accum	pg_catalog	int8_avg_accum	pg_catalog	int8_avg_accum_inv	pg_catalog	numeric_poly_sum			pg_catalog	internal	48		
+pg_catalog	sum	73	0	pg_catalog	int4_sum	pg_catalog	int8	0			pg_catalog	int8pl			pg_catalog	int4_avg_accum	pg_catalog	int4_avg_accum	pg_catalog	int4_avg_accum_inv	pg_catalog	int2int4_sum			pg_catalog	_int8	0		{0,0}
+pg_catalog	sum	73	0	pg_catalog	float8pl	pg_catalog	float8	0			pg_catalog	float8pl															0		
+pg_catalog	sum	73	0	pg_catalog	interval_pl	pg_catalog	interval	0			pg_catalog	interval_pl			pg_catalog	interval_pl	pg_catalog	interval_pl	pg_catalog	interval_mi					pg_catalog	interval	0		
+pg_catalog	sum	73	0	pg_catalog	float4pl	pg_catalog	float4	0			pg_catalog	float4pl															0		
+pg_catalog	sum	73	0	pg_catalog	cash_pl	pg_catalog	money	0			pg_catalog	cash_pl			pg_catalog	cash_pl	pg_catalog	cash_pl	pg_catalog	cash_mi					pg_catalog	money	0		
+pg_catalog	sum	73	0	pg_catalog	numeric_avg_accum	pg_catalog	internal	128	pg_catalog	numeric_sum	pg_catalog	numeric_avg_combine	pg_catalog	numeric_avg_serialize	pg_catalog	numeric_avg_accum	pg_catalog	numeric_avg_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_sum			pg_catalog	internal	128		
+pg_catalog	var_pop	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_var_pop	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	var_pop	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_var_pop	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_var_pop			pg_catalog	internal	128		
+pg_catalog	var_pop	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_pop	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_var_pop			pg_catalog	internal	48		
+pg_catalog	var_pop	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_pop	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_var_pop			pg_catalog	internal	48		
+pg_catalog	var_pop	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_var_pop	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	var_pop	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_var_pop	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_var_pop			pg_catalog	internal	128		
+pg_catalog	var_samp	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_var_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_var_samp			pg_catalog	internal	128		
+pg_catalog	var_samp	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_var_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_var_samp			pg_catalog	internal	128		
+pg_catalog	var_samp	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_var_samp			pg_catalog	internal	48		
+pg_catalog	var_samp	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_var_samp			pg_catalog	internal	48		
+pg_catalog	var_samp	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_var_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	var_samp	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_var_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	variance	73	0	pg_catalog	numeric_accum	pg_catalog	internal	128	pg_catalog	numeric_var_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	numeric_accum	pg_catalog	numeric_accum	pg_catalog	numeric_accum_inv	pg_catalog	numeric_var_samp			pg_catalog	internal	128		
+pg_catalog	variance	73	0	pg_catalog	float8_accum	pg_catalog	_float8	0	pg_catalog	float8_var_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	variance	73	0	pg_catalog	int8_accum	pg_catalog	internal	128	pg_catalog	numeric_var_samp	pg_catalog	numeric_combine	pg_catalog	numeric_serialize	pg_catalog	int8_accum	pg_catalog	int8_accum	pg_catalog	int8_accum_inv	pg_catalog	numeric_var_samp			pg_catalog	internal	128		
+pg_catalog	variance	73	0	pg_catalog	int2_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int2_accum	pg_catalog	int2_accum	pg_catalog	int2_accum_inv	pg_catalog	numeric_poly_var_samp			pg_catalog	internal	48		
+pg_catalog	variance	73	0	pg_catalog	int4_accum	pg_catalog	internal	48	pg_catalog	numeric_poly_var_samp	pg_catalog	numeric_poly_combine	pg_catalog	numeric_poly_serialize	pg_catalog	int4_accum	pg_catalog	int4_accum	pg_catalog	int4_accum_inv	pg_catalog	numeric_poly_var_samp			pg_catalog	internal	48		
+pg_catalog	variance	73	0	pg_catalog	float4_accum	pg_catalog	_float8	0	pg_catalog	float8_var_samp	pg_catalog	float8_combine															0	{0,0,0}	
+pg_catalog	xmlagg	73	0	pg_catalog	xmlconcat2	pg_catalog	xml	0																			0		
