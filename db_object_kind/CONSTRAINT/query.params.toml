@@ -1,6 +1,10 @@
-name_template = "{{.kind}}_constraints{{if .packed}}_packed{{end}}"
+name_template = "{{.kind}}_constraints_{{.oid}}{{.packed}}"
+
+[oid]
+  normalized = true
+  denormalized = false
 [packed]
-  packed = true
+  _packed = true
   "" = false
 [kind]
   check = "c"
