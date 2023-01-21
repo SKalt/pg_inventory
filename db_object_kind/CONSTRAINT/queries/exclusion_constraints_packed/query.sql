@@ -31,6 +31,7 @@ SELECT
     -- a constraint on a partitioned table.
   , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
 -- domain information -- omitted
+-- other
   , constraint_.coninhcount AS n_ancestor_constraints
     -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
   , constraint_.conkey AS constrained_column_numbers
@@ -39,6 +40,7 @@ SELECT
     -- keys, but not constraint triggers)
   , constraint_.conexclop AS per_column_exclusion_operator_oids
     -- oid[] each referencing pg_catalog.pg_operator.oid
+  , pg_catalog.obj_description(constraint_.oid, 'pg_constraint') AS "comment"
 FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON constraint_.contype = 'x'

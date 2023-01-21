@@ -167,6 +167,7 @@ SELECT
   , constraint_.conexclop AS per_column_exclusion_operator_oids
     -- oid[] each referencing pg_catalog.pg_operator.oid
 {{- end }}
+  , pg_catalog.obj_description(constraint_.oid, 'pg_constraint') AS "comment"
 FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON {{- if .kind }} constraint_.contype = '{{.kind}}'

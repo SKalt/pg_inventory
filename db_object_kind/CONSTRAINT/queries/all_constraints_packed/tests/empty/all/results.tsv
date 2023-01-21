@@ -1,108 +1,108 @@
-constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids
-pg_catalog	pg_statistic_relid_att_inh_index	24579	pg_catalog	pg_statistic			PRIMARY KEY (starelid, staattnum, stainherit)			0	{1,2,3}						
-pg_catalog	pg_type_typname_nsp_index	24581	pg_catalog	pg_type			UNIQUE (typname, typnamespace)			0	{2,3}						
-pg_catalog	pg_type_oid_index	24579	pg_catalog	pg_type			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_foreign_table_relid_index	24579	pg_catalog	pg_foreign_table			PRIMARY KEY (ftrelid)			0	{1}						
-pg_catalog	pg_authid_oid_index	24579	pg_catalog	pg_authid			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_authid_rolname_index	24581	pg_catalog	pg_authid			UNIQUE (rolname)			0	{2}						
-pg_catalog	pg_statistic_ext_data_stxoid_index	24579	pg_catalog	pg_statistic_ext_data			PRIMARY KEY (stxoid)			0	{1}						
-pg_catalog	pg_user_mapping_user_server_index	24581	pg_catalog	pg_user_mapping			UNIQUE (umuser, umserver)			0	{2,3}						
-pg_catalog	pg_user_mapping_oid_index	24579	pg_catalog	pg_user_mapping			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_subscription_subname_index	24581	pg_catalog	pg_subscription			UNIQUE (subdbid, subname)			0	{2,3}						
-pg_catalog	pg_subscription_oid_index	24579	pg_catalog	pg_subscription			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_attribute_relid_attnum_index	24579	pg_catalog	pg_attribute			PRIMARY KEY (attrelid, attnum)			0	{1,6}						
-pg_catalog	pg_attribute_relid_attnam_index	24581	pg_catalog	pg_attribute			UNIQUE (attrelid, attname)			0	{1,2}						
-pg_catalog	pg_proc_proname_args_nsp_index	24581	pg_catalog	pg_proc			UNIQUE (proname, proargtypes, pronamespace)			0	{2,20,3}						
-pg_catalog	pg_proc_oid_index	24579	pg_catalog	pg_proc			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_class_relname_nsp_index	24581	pg_catalog	pg_class			UNIQUE (relname, relnamespace)			0	{2,3}						
-pg_catalog	pg_class_oid_index	24579	pg_catalog	pg_class			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_attrdef_oid_index	24579	pg_catalog	pg_attrdef			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_attrdef_adrelid_adnum_index	24581	pg_catalog	pg_attrdef			UNIQUE (adrelid, adnum)			0	{2,3}						
-pg_catalog	pg_constraint_oid_index	24579	pg_catalog	pg_constraint			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_constraint_conrelid_contypid_conname_index	24581	pg_catalog	pg_constraint			UNIQUE (conrelid, contypid, conname)			0	{8,9,2}						
-pg_catalog	pg_inherits_relid_seqno_index	24579	pg_catalog	pg_inherits			PRIMARY KEY (inhrelid, inhseqno)			0	{1,3}						
-pg_catalog	pg_index_indexrelid_index	24579	pg_catalog	pg_index			PRIMARY KEY (indexrelid)			0	{1}						
-pg_catalog	pg_operator_oprname_l_r_n_index	24581	pg_catalog	pg_operator			UNIQUE (oprname, oprleft, oprright, oprnamespace)			0	{2,8,9,3}						
-pg_catalog	pg_operator_oid_index	24579	pg_catalog	pg_operator			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_opfamily_oid_index	24579	pg_catalog	pg_opfamily			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_opfamily_am_name_nsp_index	24581	pg_catalog	pg_opfamily			UNIQUE (opfmethod, opfname, opfnamespace)			0	{2,3,4}						
-pg_catalog	pg_opclass_oid_index	24579	pg_catalog	pg_opclass			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_opclass_am_name_nsp_index	24581	pg_catalog	pg_opclass			UNIQUE (opcmethod, opcname, opcnamespace)			0	{2,3,4}						
-pg_catalog	pg_am_oid_index	24579	pg_catalog	pg_am			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_am_name_index	24581	pg_catalog	pg_am			UNIQUE (amname)			0	{2}						
-pg_catalog	pg_amop_oid_index	24579	pg_catalog	pg_amop			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_amop_opr_fam_index	24581	pg_catalog	pg_amop			UNIQUE (amopopr, amoppurpose, amopfamily)			0	{7,6,2}						
-pg_catalog	pg_amop_fam_strat_index	24581	pg_catalog	pg_amop			UNIQUE (amopfamily, amoplefttype, amoprighttype, amopstrategy)			0	{2,3,4,5}						
-pg_catalog	pg_amproc_oid_index	24579	pg_catalog	pg_amproc			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_amproc_fam_proc_index	24581	pg_catalog	pg_amproc			UNIQUE (amprocfamily, amproclefttype, amprocrighttype, amprocnum)			0	{2,3,4,5}						
-pg_catalog	pg_language_oid_index	24579	pg_catalog	pg_language			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_language_name_index	24581	pg_catalog	pg_language			UNIQUE (lanname)			0	{2}						
-pg_catalog	pg_largeobject_metadata_oid_index	24579	pg_catalog	pg_largeobject_metadata			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_aggregate_fnoid_index	24579	pg_catalog	pg_aggregate			PRIMARY KEY (aggfnoid)			0	{1}						
-pg_catalog	pg_statistic_ext_name_index	24581	pg_catalog	pg_statistic_ext			UNIQUE (stxname, stxnamespace)			0	{3,4}						
-pg_catalog	pg_statistic_ext_oid_index	24579	pg_catalog	pg_statistic_ext			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_rewrite_rel_rulename_index	24581	pg_catalog	pg_rewrite			UNIQUE (ev_class, rulename)			0	{3,2}						
-pg_catalog	pg_rewrite_oid_index	24579	pg_catalog	pg_rewrite			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_trigger_oid_index	24579	pg_catalog	pg_trigger			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_trigger_tgrelid_tgname_index	24581	pg_catalog	pg_trigger			UNIQUE (tgrelid, tgname)			0	{2,4}						
-pg_catalog	pg_event_trigger_oid_index	24579	pg_catalog	pg_event_trigger			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_event_trigger_evtname_index	24581	pg_catalog	pg_event_trigger			UNIQUE (evtname)			0	{2}						
-pg_catalog	pg_description_o_c_o_index	24579	pg_catalog	pg_description			PRIMARY KEY (objoid, classoid, objsubid)			0	{1,2,3}						
-pg_catalog	pg_cast_source_target_index	24581	pg_catalog	pg_cast			UNIQUE (castsource, casttarget)			0	{2,3}						
-pg_catalog	pg_cast_oid_index	24579	pg_catalog	pg_cast			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_enum_typid_sortorder_index	24581	pg_catalog	pg_enum			UNIQUE (enumtypid, enumsortorder)			0	{2,3}						
-pg_catalog	pg_enum_typid_label_index	24581	pg_catalog	pg_enum			UNIQUE (enumtypid, enumlabel)			0	{2,4}						
-pg_catalog	pg_enum_oid_index	24579	pg_catalog	pg_enum			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_namespace_oid_index	24579	pg_catalog	pg_namespace			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_namespace_nspname_index	24581	pg_catalog	pg_namespace			UNIQUE (nspname)			0	{2}						
-pg_catalog	pg_conversion_oid_index	24579	pg_catalog	pg_conversion			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_conversion_name_nsp_index	24581	pg_catalog	pg_conversion			UNIQUE (conname, connamespace)			0	{2,3}						
-pg_catalog	pg_conversion_default_index	24581	pg_catalog	pg_conversion			UNIQUE (connamespace, conforencoding, contoencoding, oid)			0	{3,5,6,1}						
-pg_catalog	pg_database_oid_index	24579	pg_catalog	pg_database			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_database_datname_index	24581	pg_catalog	pg_database			UNIQUE (datname)			0	{2}						
-pg_catalog	pg_db_role_setting_databaseid_rol_index	24579	pg_catalog	pg_db_role_setting			PRIMARY KEY (setdatabase, setrole)			0	{1,2}						
-pg_catalog	pg_tablespace_spcname_index	24581	pg_catalog	pg_tablespace			UNIQUE (spcname)			0	{2}						
-pg_catalog	pg_tablespace_oid_index	24579	pg_catalog	pg_tablespace			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_auth_members_member_role_index	24581	pg_catalog	pg_auth_members			UNIQUE (member, roleid)			0	{2,1}						
-pg_catalog	pg_auth_members_role_member_index	24579	pg_catalog	pg_auth_members			PRIMARY KEY (roleid, member)			0	{1,2}						
-pg_catalog	pg_shdescription_o_c_index	24579	pg_catalog	pg_shdescription			PRIMARY KEY (objoid, classoid)			0	{1,2}						
-pg_catalog	pg_ts_config_oid_index	24579	pg_catalog	pg_ts_config			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_ts_config_cfgname_index	24581	pg_catalog	pg_ts_config			UNIQUE (cfgname, cfgnamespace)			0	{2,3}						
-pg_catalog	pg_ts_config_map_index	24579	pg_catalog	pg_ts_config_map			PRIMARY KEY (mapcfg, maptokentype, mapseqno)			0	{1,2,3}						
-pg_catalog	pg_ts_dict_oid_index	24579	pg_catalog	pg_ts_dict			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_ts_dict_dictname_index	24581	pg_catalog	pg_ts_dict			UNIQUE (dictname, dictnamespace)			0	{2,3}						
-pg_catalog	pg_ts_parser_oid_index	24579	pg_catalog	pg_ts_parser			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_ts_parser_prsname_index	24581	pg_catalog	pg_ts_parser			UNIQUE (prsname, prsnamespace)			0	{2,3}						
-pg_catalog	pg_ts_template_oid_index	24579	pg_catalog	pg_ts_template			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_ts_template_tmplname_index	24581	pg_catalog	pg_ts_template			UNIQUE (tmplname, tmplnamespace)			0	{2,3}						
-pg_catalog	pg_extension_name_index	24581	pg_catalog	pg_extension			UNIQUE (extname)			0	{2}						
-pg_catalog	pg_extension_oid_index	24579	pg_catalog	pg_extension			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_foreign_data_wrapper_name_index	24581	pg_catalog	pg_foreign_data_wrapper			UNIQUE (fdwname)			0	{2}						
-pg_catalog	pg_foreign_data_wrapper_oid_index	24579	pg_catalog	pg_foreign_data_wrapper			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_foreign_server_name_index	24581	pg_catalog	pg_foreign_server			UNIQUE (srvname)			0	{2}						
-pg_catalog	pg_foreign_server_oid_index	24579	pg_catalog	pg_foreign_server			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_policy_polrelid_polname_index	24581	pg_catalog	pg_policy			UNIQUE (polrelid, polname)			0	{3,2}						
-pg_catalog	pg_policy_oid_index	24579	pg_catalog	pg_policy			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_replication_origin_roname_index	24581	pg_catalog	pg_replication_origin			UNIQUE (roname)			0	{2}						
-pg_catalog	pg_replication_origin_roiident_index	24579	pg_catalog	pg_replication_origin			PRIMARY KEY (roident)			0	{1}						
-pg_catalog	pg_default_acl_oid_index	24579	pg_catalog	pg_default_acl			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_default_acl_role_nsp_obj_index	24581	pg_catalog	pg_default_acl			UNIQUE (defaclrole, defaclnamespace, defaclobjtype)			0	{2,3,4}						
-pg_catalog	pg_init_privs_o_c_o_index	24579	pg_catalog	pg_init_privs			PRIMARY KEY (objoid, classoid, objsubid)			0	{1,2,3}						
-pg_catalog	pg_seclabel_object_index	24579	pg_catalog	pg_seclabel			PRIMARY KEY (objoid, classoid, objsubid, provider)			0	{1,2,3,4}						
-pg_catalog	pg_shseclabel_object_index	24579	pg_catalog	pg_shseclabel			PRIMARY KEY (objoid, classoid, provider)			0	{1,2,3}						
-pg_catalog	pg_collation_oid_index	24579	pg_catalog	pg_collation			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_collation_name_enc_nsp_index	24581	pg_catalog	pg_collation			UNIQUE (collname, collencoding, collnamespace)			0	{2,7,3}						
-pg_catalog	pg_partitioned_table_partrelid_index	24579	pg_catalog	pg_partitioned_table			PRIMARY KEY (partrelid)			0	{1}						
-pg_catalog	pg_range_rngmultitypid_index	24581	pg_catalog	pg_range			UNIQUE (rngmultitypid)			0	{3}						
-pg_catalog	pg_range_rngtypid_index	24579	pg_catalog	pg_range			PRIMARY KEY (rngtypid)			0	{1}						
-pg_catalog	pg_transform_type_lang_index	24581	pg_catalog	pg_transform			UNIQUE (trftype, trflang)			0	{2,3}						
-pg_catalog	pg_transform_oid_index	24579	pg_catalog	pg_transform			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_sequence_seqrelid_index	24579	pg_catalog	pg_sequence			PRIMARY KEY (seqrelid)			0	{1}						
-pg_catalog	pg_publication_pubname_index	24581	pg_catalog	pg_publication			UNIQUE (pubname)			0	{2}						
-pg_catalog	pg_publication_oid_index	24579	pg_catalog	pg_publication			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_publication_rel_prrelid_prpubid_index	24581	pg_catalog	pg_publication_rel			UNIQUE (prrelid, prpubid)			0	{3,2}						
-pg_catalog	pg_publication_rel_oid_index	24579	pg_catalog	pg_publication_rel			PRIMARY KEY (oid)			0	{1}						
-pg_catalog	pg_subscription_rel_srrelid_srsubid_index	24579	pg_catalog	pg_subscription_rel			PRIMARY KEY (srrelid, srsubid)			0	{2,1}						
-pg_catalog	pg_largeobject_loid_pn_index	24579	pg_catalog	pg_largeobject			PRIMARY KEY (loid, pageno)			0	{1,2}						
-information_schema	yes_or_no_check	8193					CHECK (VALUE::text = ANY (ARRAY['YES'::character varying, 'NO'::character varying]::text[]))	information_schema	yes_or_no	0							
-information_schema	cardinal_number_domain_check	8193					CHECK (VALUE >= 0)	information_schema	cardinal_number	0							
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	pk_fk_equality_comparison_operator_oids	pk_pk_equality_comparison_operator_oids	fk_fk_equality_comparison_operator_oids	comment
+pg_catalog	pg_statistic_relid_att_inh_index	24579	pg_catalog	pg_statistic			PRIMARY KEY (starelid, staattnum, stainherit)			0	{1,2,3}							
+pg_catalog	pg_type_typname_nsp_index	24581	pg_catalog	pg_type			UNIQUE (typname, typnamespace)			0	{2,3}							
+pg_catalog	pg_type_oid_index	24579	pg_catalog	pg_type			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_foreign_table_relid_index	24579	pg_catalog	pg_foreign_table			PRIMARY KEY (ftrelid)			0	{1}							
+pg_catalog	pg_authid_oid_index	24579	pg_catalog	pg_authid			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_authid_rolname_index	24581	pg_catalog	pg_authid			UNIQUE (rolname)			0	{2}							
+pg_catalog	pg_statistic_ext_data_stxoid_index	24579	pg_catalog	pg_statistic_ext_data			PRIMARY KEY (stxoid)			0	{1}							
+pg_catalog	pg_user_mapping_user_server_index	24581	pg_catalog	pg_user_mapping			UNIQUE (umuser, umserver)			0	{2,3}							
+pg_catalog	pg_user_mapping_oid_index	24579	pg_catalog	pg_user_mapping			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_subscription_subname_index	24581	pg_catalog	pg_subscription			UNIQUE (subdbid, subname)			0	{2,3}							
+pg_catalog	pg_subscription_oid_index	24579	pg_catalog	pg_subscription			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_attribute_relid_attnum_index	24579	pg_catalog	pg_attribute			PRIMARY KEY (attrelid, attnum)			0	{1,6}							
+pg_catalog	pg_attribute_relid_attnam_index	24581	pg_catalog	pg_attribute			UNIQUE (attrelid, attname)			0	{1,2}							
+pg_catalog	pg_proc_proname_args_nsp_index	24581	pg_catalog	pg_proc			UNIQUE (proname, proargtypes, pronamespace)			0	{2,20,3}							
+pg_catalog	pg_proc_oid_index	24579	pg_catalog	pg_proc			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_class_relname_nsp_index	24581	pg_catalog	pg_class			UNIQUE (relname, relnamespace)			0	{2,3}							
+pg_catalog	pg_class_oid_index	24579	pg_catalog	pg_class			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_attrdef_oid_index	24579	pg_catalog	pg_attrdef			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_attrdef_adrelid_adnum_index	24581	pg_catalog	pg_attrdef			UNIQUE (adrelid, adnum)			0	{2,3}							
+pg_catalog	pg_constraint_oid_index	24579	pg_catalog	pg_constraint			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_constraint_conrelid_contypid_conname_index	24581	pg_catalog	pg_constraint			UNIQUE (conrelid, contypid, conname)			0	{8,9,2}							
+pg_catalog	pg_inherits_relid_seqno_index	24579	pg_catalog	pg_inherits			PRIMARY KEY (inhrelid, inhseqno)			0	{1,3}							
+pg_catalog	pg_index_indexrelid_index	24579	pg_catalog	pg_index			PRIMARY KEY (indexrelid)			0	{1}							
+pg_catalog	pg_operator_oprname_l_r_n_index	24581	pg_catalog	pg_operator			UNIQUE (oprname, oprleft, oprright, oprnamespace)			0	{2,8,9,3}							
+pg_catalog	pg_operator_oid_index	24579	pg_catalog	pg_operator			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_opfamily_oid_index	24579	pg_catalog	pg_opfamily			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_opfamily_am_name_nsp_index	24581	pg_catalog	pg_opfamily			UNIQUE (opfmethod, opfname, opfnamespace)			0	{2,3,4}							
+pg_catalog	pg_opclass_oid_index	24579	pg_catalog	pg_opclass			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_opclass_am_name_nsp_index	24581	pg_catalog	pg_opclass			UNIQUE (opcmethod, opcname, opcnamespace)			0	{2,3,4}							
+pg_catalog	pg_am_oid_index	24579	pg_catalog	pg_am			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_am_name_index	24581	pg_catalog	pg_am			UNIQUE (amname)			0	{2}							
+pg_catalog	pg_amop_oid_index	24579	pg_catalog	pg_amop			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_amop_opr_fam_index	24581	pg_catalog	pg_amop			UNIQUE (amopopr, amoppurpose, amopfamily)			0	{7,6,2}							
+pg_catalog	pg_amop_fam_strat_index	24581	pg_catalog	pg_amop			UNIQUE (amopfamily, amoplefttype, amoprighttype, amopstrategy)			0	{2,3,4,5}							
+pg_catalog	pg_amproc_oid_index	24579	pg_catalog	pg_amproc			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_amproc_fam_proc_index	24581	pg_catalog	pg_amproc			UNIQUE (amprocfamily, amproclefttype, amprocrighttype, amprocnum)			0	{2,3,4,5}							
+pg_catalog	pg_language_oid_index	24579	pg_catalog	pg_language			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_language_name_index	24581	pg_catalog	pg_language			UNIQUE (lanname)			0	{2}							
+pg_catalog	pg_largeobject_metadata_oid_index	24579	pg_catalog	pg_largeobject_metadata			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_aggregate_fnoid_index	24579	pg_catalog	pg_aggregate			PRIMARY KEY (aggfnoid)			0	{1}							
+pg_catalog	pg_statistic_ext_name_index	24581	pg_catalog	pg_statistic_ext			UNIQUE (stxname, stxnamespace)			0	{3,4}							
+pg_catalog	pg_statistic_ext_oid_index	24579	pg_catalog	pg_statistic_ext			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_rewrite_rel_rulename_index	24581	pg_catalog	pg_rewrite			UNIQUE (ev_class, rulename)			0	{3,2}							
+pg_catalog	pg_rewrite_oid_index	24579	pg_catalog	pg_rewrite			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_trigger_oid_index	24579	pg_catalog	pg_trigger			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_trigger_tgrelid_tgname_index	24581	pg_catalog	pg_trigger			UNIQUE (tgrelid, tgname)			0	{2,4}							
+pg_catalog	pg_event_trigger_oid_index	24579	pg_catalog	pg_event_trigger			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_event_trigger_evtname_index	24581	pg_catalog	pg_event_trigger			UNIQUE (evtname)			0	{2}							
+pg_catalog	pg_description_o_c_o_index	24579	pg_catalog	pg_description			PRIMARY KEY (objoid, classoid, objsubid)			0	{1,2,3}							
+pg_catalog	pg_cast_source_target_index	24581	pg_catalog	pg_cast			UNIQUE (castsource, casttarget)			0	{2,3}							
+pg_catalog	pg_cast_oid_index	24579	pg_catalog	pg_cast			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_enum_typid_sortorder_index	24581	pg_catalog	pg_enum			UNIQUE (enumtypid, enumsortorder)			0	{2,3}							
+pg_catalog	pg_enum_typid_label_index	24581	pg_catalog	pg_enum			UNIQUE (enumtypid, enumlabel)			0	{2,4}							
+pg_catalog	pg_enum_oid_index	24579	pg_catalog	pg_enum			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_namespace_oid_index	24579	pg_catalog	pg_namespace			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_namespace_nspname_index	24581	pg_catalog	pg_namespace			UNIQUE (nspname)			0	{2}							
+pg_catalog	pg_conversion_oid_index	24579	pg_catalog	pg_conversion			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_conversion_name_nsp_index	24581	pg_catalog	pg_conversion			UNIQUE (conname, connamespace)			0	{2,3}							
+pg_catalog	pg_conversion_default_index	24581	pg_catalog	pg_conversion			UNIQUE (connamespace, conforencoding, contoencoding, oid)			0	{3,5,6,1}							
+pg_catalog	pg_database_oid_index	24579	pg_catalog	pg_database			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_database_datname_index	24581	pg_catalog	pg_database			UNIQUE (datname)			0	{2}							
+pg_catalog	pg_db_role_setting_databaseid_rol_index	24579	pg_catalog	pg_db_role_setting			PRIMARY KEY (setdatabase, setrole)			0	{1,2}							
+pg_catalog	pg_tablespace_spcname_index	24581	pg_catalog	pg_tablespace			UNIQUE (spcname)			0	{2}							
+pg_catalog	pg_tablespace_oid_index	24579	pg_catalog	pg_tablespace			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_auth_members_member_role_index	24581	pg_catalog	pg_auth_members			UNIQUE (member, roleid)			0	{2,1}							
+pg_catalog	pg_auth_members_role_member_index	24579	pg_catalog	pg_auth_members			PRIMARY KEY (roleid, member)			0	{1,2}							
+pg_catalog	pg_shdescription_o_c_index	24579	pg_catalog	pg_shdescription			PRIMARY KEY (objoid, classoid)			0	{1,2}							
+pg_catalog	pg_ts_config_oid_index	24579	pg_catalog	pg_ts_config			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_ts_config_cfgname_index	24581	pg_catalog	pg_ts_config			UNIQUE (cfgname, cfgnamespace)			0	{2,3}							
+pg_catalog	pg_ts_config_map_index	24579	pg_catalog	pg_ts_config_map			PRIMARY KEY (mapcfg, maptokentype, mapseqno)			0	{1,2,3}							
+pg_catalog	pg_ts_dict_oid_index	24579	pg_catalog	pg_ts_dict			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_ts_dict_dictname_index	24581	pg_catalog	pg_ts_dict			UNIQUE (dictname, dictnamespace)			0	{2,3}							
+pg_catalog	pg_ts_parser_oid_index	24579	pg_catalog	pg_ts_parser			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_ts_parser_prsname_index	24581	pg_catalog	pg_ts_parser			UNIQUE (prsname, prsnamespace)			0	{2,3}							
+pg_catalog	pg_ts_template_oid_index	24579	pg_catalog	pg_ts_template			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_ts_template_tmplname_index	24581	pg_catalog	pg_ts_template			UNIQUE (tmplname, tmplnamespace)			0	{2,3}							
+pg_catalog	pg_extension_name_index	24581	pg_catalog	pg_extension			UNIQUE (extname)			0	{2}							
+pg_catalog	pg_extension_oid_index	24579	pg_catalog	pg_extension			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_foreign_data_wrapper_name_index	24581	pg_catalog	pg_foreign_data_wrapper			UNIQUE (fdwname)			0	{2}							
+pg_catalog	pg_foreign_data_wrapper_oid_index	24579	pg_catalog	pg_foreign_data_wrapper			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_foreign_server_name_index	24581	pg_catalog	pg_foreign_server			UNIQUE (srvname)			0	{2}							
+pg_catalog	pg_foreign_server_oid_index	24579	pg_catalog	pg_foreign_server			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_policy_polrelid_polname_index	24581	pg_catalog	pg_policy			UNIQUE (polrelid, polname)			0	{3,2}							
+pg_catalog	pg_policy_oid_index	24579	pg_catalog	pg_policy			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_replication_origin_roname_index	24581	pg_catalog	pg_replication_origin			UNIQUE (roname)			0	{2}							
+pg_catalog	pg_replication_origin_roiident_index	24579	pg_catalog	pg_replication_origin			PRIMARY KEY (roident)			0	{1}							
+pg_catalog	pg_default_acl_oid_index	24579	pg_catalog	pg_default_acl			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_default_acl_role_nsp_obj_index	24581	pg_catalog	pg_default_acl			UNIQUE (defaclrole, defaclnamespace, defaclobjtype)			0	{2,3,4}							
+pg_catalog	pg_init_privs_o_c_o_index	24579	pg_catalog	pg_init_privs			PRIMARY KEY (objoid, classoid, objsubid)			0	{1,2,3}							
+pg_catalog	pg_seclabel_object_index	24579	pg_catalog	pg_seclabel			PRIMARY KEY (objoid, classoid, objsubid, provider)			0	{1,2,3,4}							
+pg_catalog	pg_shseclabel_object_index	24579	pg_catalog	pg_shseclabel			PRIMARY KEY (objoid, classoid, provider)			0	{1,2,3}							
+pg_catalog	pg_collation_oid_index	24579	pg_catalog	pg_collation			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_collation_name_enc_nsp_index	24581	pg_catalog	pg_collation			UNIQUE (collname, collencoding, collnamespace)			0	{2,7,3}							
+pg_catalog	pg_partitioned_table_partrelid_index	24579	pg_catalog	pg_partitioned_table			PRIMARY KEY (partrelid)			0	{1}							
+pg_catalog	pg_range_rngmultitypid_index	24581	pg_catalog	pg_range			UNIQUE (rngmultitypid)			0	{3}							
+pg_catalog	pg_range_rngtypid_index	24579	pg_catalog	pg_range			PRIMARY KEY (rngtypid)			0	{1}							
+pg_catalog	pg_transform_type_lang_index	24581	pg_catalog	pg_transform			UNIQUE (trftype, trflang)			0	{2,3}							
+pg_catalog	pg_transform_oid_index	24579	pg_catalog	pg_transform			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_sequence_seqrelid_index	24579	pg_catalog	pg_sequence			PRIMARY KEY (seqrelid)			0	{1}							
+pg_catalog	pg_publication_pubname_index	24581	pg_catalog	pg_publication			UNIQUE (pubname)			0	{2}							
+pg_catalog	pg_publication_oid_index	24579	pg_catalog	pg_publication			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_publication_rel_prrelid_prpubid_index	24581	pg_catalog	pg_publication_rel			UNIQUE (prrelid, prpubid)			0	{3,2}							
+pg_catalog	pg_publication_rel_oid_index	24579	pg_catalog	pg_publication_rel			PRIMARY KEY (oid)			0	{1}							
+pg_catalog	pg_subscription_rel_srrelid_srsubid_index	24579	pg_catalog	pg_subscription_rel			PRIMARY KEY (srrelid, srsubid)			0	{2,1}							
+pg_catalog	pg_largeobject_loid_pn_index	24579	pg_catalog	pg_largeobject			PRIMARY KEY (loid, pageno)			0	{1,2}							
+information_schema	yes_or_no_check	8193					CHECK (VALUE::text = ANY (ARRAY['YES'::character varying, 'NO'::character varying]::text[]))	information_schema	yes_or_no	0								
+information_schema	cardinal_number_domain_check	8193					CHECK (VALUE >= 0)	information_schema	cardinal_number	0								
