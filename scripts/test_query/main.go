@@ -387,9 +387,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	if err != nil {
 		return err
 	}
-	queryName := c.queryName()
-
-	if queryName[len(queryName)-len("_normalized"):] == "_normalized" {
+	if strings.HasSuffix(c.queryName(), "_normalized") {
 		// this is a query that contains OIDs, and so is unstable. Just running is enough.
 		return nil
 	}
