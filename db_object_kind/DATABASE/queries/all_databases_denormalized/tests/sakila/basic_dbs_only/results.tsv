@@ -1,4 +1,4 @@
-name	admin_role	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	access_privileges
-postgres	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-template1	postgres	UTF8	en_US.utf8	en_US.utf8	true	true	-1	{=c/postgres,postgres=CTc/postgres}
-template0	postgres	UTF8	en_US.utf8	en_US.utf8	true	false	-1	{=c/postgres,postgres=CTc/postgres}
+name	admin_role	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	access_privileges	comment
+postgres	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1		default administrative connection database
+template1	postgres	UTF8	en_US.utf8	en_US.utf8	true	true	-1	{=c/postgres,postgres=CTc/postgres}	default template for new databases
+template0	postgres	UTF8	en_US.utf8	en_US.utf8	true	false	-1	{=c/postgres,postgres=CTc/postgres}	unmodifiable empty database

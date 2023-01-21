@@ -1,11 +1,11 @@
-name	admin_role	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	access_privileges
-postgres	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-template1	postgres	UTF8	en_US.utf8	en_US.utf8	true	true	-1	{=c/postgres,postgres=CTc/postgres}
-template0	postgres	UTF8	en_US.utf8	en_US.utf8	true	false	-1	{=c/postgres,postgres=CTc/postgres}
-db_in_tablespace	tablespace_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-example	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-example_cloned	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-example_owned	db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-example_owned_template	db_owner	UTF8	en_US.utf8	en_US.utf8	true	true	-1	
-example_utf8	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
-other_db	foreign_db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1	
+name	admin_role	character_encoding_name	lc_collate	lc_ctype	is_template	allow_connections	connection_count_limit	access_privileges	comment
+postgres	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1		default administrative connection database
+template1	postgres	UTF8	en_US.utf8	en_US.utf8	true	true	-1	{=c/postgres,postgres=CTc/postgres}	default template for new databases
+template0	postgres	UTF8	en_US.utf8	en_US.utf8	true	false	-1	{=c/postgres,postgres=CTc/postgres}	unmodifiable empty database
+db_in_tablespace	tablespace_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
+example	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
+example_cloned	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
+example_owned	db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
+example_owned_template	db_owner	UTF8	en_US.utf8	en_US.utf8	true	true	-1		
+example_utf8	postgres	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
+other_db	foreign_db_owner	UTF8	en_US.utf8	en_US.utf8	false	true	-1		
