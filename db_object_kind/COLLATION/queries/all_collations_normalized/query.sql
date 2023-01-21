@@ -1,5 +1,5 @@
 SELECT
-    ns.nspname AS schema_name
+  oid
   , c.collencoding AS "encoding" -- int4
     -- Encoding in which the collation is applicable, or -1 if it works for any encoding
   , c.collname AS "name" -- unique per namespace and encoding
@@ -18,5 +18,3 @@ SELECT
   -- the collation definition that could lead to data corruption.
   , pg_catalog.obj_description(c.oid, 'pg_collation') AS "comment"
 FROM pg_catalog.pg_collation as c
-INNER JOIN pg_catalog.pg_namespace AS ns
-  ON c.collnamespace = ns.oid
