@@ -1,0 +1,4 @@
+name_template = "all_ts_dictionaries_{{.oid}}"
+[oid]
+  denormalized = false
+  normalized = true

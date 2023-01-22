@@ -1,0 +1,30 @@
+schema_name	name	owner	ts_template_schema	ts_template_name	template_init_options	comment
+pg_catalog	arabic_stem	postgres		snowball	language = 'arabic'	snowball stemmer for arabic language
+pg_catalog	armenian_stem	postgres		snowball	language = 'armenian'	snowball stemmer for armenian language
+pg_catalog	basque_stem	postgres		snowball	language = 'basque'	snowball stemmer for basque language
+pg_catalog	catalan_stem	postgres		snowball	language = 'catalan'	snowball stemmer for catalan language
+pg_catalog	danish_stem	postgres		snowball	language = 'danish', stopwords = 'danish'	snowball stemmer for danish language
+pg_catalog	dutch_stem	postgres		snowball	language = 'dutch', stopwords = 'dutch'	snowball stemmer for dutch language
+pg_catalog	english_stem	postgres		snowball	language = 'english', stopwords = 'english'	snowball stemmer for english language
+pg_catalog	finnish_stem	postgres		snowball	language = 'finnish', stopwords = 'finnish'	snowball stemmer for finnish language
+pg_catalog	french_stem	postgres		snowball	language = 'french', stopwords = 'french'	snowball stemmer for french language
+pg_catalog	german_stem	postgres		snowball	language = 'german', stopwords = 'german'	snowball stemmer for german language
+pg_catalog	greek_stem	postgres		snowball	language = 'greek'	snowball stemmer for greek language
+pg_catalog	hindi_stem	postgres		snowball	language = 'hindi'	snowball stemmer for hindi language
+pg_catalog	hungarian_stem	postgres		snowball	language = 'hungarian', stopwords = 'hungarian'	snowball stemmer for hungarian language
+pg_catalog	indonesian_stem	postgres		snowball	language = 'indonesian'	snowball stemmer for indonesian language
+pg_catalog	irish_stem	postgres		snowball	language = 'irish'	snowball stemmer for irish language
+pg_catalog	italian_stem	postgres		snowball	language = 'italian', stopwords = 'italian'	snowball stemmer for italian language
+pg_catalog	lithuanian_stem	postgres		snowball	language = 'lithuanian'	snowball stemmer for lithuanian language
+pg_catalog	nepali_stem	postgres		snowball	language = 'nepali', stopwords = 'nepali'	snowball stemmer for nepali language
+pg_catalog	norwegian_stem	postgres		snowball	language = 'norwegian', stopwords = 'norwegian'	snowball stemmer for norwegian language
+pg_catalog	portuguese_stem	postgres		snowball	language = 'portuguese', stopwords = 'portuguese'	snowball stemmer for portuguese language
+pg_catalog	romanian_stem	postgres		snowball	language = 'romanian'	snowball stemmer for romanian language
+pg_catalog	russian_stem	postgres		snowball	language = 'russian', stopwords = 'russian'	snowball stemmer for russian language
+pg_catalog	serbian_stem	postgres		snowball	language = 'serbian'	snowball stemmer for serbian language
+pg_catalog	simple	postgres		simple		simple dictionary: just lower case and check for stopword
+pg_catalog	spanish_stem	postgres		snowball	language = 'spanish', stopwords = 'spanish'	snowball stemmer for spanish language
+pg_catalog	swedish_stem	postgres		snowball	language = 'swedish', stopwords = 'swedish'	snowball stemmer for swedish language
+pg_catalog	tamil_stem	postgres		snowball	language = 'tamil'	snowball stemmer for tamil language
+pg_catalog	turkish_stem	postgres		snowball	language = 'turkish', stopwords = 'turkish'	snowball stemmer for turkish language
+pg_catalog	yiddish_stem	postgres		snowball	language = 'yiddish'	snowball stemmer for yiddish language
