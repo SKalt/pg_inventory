@@ -1,5 +1,8 @@
-name_template = "{{.internal}}_languages"
+name_template = "{{.internal}}_languages_{{.oid}}"
+[oid]
+  normalized = true
+  denormalized = false
 [internal]
-  only_internal = "only"
+  internal = "only"
   all = "include"
-  non_internal = "exclude"
+  # external = "exclude" # to fetch external languages only, filter with `where lanispl`
