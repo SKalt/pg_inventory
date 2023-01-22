@@ -14,4 +14,5 @@ SELECT
     -- 'R' => "replica" mode
     -- 'A' => rule always fires
   , pg_catalog.pg_get_ruledef(r.oid) AS definition
+  , pg_catalog.obj_description(r.oid, 'pg_rewrite') AS "comment"
 FROM pg_catalog.pg_rewrite AS r -- https://www.postgresql.org/docs/current/catalog-pg-rewrite.html
