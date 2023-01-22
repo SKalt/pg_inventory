@@ -1,5 +1,5 @@
-name	owner_name	location	access_privileges	options
-pg_default	postgres			
-pg_global	postgres			
-example_tablespace	postgres	/data/example_tablespace		
-indexspace	tablespace_owner	/data/indices_tablespace		
+name	owner_name	location	access_privileges	options	comment
+pg_default	postgres				
+pg_global	postgres				
+example_tablespace	postgres	/data/example_tablespace			
+indexspace	tablespace_owner	/data/indices_tablespace			
