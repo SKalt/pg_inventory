@@ -1,0 +1,5 @@
+name_template = "all_text_search_parsers_{{.oid}}"
+
+[oid]
+  normalized = true
+  denormalized = false

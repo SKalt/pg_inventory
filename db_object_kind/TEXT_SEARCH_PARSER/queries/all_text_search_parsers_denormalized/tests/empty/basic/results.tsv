@@ -1,0 +1,2 @@
+schema_name	name	startup_fn_schema	startup_fn_name	next_token_fn	next_token_fn	shutdown_fn_schema	shutdown_fn_name	headline_fn_schema	headline_fn_name	lextype_fn_schema	lextype_fn_name	comment
+pg_catalog	default		prsd_start		prsd_nexttoken		prsd_end		prsd_headline		prsd_lextype	default word parser
