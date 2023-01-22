@@ -3,6 +3,7 @@ SELECT
   , ns.nspowner AS owner_oid
   , ns.nspname           AS "name"
   , ns.nspacl            AS acl
+  , pg_catalog.obj_description(ns.oid ,'pg_namespace') AS "comment"
 FROM (
   -- filter out extension-owned schemata
   SELECT *

@@ -1,5 +1,5 @@
-owner_name	name	acl
-postgres	pg_toast	
-postgres	pg_catalog	{postgres=UC/postgres,=U/postgres}
-postgres	public	{postgres=UC/postgres,=UC/postgres}
-postgres	information_schema	{postgres=UC/postgres,=U/postgres}
+owner_name	name	acl	comment
+postgres	pg_toast		reserved schema for TOAST tables
+postgres	pg_catalog	{postgres=UC/postgres,=U/postgres}	system catalog schema
+postgres	public	{postgres=UC/postgres,=UC/postgres}	standard public schema
+postgres	information_schema	{postgres=UC/postgres,=U/postgres}	
