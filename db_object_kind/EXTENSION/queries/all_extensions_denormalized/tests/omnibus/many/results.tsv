@@ -1,0 +1,4 @@
+schema_name	name	owner_name	extension_version	can_be_moved_between_schemata	config_table_filters	comment
+pg_catalog	plpgsql	postgres	1.0	false		PL/pgSQL procedural language
+extension_example	hstore	postgres	1.8	true		extensions are effectively global, despite the WITH SCHEMA clause
+foreign_db_example	postgres_fdw	postgres	1.1	true		foreign-data wrapper for remote PostgreSQL servers

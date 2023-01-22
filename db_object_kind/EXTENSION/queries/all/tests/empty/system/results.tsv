@@ -1,2 +1,0 @@
-oid	name	owner_name	schema_oid	schema_name	can_be_moved_between_schemata	extension_version	config_table_oids	config_table_filters
-13740	plpgsql	postgres	11	pg_catalog	false	1.0		

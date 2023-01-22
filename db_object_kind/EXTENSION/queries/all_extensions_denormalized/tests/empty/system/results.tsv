@@ -1,0 +1,2 @@
+schema_name	name	owner_name	extension_version	can_be_moved_between_schemata	config_table_filters	comment
+pg_catalog	plpgsql	postgres	1.0	false		PL/pgSQL procedural language
