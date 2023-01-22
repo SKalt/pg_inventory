@@ -28,6 +28,7 @@ SELECT
   , join_fn.proname AS join_fn
   , join_selectivity_estimation_fn_schema.nspname AS join_selectivity_estimation_fn_schema
   , join_selectivity_estimation_fn.proname AS join_selectivity_estimation_fn
+  , pg_catalog.obj_description(op.oid, 'pg_operator')
 FROM pg_catalog.pg_operator AS op -- https://www.postgresql.org/docs/current/catalog-pg-operator.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON op.oprnamespace = ns.oid
