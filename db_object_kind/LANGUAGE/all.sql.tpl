@@ -10,9 +10,8 @@ SELECT
     {{- end }}
     , lang.lanacl AS access_privileges -- aclitem[]
   -- details
-    {{if eq .internal "only" -}} -- omitted for internal languages:
-    {{- else -}},  {{ end -}}
-    lang.lanispl AS is_procedural
+    {{if eq .internal "only" -}} -- omitted for internal languages: {{ end -}}
+    , lang.lanispl AS is_procedural
       -- This is false for internal languages (such as SQL) and true for
       -- user-defined languages.
     , lang.lanpltrusted AS is_trusted
@@ -64,6 +63,7 @@ SELECT
     , pg_catalog.pg_get_userbyid(validator_fn.proowner) AS validator_fn_owner
     {{- end }}
   {{- end }}
+    , pg_catalog.obj_description(lang.oid, 'pg_language') AS "comment"
 FROM pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
 {{ if not .oid -}}
 LEFT JOIN (

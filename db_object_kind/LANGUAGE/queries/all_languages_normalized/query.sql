@@ -5,7 +5,7 @@ SELECT
     , lang.lanowner AS owner_oid
     , lang.lanacl AS access_privileges -- aclitem[]
   -- details
-    ,  lang.lanispl AS is_procedural
+    , lang.lanispl AS is_procedural
       -- This is false for internal languages (such as SQL) and true for
       -- user-defined languages.
     , lang.lanpltrusted AS is_trusted
@@ -30,4 +30,5 @@ SELECT
     -- checking the syntax and validity of new functions when they are created.
     , lang.lanvalidator AS validator_fn_oid
       -- Zero if no validator is provided.
+    , pg_catalog.obj_description(lang.oid, 'pg_language') AS "comment"
 FROM pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html

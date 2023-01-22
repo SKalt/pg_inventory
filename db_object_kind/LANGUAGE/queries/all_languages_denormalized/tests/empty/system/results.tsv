@@ -1,5 +1,5 @@
-language_name	owner_name	is_procedural	is_trusted	handler_fn_owner	access_privileges	handler_fn_schema_name	handler_fn_name	inline_block_handler_fn_schema_name	inline_block_handler_fn_name	inline_block_handler_fn_owner	validator_fn_schema_name	validator_fn_name	validator_fn_owner
-internal	postgres	false	false										
-c	postgres	false	false										
-sql	postgres	false	true										
-plpgsql	postgres	true	true	postgres		pg_catalog	plpgsql_call_handler	pg_catalog	plpgsql_inline_handler	postgres			
+language_name	owner_name	access_privileges	is_procedural	is_trusted	handler_fn_schema_name	handler_fn_name	handler_fn_owner	inline_block_handler_fn_schema_name	inline_block_handler_fn_name	inline_block_handler_fn_owner	validator_fn_schema_name	validator_fn_name	validator_fn_owner	comment
+internal	postgres		false	false										built-in functions
+c	postgres		false	false										dynamically-loaded C functions
+sql	postgres		false	true										SQL-language functions
+plpgsql	postgres		true	true	pg_catalog	plpgsql_call_handler	postgres	pg_catalog	plpgsql_inline_handler	postgres				PL/pgSQL procedural language

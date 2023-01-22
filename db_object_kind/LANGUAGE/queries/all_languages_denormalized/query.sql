@@ -4,7 +4,7 @@ SELECT
     , pg_catalog.pg_get_userbyid(lang.lanowner) AS owner_name
     , lang.lanacl AS access_privileges -- aclitem[]
   -- details
-    ,  lang.lanispl AS is_procedural
+    , lang.lanispl AS is_procedural
       -- This is false for internal languages (such as SQL) and true for
       -- user-defined languages.
     , lang.lanpltrusted AS is_trusted
@@ -32,6 +32,7 @@ SELECT
     , validator_fn_ns.nspname AS validator_fn_schema_name
     , validator_fn.proname AS validator_fn_name
     , pg_catalog.pg_get_userbyid(validator_fn.proowner) AS validator_fn_owner
+    , pg_catalog.obj_description(lang.oid, 'pg_language') AS "comment"
 FROM pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
 LEFT JOIN (
     pg_catalog.pg_proc AS handler_fn -- -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
