@@ -1,2 +1,0 @@
-oid	server_name	user_name	options
-16730	technically_this_server	foreign_db_owner	{password=password,user=foreign_db_owner}

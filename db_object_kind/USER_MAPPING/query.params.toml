@@ -1,0 +1,5 @@
+name_template = "all_user_mappings_{{.oid}}"
+
+[oid]
+  normalized = true
+  denormalized = false

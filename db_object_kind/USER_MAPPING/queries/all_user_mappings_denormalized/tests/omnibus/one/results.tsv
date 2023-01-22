@@ -1,0 +1,2 @@
+role_name	server_name	options
+foreign_db_owner	technically_this_server	{password=password,user=foreign_db_owner}
