@@ -1,0 +1,6 @@
+schema_name	name	init_fn_schema	init_fn_name	init_fn_schema	lexize_fn_name	comment
+pg_catalog	ispell		dispell_init		dispell_lexize	ispell dictionary
+pg_catalog	simple		dsimple_init		dsimple_lexize	simple dictionary: just lower case and check for stopword
+pg_catalog	snowball		dsnowball_init		dsnowball_lexize	snowball stemmer
+pg_catalog	synonym		dsynonym_init		dsynonym_lexize	synonym dictionary: replace word by its synonym
+pg_catalog	thesaurus		thesaurus_init		thesaurus_lexize	thesaurus dictionary: phrase by phrase substitution
