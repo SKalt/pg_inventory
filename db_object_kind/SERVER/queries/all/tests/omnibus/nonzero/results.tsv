@@ -1,2 +1,0 @@
-oid	name	owner_name	fdw	server_type	server_version	access_privileges	srvoptions
-16729	technically_this_server	postgres	postgres_fdw				{dbname=other_db,host=localhost,port=5432}

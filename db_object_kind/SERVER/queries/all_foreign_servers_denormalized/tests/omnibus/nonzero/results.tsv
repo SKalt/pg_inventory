@@ -1,0 +1,2 @@
+name	owner_name	fdw	server_type	server_version	access_privileges	options	comment
+technically_this_server	postgres	postgres_fdw				{dbname=other_db,host=localhost,port=5432}	
