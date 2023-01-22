@@ -1,3 +1,3 @@
-schema_name	name	tablespace_name	owner	acl	description	replica_identity	is_populated	persistence	n_user_columns	n_check_constraints	view_definition
-am_examples	heapmv		postgres			d	false	p	2	0	" SELECT heaptable.a,\n    heaptable.repeat\n   FROM am_examples.heaptable;"
-am_examples	tableam_tblmv_heapx		postgres			d	false	p	1	0	" SELECT tableam_tbl_heapx.f1\n   FROM am_examples.tableam_tbl_heapx;"
+schema_name	name	tablespace_name	owner	acl	description	replica_identity	is_populated	persistence	n_user_columns	n_check_constraints	view_definition	comment
+am_examples	heapmv		postgres			d	false	p	2	0	" SELECT heaptable.a,\n    heaptable.repeat\n   FROM am_examples.heaptable;"	
+am_examples	tableam_tblmv_heapx		postgres			d	false	p	1	0	" SELECT tableam_tbl_heapx.f1\n   FROM am_examples.tableam_tbl_heapx;"	

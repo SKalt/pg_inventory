@@ -77,6 +77,7 @@ SELECT
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
+    , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON
