@@ -1,4 +1,4 @@
-name_template = "all_roles{{ if .packed }}_packed{{ end }}"
+name_template = "all_roles{{.packed }}"
 [packed]
   "" = false
-  packed = true
+  _packed = true

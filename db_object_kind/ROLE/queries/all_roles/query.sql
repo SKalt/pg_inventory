@@ -11,5 +11,6 @@ SELECT
   , rolvaliduntil AS password_expiry_time
   , rolconnlimit  AS connection_count_limit
   , rolconfig     AS runtime_config_var_defaults
+  , pg_catalog.shobj_description(oid, 'pg_authid') AS "comment"
 FROM pg_catalog.pg_roles -- https://www.postgresql.org/docs/current/view-pg-roles.html
 -- see also: https://www.postgresql.org/docs/current/catalog-pg-authid.html

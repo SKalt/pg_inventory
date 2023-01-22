@@ -1,13 +1,13 @@
-name	permission_bits	password_expiry_time	connection_count_limit	runtime_config_var_defaults
-pg_database_owner	2		-1	
-pg_read_all_data	2		-1	
-pg_write_all_data	2		-1	
-pg_monitor	2		-1	
-pg_read_all_settings	2		-1	
-pg_read_all_stats	2		-1	
-pg_stat_scan_tables	2		-1	
-pg_read_server_files	2		-1	
-pg_write_server_files	2		-1	
-pg_execute_server_program	2		-1	
-pg_signal_backend	2		-1	
-postgres	127		-1	
+name	permission_bits	password_expiry_time	connection_count_limit	runtime_config_var_defaults	comment
+pg_database_owner	2		-1		
+pg_read_all_data	2		-1		
+pg_write_all_data	2		-1		
+pg_monitor	2		-1		
+pg_read_all_settings	2		-1		
+pg_read_all_stats	2		-1		
+pg_stat_scan_tables	2		-1		
+pg_read_server_files	2		-1		
+pg_write_server_files	2		-1		
+pg_execute_server_program	2		-1		
+pg_signal_backend	2		-1		
+postgres	127		-1		
