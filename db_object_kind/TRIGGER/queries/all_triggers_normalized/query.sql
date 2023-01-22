@@ -38,5 +38,6 @@ SELECT
     , trigger_.tgoldtable AS old_table_name -- in REFERENCING clause, if any
     , trigger_.tgnewtable AS new_table_name -- in REFERENCING clause, if any
     , pg_catalog.pg_get_triggerdef(trigger_.oid, true) AS trigger_def
+    , pg_catalog.obj_description(trigger_.oid, 'pg_trigger') AS "comment"
 FROM pg_catalog.pg_trigger AS trigger_ -- https://www.postgresql.org/docs/current/catalog-pg-trigger.html
 
