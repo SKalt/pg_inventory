@@ -1,3 +1,0 @@
-where = "ns.nspname NOT IN ('pg_catalog', 'pg_toast', 'information_schema')"
-order_by = "ns.nspname, fn.proname"
-kind = 'f'

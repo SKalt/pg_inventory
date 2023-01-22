@@ -1,20 +1,23 @@
 SELECT
-    ns.nspname AS schema_name
+    fn.oid
+  , fn.pronamespace AS schema_oid
   , fn.proname AS function_name
-  , pg_catalog.pg_get_userbyid(fn.proowner) AS owner_name
-  , lang.lanname AS language_name
+  , fn.proowner AS owner_oid
+  , fn.prolang AS language_oid
   , fn.proacl AS access_privileges--  aclitem[]
     -- Implementation language or call interface of this function
   , fn.procost AS estimated_execution_cost
     -- float4 (in units of cpu_operator_cost); if proretset, this is cost per row returned
   , fn.prorows AS estimated_n_rows -- float4
     -- Estimated number of result rows (zero if not proretset)
-  , variadic_type_schema.nspname AS variadic_type_schema
-  , variadic_type.typname AS variadic_type
-  -- Data type of the variadic array parameter's elements, or zero if the
-  -- function does not have a variadic parameter
-  , planner_support_fn_schema.nspname AS planner_support_fn_schema
-  , planner_support_fn.proname AS planner_support_fn -- null if none
+  , fn.provariadic AS variadic_type_oid -- can be 0
+    -- Data type of the variadic array parameter's elements, if present
+  , fn.prosupport AS planner_support_fn_oid
+  , fn.prokind AS kind
+    -- 'f' => normal function
+    -- 'p' => procedure
+    -- 'a' => aggregate function
+    -- 'w' => window function
   , fn.provolatile AS volatility
     -- whether the function's result depends only on its input arguments, or is affected by outside factors.
     -- 'i' => "immutable" functions: always deliver the same result for the same inputs.
@@ -41,8 +44,7 @@ SELECT
     -- fn returns multiple values of the specified data type
   , fn.pronargs AS n_args -- int2
   , fn.pronargdefaults AS n_args_with_defaults -- int2
-  , return_type_schema.nspname AS return_type_schema
-  , return_type.typname AS return_type
+  , fn.prorettype AS return_type_oid
   , pg_catalog.pg_get_function_arguments(fn.oid) AS call_signature
     -- text with argument defaults
   , pg_catalog.pg_get_function_result(fn.oid) AS return_signature
@@ -58,51 +60,3 @@ SELECT
   , fn.proconfig as runtime_config_vars
   , pg_catalog.obj_description(fn.oid, 'pg_proc') AS "comment"
 FROM pg_catalog.pg_proc AS fn -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
-INNER JOIN pg_catalog.pg_namespace AS ns ON
-  NOT EXISTS ( -- filter out schemata that are managed by extensions
-    SELECT 1
-    FROM pg_catalog.pg_depend AS dependency
-    -- https://www.postgresql.org/docs/current/catalog-pg-depend.html
-    WHERE
-      ns.oid = dependency.objid
-      AND dependency.deptype = 'e'
-      -- DEPENDENCY_EXTENSION (e): The dependent object is a member of the
-      -- referenced extension (see pg_extension)
-    LIMIT 1
-  ) AND
-  NOT EXISTS ( -- filter out fns that are managed by extensions
-    SELECT 1
-    FROM pg_catalog.pg_depend AS dependency
-    WHERE
-      fn.oid = dependency.objid
-      AND dependency.deptype = 'e'
-    LIMIT 1
-  ) AND
-  (
-    CASE :'kind'
-      WHEN 'f' THEN true -- normal function
-      WHEN 'p' THEN true -- procedure
-      WHEN 'a' THEN true -- aggregate function
-      WHEN 'w' THEN true -- window function
-      ELSE (1/0)::BOOLEAN -- kind must be one of 'f', 'p', 'a', 'w'
-    END
-  ) AND
-  fn.prokind = :'kind' AND
-  fn.pronamespace = ns.oid
-INNER JOIN pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
-  ON fn.prolang = lang.oid
-LEFT JOIN (
-  pg_catalog.pg_type AS variadic_type
-  INNER JOIN pg_catalog.pg_namespace AS variadic_type_schema
-    ON variadic_type.typnamespace = variadic_type_schema.oid
-) ON fn.provariadic = variadic_type.oid
-LEFT JOIN (
-  pg_catalog.pg_type AS return_type
-  INNER JOIN pg_catalog.pg_namespace AS return_type_schema
-    ON return_type.typnamespace = return_type_schema.oid
-) ON fn.prorettype = return_type.oid
-LEFT JOIN (
-  pg_catalog.pg_proc AS planner_support_fn
-  INNER JOIN pg_catalog.pg_namespace AS planner_support_fn_schema
-    ON planner_support_fn.pronamespace = planner_support_fn_schema.oid
-) ON fn.prosupport = planner_support_fn.oid

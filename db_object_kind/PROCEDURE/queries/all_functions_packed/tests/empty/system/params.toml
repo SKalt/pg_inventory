@@ -1,1 +1,0 @@
-order_by = "ns.nspname, fn.proname, fn.oid"

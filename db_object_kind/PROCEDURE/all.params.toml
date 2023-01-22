@@ -1,14 +1,7 @@
-name_template="""
-{{- if (not .filter_by_kind) -}}all_{{- end -}}
-functions
-{{- if .filter_by_kind -}}_filtered_by_kind{{- end -}}
-{{- if .packed -}}_packed{{- end -}}
-"""
-
-[filter_by_kind]
-  "" = false
-  filtered = true
-
+name_template="""all_functions_{{.oid}}{{.packed }}"""
+[oid]
+  normalized = true
+  denormalized = false
 [packed]
   "" = false
-  packed = true
+  _packed = true

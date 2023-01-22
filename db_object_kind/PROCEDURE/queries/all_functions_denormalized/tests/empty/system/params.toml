@@ -1,2 +1,2 @@
 order_by = "ns.nspname, fn.proname, fn.oid"
-kind = 'f'
+# where = "prokind = 'f'"
