@@ -1,0 +1,5 @@
+name_template = "all_policies_{{.oid}}"
+
+[oid]
+  normalized = true
+  denormalized = false
