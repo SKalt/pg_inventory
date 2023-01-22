@@ -1,0 +1,4 @@
+name_template = "all_foreign_data_wrappers_{{.oid}}"
+[oid]
+  normalized = true
+  denormalized = false
