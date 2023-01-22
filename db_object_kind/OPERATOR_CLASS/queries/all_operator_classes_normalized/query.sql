@@ -1,7 +1,8 @@
 SELECT
   -- namespacing, ownership
-        op_class.opcnamespace AS schema_oid
-      , op_class.opcname AS name
+      op_class.oid
+      , op_class.opcnamespace AS schema_oid
+      , op_class.opcname AS "name"
       , op_class.opcmethod AS access_method_oid
       , op_class.opcowner AS owner_oid
       , op_class.opcfamily AS op_family_oid
@@ -13,4 +14,5 @@ SELECT
             ELSE op_class.opckeytype
           END
         ) AS key_type_oid
+      , pg_catalog.obj_description(op_class.oid, 'pg_opclass') AS "comment"
 FROM pg_catalog.pg_opclass AS op_class -- https://www.postgresql.org/docs/current/catalog-pg-opclass.html

@@ -1,8 +1,10 @@
 SELECT
   -- namespacing, ownership
-        {{ if .oid -}} op_class.opcnamespace AS schema_oid
-        {{- else -}} ns.nspname AS schema_name {{- end }}
-      , op_class.opcname AS name
+      {{ if .oid -}} op_class.oid
+      , op_class.opcnamespace AS schema_oid
+      {{ else -}} ns.nspname AS schema_name
+      {{ end -}}
+      , op_class.opcname AS "name"
       , {{ if .oid -}} op_class.opcmethod AS access_method_oid
         {{- else -}} access_method.amname AS access_method
         {{- end }}
@@ -27,6 +29,7 @@ SELECT
         {{- else -}} key_type_ns.nspname AS key_type_schema
       , key_type.typname AS key_type
         {{- end }}
+      , pg_catalog.obj_description(op_class.oid, 'pg_opclass') AS "comment"
 FROM pg_catalog.pg_opclass AS op_class -- https://www.postgresql.org/docs/current/catalog-pg-opclass.html
 {{- if not .oid }}
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html

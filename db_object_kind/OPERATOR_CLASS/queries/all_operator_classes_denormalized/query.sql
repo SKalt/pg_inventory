@@ -1,7 +1,7 @@
 SELECT
   -- namespacing, ownership
-        ns.nspname AS schema_name
-      , op_class.opcname AS name
+      ns.nspname AS schema_name
+      , op_class.opcname AS "name"
       , access_method.amname AS access_method
       , pg_catalog.pg_get_userbyid(op_class.opcowner) AS owner
       , op_family_ns.nspname AS op_family_schema
@@ -11,6 +11,7 @@ SELECT
       , op_class.opcdefault AS is_default_for_indexed_type
       , key_type_ns.nspname AS key_type_schema
       , key_type.typname AS key_type
+      , pg_catalog.obj_description(op_class.oid, 'pg_opclass') AS "comment"
 FROM pg_catalog.pg_opclass AS op_class -- https://www.postgresql.org/docs/current/catalog-pg-opclass.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON op_class.opcnamespace = ns.oid
