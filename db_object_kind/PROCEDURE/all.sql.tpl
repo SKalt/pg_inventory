@@ -136,7 +136,7 @@ INNER JOIN pg_catalog.pg_namespace AS ns ON
   fn.prokind = :'kind' AND
   {{- end }}
   fn.pronamespace = ns.oid
-INNER JOIN pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-language.html
+INNER JOIN pg_catalog.pg_language AS lang -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
   ON fn.prolang = lang.oid
 LEFT JOIN (
   pg_catalog.pg_type AS variadic_type
