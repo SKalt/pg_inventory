@@ -1,0 +1,30 @@
+schema_name	name	owner	ts_parser_schema	ts_parser_name	comment
+pg_catalog	arabic	postgres	pg_catalog	default	configuration for arabic language
+pg_catalog	armenian	postgres	pg_catalog	default	configuration for armenian language
+pg_catalog	basque	postgres	pg_catalog	default	configuration for basque language
+pg_catalog	catalan	postgres	pg_catalog	default	configuration for catalan language
+pg_catalog	danish	postgres	pg_catalog	default	configuration for danish language
+pg_catalog	dutch	postgres	pg_catalog	default	configuration for dutch language
+pg_catalog	english	postgres	pg_catalog	default	configuration for english language
+pg_catalog	finnish	postgres	pg_catalog	default	configuration for finnish language
+pg_catalog	french	postgres	pg_catalog	default	configuration for french language
+pg_catalog	german	postgres	pg_catalog	default	configuration for german language
+pg_catalog	greek	postgres	pg_catalog	default	configuration for greek language
+pg_catalog	hindi	postgres	pg_catalog	default	configuration for hindi language
+pg_catalog	hungarian	postgres	pg_catalog	default	configuration for hungarian language
+pg_catalog	indonesian	postgres	pg_catalog	default	configuration for indonesian language
+pg_catalog	irish	postgres	pg_catalog	default	configuration for irish language
+pg_catalog	italian	postgres	pg_catalog	default	configuration for italian language
+pg_catalog	lithuanian	postgres	pg_catalog	default	configuration for lithuanian language
+pg_catalog	nepali	postgres	pg_catalog	default	configuration for nepali language
+pg_catalog	norwegian	postgres	pg_catalog	default	configuration for norwegian language
+pg_catalog	portuguese	postgres	pg_catalog	default	configuration for portuguese language
+pg_catalog	romanian	postgres	pg_catalog	default	configuration for romanian language
+pg_catalog	russian	postgres	pg_catalog	default	configuration for russian language
+pg_catalog	serbian	postgres	pg_catalog	default	configuration for serbian language
+pg_catalog	simple	postgres	pg_catalog	default	simple configuration
+pg_catalog	spanish	postgres	pg_catalog	default	configuration for spanish language
+pg_catalog	swedish	postgres	pg_catalog	default	configuration for swedish language
+pg_catalog	tamil	postgres	pg_catalog	default	configuration for tamil language
+pg_catalog	turkish	postgres	pg_catalog	default	configuration for turkish language
+pg_catalog	yiddish	postgres	pg_catalog	default	configuration for yiddish language
