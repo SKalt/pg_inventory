@@ -111,6 +111,7 @@ SELECT
     -- text: Additional information about how to invoke the function. Again, the
     -- interpretation is language-specific.
   , fn.proconfig as runtime_config_vars
+  , pg_catalog.obj_description(fn.oid, 'pg_proc') AS "comment"
 FROM pg_catalog.pg_proc AS fn -- https://www.postgresql.org/docs/current/catalog-pg-proc.html
 INNER JOIN pg_catalog.pg_namespace AS ns ON
   {{ include . "file://./../SCHEMA/exclude_extensions.sql.tpl" | indent 1 }} AND
