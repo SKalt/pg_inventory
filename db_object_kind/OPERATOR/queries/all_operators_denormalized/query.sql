@@ -2,7 +2,6 @@ SELECT
     ns.nspname AS schema_name
   , op.oprname AS "name"
   , pg_catalog.pg_get_userbyid(op.oprowner) AS owner_name
-  -- TODO: packed representation
   , op.oprkind
     -- 'b' = infix operator ("both")
     -- 'l' = prefix operator ("left")
@@ -28,6 +27,7 @@ SELECT
   , join_fn.proname AS join_fn
   , join_selectivity_estimation_fn_schema.nspname AS join_selectivity_estimation_fn_schema
   , join_selectivity_estimation_fn.proname AS join_selectivity_estimation_fn
+
   , pg_catalog.obj_description(op.oid, 'pg_operator')
 FROM pg_catalog.pg_operator AS op -- https://www.postgresql.org/docs/current/catalog-pg-operator.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
@@ -85,4 +85,3 @@ LEFT JOIN (
   INNER JOIN pg_namespace AS join_selectivity_estimation_fn_schema
     ON join_selectivity_estimation_fn.pronamespace = join_selectivity_estimation_fn_schema.oid
 ) ON op.oprjoin = join_selectivity_estimation_fn.oid
-
