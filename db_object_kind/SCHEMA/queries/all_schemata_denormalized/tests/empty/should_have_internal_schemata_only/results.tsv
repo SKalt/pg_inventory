@@ -1,0 +1,5 @@
+owner_name	name	acl
+postgres	information_schema	{postgres=UC/postgres,=U/postgres}
+postgres	pg_catalog	{postgres=UC/postgres,=U/postgres}
+postgres	pg_toast	
+postgres	public	{postgres=UC/postgres,=UC/postgres}

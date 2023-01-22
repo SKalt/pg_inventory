@@ -1,5 +1,0 @@
-schema_name	schema_owner_name	schema_acl
-pg_toast	postgres	
-pg_catalog	postgres	{postgres=UC/postgres,=U/postgres}
-public	postgres	{postgres=UC/postgres,=UC/postgres}
-information_schema	postgres	{postgres=UC/postgres,=U/postgres}

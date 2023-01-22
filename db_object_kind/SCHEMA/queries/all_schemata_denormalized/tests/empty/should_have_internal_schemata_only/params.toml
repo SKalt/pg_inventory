@@ -1,0 +1,2 @@
+order_by = "nspname"
+where = "ns.oid < 16834"

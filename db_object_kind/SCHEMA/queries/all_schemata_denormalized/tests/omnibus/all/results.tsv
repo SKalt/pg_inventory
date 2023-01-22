@@ -1,0 +1,22 @@
+owner_name	name	acl
+postgres	pg_toast	
+postgres	pg_catalog	{postgres=UC/postgres,=U/postgres}
+postgres	public	{postgres=UC/postgres,=UC/postgres}
+postgres	information_schema	{postgres=UC/postgres,=U/postgres}
+postgres	agg_ex	
+postgres	collation_ex	
+postgres	composite_type_examples	
+postgres	enum_example	
+postgres	idx_ex	
+postgres	trigger_test	
+postgres	regress_rls_schema	{postgres=UC/postgres,=UC/postgres}
+am_owner	am_examples	
+base_type_owner	base_type_examples	
+castor	create_cast	
+conversion_owner	conversion_example	
+domain_owner	domain_examples	
+extension_user	extension_example	
+fn_owner	fn_examples	
+foreign_db_owner	foreign_db_example	
+ordinary_table_owner	ordinary_tables	
+tablespace_owner	tablespace_dependencies	

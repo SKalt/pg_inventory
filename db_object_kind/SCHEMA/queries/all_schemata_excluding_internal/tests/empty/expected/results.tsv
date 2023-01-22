@@ -1,2 +1,0 @@
-schema_name	schema_owner_name	schema_acl
-public	postgres	{postgres=UC/postgres,=UC/postgres}
