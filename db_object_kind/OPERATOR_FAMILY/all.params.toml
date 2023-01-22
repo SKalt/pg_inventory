@@ -1,4 +1,4 @@
-name_template = """all_operator_families{{.oid}}"""
+name_template = """all_operator_families_{{.oid}}"""
 [oid]
-  "" = false
-  _raw = true
+  denormalized = false
+  normalized = true
