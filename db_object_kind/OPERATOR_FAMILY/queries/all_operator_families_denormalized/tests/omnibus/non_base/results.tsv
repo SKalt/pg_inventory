@@ -1,7 +1,7 @@
-schema_name	name	owner	access_method
-extension_example	btree_hstore_ops	postgres	btree
-extension_example	hash_hstore_ops	postgres	hash
-extension_example	gist_hstore_ops	postgres	gist
-extension_example	gin_hstore_ops	postgres	gin
-am_examples	box_ops	postgres	gist2
-am_examples	gist2_fam	postgres	gist2
+schema_name	name	owner	access_method	comment
+extension_example	btree_hstore_ops	postgres	btree	
+extension_example	hash_hstore_ops	postgres	hash	
+extension_example	gist_hstore_ops	postgres	gist	
+extension_example	gin_hstore_ops	postgres	gin	
+am_examples	box_ops	postgres	gist2	
+am_examples	gist2_fam	postgres	gist2	

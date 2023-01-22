@@ -5,6 +5,7 @@ SELECT
     , pg_catalog.pg_get_userbyid(op_family.opfowner) AS owner
   -- details
     , access_method.amname AS access_method
+    , pg_catalog.obj_description(op_family.oid, 'pg_opfamily') AS "comment"
 FROM pg_catalog.pg_opfamily AS op_family -- https://www.postgresql.org/docs/current/catalog-pg-opfamily.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON op_family.opfnamespace = ns.oid

@@ -1,7 +1,8 @@
 SELECT
   -- namespacing and ownership
     {{- if .oid }}
-      opfnamespace AS schema_oid
+      op_family.oid
+    , op_family.opfnamespace AS schema_oid
     {{- else }}
       ns.nspname AS schema_name
     {{- end }}
@@ -18,6 +19,7 @@ SELECT
     {{- else }}
     , access_method.amname AS access_method
     {{- end }}
+    , pg_catalog.obj_description(op_family.oid, 'pg_opfamily') AS "comment"
 FROM pg_catalog.pg_opfamily AS op_family -- https://www.postgresql.org/docs/current/catalog-pg-opfamily.html
 {{- if not .oid }}
 INNER JOIN pg_catalog.pg_namespace AS ns -- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
