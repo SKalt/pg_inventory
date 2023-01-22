@@ -1,70 +1,70 @@
-schema_name	table_name	policy_name	policy_cmd_type	is_permissinve	roles	security_barrier_qualifications	with_check_qualifications
-regress_rls_schema	b1	p1	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	dependent	d1	*	true	{}	(x = ( SELECT d.x\n   FROM regress_rls_schema.dependee d\n  WHERE (d.y = d.y)))	
-regress_rls_schema	dob_t1	p1	*	true	{regress_rls_dob_role1}	true	
-regress_rls_schema	dob_t1	p1_2	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true	
-regress_rls_schema	dob_t1	p1_3	*	true	{regress_rls_dob_role1}	true	
-regress_rls_schema	dob_t1	p1_4	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true	
-regress_rls_schema	dob_t2	p1	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true	
-regress_rls_schema	document	p1	*	true	{}	(dlevel <= ( SELECT uaccount.seclv\n   FROM regress_rls_schema.uaccount\n  WHERE (uaccount.pguser = CURRENT_USER)))	
-regress_rls_schema	document	p1_3	r	true	{}	true	
-regress_rls_schema	document	p1_4	r	true	{}	true	
-regress_rls_schema	document	p1r	*	false	{regress_rls_dave}	(cid <> 44)	
-regress_rls_schema	document	p2_3	a	true	{}		(dauthor = CURRENT_USER)
-regress_rls_schema	document	p2_4	a	true	{}		(dauthor = CURRENT_USER)
-regress_rls_schema	document	p2r	*	false	{regress_rls_dave}	((cid <> 44) AND (cid < 50))	
-regress_rls_schema	document	p3_3	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)
-regress_rls_schema	document	p3_4	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)
-regress_rls_schema	document	p3_with_all	*	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)
-regress_rls_schema	document	p3_with_default	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	
-regress_rls_schema	document	p4_4	d	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'manga'::text)))	
-regress_rls_schema	part_document	pp1	*	true	{}	(dlevel <= ( SELECT uaccount.seclv\n   FROM regress_rls_schema.uaccount\n  WHERE (uaccount.pguser = CURRENT_USER)))	
-regress_rls_schema	part_document	pp1r	*	false	{regress_rls_dave}	(cid < 55)	
-regress_rls_schema	r1	p1	*	true	{}	true	
-regress_rls_schema	r1_2	p1	*	true	{}	false	
-regress_rls_schema	r1_3	p1	*	true	{}	false	
-regress_rls_schema	r2	p1	r	true	{}	true	
-regress_rls_schema	r2	p2	a	true	{}		false
-regress_rls_schema	r2	p3	w	true	{}	false	
-regress_rls_schema	r2	p4	d	true	{}	false	
-regress_rls_schema	r2_3	p1	*	true	{}	false	
-regress_rls_schema	r2_4	p1	*	true	{}	false	
-regress_rls_schema	r2_5	p1	*	true	{}	false	
-regress_rls_schema	rec1	r1	*	true	{}	(x = ( SELECT r.x\n   FROM regress_rls_schema.rec1 r\n  WHERE (r.y = r.y)))	
-regress_rls_schema	rec1	r1_2	*	true	{}	(x = ( SELECT rec2.a\n   FROM regress_rls_schema.rec2\n  WHERE (rec2.b = rec1.y)))	
-regress_rls_schema	rec1	r1_3	*	true	{}	(x = ( SELECT rec2v.a\n   FROM regress_rls_schema.rec2v\n  WHERE (rec2v.b = rec1.y)))	
-regress_rls_schema	rec1	r1_4	*	true	{}	(x = ( SELECT rec2v_2.a\n   FROM regress_rls_schema.rec2v_2\n  WHERE (rec2v_2.b = rec1.y)))	
-regress_rls_schema	rec2	r2	*	true	{}	(a = ( SELECT rec1.x\n   FROM regress_rls_schema.rec1\n  WHERE (rec1.y = rec2.b)))	
-regress_rls_schema	rec2	r2_2	*	true	{}	(a = ( SELECT rec1v_2.x\n   FROM regress_rls_schema.rec1v_2\n  WHERE (rec1v_2.y = rec2.b)))	
-regress_rls_schema	rec2	r2_3	*	true	{}	(a = ( SELECT rec1v.x\n   FROM regress_rls_schema.rec1v\n  WHERE (rec1v.y = rec2.b)))	
-regress_rls_schema	rls_tbl	p1	*	true	{}	(EXISTS ( SELECT 1\n   FROM regress_rls_schema.ref_tbl))	
-regress_rls_schema	rls_tbl_3	p1	*	true	{}	(rls_tbl_3.* >= ROW(1, 1, 1))	
-regress_rls_schema	s1	p1	*	true	{}	(a IN ( SELECT s2.x\n   FROM regress_rls_schema.s2\n  WHERE (s2.y ~~ '%2f%'::text)))	
-regress_rls_schema	s1	p1_2	*	true	{}	(a IN ( SELECT v2.x\n   FROM regress_rls_schema.v2))	
-regress_rls_schema	s1	p3	a	true	{}		(a = ( SELECT s1_1.a\n   FROM regress_rls_schema.s1 s1_1))
-regress_rls_schema	s2	p2	*	true	{}	(x IN ( SELECT s1.a\n   FROM regress_rls_schema.s1\n  WHERE (s1.b ~~ '%22%'::text)))	
-regress_rls_schema	s2	p2_2	*	true	{}	(x IN ( SELECT s1.a\n   FROM regress_rls_schema.s1\n  WHERE (s1.b ~~ '%d2%'::text)))	
-regress_rls_schema	t	p	*	true	{}	((c % 2) = 1)	
-regress_rls_schema	t1	p1	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	t1_2	p1	*	true	{regress_rls_bob}	((a % 2) = 0)	
-regress_rls_schema	t1_2	p2	*	true	{regress_rls_carol}	((a % 4) = 0)	
-regress_rls_schema	t1_3	p1	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	t1_3	p1_2	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	t2	p2	*	true	{}	((a % 2) = 1)	
-regress_rls_schema	t2_3	p2	*	true	{}	((a % 2) = 1)	
-regress_rls_schema	tbl1	p	*	true	{regress_rls_eve,regress_rls_frank}	true	
-regress_rls_schema	x1	p0	*	true	{}	(c = CURRENT_USER)	
-regress_rls_schema	x1	p1	r	true	{}	((a % 2) = 0)	
-regress_rls_schema	x1	p2	a	true	{}		((a % 2) = 1)
-regress_rls_schema	x1	p3	w	true	{}	((a % 2) = 0)	
-regress_rls_schema	x1	p4	d	true	{}	(a < 8)	
-regress_rls_schema	y1	p1	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	y1	p1_2	r	true	{}	((a % 2) = 1)	
-regress_rls_schema	y1	p2	r	true	{}	(a > 2)	
-regress_rls_schema	y2	p1	*	true	{}	((a % 2) = 0)	
-regress_rls_schema	y2	p2	*	true	{}	((a % 3) = 0)	
-regress_rls_schema	y2	p3	*	true	{}	((a % 4) = 0)	
-regress_rls_schema	z1	p1	*	true	{regress_rls_group1}	((a % 2) = 0)	
-regress_rls_schema	z1	p2	*	true	{regress_rls_group2}	((a % 2) = 1)	
-regress_rls_schema	z1	p3	*	false	{}	(NOT (a IN ( SELECT z1_blacklist.a\n   FROM regress_rls_schema.z1_blacklist)))	
-regress_rls_schema	z1	p3_2	*	false	{}	(NOT (a IN ( SELECT z1_blacklist.a\n   FROM regress_rls_schema.z1_blacklist)))	
+schema_name	table_name	policy_name	policy_cmd_type	is_permissinve	roles	security_barrier_qualifications	with_check_qualifications	comment
+regress_rls_schema	b1	p1	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	dependent	d1	*	true	{}	(x = ( SELECT d.x\n   FROM regress_rls_schema.dependee d\n  WHERE (d.y = d.y)))		
+regress_rls_schema	dob_t1	p1	*	true	{regress_rls_dob_role1}	true		
+regress_rls_schema	dob_t1	p1_2	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true		
+regress_rls_schema	dob_t1	p1_3	*	true	{regress_rls_dob_role1}	true		
+regress_rls_schema	dob_t1	p1_4	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true		
+regress_rls_schema	dob_t2	p1	*	true	{regress_rls_dob_role1,regress_rls_dob_role2}	true		
+regress_rls_schema	document	p1	*	true	{}	(dlevel <= ( SELECT uaccount.seclv\n   FROM regress_rls_schema.uaccount\n  WHERE (uaccount.pguser = CURRENT_USER)))		
+regress_rls_schema	document	p1_3	r	true	{}	true		
+regress_rls_schema	document	p1_4	r	true	{}	true		
+regress_rls_schema	document	p1r	*	false	{regress_rls_dave}	(cid <> 44)		
+regress_rls_schema	document	p2_3	a	true	{}		(dauthor = CURRENT_USER)	
+regress_rls_schema	document	p2_4	a	true	{}		(dauthor = CURRENT_USER)	
+regress_rls_schema	document	p2r	*	false	{regress_rls_dave}	((cid <> 44) AND (cid < 50))		
+regress_rls_schema	document	p3_3	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)	
+regress_rls_schema	document	p3_4	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)	
+regress_rls_schema	document	p3_with_all	*	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))	(dauthor = CURRENT_USER)	
+regress_rls_schema	document	p3_with_default	w	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'novel'::text)))		
+regress_rls_schema	document	p4_4	d	true	{}	(cid = ( SELECT category.cid\n   FROM regress_rls_schema.category\n  WHERE (category.cname = 'manga'::text)))		
+regress_rls_schema	part_document	pp1	*	true	{}	(dlevel <= ( SELECT uaccount.seclv\n   FROM regress_rls_schema.uaccount\n  WHERE (uaccount.pguser = CURRENT_USER)))		
+regress_rls_schema	part_document	pp1r	*	false	{regress_rls_dave}	(cid < 55)		
+regress_rls_schema	r1	p1	*	true	{}	true		
+regress_rls_schema	r1_2	p1	*	true	{}	false		
+regress_rls_schema	r1_3	p1	*	true	{}	false		
+regress_rls_schema	r2	p1	r	true	{}	true		
+regress_rls_schema	r2	p2	a	true	{}		false	
+regress_rls_schema	r2	p3	w	true	{}	false		
+regress_rls_schema	r2	p4	d	true	{}	false		
+regress_rls_schema	r2_3	p1	*	true	{}	false		
+regress_rls_schema	r2_4	p1	*	true	{}	false		
+regress_rls_schema	r2_5	p1	*	true	{}	false		
+regress_rls_schema	rec1	r1	*	true	{}	(x = ( SELECT r.x\n   FROM regress_rls_schema.rec1 r\n  WHERE (r.y = r.y)))		
+regress_rls_schema	rec1	r1_2	*	true	{}	(x = ( SELECT rec2.a\n   FROM regress_rls_schema.rec2\n  WHERE (rec2.b = rec1.y)))		
+regress_rls_schema	rec1	r1_3	*	true	{}	(x = ( SELECT rec2v.a\n   FROM regress_rls_schema.rec2v\n  WHERE (rec2v.b = rec1.y)))		
+regress_rls_schema	rec1	r1_4	*	true	{}	(x = ( SELECT rec2v_2.a\n   FROM regress_rls_schema.rec2v_2\n  WHERE (rec2v_2.b = rec1.y)))		
+regress_rls_schema	rec2	r2	*	true	{}	(a = ( SELECT rec1.x\n   FROM regress_rls_schema.rec1\n  WHERE (rec1.y = rec2.b)))		
+regress_rls_schema	rec2	r2_2	*	true	{}	(a = ( SELECT rec1v_2.x\n   FROM regress_rls_schema.rec1v_2\n  WHERE (rec1v_2.y = rec2.b)))		
+regress_rls_schema	rec2	r2_3	*	true	{}	(a = ( SELECT rec1v.x\n   FROM regress_rls_schema.rec1v\n  WHERE (rec1v.y = rec2.b)))		
+regress_rls_schema	rls_tbl	p1	*	true	{}	(EXISTS ( SELECT 1\n   FROM regress_rls_schema.ref_tbl))		
+regress_rls_schema	rls_tbl_3	p1	*	true	{}	(rls_tbl_3.* >= ROW(1, 1, 1))		
+regress_rls_schema	s1	p1	*	true	{}	(a IN ( SELECT s2.x\n   FROM regress_rls_schema.s2\n  WHERE (s2.y ~~ '%2f%'::text)))		
+regress_rls_schema	s1	p1_2	*	true	{}	(a IN ( SELECT v2.x\n   FROM regress_rls_schema.v2))		
+regress_rls_schema	s1	p3	a	true	{}		(a = ( SELECT s1_1.a\n   FROM regress_rls_schema.s1 s1_1))	
+regress_rls_schema	s2	p2	*	true	{}	(x IN ( SELECT s1.a\n   FROM regress_rls_schema.s1\n  WHERE (s1.b ~~ '%22%'::text)))		
+regress_rls_schema	s2	p2_2	*	true	{}	(x IN ( SELECT s1.a\n   FROM regress_rls_schema.s1\n  WHERE (s1.b ~~ '%d2%'::text)))		
+regress_rls_schema	t	p	*	true	{}	((c % 2) = 1)		
+regress_rls_schema	t1	p1	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	t1_2	p1	*	true	{regress_rls_bob}	((a % 2) = 0)		
+regress_rls_schema	t1_2	p2	*	true	{regress_rls_carol}	((a % 4) = 0)		
+regress_rls_schema	t1_3	p1	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	t1_3	p1_2	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	t2	p2	*	true	{}	((a % 2) = 1)		
+regress_rls_schema	t2_3	p2	*	true	{}	((a % 2) = 1)		
+regress_rls_schema	tbl1	p	*	true	{regress_rls_eve,regress_rls_frank}	true		
+regress_rls_schema	x1	p0	*	true	{}	(c = CURRENT_USER)		
+regress_rls_schema	x1	p1	r	true	{}	((a % 2) = 0)		
+regress_rls_schema	x1	p2	a	true	{}		((a % 2) = 1)	
+regress_rls_schema	x1	p3	w	true	{}	((a % 2) = 0)		
+regress_rls_schema	x1	p4	d	true	{}	(a < 8)		
+regress_rls_schema	y1	p1	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	y1	p1_2	r	true	{}	((a % 2) = 1)		
+regress_rls_schema	y1	p2	r	true	{}	(a > 2)		
+regress_rls_schema	y2	p1	*	true	{}	((a % 2) = 0)		
+regress_rls_schema	y2	p2	*	true	{}	((a % 3) = 0)		
+regress_rls_schema	y2	p3	*	true	{}	((a % 4) = 0)		
+regress_rls_schema	z1	p1	*	true	{regress_rls_group1}	((a % 2) = 0)		
+regress_rls_schema	z1	p2	*	true	{regress_rls_group2}	((a % 2) = 1)		
+regress_rls_schema	z1	p3	*	false	{}	(NOT (a IN ( SELECT z1_blacklist.a\n   FROM regress_rls_schema.z1_blacklist)))		
+regress_rls_schema	z1	p3_2	*	false	{}	(NOT (a IN ( SELECT z1_blacklist.a\n   FROM regress_rls_schema.z1_blacklist)))		

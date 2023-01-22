@@ -1,1 +1,1 @@
-schema_name	table_name	policy_name	policy_cmd_type	is_permissinve	roles	security_barrier_qualifications	with_check_qualifications
+schema_name	table_name	policy_name	policy_cmd_type	is_permissinve	roles	security_barrier_qualifications	with_check_qualifications	comment
