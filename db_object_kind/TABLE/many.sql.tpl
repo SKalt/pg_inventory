@@ -18,6 +18,7 @@
       FOREIGN TABLE: f => foreign table
   */ -}}
   {{- $is_table             := eq .pg_class_category "TABLE" -}}
+  {{- $is_foreign           := eq .pg_class_category "FOREIGN TABLE" -}}
   {{- $is_index             := eq .pg_class_category "INDEX" -}}
   {{- $is_view              := eq .pg_class_category "VIEW" -}}
   {{- $is_materialized_view := eq .pg_class_category "MATERIALIZED VIEW" -}}
@@ -36,14 +37,13 @@ SELECT
   {{- if or $is_table $is_index $is_materialized_view }}
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (sequences, as well as
-      --  relations without storage, such as views)
+      --  relations without storage, such as views or foreign tables)
     , access_method.amname AS access_method_name
     , cls.reloptions AS access_method_options
       -- Access-method-specific options, as "keyword=value" strings
   {{- else }} -- omitted for classes other than tables and indices
   {{- end }}
   -- details
-    , pg_catalog.obj_description(cls.oid, 'pg_class') AS "description" -- comment?
   {{- if .packed }}
     , (-- info: 2-byte int
         0
@@ -83,16 +83,16 @@ SELECT
       -- 0000 1110 0000 0000 : replica identity
         | ((
             CASE cls.relreplident
-              WHEN 'd' THEN 1 -- default (primary key, if any),
-              WHEN 'n' THEN 2 -- nothing,
-              WHEN 'f' THEN 3 -- all columns,
+              WHEN 'd' THEN 1 -- default (primary key, if any)
+              WHEN 'n' THEN 2 -- nothing
+              WHEN 'f' THEN 3 -- all columns
               WHEN 'i' THEN 4 -- index with indisreplident set (same as nothing
                               -- if the index used has been dropped)
               ELSE          0
             END
           )<<9)
       -- 0011 0000 0000 0000 : persistence
-        {{- if or (not .filter_on_persistence) (not $is_materialized_view) }}
+        {{- if or (not .filter_on_persistence) (not $is_materialized_view) (not $is_foreign) }}
         | ((
             CASE cls.relpersistence
               WHEN 'p' THEN 1
@@ -175,7 +175,7 @@ SELECT
     , underlying_composite_type.typname AS underlying_composite_type
       -- for typed tables
   {{- end }}
-    {{ if $is_view -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
     , cls.reltuples AS approximate_number_of_rows
   {{- if $is_partitionable }}
     , (
@@ -185,9 +185,9 @@ SELECT
         END
       ) AS partition_bound
   {{- end }}
-    {{ if $is_view -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
     , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
-    {{ if $is_view -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
     , cls.relallvisible AS n_pages_all_visible
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
@@ -198,6 +198,10 @@ SELECT
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
   {{- else if $is_index }}
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
+  {{- end }}
+  {{- if $is_foreign }}
+    , foreign_table.ftoptions AS foreign_table_options
+    , foreign_server.srvname AS foreign_server_name
   {{- end }}
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
@@ -267,4 +271,11 @@ LEFT JOIN (
       underlying_composite_type.typnamespace = underlying_type_ns.oid
     )
   ) ON (cls.reloftype = underlying_composite_type.oid)
+{{- end }}
+{{- if $is_foreign }}
+INNER JOIN (
+  pg_catalog.pg_foreign_table AS foreign_table
+  INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
+  ON foreign_table.ftserver = foreign_server.oid
+) ON cls.oid = foreign_table.ftrelid
 {{- end }}

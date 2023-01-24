@@ -1,3 +1,3 @@
-where = "tbl.schema_name = 'public'"
-order_by = "tbl.schema_name, tbl.name"
+where = "ns.nspname = 'public'"
+order_by = "1,2"
 partitioning = false

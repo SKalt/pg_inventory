@@ -1,2 +1,2 @@
-order_by = "tbl.schema_name, tbl.name"
+order_by = "1,2"
 partitioning = false
