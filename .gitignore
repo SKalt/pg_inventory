@@ -17,3 +17,4 @@
 bin
 # ignore explain plans until we can average or round timing, costs
 explain.yaml
+db_object_kind/**/*_normalized*/**/results.tsv
