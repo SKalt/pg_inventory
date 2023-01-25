@@ -1,3 +1,0 @@
-where = "rel.schema_name NOT IN ('information_schema', 'pg_catalog')"
-order_by = "rel.schema_name, rel.name"
-persistence = 'p'

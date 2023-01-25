@@ -1,1 +1,0 @@
-order_by = "rel.schema_name, rel.name"

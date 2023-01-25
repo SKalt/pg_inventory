@@ -5,13 +5,7 @@ SELECT
     , cls_space.spcname AS tablespace_name
     , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
     , cls.relacl AS acl -- aclitem[]
-  -- access method details
-      -- If this is a table or an index, the access method used (heap, B-tree,
-      -- hash, etc.); otherwise zero (sequences, as well as
-      --  relations without storage, such as views or foreign tables)
-    , access_method.amname AS access_method_name
-    , cls.reloptions AS access_method_options
-      -- Access-method-specific options, as "keyword=value" strings
+  -- access method details -- omitted for classes other than tables and indices
   -- details
     , cls.relreplident AS replica_identity -- char
       -- Columns used to form "replica identity" for rows:
@@ -19,8 +13,6 @@ SELECT
       -- n = nothing
       -- f = all columns
       -- i = index with indisreplident set (same as nothing if the index used has been dropped)
-    , cls.relispopulated AS is_populated
-      -- Only false for some materialized views
     , cls.relpersistence AS persistence
       -- p => permanent table
       -- u => unlogged table: not dropped at a session
@@ -33,12 +25,30 @@ SELECT
       -- There must be this many corresponding entries in pg_attribute.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
-    , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
+  -- sequence-specific info
+    , seq.seqstart AS start -- int8
+    , seq.seqincrement AS increment -- int8
+    , seq.seqmax AS max -- int8
+    , seq.seqmin AS min -- int8
+    , seq.seqcache AS cache_size -- int8
+    , seq.seqcycle AS does_cycle -- bool
+    , seq_type.typname AS sequence_type
+    , seq_type_schema.nspname AS sequence_type_schema_name
+    , pg_catalog.pg_get_userbyid(seq_type.typowner) AS sequence_type_owner_name
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM (
   SELECT * FROM pg_catalog.pg_class AS cls
   WHERE 1=1
-    AND cls.relkind = 'm'
+    AND cls.relkind = 'S'
+    AND ( --validate input parameter: persistence
+      CASE :'persistence'
+        WHEN 'p' THEN true -- permanent table
+        WHEN 'u' THEN true -- unlogged table: not dropped at a session
+        WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
+        ELSE (1/0)::BOOLEAN -- error: parameter persistence must be either 'p', 'u', or 't'
+      END
+    )
+    AND cls.relpersistence = :'persistence'
 ) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
 INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON cls.relnamespace = ns.oid
@@ -46,3 +56,9 @@ LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/c
   ON cls.relam > 0 AND cls.relam = access_method.oid
 LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
   ON (cls.reltablespace = cls_space.oid)
+INNER JOIN pg_catalog.pg_sequence AS seq -- https://www.postgresql.org/docs/current/catalog-pg-sequence.html
+  ON seq.seqrelid = cls.oid
+INNER JOIN pg_catalog.pg_type AS seq_type -- https://www.postgresql.org/docs/current/catalog-pg-type.html
+  ON seq.seqtypid = seq_type.oid
+INNER JOIN pg_catalog.pg_namespace as seq_type_schema
+  ON seq_type.typnamespace = seq_type_schema.oid

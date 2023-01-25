@@ -1,17 +1,12 @@
 SELECT
   -- namespacing and ownership
-      ns.nspname AS schema_name
+      cls.oid
+    , cls.relnamespace AS schema_oid
     , cls.relname AS "name"
-    , cls_space.spcname AS tablespace_name
-    , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
+    , cls.reltablespace AS tablespace_oid
+    , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
-  -- access method details
-      -- If this is a table or an index, the access method used (heap, B-tree,
-      -- hash, etc.); otherwise zero (sequences, as well as
-      --  relations without storage, such as views or foreign tables)
-    , access_method.amname AS access_method_name
-    , cls.reloptions AS access_method_options
-      -- Access-method-specific options, as "keyword=value" strings
+  -- access method details -- omitted for classes other than tables and indices
   -- details
     , (-- info: 2-byte int
         0
@@ -27,8 +22,7 @@ SELECT
       -- 0000 0000 0100 0000 : row_level_security_enforced_on_owner
         | (CASE WHEN cls.relforcerowsecurity THEN 1<<6 ELSE 0 END)
       -- 0000 0000 1000 0000 : row_level_security_enforced_on_owner -- omitted: only applicable to tables or indices
-      -- 0000 0001 0000 0000 : is_populated
-        | (CASE WHEN cls.relispopulated      THEN 1<<8 ELSE 0 END)
+      -- 0000 0001 0000 0000 : is_populated -- omitted: only for materialized/regular views
       -- 0000 1110 0000 0000 : replica identity
         | ((
             CASE cls.relreplident
@@ -58,16 +52,19 @@ SELECT
       -- There must be this many corresponding entries in pg_attribute.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
-    , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
+  -- sequence-specific info
+    , seq.seqstart AS start -- int8
+    , seq.seqincrement AS increment -- int8
+    , seq.seqmax AS max -- int8
+    , seq.seqmin AS min -- int8
+    , seq.seqcache AS cache_size -- int8
+    , seq.seqcycle AS does_cycle -- bool
+    , seq.seqtypid AS sequence_type_id
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM (
   SELECT * FROM pg_catalog.pg_class AS cls
   WHERE 1=1
-    AND cls.relkind = 'm'
+    AND cls.relkind = 'S'
 ) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
-INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
-  ON cls.relnamespace = ns.oid
-LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/current/catalog-pg-am.html
-  ON cls.relam > 0 AND cls.relam = access_method.oid
-LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
-  ON (cls.reltablespace = cls_space.oid)
+INNER JOIN pg_catalog.pg_sequence AS seq -- https://www.postgresql.org/docs/current/catalog-pg-sequence.html
+  ON seq.seqrelid = cls.oid

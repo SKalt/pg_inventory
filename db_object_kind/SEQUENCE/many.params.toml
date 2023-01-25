@@ -1,10 +1,6 @@
 name_template = """
-{{- $filter_on_persistence := eq .filter_on_persistence "one" -}}
-
-{{- if (not $filter_on_persistence) -}}all_{{- end -}}
-sequences
-{{- .packed }}
-{{- if $filter_on_persistence -}}_filtered_by_persistence{{- end -}}
+{{- if (not .filter_on_persistence) -}}all_{{- end -}}
+sequences_{{- .oid -}}{{- .packed }}{{- .filter_on_persistence -}}
 """
 [oid]
   normalized = true
@@ -14,8 +10,8 @@ sequences
 [kind]
   always = 'S'
 [filter_on_persistence]
-  all = false
-  one = true
+  "" = false
+  _filtered_by_persistence = true
 [packed]
   "" = false
   _packed = true

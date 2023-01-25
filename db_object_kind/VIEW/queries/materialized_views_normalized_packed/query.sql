@@ -1,15 +1,16 @@
 SELECT
   -- namespacing and ownership
-      ns.nspname AS schema_name
+      cls.oid
+    , cls.relnamespace AS schema_oid
     , cls.relname AS "name"
-    , cls_space.spcname AS tablespace_name
-    , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
+    , cls.reltablespace AS tablespace_oid
+    , cls.relowner AS owner_oid
     , cls.relacl AS acl -- aclitem[]
   -- access method details
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views or foreign tables)
-    , access_method.amname AS access_method_name
+    , cls.relam AS access_method_oid
     , cls.reloptions AS access_method_options
       -- Access-method-specific options, as "keyword=value" strings
   -- details
@@ -65,9 +66,3 @@ FROM (
   WHERE 1=1
     AND cls.relkind = 'm'
 ) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
-INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
-  ON cls.relnamespace = ns.oid
-LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/current/catalog-pg-am.html
-  ON cls.relam > 0 AND cls.relam = access_method.oid
-LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
-  ON (cls.reltablespace = cls_space.oid)

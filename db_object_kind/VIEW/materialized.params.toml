@@ -1,6 +1,4 @@
-name_template = """
-{{.pg_class_category}}_views{{- if .packed -}}_packed{{- end -}}
-"""
+name_template = "{{.pg_class_category}}_views_{{.oid}}{{- .packed -}}"
 [oid]
   normalized = true
   denormalized = false
@@ -12,4 +10,4 @@ name_template = """
   always = false # materialized views are always persistent, and can't be unlogged
 [packed]
   "" = false
-  packed = true
+  _packed = true

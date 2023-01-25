@@ -1,0 +1,6 @@
+schema_name	name	tablespace_name	owner	acl	replica_identity	persistence	approximate_number_of_rows	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	start	increment	max	min	cache_size	does_cycle	sequence_type	sequence_type_schema_name	sequence_type_owner_name	comment
+domain_examples	us_snail_addy_address_id_seq		postgres		n	p	1	1	0	3	0	1	1	2147483647	1	1	false	int4	pg_catalog	postgres	
+enum_example	bugs_id_seq		postgres		n	p	1	1	0	3	0	1	1	2147483647	1	1	false	int4	pg_catalog	postgres	
+ordinary_tables	numeric_type_examples_a_bigserial_seq		postgres		n	p	1	1	0	3	0	1	1	9223372036854775807	1	1	false	int8	pg_catalog	postgres	
+ordinary_tables	numeric_type_examples_a_smallserial_seq		postgres		n	p	1	1	0	3	0	1	1	32767	1	1	false	int2	pg_catalog	postgres	
+ordinary_tables	numeric_type_examples_id_seq		postgres		n	p	1	1	0	3	0	1	1	2147483647	1	1	false	int4	pg_catalog	postgres	

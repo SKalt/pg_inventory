@@ -216,13 +216,27 @@ SELECT
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
   {{- else if $is_index }}
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
-  {{- end }}
-  {{- if $is_foreign }}
+  {{- else if $is_foreign }}
     , foreign_table.ftoptions AS foreign_table_options
     {{- if .oid }}
     , foreign_table.ftserver AS foreign_server_oid
     {{- else }}
     , foreign_server.srvname AS foreign_server_name
+    {{- end }}
+  {{- else if $is_sequence }}
+  -- sequence-specific info
+    , seq.seqstart AS start -- int8
+    , seq.seqincrement AS increment -- int8
+    , seq.seqmax AS max -- int8
+    , seq.seqmin AS min -- int8
+    , seq.seqcache AS cache_size -- int8
+    , seq.seqcycle AS does_cycle -- bool
+    {{- if .oid }}
+    , seq.seqtypid AS sequence_type_id
+    {{- else }}
+    , seq_type.typname AS sequence_type
+    , seq_type_schema.nspname AS sequence_type_schema_name
+    , pg_catalog.pg_get_userbyid(seq_type.typowner) AS sequence_type_owner_name
     {{- end }}
   {{- end }}
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
@@ -304,5 +318,15 @@ INNER JOIN pg_catalog.pg_foreign_table AS foreign_table -- see https://www.postg
 {{- if not .oid }}
 INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
   ON foreign_table.ftserver = foreign_server.oid
+{{- end }}
+{{- end }}
+{{- if $is_sequence }}
+INNER JOIN pg_catalog.pg_sequence AS seq -- https://www.postgresql.org/docs/current/catalog-pg-sequence.html
+  ON seq.seqrelid = cls.oid
+{{- if not .oid }}
+INNER JOIN pg_catalog.pg_type AS seq_type -- https://www.postgresql.org/docs/current/catalog-pg-type.html
+  ON seq.seqtypid = seq_type.oid
+INNER JOIN pg_catalog.pg_namespace as seq_type_schema
+  ON seq_type.typnamespace = seq_type_schema.oid
 {{- end }}
 {{- end }}
