@@ -381,19 +381,6 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	row := db.QueryRow("EXPLAIN (ANALYZE, COSTS, VERBOSE, BUFFERS, FORMAT YAML) " + query)
 	var explain string
 	if err = row.Scan(&explain); err != nil {
-		return err
-	}
-	err = os.WriteFile(c.targetExplainPath(), []byte(explain), 0666)
-	if err != nil {
-		return err
-	}
-	if strings.HasSuffix(c.queryName(), "_normalized") {
-		// this is a query that contains OIDs, and so is unstable. Just running is enough.
-		return nil
-	}
-	// TODO: accept *_normalized queries here
-	rows, err := db.Query(query)
-	if err != nil {
 		// persist query to /tmp/query.sql for further debugging
 		tempFile, e2 := os.CreateTemp("", "query.*.sql")
 		if e2 != nil {
@@ -403,6 +390,16 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 		if e2 != nil {
 			panic(e2)
 		}
+		return err
+	}
+	err = os.WriteFile(c.targetExplainPath(), []byte(explain), 0666)
+	if err != nil {
+		return err
+	}
+	unstable := strings.Contains(c.queryName(), "_normalized_") || strings.HasSuffix(c.queryName(), "_normalized")
+	// TODO: accept *_normalized queries here
+	rows, err := db.Query(query)
+	if err != nil {
 		return err
 	}
 	tsv, err := rowsAsTsv(rows)
@@ -423,7 +420,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 			return err
 		}
 	}
-	if accept {
+	if accept || unstable {
 		err = targetTsvFile.Truncate(0)
 		crashIfErrNotNil(err)
 		_, err = targetTsvFile.WriteString(tsv)
