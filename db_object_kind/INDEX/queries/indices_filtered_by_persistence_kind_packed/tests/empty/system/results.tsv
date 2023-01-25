@@ -1,1 +1,0 @@
-schema_name	name	tablespace_name	owner	acl	access_method_name	access_method_options	description	info	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	index_definition

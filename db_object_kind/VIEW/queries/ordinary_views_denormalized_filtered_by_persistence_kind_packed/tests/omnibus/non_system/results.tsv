@@ -1,0 +1,3 @@
+schema_name	name	tablespace_name	owner	acl	info	n_user_columns	n_check_constraints	view_definition	comment
+am_examples	heapmv		postgres		2560	2	0	" SELECT heaptable.a,\n    heaptable.repeat\n   FROM am_examples.heaptable;"	
+am_examples	tableam_tblmv_heapx		postgres		2560	1	0	" SELECT tableam_tbl_heapx.f1\n   FROM am_examples.tableam_tbl_heapx;"	

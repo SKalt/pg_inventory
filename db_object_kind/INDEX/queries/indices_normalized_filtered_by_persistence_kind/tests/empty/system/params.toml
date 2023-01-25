@@ -1,0 +1,3 @@
+kind = 'i'
+partitioning = false
+persistence = 'p'

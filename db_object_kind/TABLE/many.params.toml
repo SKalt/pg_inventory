@@ -10,7 +10,7 @@ name_template = """
 {{- if not $any_filters -}}
   all_
 {{- end -}}
-tables
+tables_{{- .oid -}}
 {{- if $any_filters -}}
   _filtered_by
   {{- if $filter_on_partitioning -}}
@@ -27,6 +27,9 @@ tables
   _packed
 {{- end -}}
 """
+[oid]
+  normalized = true
+  denormalized = false
 [pg_class_category]
   kind = "TABLE"
 [filter_on_partitioning]

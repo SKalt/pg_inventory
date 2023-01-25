@@ -1,0 +1,3 @@
+order_by = "relname"
+kind = 'r'
+partitioning = false

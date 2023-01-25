@@ -1,0 +1,22 @@
+schema_name	name	tablespace_name	owner	acl	access_method_name	access_method_options	info	kind	underlying_type_schema	underlying_composite_type	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	comment
+public	actor		postgres		heap		2569	r			-1		0	0	4	0	
+public	address		postgres		heap		2569	r			-1		0	0	8	0	
+public	category		postgres		heap		2569	r			-1		0	0	3	0	
+public	city		postgres		heap		2569	r			-1		0	0	4	0	
+public	country		postgres		heap		2569	r			-1		0	0	3	0	
+public	customer		postgres		heap		2569	r			-1		0	0	10	0	
+public	film		postgres		heap		2569	r			-1		0	0	14	0	
+public	film_actor		postgres		heap		2569	r			-1		0	0	3	0	
+public	film_category		postgres		heap		2569	r			-1		0	0	3	0	
+public	inventory		postgres		heap		2569	r			-1		0	0	4	0	
+public	language		postgres		heap		2569	r			-1		0	0	3	0	
+public	payment		postgres		heap		2589	r			-1		0	0	6	0	
+public	payment_p2007_01		postgres		heap		2569	r			-1		0	0	6	1	
+public	payment_p2007_02		postgres		heap		2569	r			-1		0	0	6	1	
+public	payment_p2007_03		postgres		heap		2569	r			-1		0	0	6	1	
+public	payment_p2007_04		postgres		heap		2569	r			-1		0	0	6	1	
+public	payment_p2007_05		postgres		heap		2569	r			-1		0	0	6	1	
+public	payment_p2007_06		postgres		heap		2569	r			-1		0	0	6	1	
+public	rental		postgres		heap		2569	r			-1		0	0	7	0	
+public	staff		postgres		heap		2569	r			-1		0	0	11	0	
+public	store		postgres		heap		2569	r			-1		0	0	4	0	

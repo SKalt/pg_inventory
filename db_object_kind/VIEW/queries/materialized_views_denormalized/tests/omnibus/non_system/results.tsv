@@ -1,0 +1,3 @@
+schema_name	name	tablespace_name	owner	acl	access_method_name	access_method_options	description	replica_identity	is_populated	persistence	approximate_number_of_rows	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	view_definition	comment
+am_examples	heapmv		postgres		heap2			d	false	p	-1	0	0	2	0	" SELECT heaptable.a,\n    heaptable.repeat\n   FROM am_examples.heaptable;"	
+am_examples	tableam_tblmv_heapx		postgres		heap2			d	false	p	-1	0	0	1	0	" SELECT tableam_tbl_heapx.f1\n   FROM am_examples.tableam_tbl_heapx;"	

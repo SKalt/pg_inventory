@@ -28,17 +28,31 @@
   {{- $multi_kind_possible  := or $is_table $is_index $is_view -}}
 SELECT
   -- namespacing and ownership
+    {{- if .oid }}
+      cls.oid
+    , cls.relnamespace AS schema_oid
+    {{- else }}
       ns.nspname AS schema_name
-    , cls.relname AS name
+    {{- end }}
+    , cls.relname AS "name"
+    {{- if .oid }}
+    , cls.reltablespace AS tablespace_oid
+    , cls.relowner AS owner_oid
+    {{- else }}
     , cls_space.spcname AS tablespace_name
     , pg_catalog.pg_get_userbyid(cls.relowner) AS owner
+    {{- end }}
     , cls.relacl AS acl -- aclitem[]
   -- access method details
   {{- if or $is_table $is_index $is_materialized_view }}
       -- If this is a table or an index, the access method used (heap, B-tree,
       -- hash, etc.); otherwise zero (sequences, as well as
       --  relations without storage, such as views or foreign tables)
+    {{- if .oid }}
+    , cls.relam AS access_method_oid
+    {{- else }}
     , access_method.amname AS access_method_name
+    {{- end }}
     , cls.reloptions AS access_method_options
       -- Access-method-specific options, as "keyword=value" strings
   {{- else }} -- omitted for classes other than tables and indices
@@ -171,8 +185,12 @@ SELECT
       -- f => foreign table
   {{- end}}
   {{- if $is_table }}
+    {{- if .oid }}
+    , cls.reloftype AS underlying_composite_type_oid
+    {{- else }}
     , underlying_type_ns.nspname AS underlying_type_schema
     , underlying_composite_type.typname AS underlying_composite_type
+    {{- end }}
       -- for typed tables
   {{- end }}
     {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
@@ -201,16 +219,20 @@ SELECT
   {{- end }}
   {{- if $is_foreign }}
     , foreign_table.ftoptions AS foreign_table_options
+    {{- if .oid }}
+    , foreign_table.ftserver AS foreign_server_oid
+    {{- else }}
     , foreign_server.srvname AS foreign_server_name
+    {{- end }}
   {{- end }}
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
-FROM pg_catalog.pg_class AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
-INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
-  ON
+FROM (
+  SELECT * FROM pg_catalog.pg_class AS cls
+  WHERE 1=1
   {{- if not $multi_kind_possible }}
-    cls.relkind = '{{.kind}}' AND
+    AND cls.relkind = '{{.kind}}'
   {{- else if .filter_on_kind }}
-    ( -- validate input parameter: kind
+    AND ( -- validate input parameter: kind
       CASE :'kind'
         -- r => ordinary table
         -- p => partitioned table
@@ -236,30 +258,33 @@ INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/
         ELSE (1/0)::BOOLEAN -- error: parameter kind must be either 'i' or 'I'
       {{- end }}
       END
-    ) AND
-    cls.relkind = :'kind' AND
+    )
+    AND cls.relkind = :'kind'
   {{- else if $is_table }}
-    cls.relkind IN ('r', 'p') AND
+    AND cls.relkind IN ('r', 'p')
   {{- else if $is_view }}
-    cls.relkind IN ('v', 'm') AND
+    AND cls.relkind IN ('v', 'm')
   {{- else if $is_index }}
-    cls.relkind IN ('i', 'I') AND
+    AND cls.relkind IN ('i', 'I')
   {{- end }}
   {{- if .filter_on_persistence }}
-    ( --validate input parameter: persistence
+    AND ( --validate input parameter: persistence
       CASE :'persistence'
         WHEN 'p' THEN true -- permanent table
         WHEN 'u' THEN true -- unlogged table: not dropped at a session
         WHEN 't' THEN true -- temporary table: unlogged **and** dropped at the end of a session.
         ELSE (1/0)::BOOLEAN -- error: parameter persistence must be either 'p', 'u', or 't'
       END
-    ) AND
-    cls.relpersistence = :'persistence' AND
+    )
+    AND cls.relpersistence = :'persistence'
   {{- end }}
   {{- if .filter_on_partitioning }}
-    cls.relispartition = :partitioning AND
+    AND cls.relispartition = :partitioning
   {{- end }}
-    cls.relnamespace = ns.oid
+) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+{{- if not .oid }}
+INNER JOIN pg_catalog.pg_namespace AS ns -- see https://www.postgresql.org/docs/current/catalog-pg-namespace.html
+  ON cls.relnamespace = ns.oid
 LEFT JOIN pg_catalog.pg_am AS access_method -- https://www.postgresql.org/docs/current/catalog-pg-am.html
   ON cls.relam > 0 AND cls.relam = access_method.oid
 LEFT JOIN pg_catalog.pg_tablespace AS cls_space -- see https://www.postgresql.org/docs/current/catalog-pg-tablespace.html
@@ -272,10 +297,12 @@ LEFT JOIN (
     )
   ) ON (cls.reloftype = underlying_composite_type.oid)
 {{- end }}
+{{- end }}
 {{- if $is_foreign }}
-INNER JOIN (
-  pg_catalog.pg_foreign_table AS foreign_table
-  INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
+INNER JOIN pg_catalog.pg_foreign_table AS foreign_table -- see https://www.postgresql.org/docs/current/catalog-pg-foreign-table.html
+  ON cls.oid = foreign_table.ftrelid
+{{- if not .oid }}
+INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
   ON foreign_table.ftserver = foreign_server.oid
-) ON cls.oid = foreign_table.ftrelid
+{{- end }}
 {{- end }}

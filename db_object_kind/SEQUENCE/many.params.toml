@@ -6,6 +6,9 @@ sequences
 {{- .packed }}
 {{- if $filter_on_persistence -}}_filtered_by_persistence{{- end -}}
 """
+[oid]
+  normalized = true
+  denormalized = false
 [pg_class_category]
   kind = "SEQUENCE"
 [kind]

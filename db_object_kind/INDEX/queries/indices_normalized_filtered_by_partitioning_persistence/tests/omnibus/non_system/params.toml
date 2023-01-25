@@ -1,0 +1,5 @@
+where = "cls.oid >= 16834"
+order_by = "cls.relname"
+kind = 'I'
+partitioning = true
+persistence = 'p'

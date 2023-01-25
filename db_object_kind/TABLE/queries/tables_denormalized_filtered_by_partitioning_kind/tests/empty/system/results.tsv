@@ -1,0 +1,67 @@
+schema_name	name	tablespace_name	owner	acl	access_method_name	access_method_options	replica_identity	has_index	is_shared	has_rules	has_triggers	has_subclass	has_row_level_security	row_level_security_enforced_on_owner	is_partition	persistence	underlying_type_schema	underlying_composite_type	approximate_number_of_rows	partition_bound	n_pages	n_pages_all_visible	n_user_columns	n_check_constraints	comment
+information_schema	sql_features		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		d	false	false	false	false	false	false	false	false	p			713		8	8	7	0	
+information_schema	sql_implementation_info		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		d	false	false	false	false	false	false	false	false	p			12		1	1	5	0	
+information_schema	sql_parts		postgres		heap		d	false	false	false	false	false	false	false	false	p			10		1	1	5	0	
+information_schema	sql_sizing		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		d	false	false	false	false	false	false	false	false	p			23		1	1	4	0	
+pg_catalog	pg_aggregate		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			145		2	2	22	0	
+pg_catalog	pg_am		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			7		1	1	4	0	
+pg_catalog	pg_amop		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			945		7	7	9	0	
+pg_catalog	pg_amproc		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			697		5	5	6	0	
+pg_catalog	pg_attrdef		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	4	0	
+pg_catalog	pg_attribute		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			2971		55	55	26	0	
+pg_catalog	pg_auth_members	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			3		1	1	4	0	
+pg_catalog	pg_authid	pg_global	postgres	{postgres=arwdDxt/postgres}	heap		n	true	true	false	false	false	false	false	false	p			12		1	1	12	0	
+pg_catalog	pg_cast		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			230		2	2	6	0	
+pg_catalog	pg_class		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			396		13	13	33	0	
+pg_catalog	pg_collation		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			787		25	25	10	0	
+pg_catalog	pg_constraint		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			107		3	3	25	0	
+pg_catalog	pg_conversion		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			128		2	2	8	0	
+pg_catalog	pg_database	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			2		1	1	14	0	
+pg_catalog	pg_db_role_setting	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			0		0	0	3	0	
+pg_catalog	pg_default_acl		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	5	0	
+pg_catalog	pg_depend		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			8814		65	65	7	0	
+pg_catalog	pg_description		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			5078		44	44	4	0	
+pg_catalog	pg_enum		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	4	0	
+pg_catalog	pg_event_trigger		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	7	0	
+pg_catalog	pg_extension		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			1		1	1	8	0	
+pg_catalog	pg_foreign_data_wrapper		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	7	0	
+pg_catalog	pg_foreign_server		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	8	0	
+pg_catalog	pg_foreign_table		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	3	0	
+pg_catalog	pg_index		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			155		4	4	20	0	
+pg_catalog	pg_inherits		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	4	0	
+pg_catalog	pg_init_privs		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			199		3	3	5	0	
+pg_catalog	pg_language		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			4		1	1	9	0	
+pg_catalog	pg_largeobject		postgres	{postgres=arwdDxt/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	3	0	
+pg_catalog	pg_largeobject_metadata		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	3	0	
+pg_catalog	pg_namespace		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			4		1	1	4	0	
+pg_catalog	pg_opclass		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			177		3	3	9	0	
+pg_catalog	pg_operator		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			804		14	14	15	0	
+pg_catalog	pg_opfamily		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			146		2	2	5	0	
+pg_catalog	pg_partitioned_table		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	8	0	
+pg_catalog	pg_policy		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	8	0	
+pg_catalog	pg_proc		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			3202		94	94	30	0	
+pg_catalog	pg_publication		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	9	0	
+pg_catalog	pg_publication_rel		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	3	0	
+pg_catalog	pg_range		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			6		1	1	7	0	
+pg_catalog	pg_replication_origin	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			0		0	0	2	0	
+pg_catalog	pg_rewrite		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			139		13	13	8	0	
+pg_catalog	pg_seclabel		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	5	0	
+pg_catalog	pg_sequence		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	8	0	
+pg_catalog	pg_shdepend	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			12		1	1	7	0	
+pg_catalog	pg_shdescription	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			1		1	1	3	0	
+pg_catalog	pg_shseclabel	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			0		0	0	4	0	
+pg_catalog	pg_statistic		postgres	{postgres=arwdDxt/postgres}	heap		n	true	false	false	false	false	false	false	false	p			406		19	19	31	0	
+pg_catalog	pg_statistic_ext		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	9	0	
+pg_catalog	pg_statistic_ext_data		postgres	{postgres=arwdDxt/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	5	0	
+pg_catalog	pg_subscription	pg_global	postgres	{postgres=arwdDxt/postgres}	heap		n	true	true	false	false	false	false	false	false	p			0		0	0	11	0	
+pg_catalog	pg_subscription_rel		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	4	0	
+pg_catalog	pg_tablespace	pg_global	postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	true	false	false	false	false	false	false	p			2		1	1	5	0	
+pg_catalog	pg_transform		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	5	0	
+pg_catalog	pg_trigger		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	19	0	
+pg_catalog	pg_ts_config		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			29		1	1	5	0	
+pg_catalog	pg_ts_config_map		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			551		3	3	4	0	
+pg_catalog	pg_ts_dict		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			29		1	1	6	0	
+pg_catalog	pg_ts_parser		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			1		1	1	8	0	
+pg_catalog	pg_ts_template		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			5		1	1	5	0	
+pg_catalog	pg_type		postgres	{postgres=arwdDxt/postgres,=r/postgres}	heap		n	true	false	false	false	false	false	false	false	p			601		14	14	32	0	
+pg_catalog	pg_user_mapping		postgres	{postgres=arwdDxt/postgres}	heap		n	true	false	false	false	false	false	false	false	p			0		0	0	4	0	

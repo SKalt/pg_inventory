@@ -1,18 +1,17 @@
 name_template = """
-{{- $filter_on_partitioning := eq .filter_on_partitioning "one" -}}
-
-{{- if (not $filter_on_partitioning) -}}all_{{- end -}}
-foreign_tables
-{{- if $filter_on_partitioning -}}_filtered_by_partitioning{{- end -}}
-{{- if .packed -}}_packed{{- end -}}
+{{- if (not .filter_on_partitioning) -}}all_{{- end -}}
+foreign_tables_{{.oid}}{{ .filter_on_partitioning }}{{- .packed -}}
 """
+[oid]
+  normalized = true
+  denormalized = false
 [pg_class_category]
   kind = "FOREIGN TABLE"
 [kind]
   always = 'f'
 [filter_on_partitioning]
-  all = false
-  one = true
+  "" = false
+  _filtered_by_partitioning = true
 [packed]
   "" = false
-  packed = true
+  _packed = true
