@@ -1,13 +1,18 @@
 SELECT
   {{ if .oid -}}
     oid
+  , c.collnamespace AS schema_oid
   {{ else -}}
     ns.nspname AS schema_name
   {{ end -}}
   , c.collencoding AS "encoding" -- int4
     -- Encoding in which the collation is applicable, or -1 if it works for any encoding
   , c.collname AS "name" -- unique per namespace and encoding
+  {{- if .oid }}
+  , c.collowner AS owner_oid
+  {{- else }}
   , pg_catalog.pg_get_userbyid(c.collowner) AS owner_name
+  {{- end }}
   , c.collprovider
     -- Provider of the collation
     -- 'd' => database default

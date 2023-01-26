@@ -1,9 +1,10 @@
 SELECT
   oid
+  , c.collnamespace AS schema_oid
   , c.collencoding AS "encoding" -- int4
     -- Encoding in which the collation is applicable, or -1 if it works for any encoding
   , c.collname AS "name" -- unique per namespace and encoding
-  , pg_catalog.pg_get_userbyid(c.collowner) AS owner_name
+  , c.collowner AS owner_oid
   , c.collprovider
     -- Provider of the collation
     -- 'd' => database default
