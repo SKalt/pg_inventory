@@ -1,34 +1,34 @@
 SELECT
--- constraint namespacing
+  -- constraint namespacing
     ns.nspname AS constraint_schema
-  , constraint_.conname AS constraint_name
--- constraint enforcement info
-  , constraint_.condeferrable AS is_deferrable
-  , constraint_.condeferred AS is_deferred_by_default
-  , constraint_.convalidated AS is_validated
-    -- currently falsifiable only for fk and check
-  , constraint_.conislocal AS is_local
-    -- the constraint is defined within the relation (can be inherited, too)
-  , constraint_.connoinherit AS not_inheritable
-    -- not inheritabe AND local to the relation
--- table constraint information
-  , tbl_ns.nspname AS table_schema
-  , tbl.relname AS table_name
-    -- always null for non-table constraints
-  , parent_constraint_schema.nspname AS parent_constraint_schema
-  , parent_constraint.conname AS parent_constraint
-  -- if this is a constraint on a partition, the constraint of the
-    -- parent partitioned table.
-  , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
--- domain information -- omitted
--- other
-  , constraint_.coninhcount AS n_ancestor_constraints
-    -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
-  , constraint_.conkey AS constrained_column_numbers
-    -- int2[] list of the constrained columns (references pg_attribute.attnum)
-    -- Populated iff the constraint is a table constraint (including foreign
-    -- keys, but not constraint triggers)
-  , pg_catalog.obj_description(constraint_.oid, 'pg_constraint') AS "comment"
+    , constraint_.conname AS constraint_name
+  -- constraint enforcement info
+    , constraint_.condeferrable AS is_deferrable
+    , constraint_.condeferred AS is_deferred_by_default
+    , constraint_.convalidated AS is_validated
+      -- currently falsifiable only for fk and check
+    , constraint_.conislocal AS is_local
+      -- the constraint is defined within the relation (can be inherited, too)
+    , constraint_.connoinherit AS not_inheritable
+      -- not inheritabe AND local to the relation
+  -- table constraint information
+    , tbl_ns.nspname AS table_schema
+    , tbl.relname AS table_name
+      -- always null for non-table constraints
+    , parent_constraint_schema.nspname AS parent_constraint_schema
+    , parent_constraint.conname AS parent_constraint
+      -- if this is a constraint on a partition, the constraint of the
+      -- parent partitioned table.
+    , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
+  -- domain information -- omitted
+  -- other
+    , constraint_.coninhcount AS n_ancestor_constraints
+      -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
+    , constraint_.conkey AS constrained_column_numbers
+      -- int2[] list of the constrained columns (references pg_attribute.attnum)
+      -- Populated iff the constraint is a table constraint (including foreign
+      -- keys, but not constraint triggers)
+    , pg_catalog.obj_description(constraint_.oid, 'pg_constraint') AS "comment"
 FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
 INNER JOIN pg_catalog.pg_namespace AS ns-- https://www.postgresql.org/docs/current/catalog-pg-namespace.html
   ON constraint_.contype = 'c'
