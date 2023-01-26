@@ -13,7 +13,7 @@ SELECT
   {{- else }}
   , pg_catalog.pg_get_userbyid(c.collowner) AS owner_name
   {{- end }}
-  , c.collprovider
+  , c.collprovider AS "provider"
     -- Provider of the collation
     -- 'd' => database default
     -- 'c' => libc
@@ -21,7 +21,7 @@ SELECT
   , c.collisdeterministic AS is_deterministic
   , c.collcollate AS lc_collate
   , c.collctype AS lc_ctype
-  , c.collversion
+  , c.collversion AS "version"
   -- Provider-specific version of the collation. This is recorded when the
   -- collation is created and then checked when it is used, to detect changes in
   -- the collation definition that could lead to data corruption.
