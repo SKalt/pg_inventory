@@ -211,6 +211,7 @@ SELECT
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
       -- ^This **is** populated for indices.
+    {{ if $is_index -}} -- omitted: indices aren't governed by check constraints: {{ end -}}
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
   {{- if or $is_view $is_materialized_view }}

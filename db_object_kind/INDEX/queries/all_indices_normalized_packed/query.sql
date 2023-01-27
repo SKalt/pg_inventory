@@ -75,7 +75,7 @@ SELECT
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
       -- ^This **is** populated for indices.
-    , cls.relchecks AS n_check_constraints
+    -- omitted: indices aren't governed by check constraints: , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
     -- index-specific information
     , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
