@@ -1,0 +1,46 @@
+constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	per_column_exclusion_operator_oids	comment
+pg_catalog	pg_type_typname_nsp_index	24576	pg_catalog	pg_type			UNIQUE (typname, typnamespace)			0	{2,3}		
+pg_catalog	pg_authid_rolname_index	24576	pg_catalog	pg_authid			UNIQUE (rolname)			0	{2}		
+pg_catalog	pg_user_mapping_user_server_index	24576	pg_catalog	pg_user_mapping			UNIQUE (umuser, umserver)			0	{2,3}		
+pg_catalog	pg_subscription_subname_index	24576	pg_catalog	pg_subscription			UNIQUE (subdbid, subname)			0	{2,3}		
+pg_catalog	pg_attribute_relid_attnam_index	24576	pg_catalog	pg_attribute			UNIQUE (attrelid, attname)			0	{1,2}		
+pg_catalog	pg_proc_proname_args_nsp_index	24576	pg_catalog	pg_proc			UNIQUE (proname, proargtypes, pronamespace)			0	{2,20,3}		
+pg_catalog	pg_class_relname_nsp_index	24576	pg_catalog	pg_class			UNIQUE (relname, relnamespace)			0	{2,3}		
+pg_catalog	pg_attrdef_adrelid_adnum_index	24576	pg_catalog	pg_attrdef			UNIQUE (adrelid, adnum)			0	{2,3}		
+pg_catalog	pg_constraint_conrelid_contypid_conname_index	24576	pg_catalog	pg_constraint			UNIQUE (conrelid, contypid, conname)			0	{8,9,2}		
+pg_catalog	pg_operator_oprname_l_r_n_index	24576	pg_catalog	pg_operator			UNIQUE (oprname, oprleft, oprright, oprnamespace)			0	{2,8,9,3}		
+pg_catalog	pg_opfamily_am_name_nsp_index	24576	pg_catalog	pg_opfamily			UNIQUE (opfmethod, opfname, opfnamespace)			0	{2,3,4}		
+pg_catalog	pg_opclass_am_name_nsp_index	24576	pg_catalog	pg_opclass			UNIQUE (opcmethod, opcname, opcnamespace)			0	{2,3,4}		
+pg_catalog	pg_am_name_index	24576	pg_catalog	pg_am			UNIQUE (amname)			0	{2}		
+pg_catalog	pg_amop_opr_fam_index	24576	pg_catalog	pg_amop			UNIQUE (amopopr, amoppurpose, amopfamily)			0	{7,6,2}		
+pg_catalog	pg_amop_fam_strat_index	24576	pg_catalog	pg_amop			UNIQUE (amopfamily, amoplefttype, amoprighttype, amopstrategy)			0	{2,3,4,5}		
+pg_catalog	pg_amproc_fam_proc_index	24576	pg_catalog	pg_amproc			UNIQUE (amprocfamily, amproclefttype, amprocrighttype, amprocnum)			0	{2,3,4,5}		
+pg_catalog	pg_language_name_index	24576	pg_catalog	pg_language			UNIQUE (lanname)			0	{2}		
+pg_catalog	pg_statistic_ext_name_index	24576	pg_catalog	pg_statistic_ext			UNIQUE (stxname, stxnamespace)			0	{3,4}		
+pg_catalog	pg_rewrite_rel_rulename_index	24576	pg_catalog	pg_rewrite			UNIQUE (ev_class, rulename)			0	{3,2}		
+pg_catalog	pg_trigger_tgrelid_tgname_index	24576	pg_catalog	pg_trigger			UNIQUE (tgrelid, tgname)			0	{2,4}		
+pg_catalog	pg_event_trigger_evtname_index	24576	pg_catalog	pg_event_trigger			UNIQUE (evtname)			0	{2}		
+pg_catalog	pg_cast_source_target_index	24576	pg_catalog	pg_cast			UNIQUE (castsource, casttarget)			0	{2,3}		
+pg_catalog	pg_enum_typid_sortorder_index	24576	pg_catalog	pg_enum			UNIQUE (enumtypid, enumsortorder)			0	{2,3}		
+pg_catalog	pg_enum_typid_label_index	24576	pg_catalog	pg_enum			UNIQUE (enumtypid, enumlabel)			0	{2,4}		
+pg_catalog	pg_namespace_nspname_index	24576	pg_catalog	pg_namespace			UNIQUE (nspname)			0	{2}		
+pg_catalog	pg_conversion_name_nsp_index	24576	pg_catalog	pg_conversion			UNIQUE (conname, connamespace)			0	{2,3}		
+pg_catalog	pg_conversion_default_index	24576	pg_catalog	pg_conversion			UNIQUE (connamespace, conforencoding, contoencoding, oid)			0	{3,5,6,1}		
+pg_catalog	pg_database_datname_index	24576	pg_catalog	pg_database			UNIQUE (datname)			0	{2}		
+pg_catalog	pg_tablespace_spcname_index	24576	pg_catalog	pg_tablespace			UNIQUE (spcname)			0	{2}		
+pg_catalog	pg_auth_members_member_role_index	24576	pg_catalog	pg_auth_members			UNIQUE (member, roleid)			0	{2,1}		
+pg_catalog	pg_ts_config_cfgname_index	24576	pg_catalog	pg_ts_config			UNIQUE (cfgname, cfgnamespace)			0	{2,3}		
+pg_catalog	pg_ts_dict_dictname_index	24576	pg_catalog	pg_ts_dict			UNIQUE (dictname, dictnamespace)			0	{2,3}		
+pg_catalog	pg_ts_parser_prsname_index	24576	pg_catalog	pg_ts_parser			UNIQUE (prsname, prsnamespace)			0	{2,3}		
+pg_catalog	pg_ts_template_tmplname_index	24576	pg_catalog	pg_ts_template			UNIQUE (tmplname, tmplnamespace)			0	{2,3}		
+pg_catalog	pg_extension_name_index	24576	pg_catalog	pg_extension			UNIQUE (extname)			0	{2}		
+pg_catalog	pg_foreign_data_wrapper_name_index	24576	pg_catalog	pg_foreign_data_wrapper			UNIQUE (fdwname)			0	{2}		
+pg_catalog	pg_foreign_server_name_index	24576	pg_catalog	pg_foreign_server			UNIQUE (srvname)			0	{2}		
+pg_catalog	pg_policy_polrelid_polname_index	24576	pg_catalog	pg_policy			UNIQUE (polrelid, polname)			0	{3,2}		
+pg_catalog	pg_replication_origin_roname_index	24576	pg_catalog	pg_replication_origin			UNIQUE (roname)			0	{2}		
+pg_catalog	pg_default_acl_role_nsp_obj_index	24576	pg_catalog	pg_default_acl			UNIQUE (defaclrole, defaclnamespace, defaclobjtype)			0	{2,3,4}		
+pg_catalog	pg_collation_name_enc_nsp_index	24576	pg_catalog	pg_collation			UNIQUE (collname, collencoding, collnamespace)			0	{2,7,3}		
+pg_catalog	pg_range_rngmultitypid_index	24576	pg_catalog	pg_range			UNIQUE (rngmultitypid)			0	{3}		
+pg_catalog	pg_transform_type_lang_index	24576	pg_catalog	pg_transform			UNIQUE (trftype, trflang)			0	{2,3}		
+pg_catalog	pg_publication_pubname_index	24576	pg_catalog	pg_publication			UNIQUE (pubname)			0	{2}		
+pg_catalog	pg_publication_rel_prrelid_prpubid_index	24576	pg_catalog	pg_publication_rel			UNIQUE (prrelid, prpubid)			0	{3,2}		

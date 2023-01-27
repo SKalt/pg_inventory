@@ -1,0 +1,16 @@
+constraint_schema	constraint_name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	per_column_exclusion_operator_oids	comment
+public	actor_pkey	false	false	true	true	true	public	actor			PRIMARY KEY (actor_id)			0	{1}		
+public	film_pkey	false	false	true	true	true	public	film			PRIMARY KEY (film_id)			0	{1}		
+public	address_pkey	false	false	true	true	true	public	address			PRIMARY KEY (address_id)			0	{1}		
+public	category_pkey	false	false	true	true	true	public	category			PRIMARY KEY (category_id)			0	{1}		
+public	city_pkey	false	false	true	true	true	public	city			PRIMARY KEY (city_id)			0	{1}		
+public	country_pkey	false	false	true	true	true	public	country			PRIMARY KEY (country_id)			0	{1}		
+public	customer_pkey	false	false	true	true	true	public	customer			PRIMARY KEY (customer_id)			0	{1}		
+public	film_actor_pkey	false	false	true	true	true	public	film_actor			PRIMARY KEY (actor_id, film_id)			0	{1,2}		
+public	film_category_pkey	false	false	true	true	true	public	film_category			PRIMARY KEY (film_id, category_id)			0	{1,2}		
+public	inventory_pkey	false	false	true	true	true	public	inventory			PRIMARY KEY (inventory_id)			0	{1}		
+public	language_pkey	false	false	true	true	true	public	language			PRIMARY KEY (language_id)			0	{1}		
+public	rental_pkey	false	false	true	true	true	public	rental			PRIMARY KEY (rental_id)			0	{1}		
+public	staff_pkey	false	false	true	true	true	public	staff			PRIMARY KEY (staff_id)			0	{1}		
+public	store_pkey	false	false	true	true	true	public	store			PRIMARY KEY (store_id)			0	{1}		
+public	payment_pkey	false	false	true	true	true	public	payment			PRIMARY KEY (payment_id)			0	{1}		

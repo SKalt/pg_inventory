@@ -1,4 +1,4 @@
-name_template = "{{.kind}}_constraints_{{.oid}}{{.packed}}"
+name_template = "{{.oid}}_{{.kind}}{{.packed}}"
 
 [oid]
   normalized = true
@@ -6,10 +6,7 @@ name_template = "{{.kind}}_constraints_{{.oid}}{{.packed}}"
 [packed]
   _packed = true
   "" = false
-[kind]
-  check = "c"
-  primary_key = "p"
-  foreign_key = "f"
-  unique = "u"
-  exclusion = "x"
-  all = ""
+[kind] # should be equivalent to contype
+  foreign_key_constraints = "f"
+  constraints_filtered_by_kind = ":" # trigger, constraint, PK, unique, unique constraints all have the same columns
+  constraints = ""
