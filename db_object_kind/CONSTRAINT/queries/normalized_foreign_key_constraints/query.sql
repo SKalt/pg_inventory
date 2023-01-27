@@ -1,7 +1,7 @@
 SELECT
   -- constraint namespacing
     constraint_.connamespace AS schema_oid
-    , constraint_.conname AS constraint_name
+    , constraint_.conname AS "name"
   -- constraint enforcement info
     , constraint_.condeferrable AS is_deferrable
     , constraint_.condeferred AS is_deferred_by_default
@@ -25,7 +25,8 @@ SELECT
       -- p => partial
       -- s => simple
   -- table constraint information
-    , constraint_.conrelid AS table_oid -- can be 0
+    , constraint_.conrelid AS relation_oid
+      -- always 0 for non-table constraints
     , constraint_.conparentid AS parent_constraint_oid -- can be 0
       -- if this is a constraint on a partition, the constraint of the
       -- parent partitioned table.

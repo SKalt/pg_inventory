@@ -1,4 +1,4 @@
-constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	per_column_exclusion_operator_oids	comment
+schema_name	name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	per_column_exclusion_operator_oids	comment
 pg_catalog	pg_statistic_relid_att_inh_index	24576	pg_catalog	pg_statistic			PRIMARY KEY (starelid, staattnum, stainherit)			0	{1,2,3}		
 pg_catalog	pg_type_oid_index	24576	pg_catalog	pg_type			PRIMARY KEY (oid)			0	{1}		
 pg_catalog	pg_foreign_table_relid_index	24576	pg_catalog	pg_foreign_table			PRIMARY KEY (ftrelid)			0	{1}		

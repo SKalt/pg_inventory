@@ -1,7 +1,7 @@
 SELECT
   -- constraint namespacing
-    ns.nspname AS constraint_schema
-    , constraint_.conname AS constraint_name
+    ns.nspname AS schema_name
+    , constraint_.conname AS "name"
   -- constraint enforcement info
     , (-- info: a 2-byte packed int.
         0
@@ -46,7 +46,7 @@ SELECT
 FROM (
   SELECT *
   FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
-  WHERE constraint_.contype = :'kind'
+  WHERE constraint_.contype != 'f' AND constraint_.contype = :'kind'
     -- c => check
     -- f => foreign key
     -- p => primary key

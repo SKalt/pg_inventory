@@ -1,4 +1,4 @@
-constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	per_column_exclusion_operator_oids	comment
+schema_name	name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	per_column_exclusion_operator_oids	comment
 public	actor_pkey	24579	public	actor			PRIMARY KEY (actor_id)			0	{1}					
 public	film_original_language_id_fkey	25306	public	film			FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT			0	{6}	public	language	{1}		
 public	film_language_id_fkey	25306	public	film			FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT			0	{5}	public	language	{1}		

@@ -1,4 +1,4 @@
-constraint_schema	constraint_name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	per_column_exclusion_operator_oids	comment
+schema_name	name	info	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	type_schema	type_name	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	per_column_exclusion_operator_oids	comment
 composite_type_examples	check_f1_gt_1	8193	composite_type_examples	ordinary_table			CHECK ((basic_).f1 > 1)			0	{1}					
 composite_type_examples	check_f1_gt_1	1	composite_type_examples	inherited_table			CHECK ((basic_).f1 > 1)			1	{1}					
 composite_type_examples	check_f1_gt_1_again	1	composite_type_examples	inherited_table			CHECK ((_basic).f1 > 1)			1	{2}					

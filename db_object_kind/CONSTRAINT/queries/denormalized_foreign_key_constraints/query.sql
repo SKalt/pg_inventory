@@ -1,7 +1,7 @@
 SELECT
   -- constraint namespacing
-    ns.nspname AS constraint_schema
-    , constraint_.conname AS constraint_name
+    ns.nspname AS schema_name
+    , constraint_.conname AS "name"
   -- constraint enforcement info
     , constraint_.condeferrable AS is_deferrable
     , constraint_.condeferred AS is_deferred_by_default

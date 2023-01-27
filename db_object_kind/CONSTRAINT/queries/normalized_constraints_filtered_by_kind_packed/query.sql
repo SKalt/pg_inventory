@@ -1,7 +1,7 @@
 SELECT
   -- constraint namespacing
     constraint_.connamespace AS schema_oid
-    , constraint_.conname AS constraint_name
+    , constraint_.conname AS "name"
   -- constraint enforcement info
     , (-- info: a 2-byte packed int.
         0
@@ -21,7 +21,8 @@ SELECT
           * CASE WHEN constraint_.convalidated  THEN 1 ELSE -1 END
       )::INT2 AS info
   -- table constraint information
-    , constraint_.conrelid AS table_oid -- can be 0
+    , constraint_.conrelid AS relation_oid
+      -- always 0 for non-table constraints
     , constraint_.conparentid AS parent_constraint_oid -- can be 0
       -- if this is a constraint on a partition, the constraint of the
       -- parent partitioned table.
@@ -41,7 +42,7 @@ SELECT
 FROM (
   SELECT *
   FROM pg_catalog.pg_constraint AS constraint_ -- https://www.postgresql.org/docs/current/catalog-pg-constraint.html
-  WHERE constraint_.contype = :'kind'
+  WHERE constraint_.contype != 'f' AND constraint_.contype = :'kind'
     -- c => check
     -- f => foreign key
     -- p => primary key

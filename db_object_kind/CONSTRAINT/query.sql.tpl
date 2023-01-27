@@ -5,9 +5,9 @@
 SELECT
   -- constraint namespacing
     {{ if .oid -}} constraint_.connamespace AS schema_oid
-    {{ else -}} ns.nspname AS constraint_schema
+    {{ else -}} ns.nspname AS schema_name
     {{ end -}}
-    , constraint_.conname AS constraint_name
+    , constraint_.conname AS "name"
   -- constraint enforcement info
 {{- if and $is_all (not .packed) }}
     , constraint_.contype AS constraint_type
@@ -131,7 +131,8 @@ SELECT
 {{- end }}
   -- table constraint information
   {{- if .oid }}
-    , constraint_.conrelid AS table_oid -- can be 0
+    , constraint_.conrelid AS relation_oid
+      -- always 0 for non-table constraints
     , constraint_.conparentid AS parent_constraint_oid -- can be 0
   {{- else }}
     , tbl_ns.nspname AS table_schema
@@ -185,7 +186,7 @@ FROM (
   {{- if $is_fk }}
   WHERE constraint_.contype = 'f'
   {{- else }}
-  WHERE constraint_.contype = :'kind'
+  WHERE constraint_.contype != 'f' AND constraint_.contype = :'kind'
   {{- end }}
     -- c => check
     -- f => foreign key
