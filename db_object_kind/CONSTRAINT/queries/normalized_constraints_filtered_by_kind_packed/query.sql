@@ -24,7 +24,6 @@ SELECT
   -- table constraint information
     , constraint_.conrelid AS relation_oid
       -- always 0 for non-table constraints
-    , constraint_.conparentid AS parent_constraint_oid -- can be 0
       -- if this is a constraint on a partition, the constraint of the
       -- parent partitioned table.
     , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
@@ -32,6 +31,7 @@ SELECT
     , constraint_.contypid AS type_oid -- always 0 for non-domain constraints
   -- fk info -- excluded for non-fk constraints
   -- other
+    , constraint_.conparentid AS parent_constraint_oid -- can be 0
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
     , constraint_.conkey AS constrained_column_numbers

@@ -28,7 +28,6 @@ SELECT
   -- table constraint information
     , constraint_.conrelid AS relation_oid
       -- always 0 for non-table constraints
-    , constraint_.conparentid AS parent_constraint_oid -- can be 0
       -- if this is a constraint on a partition, the constraint of the
       -- parent partitioned table.
     , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
@@ -36,7 +35,6 @@ SELECT
   -- fk info
     , constraint_.confrelid AS referenced_table_oid
     -- fk comparison operator oids: oid[] each referencing pg_catalog.pg_operator.oid
-    -- TODO: figure out how to map those OID arrays to schema-qualified names
     , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
     , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
     , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
@@ -44,6 +42,7 @@ SELECT
       -- int2[] (each reference pg_attribute.attnum)
       -- list of the columns the FK references
   -- other
+    , constraint_.conparentid AS parent_constraint_oid -- can be 0
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
     , constraint_.conkey AS constrained_column_numbers

@@ -36,7 +36,7 @@ SELECT
               WHEN 'd' THEN 5 -- set default
               ELSE          0
             END
-          )<<6)
+            )<<6)
         -- 0000 0111 0000 0000 : FK delete action
           | ((
               CASE constraint_.confdeltype

@@ -62,7 +62,7 @@ SELECT
               WHEN 'd' THEN 5 -- set default
               ELSE          0
             END
-          )<<6)
+            )<<6)
           {{- end }}
         -- 0000 0111 0000 0000 : FK delete action
           {{- if not $show_fk }} -- omitted since only non-FK constraints matched
@@ -135,7 +135,6 @@ SELECT
   {{- if .oid }}
     , constraint_.conrelid AS relation_oid
       -- always 0 for non-table constraints
-    , constraint_.conparentid AS parent_constraint_oid -- can be 0
   {{- else }}
     , tbl_ns.nspname AS table_schema
     , tbl.relname AS table_name
@@ -160,7 +159,6 @@ SELECT
   {{- if .oid }}
     , constraint_.confrelid AS referenced_table_oid
     -- fk comparison operator oids: oid[] each referencing pg_catalog.pg_operator.oid
-    -- TODO: figure out how to map those OID arrays to schema-qualified names
     , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
     , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
     , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
@@ -174,6 +172,9 @@ SELECT
 {{- else }} -- excluded for non-fk constraints
 {{- end }}
   -- other
+  {{- if .oid }}
+    , constraint_.conparentid AS parent_constraint_oid -- can be 0
+  {{- end }}
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
     , constraint_.conkey AS constrained_column_numbers
