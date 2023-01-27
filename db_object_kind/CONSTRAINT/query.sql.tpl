@@ -54,14 +54,14 @@ SELECT
           {{- if not $show_fk }} -- omitted since only non-FK constraints matched
           {{- else }}
           | ((
-            CASE constraint_.confupdtype
-              WHEN 'a' THEN 1 -- no action
-              WHEN 'r' THEN 2 -- restrict
-              WHEN 'c' THEN 3 -- cascade
-              WHEN 'n' THEN 4 -- set null
-              WHEN 'd' THEN 5 -- set default
-              ELSE          0
-            END
+              CASE constraint_.confupdtype
+                WHEN 'a' THEN 1 -- no action
+                WHEN 'r' THEN 2 -- restrict
+                WHEN 'c' THEN 3 -- cascade
+                WHEN 'n' THEN 4 -- set null
+                WHEN 'd' THEN 5 -- set default
+                ELSE          0
+              END
             )<<6)
           {{- end }}
         -- 0000 0111 0000 0000 : FK delete action
