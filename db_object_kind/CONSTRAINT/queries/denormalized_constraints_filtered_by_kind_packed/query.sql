@@ -33,6 +33,7 @@ SELECT
     , type_ns.nspname AS type_schema
     , type_.typname AS type_name
       -- always null for non-domain constraints
+  -- fk info -- excluded for non-fk constraints
   -- other
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed

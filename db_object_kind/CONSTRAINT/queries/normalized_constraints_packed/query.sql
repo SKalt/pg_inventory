@@ -69,6 +69,16 @@ SELECT
     , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
   -- domain information
     , constraint_.contypid AS type_oid -- always 0 for non-domain constraints
+  -- fk info
+    , constraint_.confrelid AS referenced_table_oid
+    -- fk comparison operator oids: oid[] each referencing pg_catalog.pg_operator.oid
+    -- TODO: figure out how to map those OID arrays to schema-qualified names
+    , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
+    , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
+    , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
+    , constraint_.confkey AS foreign_key_column_numbers
+      -- int2[] (each reference pg_attribute.attnum)
+      -- list of the columns the FK references
   -- other
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
@@ -76,12 +86,6 @@ SELECT
       -- int2[] list of the constrained columns (references pg_attribute.attnum)
       -- Populated iff the constraint is a table constraint (including foreign
       -- keys, but not constraint triggers)
-    , constraint_.confrelid AS referenced_table_oid
-    -- fk comparison operator oids: oid[] each referencing pg_catalog.pg_operator.oid
-    -- TODO: figure out how to map those OID arrays to schema-qualified names
-    , constraint_.conpfeqop AS pk_fk_equality_comparison_operator_oids
-    , constraint_.conppeqop AS pk_pk_equality_comparison_operator_oids
-    , constraint_.conffeqop AS fk_fk_equality_comparison_operator_oids
     , constraint_.conexclop AS per_column_exclusion_operator_oids
       -- oid[] each referencing pg_catalog.pg_operator.oid
     , pg_catalog.obj_description(constraint_.oid, 'pg_constraint') AS "comment"

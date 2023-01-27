@@ -1,41 +1,41 @@
-schema_name	name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	fk_update_action_code	fk_delete_action_code	fk_match_type	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	n_ancestor_constraints	constrained_column_numbers	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	per_column_exclusion_operator_oids	comment
-public	film_original_language_id_fkey	false	false	true	true	true	c	r	s	public	film			FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{6}	public	language	{1}		
-public	film_language_id_fkey	false	false	true	true	true	c	r	s	public	film			FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{5}	public	language	{1}		
-public	payment_p2007_02_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_02_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_02_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	payment_p2007_03_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_03_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_03_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	payment_p2007_04_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_04_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_04_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	payment_p2007_05_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_05_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_05_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	payment_p2007_06_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_06_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_06_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	payment_p2007_01_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	0	{3}	public	staff	{1}		
-public	payment_p2007_01_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	0	{4}	public	rental	{1}		
-public	payment_p2007_01_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	0	{2}	public	customer	{1}		
-public	address_city_id_fkey	false	false	true	true	true	c	r	s	public	address			FOREIGN KEY (city_id) REFERENCES city(city_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{5}	public	city	{1}		
-public	city_country_id_fkey	false	false	true	true	true	c	r	s	public	city			FOREIGN KEY (country_id) REFERENCES country(country_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{3}	public	country	{1}		
-public	customer_store_id_fkey	false	false	true	true	true	c	r	s	public	customer			FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	store	{1}		
-public	customer_address_id_fkey	false	false	true	true	true	c	r	s	public	customer			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{6}	public	address	{1}		
-public	film_actor_film_id_fkey	false	false	true	true	true	c	r	s	public	film_actor			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	film	{1}		
-public	film_actor_actor_id_fkey	false	false	true	true	true	c	r	s	public	film_actor			FOREIGN KEY (actor_id) REFERENCES actor(actor_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{1}	public	actor	{1}		
-public	film_category_film_id_fkey	false	false	true	true	true	c	r	s	public	film_category			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{1}	public	film	{1}		
-public	film_category_category_id_fkey	false	false	true	true	true	c	r	s	public	film_category			FOREIGN KEY (category_id) REFERENCES category(category_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	category	{1}		
-public	inventory_store_id_fkey	false	false	true	true	true	c	r	s	public	inventory			FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{3}	public	store	{1}		
-public	inventory_film_id_fkey	false	false	true	true	true	c	r	s	public	inventory			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	film	{1}		
-public	rental_staff_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{6}	public	staff	{1}		
-public	rental_inventory_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{3}	public	inventory	{1}		
-public	rental_customer_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{4}	public	customer	{1}		
-public	staff_store_id_fkey	false	false	true	true	true	a	a	s	public	staff			FOREIGN KEY (store_id) REFERENCES store(store_id)	0	{6}	public	store	{1}		
-public	staff_address_id_fkey	false	false	true	true	true	c	r	s	public	staff			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{4}	public	address	{1}		
-public	store_manager_staff_id_fkey	false	false	true	true	true	c	r	s	public	store			FOREIGN KEY (manager_staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	staff	{1}		
-public	store_address_id_fkey	false	false	true	true	true	c	r	s	public	store			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{3}	public	address	{1}		
-public	payment_staff_id_fkey	false	false	true	true	true	c	r	s	public	payment			FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{3}	public	staff	{1}		
-public	payment_rental_id_fkey	false	false	true	true	true	c	n	s	public	payment			FOREIGN KEY (rental_id) REFERENCES rental(rental_id) ON UPDATE CASCADE ON DELETE SET NULL	0	{4}	public	rental	{1}		
-public	payment_customer_id_fkey	false	false	true	true	true	c	r	s	public	payment			FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT	0	{2}	public	customer	{1}		
+schema_name	name	is_deferrable	is_deferred_by_default	is_validated	is_local	not_inheritable	fk_update_action_code	fk_delete_action_code	fk_match_type	table_schema	table_name	parent_constraint_schema	parent_constraint	constraint_def	referenced_table_schema	referenced_table_name	foreign_key_column_numbers	n_ancestor_constraints	constrained_column_numbers	per_column_exclusion_operator_oids	comment
+public	film_original_language_id_fkey	false	false	true	true	true	c	r	s	public	film			FOREIGN KEY (original_language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	language	{1}	0	{6}		
+public	film_language_id_fkey	false	false	true	true	true	c	r	s	public	film			FOREIGN KEY (language_id) REFERENCES language(language_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	language	{1}	0	{5}		
+public	payment_p2007_02_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_02_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_02_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_02			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	payment_p2007_03_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_03_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_03_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_03			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	payment_p2007_04_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_04_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_04_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_04			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	payment_p2007_05_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_05_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_05_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_05			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	payment_p2007_06_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_06_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_06_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_06			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	payment_p2007_01_staff_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (staff_id) REFERENCES staff(staff_id)	public	staff	{1}	0	{3}		
+public	payment_p2007_01_rental_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (rental_id) REFERENCES rental(rental_id)	public	rental	{1}	0	{4}		
+public	payment_p2007_01_customer_id_fkey	false	false	true	true	true	a	a	s	public	payment_p2007_01			FOREIGN KEY (customer_id) REFERENCES customer(customer_id)	public	customer	{1}	0	{2}		
+public	address_city_id_fkey	false	false	true	true	true	c	r	s	public	address			FOREIGN KEY (city_id) REFERENCES city(city_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	city	{1}	0	{5}		
+public	city_country_id_fkey	false	false	true	true	true	c	r	s	public	city			FOREIGN KEY (country_id) REFERENCES country(country_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	country	{1}	0	{3}		
+public	customer_store_id_fkey	false	false	true	true	true	c	r	s	public	customer			FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	store	{1}	0	{2}		
+public	customer_address_id_fkey	false	false	true	true	true	c	r	s	public	customer			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	address	{1}	0	{6}		
+public	film_actor_film_id_fkey	false	false	true	true	true	c	r	s	public	film_actor			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	film	{1}	0	{2}		
+public	film_actor_actor_id_fkey	false	false	true	true	true	c	r	s	public	film_actor			FOREIGN KEY (actor_id) REFERENCES actor(actor_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	actor	{1}	0	{1}		
+public	film_category_film_id_fkey	false	false	true	true	true	c	r	s	public	film_category			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	film	{1}	0	{1}		
+public	film_category_category_id_fkey	false	false	true	true	true	c	r	s	public	film_category			FOREIGN KEY (category_id) REFERENCES category(category_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	category	{1}	0	{2}		
+public	inventory_store_id_fkey	false	false	true	true	true	c	r	s	public	inventory			FOREIGN KEY (store_id) REFERENCES store(store_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	store	{1}	0	{3}		
+public	inventory_film_id_fkey	false	false	true	true	true	c	r	s	public	inventory			FOREIGN KEY (film_id) REFERENCES film(film_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	film	{1}	0	{2}		
+public	rental_staff_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	staff	{1}	0	{6}		
+public	rental_inventory_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	inventory	{1}	0	{3}		
+public	rental_customer_id_fkey	false	false	true	true	true	c	r	s	public	rental			FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	customer	{1}	0	{4}		
+public	staff_store_id_fkey	false	false	true	true	true	a	a	s	public	staff			FOREIGN KEY (store_id) REFERENCES store(store_id)	public	store	{1}	0	{6}		
+public	staff_address_id_fkey	false	false	true	true	true	c	r	s	public	staff			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	address	{1}	0	{4}		
+public	store_manager_staff_id_fkey	false	false	true	true	true	c	r	s	public	store			FOREIGN KEY (manager_staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	staff	{1}	0	{2}		
+public	store_address_id_fkey	false	false	true	true	true	c	r	s	public	store			FOREIGN KEY (address_id) REFERENCES address(address_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	address	{1}	0	{3}		
+public	payment_staff_id_fkey	false	false	true	true	true	c	r	s	public	payment			FOREIGN KEY (staff_id) REFERENCES staff(staff_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	staff	{1}	0	{3}		
+public	payment_rental_id_fkey	false	false	true	true	true	c	n	s	public	payment			FOREIGN KEY (rental_id) REFERENCES rental(rental_id) ON UPDATE CASCADE ON DELETE SET NULL	public	rental	{1}	0	{4}		
+public	payment_customer_id_fkey	false	false	true	true	true	c	r	s	public	payment			FOREIGN KEY (customer_id) REFERENCES customer(customer_id) ON UPDATE CASCADE ON DELETE RESTRICT	public	customer	{1}	0	{2}		
