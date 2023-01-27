@@ -210,11 +210,61 @@ SELECT
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
+      -- ^This **is** populated for indices.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
   {{- if or $is_view $is_materialized_view }}
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
   {{- else if $is_index }}
+    -- index-specific information
+    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
+    , idx.indnkeyatts AS n_key_columns
+    , idx.indcollation AS collation_oids
+    , idx.indclass AS opclass_oids
+    , idx.indoption AS per_column_flags
+    {{- if .packed }}
+    , ( -- index_info: a 2-byte packed struct
+        0
+        -- 0000 0000 0000 0001 : is_unique
+          | CASE WHEN idx.indisunique THEN 1<<0 ELSE 0 END
+      {{- if and .version (ge .version 15) }}
+        -- 0000 0000 0000 0010 : nulls_considered_equal
+          | CASE WHEN idx.indnullsnotdistinct THEN 1<<1 ELSE 0 END
+      {{- end }}
+        -- 0000 0000 0000 0100 : is_primary_key_index
+          | CASE WHEN idx.indisprimary THEN 1<<2 ELSE 0 END
+        -- 0000 0000 0000 1000 : is_exclusion
+          | CASE WHEN idx.indisexclusion THEN 1<<3 ELSE 0 END
+        -- 0000 0000 0001 0000 : uniqueness_checked_immediately
+          | CASE WHEN idx.indimmediate THEN 1<<4 ELSE 0 END
+        -- 0000 0000 0010 0000 : last_clustered_on_this_index
+          | CASE WHEN idx.indisclustered THEN 1<<5 ELSE 0 END
+        -- 0000 0000 0100 0000 : is_valid
+          | CASE WHEN idx.indisvalid THEN 1<<6 ELSE 0 END
+        -- 0000 0000 1000 0000 : check_xmin
+          | CASE WHEN idx.indcheckxmin THEN 1<<7 ELSE 0 END
+        -- 0000 0001 0000 0000 : is_ready
+          | CASE WHEN idx.indisready THEN 1<<8 ELSE 0 END
+        -- 0000 0010 0000 0000 : is_live
+          | CASE WHEN idx.indislive THEN 1<<9 ELSE 0 END
+        -- 0000 0100 0000 0000 : is_replica_identity
+          | CASE WHEN idx.indisreplident THEN 1<<10 ELSE 0 END
+      )::INT2 AS index_info
+    {{- else }}
+    , idx.indisunique AS is_unique
+    {{- if and .version (ge .version 15) }}
+    , idx.indnullsnotdistinct AS nulls_considered_equal
+    {{- end }}
+    , idx.indisprimary AS is_primary_key_index
+    , idx.indisexclusion AS is_exclusion
+    , idx.indimmediate AS uniqueness_checked_immediately
+    , idx.indisclustered AS last_clustered_on_this_index
+    , idx.indisvalid AS is_valid
+    , idx.indcheckxmin AS check_xmin
+    , idx.indisready AS is_ready
+    , idx.indislive AS is_live
+    , idx.indisreplident AS is_replica_identity
+    {{- end }}
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
   {{- else if $is_foreign }}
     , foreign_table.ftoptions AS foreign_table_options
@@ -319,8 +369,7 @@ INNER JOIN pg_catalog.pg_foreign_table AS foreign_table -- see https://www.postg
 INNER JOIN pg_catalog.pg_foreign_server AS foreign_server
   ON foreign_table.ftserver = foreign_server.oid
 {{- end }}
-{{- end }}
-{{- if $is_sequence }}
+{{- else if $is_sequence }}
 INNER JOIN pg_catalog.pg_sequence AS seq -- https://www.postgresql.org/docs/current/catalog-pg-sequence.html
   ON seq.seqrelid = cls.oid
 {{- if not .oid }}
@@ -329,4 +378,8 @@ INNER JOIN pg_catalog.pg_type AS seq_type -- https://www.postgresql.org/docs/cur
 INNER JOIN pg_catalog.pg_namespace as seq_type_schema
   ON seq_type.typnamespace = seq_type_schema.oid
 {{- end }}
+{{- else if $is_index }}
+INNER JOIN pg_catalog.pg_index AS idx -- https://www.postgresql.org/docs/current/catalog-pg-index.html
+  ON cls.relkind IN ('i', 'I')
+  AND cls.oid = idx.indexrelid
 {{- end }}

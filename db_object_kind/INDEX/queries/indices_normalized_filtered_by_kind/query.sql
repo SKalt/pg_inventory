@@ -39,8 +39,25 @@ SELECT
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
+      -- ^This **is** populated for indices.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
+    -- index-specific information
+    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
+    , idx.indnkeyatts AS n_key_columns
+    , idx.indcollation AS collation_oids
+    , idx.indclass AS opclass_oids
+    , idx.indoption AS per_column_flags
+    , idx.indisunique AS is_unique
+    , idx.indisprimary AS is_primary_key_index
+    , idx.indisexclusion AS is_exclusion
+    , idx.indimmediate AS uniqueness_checked_immediately
+    , idx.indisclustered AS last_clustered_on_this_index
+    , idx.indisvalid AS is_valid
+    , idx.indcheckxmin AS check_xmin
+    , idx.indisready AS is_ready
+    , idx.indislive AS is_live
+    , idx.indisreplident AS is_replica_identity
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM (
@@ -65,3 +82,6 @@ FROM (
     )
     AND cls.relkind = :'kind'
 ) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+INNER JOIN pg_catalog.pg_index AS idx -- https://www.postgresql.org/docs/current/catalog-pg-index.html
+  ON cls.relkind IN ('i', 'I')
+  AND cls.oid = idx.indexrelid

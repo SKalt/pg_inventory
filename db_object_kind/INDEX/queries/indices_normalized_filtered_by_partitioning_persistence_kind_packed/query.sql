@@ -63,8 +63,38 @@ SELECT
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
+      -- ^This **is** populated for indices.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
+    -- index-specific information
+    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
+    , idx.indnkeyatts AS n_key_columns
+    , idx.indcollation AS collation_oids
+    , idx.indclass AS opclass_oids
+    , idx.indoption AS per_column_flags
+    , ( -- index_info: a 2-byte packed struct
+        0
+        -- 0000 0000 0000 0001 : is_unique
+          | CASE WHEN idx.indisunique THEN 1<<0 ELSE 0 END
+        -- 0000 0000 0000 0100 : is_primary_key_index
+          | CASE WHEN idx.indisprimary THEN 1<<2 ELSE 0 END
+        -- 0000 0000 0000 1000 : is_exclusion
+          | CASE WHEN idx.indisexclusion THEN 1<<3 ELSE 0 END
+        -- 0000 0000 0001 0000 : uniqueness_checked_immediately
+          | CASE WHEN idx.indimmediate THEN 1<<4 ELSE 0 END
+        -- 0000 0000 0010 0000 : last_clustered_on_this_index
+          | CASE WHEN idx.indisclustered THEN 1<<5 ELSE 0 END
+        -- 0000 0000 0100 0000 : is_valid
+          | CASE WHEN idx.indisvalid THEN 1<<6 ELSE 0 END
+        -- 0000 0000 1000 0000 : check_xmin
+          | CASE WHEN idx.indcheckxmin THEN 1<<7 ELSE 0 END
+        -- 0000 0001 0000 0000 : is_ready
+          | CASE WHEN idx.indisready THEN 1<<8 ELSE 0 END
+        -- 0000 0010 0000 0000 : is_live
+          | CASE WHEN idx.indislive THEN 1<<9 ELSE 0 END
+        -- 0000 0100 0000 0000 : is_replica_identity
+          | CASE WHEN idx.indisreplident THEN 1<<10 ELSE 0 END
+      )::INT2 AS index_info
     , pg_catalog.pg_get_indexdef(cls.oid) AS index_definition
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM (
@@ -99,3 +129,6 @@ FROM (
     AND cls.relpersistence = :'persistence'
     AND cls.relispartition = :partitioning
 ) AS cls -- https://www.postgresql.org/docs/current/catalog-pg-class.html
+INNER JOIN pg_catalog.pg_index AS idx -- https://www.postgresql.org/docs/current/catalog-pg-index.html
+  ON cls.relkind IN ('i', 'I')
+  AND cls.oid = idx.indexrelid
