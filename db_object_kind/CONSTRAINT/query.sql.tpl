@@ -147,7 +147,8 @@ SELECT
       -- parent partitioned table.
     , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
   -- domain information
-  {{- if .oid }}
+  {{- if $is_fk }} -- omitted for fks
+  {{- else if .oid }}
     , constraint_.contypid AS type_oid -- always 0 for non-domain constraints
   {{- else }}
     , type_ns.nspname AS type_schema

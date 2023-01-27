@@ -57,10 +57,7 @@ SELECT
       -- if this is a constraint on a partition, the constraint of the
       -- parent partitioned table.
     , pg_get_constraintdef(constraint_.oid, true) AS constraint_def
-  -- domain information
-    , type_ns.nspname AS type_schema
-    , type_.typname AS type_name
-      -- always null for non-domain constraints
+  -- domain information -- omitted for fks
   -- other
     , constraint_.coninhcount AS n_ancestor_constraints
       -- number of inheritence ancestors. If nonzero, can't be dropped or renamed
