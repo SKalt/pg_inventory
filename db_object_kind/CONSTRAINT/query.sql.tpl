@@ -4,7 +4,9 @@
 {{- $show_fk := or ($is_all) ($is_fk) -}}
 SELECT
   -- constraint namespacing
-    {{ if .oid -}} constraint_.connamespace AS schema_oid
+    {{ if .oid -}}
+    constraint_.oid
+    , constraint_.connamespace AS schema_oid
     {{ else -}} ns.nspname AS schema_name
     {{ end -}}
     , constraint_.conname AS "name"

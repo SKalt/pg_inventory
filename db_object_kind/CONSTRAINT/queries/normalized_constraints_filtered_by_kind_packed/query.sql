@@ -1,6 +1,7 @@
 SELECT
   -- constraint namespacing
-    constraint_.connamespace AS schema_oid
+    constraint_.oid
+    , constraint_.connamespace AS schema_oid
     , constraint_.conname AS "name"
   -- constraint enforcement info
     , (-- info: a 2-byte packed int.
