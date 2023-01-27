@@ -355,6 +355,15 @@ func (f *ioCache) readFile(path string) (string, error) {
 	}
 }
 
+func dumpFailingQuery(query string) {
+	// persist query to /tmp/query.sql for further debugging
+	tempFile, err := os.CreateTemp("", "query.*.sql")
+	crashIfErrNotNil(err)
+	_, err = tempFile.WriteString(query)
+	crashIfErrNotNil(err)
+	fmt.Printf("failing query @ %s\n", tempFile.Name())
+}
+
 func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, viewDiff bool) error {
 	params := getParams(c.testDir)
 	raw, err := fileCache.readFile(c.queryFile())
@@ -382,14 +391,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 	var explain string
 	if err = row.Scan(&explain); err != nil {
 		// persist query to /tmp/query.sql for further debugging
-		tempFile, e2 := os.CreateTemp("", "query.*.sql")
-		if e2 != nil {
-			panic(e2)
-		}
-		_, e2 = tempFile.WriteString(query)
-		if e2 != nil {
-			panic(e2)
-		}
+		dumpFailingQuery(query)
 		return err
 	}
 	err = os.WriteFile(c.targetExplainPath(), []byte(explain), 0666)
@@ -451,6 +453,7 @@ func runTest(c *testCase, pool *dbServicePool, fileCache ioCache, accept bool, v
 		if viewDiff {
 			err = exec.Command("code", "--diff", c.targetTsvPath(), tempFile.Name()).Run()
 			crashIfErrNotNil(err)
+			dumpFailingQuery(query)
 		}
 		msg := "different: "
 		if !viewDiff {
