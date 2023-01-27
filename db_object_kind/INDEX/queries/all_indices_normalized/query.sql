@@ -54,10 +54,11 @@ SELECT
     -- omitted: indices aren't governed by check constraints: , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
     -- index-specific information
-    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
-    , idx.indnkeyatts AS n_key_columns
+    , idx.indrelid AS indexed_table_oid
     , idx.indcollation AS collation_oids
     , idx.indclass AS opclass_oids
+    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
+    , idx.indnkeyatts AS n_key_columns
     , idx.indoption AS per_column_flags
     , idx.indisunique AS is_unique
     , idx.indisprimary AS is_primary_key_index

@@ -218,10 +218,28 @@ SELECT
     , pg_catalog.pg_get_viewdef(cls.oid, true) AS view_definition
   {{- else if $is_index }}
     -- index-specific information
-    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
-    , idx.indnkeyatts AS n_key_columns
+    {{- if .oid }}
+    , idx.indrelid AS indexed_table_oid
     , idx.indcollation AS collation_oids
     , idx.indclass AS opclass_oids
+    {{- else }}
+    , (
+        SELECT indexed_table_ns.nspname
+        FROM pg_class as indexed_table
+        INNER join pg_namespace as indexed_table_ns
+          ON indexed_table.relnamespace = indexed_table_ns.oid
+        WHERE indexed_table.oid = indrelid
+      ) AS indexed_table_schema_name
+    , (
+        SELECT indexed_table.relname
+        FROM pg_class as indexed_table
+        INNER join pg_namespace as indexed_table_ns
+          ON indexed_table.relnamespace = indexed_table_ns.oid
+        WHERE indexed_table.oid = indrelid
+      ) AS indexed_table_name
+    {{- end }}
+    , idx.indkey AS indexed_column_numbers -- 1-indexed; 0s mean expressions
+    , idx.indnkeyatts AS n_key_columns
     , idx.indoption AS per_column_flags
     {{- if .packed }}
     , ( -- index_info: a 2-byte packed struct
