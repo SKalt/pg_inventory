@@ -1,7 +1,7 @@
 SELECT
   -- namespacing
     {{ if .oid -}} fdw.oid
-  , {{- end -}}
+  , {{  end -}}
     fdw.fdwname AS "name"
   {{- if .oid }}
   , fdw.fdwowner AS owner_oid

@@ -1,7 +1,7 @@
 SELECT
   -- namespacing
     fdw.oid
-  ,fdw.fdwname AS "name"
+  , fdw.fdwname AS "name"
   , fdw.fdwowner AS owner_oid
   , fdw.fdwacl AS access_privileges
   , fdw.fdwoptions AS options
