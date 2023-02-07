@@ -117,6 +117,10 @@ SELECT
           )<<11)
         {{- else }} -- omitted
         {{- end }}
+      {{- if $is_sequence }}
+      -- 0100 0000 0000 0000 : does_cycle (sequence-specific)
+        | CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END
+      {{- end }}
       )::INT2 AS info
   {{- else }}
     , cls.relreplident AS replica_identity -- char
@@ -299,7 +303,9 @@ SELECT
     , seq.seqmax AS max -- int8
     , seq.seqmin AS min -- int8
     , seq.seqcache AS cache_size -- int8
+    {{- if not .packed }}
     , seq.seqcycle AS does_cycle -- bool
+    {{- end }}
     {{- if .oid }}
     , seq.seqtypid AS sequence_type_id
     {{- else }}

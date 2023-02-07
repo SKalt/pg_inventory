@@ -43,6 +43,8 @@ SELECT
               ELSE          0
             END
           )<<11)
+      -- 0100 0000 0000 0000 : does_cycle (sequence-specific)
+        | CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END
       )::INT2 AS info
     , cls.reltuples AS approximate_number_of_rows
     , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
@@ -50,6 +52,7 @@ SELECT
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
+      -- ^This **is** populated for indices.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
   -- sequence-specific info
@@ -58,7 +61,6 @@ SELECT
     , seq.seqmax AS max -- int8
     , seq.seqmin AS min -- int8
     , seq.seqcache AS cache_size -- int8
-    , seq.seqcycle AS does_cycle -- bool
     , seq.seqtypid AS sequence_type_id
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
 FROM (

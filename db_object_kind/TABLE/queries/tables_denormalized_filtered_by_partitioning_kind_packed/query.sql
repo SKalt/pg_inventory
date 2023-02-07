@@ -29,10 +29,10 @@ SELECT
         | (CASE WHEN cls.relrowsecurity      THEN 1<<5 ELSE 0 END)
       -- 0000 0000 0100 0000 : row_level_security_enforced_on_owner
         | (CASE WHEN cls.relforcerowsecurity THEN 1<<6 ELSE 0 END)
-      -- 0000 0000 1000 0000 : row_level_security_enforced_on_owner
+      -- 0000 0000 1000 0000 : is_partition
         | (CASE WHEN cls.relispartition      THEN 1<<7 ELSE 0 END)
       -- 0000 0001 0000 0000 : is_populated -- omitted: only for materialized/regular views
-      -- 0000 1110 0000 0000 : replica identity
+      -- 0000 1110 0000 0000 : replica_identity
         | ((
             CASE cls.relreplident
               WHEN 'd' THEN 1 -- default (primary key, if any)
@@ -68,6 +68,7 @@ SELECT
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
+      -- ^This **is** populated for indices.
     , cls.relchecks AS n_check_constraints
       -- int2; see pg_constraint catalog
     , pg_catalog.obj_description(cls.oid, 'pg_class') AS "comment"
