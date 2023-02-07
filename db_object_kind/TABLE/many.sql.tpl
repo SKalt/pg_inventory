@@ -197,7 +197,7 @@ SELECT
     {{- end }}
       -- for typed tables
   {{- end }}
-    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign $is_sequence -}} -- omitted: {{ end -}}
     , cls.reltuples AS approximate_number_of_rows
   {{- if $is_partitionable }}
     , (
@@ -207,10 +207,11 @@ SELECT
         END
       ) AS partition_bound
   {{- end }}
-    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign $is_sequence -}} -- omitted: {{ end -}}
     , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
-    {{ if or $is_view $is_foreign -}} -- omitted: {{ end -}}
+    {{ if or $is_view $is_foreign $is_sequence -}} -- omitted: {{ end -}}
     , cls.relallvisible AS n_pages_all_visible
+    {{ if $is_sequence -}} -- omitted: sequences always have 3 cols: {{ end -}}
     , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.

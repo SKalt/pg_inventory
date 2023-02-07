@@ -48,7 +48,7 @@ SELECT
     -- omitted: , cls.reltuples AS approximate_number_of_rows
     -- omitted: , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
     -- omitted: , cls.relallvisible AS n_pages_all_visible
-     -- omitted: sequences always have 3 cols: , cls.relnatts AS n_user_columns
+    -- omitted: sequences always have 3 cols: , cls.relnatts AS n_user_columns
       -- Number of user columns in the relation (system columns not counted).
       -- There must be this many corresponding entries in pg_attribute.
       -- ^This **is** populated for indices.
