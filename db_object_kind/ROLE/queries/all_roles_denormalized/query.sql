@@ -1,5 +1,5 @@
 SELECT
-    rolname AS name
+  rolname AS name
   , rolsuper       AS is_superuser
   , rolinherit     AS inherits_permissions
   , rolcreaterole  AS can_create_roles

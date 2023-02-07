@@ -1,4 +1,7 @@
-name_template = "all_roles{{.packed }}"
+name_template = "all_roles_{{.oid}}{{.packed }}"
+[oid]
+  denormalized = false
+  normalized = true
 [packed]
   "" = false
   _packed = true

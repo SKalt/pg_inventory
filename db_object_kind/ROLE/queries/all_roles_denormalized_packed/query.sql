@@ -1,8 +1,5 @@
 SELECT
-  {{ if .oid -}} oid
-  , {{ end -}}
   rolname AS name
-{{- if .packed }}
   , (-- permissions: 2-bit packed integer:
       0
      -- 0000 0000 0000 0001 : is_superuser
@@ -20,15 +17,6 @@ SELECT
      -- 0000 0000 0100 0000 : bypass_row_level_security
       | CASE WHEN rolbypassrls   THEN 1<<6 ELSE 0 END
     )::INT2 AS permission_bits
-{{- else }}
-  , rolsuper       AS is_superuser
-  , rolinherit     AS inherits_permissions
-  , rolcreaterole  AS can_create_roles
-  , rolcreatedb    AS can_create_dbs
-  , rolcanlogin    AS can_log_in
-  , rolreplication AS is_replication_role
-  , rolbypassrls   AS bypass_rls
-{{ end }}
   , rolvaliduntil AS password_expiry_time
   , rolconnlimit  AS connection_count_limit
   , rolconfig     AS runtime_config_var_defaults

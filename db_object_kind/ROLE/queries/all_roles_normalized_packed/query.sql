@@ -1,5 +1,6 @@
 SELECT
-    rolname AS name
+  oid
+  , rolname AS name
   , (-- permissions: 2-bit packed integer:
       0
      -- 0000 0000 0000 0001 : is_superuser
