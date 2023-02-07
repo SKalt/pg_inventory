@@ -119,7 +119,7 @@ SELECT
         {{- end }}
       {{- if $is_sequence }}
       -- 0100 0000 0000 0000 : does_cycle (sequence-specific)
-        | CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END
+        | (CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END)
       {{- end }}
       )::INT2 AS info
   {{- else }}

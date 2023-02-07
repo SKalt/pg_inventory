@@ -44,7 +44,7 @@ SELECT
             END
           )<<11)
       -- 0100 0000 0000 0000 : does_cycle (sequence-specific)
-        | CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END
+        | (CASE WHEN seq.seqcycle            THEN 1<<14 ELSE 0 END)
       )::INT2 AS info
     -- omitted: , cls.reltuples AS approximate_number_of_rows
     -- omitted: , cls.relpages AS n_pages -- int4: updated by vacuum, analyze, create index
